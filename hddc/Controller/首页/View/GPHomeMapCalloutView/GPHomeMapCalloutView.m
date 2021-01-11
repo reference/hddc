@@ -33,16 +33,19 @@
     _forumDataInfoModels = forumDataInfoModels;
     
     if (forumDataInfoModels.count == 1) {
-        self.height = 110;
+        self.tableViews.firstObject.heightLayoutConstraint.constant = 50;
         self.tableViews.firstObject.scrollEnabled = NO;
     }
     else if (forumDataInfoModels.count == 2) {
-        self.height = 160;
+        self.tableViews.firstObject.heightLayoutConstraint.constant = 100;
         self.tableViews.firstObject.scrollEnabled = NO;
     }
     else if (forumDataInfoModels.count == 3) {
-        self.height = 210;
+        self.tableViews.firstObject.heightLayoutConstraint.constant = 150;
         self.tableViews.firstObject.scrollEnabled = NO;
+    }else{
+        self.tableViews.firstObject.heightLayoutConstraint.constant = 200;
+        self.tableViews.firstObject.scrollEnabled = YES;
     }
 }
 #pragma mark - UITableViewDataSource

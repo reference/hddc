@@ -43,11 +43,11 @@ SOFTWARE.
 }
 
 + (void)showActivity:(NSString *)text {
-    [self showActivity:text inView:[UIApplication sharedApplication].keyWindow];
+    [self showActivity:text inView:[UIApplication sharedApplication].windows.firstObject];
 }
 
 + (void)showText:(NSString *)text {
-    [self showText:text inView:[UIApplication sharedApplication].keyWindow];
+    [self showText:text inView:[UIApplication sharedApplication].windows.firstObject];
 }
 
 + (void)dismiss {

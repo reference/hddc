@@ -780,8 +780,8 @@
 			isa = PBXGroup;
 			children = (
 				842C46F325ABEEE90034E6DB /* FFInstanceNode.m */,
-				842C46F425ABEEE90034E6DB /* FFPropertyInspector.h */,
 				842C46F525ABEEE90034E6DB /* FFInstanceNode.h */,
+				842C46F425ABEEE90034E6DB /* FFPropertyInspector.h */,
 				842C46F625ABEEE90034E6DB /* FFPropertyInspector.m */,
 			);
 			path = FFPropertyInspector;
@@ -823,10 +823,10 @@
 			isa = PBXGroup;
 			children = (
 				842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */,
-				842C470925ABEEE90034E6DB /* Models */,
 				842C470E25ABEEE90034E6DB /* BDHImagePickerHelper.h */,
-				842C470F25ABEEE90034E6DB /* Controllers */,
+				842C470925ABEEE90034E6DB /* Models */,
 				842C471A25ABEEE90034E6DB /* Views */,
+				842C470F25ABEEE90034E6DB /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -917,9 +917,9 @@
 		842C473925ABEEE90034E6DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				842C474025ABEEE90034E6DB /* BDBaseController.h */,
 				842C473A25ABEEE90034E6DB /* BDBaseCollectionViewController */,
 				842C473D25ABEEE90034E6DB /* BDHTTP */,
-				842C474025ABEEE90034E6DB /* BDBaseController.h */,
 				842C474125ABEEE90034E6DB /* BDBaseTableViewController */,
 				842C474425ABEEE90034E6DB /* BDTextFieldCell */,
 				842C474725ABEEE90034E6DB /* Category */,
@@ -2162,8 +2162,8 @@
 		842C48D125ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView */ = {
 			isa = PBXGroup;
 			children = (
-				842C48D225ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m */,
 				842C48D325ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib */,
+				842C48D225ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m */,
 				842C48D425ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.h */,
 			);
 			path = GPHomeTraceCollectionOnlinePopView;
