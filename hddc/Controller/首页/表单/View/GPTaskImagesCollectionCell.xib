@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BDCollectionViewCell" reuseIdentifier="BDCollectionViewCell" id="Uhn-zR-cHA" customClass="BDCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N2E-Ic-0Jc">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_plus" translatesAutoresizingMaskIntoConstraints="NO" id="PPg-Gg-pE1">
+                        <rect key="frame" x="10" y="10" width="108" height="108"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="108" id="I5k-UP-WKQ"/>
+                            <constraint firstAttribute="width" constant="108" id="ayQ-x2-ZXv"/>
+                        </constraints>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77D-Bx-6l0">
+                        <rect key="frame" x="98" y="5" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="M9U-wi-AH1"/>
+                            <constraint firstAttribute="width" constant="25" id="TzL-nh-jGe"/>
+                        </constraints>
+                        <color key="tintColor" systemColor="systemRedColor"/>
+                        <state key="normal" image="icon_close_small"/>
+                        <connections>
+                            <action selector="onButtons:" destination="Uhn-zR-cHA" eventType="touchUpInside" id="4Lx-3Z-uUS"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PPg-Gg-pE1" firstAttribute="top" secondItem="N2E-Ic-0Jc" secondAttribute="top" constant="10" id="1wC-ta-zUE"/>
+                    <constraint firstItem="PPg-Gg-pE1" firstAttribute="leading" secondItem="N2E-Ic-0Jc" secondAttribute="leading" constant="10" id="6zD-2K-ZrV"/>
+                    <constraint firstAttribute="trailing" secondItem="77D-Bx-6l0" secondAttribute="trailing" constant="5" id="DiI-Xz-suq"/>
+                    <constraint firstItem="77D-Bx-6l0" firstAttribute="top" secondItem="N2E-Ic-0Jc" secondAttribute="top" constant="5" id="Yys-NP-bW2"/>
+                    <constraint firstAttribute="trailing" secondItem="PPg-Gg-pE1" secondAttribute="trailing" constant="10" id="aW1-oa-IAl"/>
+                    <constraint firstAttribute="bottom" secondItem="PPg-Gg-pE1" secondAttribute="bottom" constant="10" id="tbS-fc-JC0"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outletCollection property="imageViews" destination="PPg-Gg-pE1" id="uZY-aC-c1z"/>
+                <outletCollection property="buttons" destination="77D-Bx-6l0" id="c7J-Kg-Vub"/>
+            </connections>
+            <point key="canvasLocation" x="-6" y="208"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_close_small" width="43" height="43"/>
+        <image name="icon_plus" width="67" height="67"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

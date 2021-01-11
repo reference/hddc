@@ -1,0 +1,2516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Historic Maps - GE3</name>
+	<Style id="12carousel_n">
+		<IconStyle>
+			<scale>0</scale>
+			<Icon>
+				<href>https://storage.googleapis.com/geteachkml4/blueMarble/world.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+			<gx:scalingMode>fixedScaling</gx:scalingMode>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[
+				<!DOCTYPE html>
+					<html>
+						 <head>
+							<meta charset="UTF-8">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+							<meta name="version" content="22.8.0" />
+							<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
+							<link rel="stylesheet" href="https://storage.googleapis.com/geteachkml4/scripts/material.blue_grey-blue.min.css" />
+							<link rel="stylesheet" href="https://storage.googleapis.com/geteachkml4/scripts/earthfeed.v22.x.min.css" type="text/css" />
+							<style>#balloonContent {visibility: hidden}</style>
+							<script src="https://storage.googleapis.com/geteachkml4/earthscripts/1.3.0material.min.js"></script>
+							<style>
+								.dropbtn {
+									color: rgba(255,255,255,.87);
+									font-size: 16px;
+									width:100%;
+									height:32px;
+									border: 1px solid rgba(155,155,155,.1);
+									cursor: pointer;
+								}
+
+								.dropbtn:hover, .dropbtn:focus {
+									background-color: #2979ff;
+									width:100%;
+									height:32px;
+								}
+
+								.dropdown {
+									width:100%;
+									position: relative;
+									display: inline-block;
+								}
+
+								.dropdown-content {
+									display: none;
+									position: absolute;
+									background-color: #263238;
+									width:100%;
+									max-height:750px;
+									padding-bottom:5px;
+									margin-bottom:60px;
+									border: 1px solid rgba(155,155,155,.1);
+									z-index: 1;
+								}
+
+								.dropdown-content a {
+									color: rgba(255,255,255,.87);
+									padding: 12px 16px 12px 16px;
+									text-decoration: none;
+									display: block;
+								}
+								.dropdown-content li {
+									color: rgba(255,255,255,.87);
+									margin:0;
+									padding:0;
+									text-decoration: none;
+									display: block;
+								}
+
+								.dropdown-content a:hover {background-color: #2979ff}
+
+								.show {display:block;}
+
+								.arrow{
+									float:left;
+									margin-left:5px;
+									margin-top:2px;
+									-webkit-user-select: none;
+									-moz-user-select: none;
+									-ms-user-select: none;
+								}
+
+								.toggle-down {
+								  transform: rotate(0deg);
+								}
+
+
+								.toggle-up {
+								  transform: rotate(90deg);
+								  margin-top:4px;
+								}
+
+								.toggle-none {
+								   background-color: #263238;
+								}
+
+
+								.toggle-color {
+								background-color: #2979ff;
+								}
+								.layerOff{
+								color: rgba(255,255,255,.87);
+								font-size:16px;
+								margin-top:4px;
+								margin-bottom:4px;
+								fill: rgba(255,255,255,.87);
+								cursor: pointer;
+								}
+								.layerOn{
+								color: #2979ff;
+								font-size:16px;
+								margin-top:4px;
+								margin-bottom:4px;
+								fill: #2979ff;
+								cursor: pointer;
+								}
+								.layers {
+									margin-top:10px;
+								}
+								.layers:hover{
+									color: #2979ff;						
+								}					
+								#layerMenu{
+								color: rgba(255,255,255,.87);
+								float:left;
+								margin-left:4px;
+								margin-top:4px;
+								font-size:16px;
+								-webkit-user-select: none;
+								-moz-user-select: none;
+								-ms-user-select: none;
+								}
+								.svgPath{
+								fill-rule:evenodd;
+								margin-left:3px;
+								margin-right:5px;
+								cursor: pointer;
+								}	
+								#$[idurl] {
+									color: #2979ff;
+									font-size:16px;
+									margin-top:4px;
+									margin-bottom:4px;
+									fill: #2979ff;
+									cursor: pointer;
+								}						
+							</style>	
+							<script>
+							function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+								var upClass = 'toggle-up';
+								var downClass = 'toggle-down';
+							  var arrow = document.querySelector('.arrow');
+							  if (~arrow.className.indexOf(downClass)) {
+								arrow.className = arrow.className.replace(downClass, upClass);
+							  } else {
+									arrow.className = arrow.className.replace(upClass, downClass);
+							  }
+
+								var upClass = 'toggle-color';
+								var downClass = 'toggle-none';  
+							  var menuHead = document.querySelector('.dropbtn');
+							  if (~menuHead.className.indexOf(downClass)) {
+								menuHead.className = menuHead.className.replace(downClass, upClass);
+							  } else {
+									menuHead.className = menuHead.className.replace(upClass, downClass);
+							  }  
+							}
+							function clickedLayer(clicked_id){
+								var clicked = (clicked_id+'click');
+								document.getElementById(clicked).click();
+							}	
+						</script>							
+					</head>
+					<body>
+						<div data-component="EfPanel" class="ef-container ef-480-width theme-dark ef-panel mdl-layout mdl-js-layout">
+							<main class="ef-content mdl-layout__content">
+								<figure class="ef-figure carousel carousel--with-caption" data-component="EfPanelCarousel">
+								  <a data-hide-if-empty="#$[id]_ilb;balloon" href="#$[id]_ilb;balloon" class="ef-figure__link"></a>
+								  <div class="carousel__buttons carousel__buttons--dark">
+									<a href="#" class="carousel__buttons__button--prev mdl-button mdl-button--icon mdl-js-button">
+									  <i class="carousel-button__icon material-icons">&#xE408;</i>
+									</a>
+									<a href="#" class="carousel__buttons__button--next mdl-button mdl-button--icon mdl-js-button">
+									  <i class="carousel-button__icon material-icons">&#xE409;</i>
+									</a>
+								  </div>
+								  <a data-hide-if-empty="#$[id]_ilb;balloon" href="#$[id]_ilb;balloon" class="ef-figure__zoom">
+									<span class="ef-figure__button mdl-button mdl-button--icon mdl-js-button">
+									  <i class="ef-figure__icon material-icons">&#xE5D0;</i>
+									</span>
+								  </a>
+								  <script type="x-component/x-data">
+									{''''json'''':null,''''images'''':[{''''url'''':''''$[carouselImageUrl-1]'''',''''caption'''':''''$[carouselImageCaption-1]''''},{''''url'''':''''$[carouselImageUrl-2]'''',''''caption'''':''''$[carouselImageCaption-2]''''},{''''url'''':''''$[carouselImageUrl-3]'''',''''caption'''':''''$[carouselImageCaption-3]''''},{''''url'''':''''$[carouselImageUrl-4]'''',''''caption'''':''''$[carouselImageCaption-4]''''},{''''url'''':''''$[carouselImageUrl-5]'''',''''caption'''':''''$[carouselImageCaption-5]''''},{''''url'''':''''$[carouselImageUrl-6]'''',''''caption'''':''''$[carouselImageCaption-6]''''},{''''url'''':''''$[carouselImageUrl-7]'''',''''caption'''':''''$[carouselImageCaption-7]''''},{''''url'''':''''$[carouselImageUrl-8]'''',''''caption'''':''''$[carouselImageCaption-8]''''},{''''url'''':''''$[carouselImageUrl-9]'''',''''caption'''':''''$[carouselImageCaption-9]''''},{''''url'''':''''$[carouselImageUrl-10]'''',''''caption'''':''''$[carouselImageCaption-10]''''},{''''url'''':''''$[carouselImageUrl-11]'''',''''caption'''':''''$[carouselImageCaption-11]''''},{''''url'''':''''$[carouselImageUrl-12]'''',''''caption'''':''''$[carouselImageCaption-12]''''},{''''url'''':''''$[carouselImageUrl-13]'''',''''caption'''':''''$[carouselImageCaption-13]''''},{''''url'''':''''$[carouselImageUrl-14]'''',''''caption'''':''''$[carouselImageCaption-14]''''}]}
+								  </script>
+								</figure>
+								<div class="ef-padding ef-padding--with-fab" style="padding-bottom:8px;">
+								  <h1 class="ef-content__title">$[name]</h1>
+								  <h2 class="ef-content__subhead">$[snippet]</h2>
+								</div>
+								<div class="ef-padding">
+									<div class="ef-content__container">
+										<div class="dropdown">
+											<div id="menu" onclick="myFunction()" class="dropbtn toggle-none">
+												<div class="arrow toggle-down">
+													<img src="https://storage.googleapis.com/geteachkml4/arrow.png" height="14px"/>
+												</div>
+												<div id="layerMenu">
+													Click and select another map layer
+												</div>
+											</div>
+											<div id="myDropdown" class="dropdown-content">
+												<div id="layer1" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer1Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer1Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l1]</div>
+												<div id="layer2" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer2Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer2Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l2]</div>
+												<div id="layer3" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer3Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer3Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l3]</div>
+												<div id="layer4" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer4Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer4Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l4]</div>
+												<div id="layer5" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer5Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer5Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l5]</div>
+												<div id="layer6" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer6Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer6Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l6]</div>
+												<div id="layer7" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer7Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer7Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l7]</div>
+												<div id="layer8" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer8Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer8Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l8]</div>
+												<div id="layer9" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer9Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer9Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l9]</div>
+												<div id="layer10" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer10Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer10Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l10]</div>
+												<div id="layer11" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer11Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer11Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l11]</div>
+												<div id="layer12" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer12Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer12Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l12]</div>
+												<div id="layer13" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer13Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer12Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>Clear Layers - Google Earth</div>
+											</div>
+										</div>	
+										<div class="ef-content__description">
+											<p class="ef-content__description" style="margin-top:8px;">Description:</br>$[description]</p>
+											<p class="ef-content__description">Credit: $[credit]</p>
+											<p class="ef-content__description"><img src="https://geteach.com/images/mapslink.png" style="margin-bottom:3px"> Curated by: <a href="https://twitter.com/geteach" target="_blank">@geteach</a> for <a href="https://sites.google.com/view/earthedu-community/" target="_blank">Google Earth's Education Community</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="ef-footer ef-padding ef-480-width">
+									  <div class="ef-footer__logo">
+										  <a href="https://twitter.com/geteach"> 
+										  <img src="https://storage.googleapis.com/geteachkml4/logogeteachtemp.png" class="ef-content__logo" style="display: block;height: 100%;max-height: 28px;vertical-align: middle;width: auto;">
+										</a>
+									  </div>
+								  <div class="ef-footer__pagination">
+								  </div>
+								</div>
+								<div id="menuClick" style="display:none;">
+									<a href="#$[short]place1;balloon" id="layer1click"></a>
+									<a href="#$[short]place2;balloon" id="layer2click"></a>
+									<a href="#$[short]place3;balloon" id="layer3click"></a>
+									<a href="#$[short]place4;balloon" id="layer4click"></a>
+									<a href="#$[short]place5;balloon" id="layer5click"></a>
+									<a href="#$[short]place6;balloon" id="layer6click"></a>
+									<a href="#$[short]place7;balloon" id="layer7click"></a>
+									<a href="#$[short]place8;balloon" id="layer8click"></a>
+									<a href="#$[short]place9;balloon" id="layer9click"></a>
+									<a href="#$[short]place10;balloon" id="layer10click"></a>
+									<a href="#$[short]place11;balloon" id="layer11click"></a>
+									<a href="#$[short]place12;balloon" id="layer12click"></a>
+									<a href="#$[short]place13;balloon" id="layer13click"></a>
+									<a href="#ciaplacemarks;hide" class="hidelink" id="clickCIAHide"></a>
+									<a href="#hisplacemarks;hide" class="hidelink" id="clickHisHide"></a>	
+									<a href="#luplacemarks;hide" class="hidelink" id="clickLuHide"></a>	
+									<a href="#demplacemarks;hide" class="hidelink" id="clickDemHide"></a>													
+									<a href="#popplacemarks;hide" class="hidelink" id="clickPopHide"></a>	
+									<a href="#enplacemarks;hide" class="hidelink" id="clickEnHide"></a>											
+									<a href="#overview_human;balloon" class="overviewLink" id="clickOverview" ></a>										
+								</div>									
+							</main>
+						<script type="x-component/x-data">
+							{''''overlayIdsToHide'''':''''$[overlayIdsToHide]'''',''''overlayIdsToShow'''':''''$[overlayIdsToShow]'''',''''overlayHideTimeout'''':0}
+						 </script>
+						</div>   
+					<script>
+						function hideLinks(){
+							var elems = document.getElementsByClassName("hidelink");
+							for(var i=0; i<elems.length;i++) { elems[i].click(); }
+							document.getElementById('clickOverview').click();	
+						};
+					</script>	
+					<script src="https://storage.googleapis.com/geteachkml4/scripts/earthfeed.v22.x.min.js"></script>
+					<script>componentHandler.upgradeAllRegistered()</script>
+					</body>
+				</html>]]>
+			</text>
+			<bgColor>ff383226</bgColor>
+			<gx:displayMode>panel</gx:displayMode>
+		</BalloonStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>https://storage.googleapis.com/geteachkml4/blueMarble/world.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>		
+	<Style id="12carousel_h">
+		<IconStyle>
+			<scale>0</scale>
+			<Icon>
+				<href>https://storage.googleapis.com/geteachkml4/blueMarble/world.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+			<gx:scalingMode>fixedScaling</gx:scalingMode>
+		</IconStyle>
+		<LabelStyle>
+			<scale>0</scale>
+		</LabelStyle>
+		<BalloonStyle>
+			<text><![CDATA[
+				<!DOCTYPE html>
+					<html>
+						 <head>
+							<meta charset="UTF-8">
+							<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+							<meta name="version" content="22.8.0" />
+							<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
+							<link rel="stylesheet" href="https://storage.googleapis.com/geteachkml4/scripts/material.blue_grey-blue.min.css" />
+							<link rel="stylesheet" href="https://storage.googleapis.com/geteachkml4/scripts/earthfeed.v22.x.min.css" type="text/css" />
+							<style>#balloonContent {visibility: hidden}</style>
+							<script src="https://storage.googleapis.com/geteachkml4/earthscripts/1.3.0material.min.js"></script>
+							<style>
+								.dropbtn {
+									color: rgba(255,255,255,.87);
+									font-size: 16px;
+									width:100%;
+									height:32px;
+									border: 1px solid rgba(155,155,155,.1);
+									cursor: pointer;
+								}
+
+								.dropbtn:hover, .dropbtn:focus {
+									background-color: #2979ff;
+									width:100%;
+									height:32px;
+								}
+
+								.dropdown {
+									width:100%;
+									position: relative;
+									display: inline-block;
+								}
+
+								.dropdown-content {
+									display: none;
+									position: absolute;
+									background-color: #263238;
+									width:100%;
+									max-height:750px;
+									padding-bottom:5px;
+									margin-bottom:60px;
+									border: 1px solid rgba(155,155,155,.1);
+									z-index: 1;
+								}
+
+								.dropdown-content a {
+									color: rgba(255,255,255,.87);
+									padding: 12px 16px 12px 16px;
+									text-decoration: none;
+									display: block;
+								}
+								.dropdown-content li {
+									color: rgba(255,255,255,.87);
+									margin:0;
+									padding:0;
+									text-decoration: none;
+									display: block;
+								}
+
+								.dropdown-content a:hover {background-color: #2979ff}
+
+								.show {display:block;}
+
+								.arrow{
+									float:left;
+									margin-left:5px;
+									margin-top:2px;
+									-webkit-user-select: none;
+									-moz-user-select: none;
+									-ms-user-select: none;
+								}
+
+								.toggle-down {
+								  transform: rotate(0deg);
+								}
+
+
+								.toggle-up {
+								  transform: rotate(90deg);
+								  margin-top:4px;
+								}
+
+								.toggle-none {
+								   background-color: #263238;
+								}
+
+
+								.toggle-color {
+								background-color: #2979ff;
+								}
+								.layerOff{
+								color: rgba(255,255,255,.87);
+								font-size:16px;
+								margin-top:4px;
+								margin-bottom:4px;
+								fill: rgba(255,255,255,.87);
+								cursor: pointer;
+								}
+								.layerOn{
+								color: #2979ff;
+								font-size:16px;
+								margin-top:4px;
+								margin-bottom:4px;
+								fill: #2979ff;
+								cursor: pointer;
+								}
+								.layers {
+									margin-top:10px;
+								}
+								.layers:hover{
+									color: #2979ff;						
+								}					
+								#layerMenu{
+								color: rgba(255,255,255,.87);
+								float:left;
+								margin-left:4px;
+								margin-top:4px;
+								font-size:16px;
+								-webkit-user-select: none;
+								-moz-user-select: none;
+								-ms-user-select: none;
+								}
+								.svgPath{
+								fill-rule:evenodd;
+								margin-left:3px;
+								margin-right:5px;
+								cursor: pointer;
+								}	
+								#$[idurl] {
+									color: #2979ff;
+									font-size:16px;
+									margin-top:4px;
+									margin-bottom:4px;
+									fill: #2979ff;
+									cursor: pointer;
+								}						
+							</style>	
+							<script>
+							function myFunction() {
+								document.getElementById("myDropdown").classList.toggle("show");
+								var upClass = 'toggle-up';
+								var downClass = 'toggle-down';
+							  var arrow = document.querySelector('.arrow');
+							  if (~arrow.className.indexOf(downClass)) {
+								arrow.className = arrow.className.replace(downClass, upClass);
+							  } else {
+									arrow.className = arrow.className.replace(upClass, downClass);
+							  }
+
+								var upClass = 'toggle-color';
+								var downClass = 'toggle-none';  
+							  var menuHead = document.querySelector('.dropbtn');
+							  if (~menuHead.className.indexOf(downClass)) {
+								menuHead.className = menuHead.className.replace(downClass, upClass);
+							  } else {
+									menuHead.className = menuHead.className.replace(upClass, downClass);
+							  }  
+							}
+							function clickedLayer(clicked_id){
+								var clicked = (clicked_id+'click');
+								document.getElementById(clicked).click();
+							}	
+						</script>							
+					</head>
+					<body>
+						<div data-component="EfPanel" class="ef-container ef-480-width theme-dark ef-panel mdl-layout mdl-js-layout">
+							<main class="ef-content mdl-layout__content">
+								<figure class="ef-figure carousel carousel--with-caption" data-component="EfPanelCarousel">
+								  <a data-hide-if-empty="#$[id]_ilb;balloon" href="#$[id]_ilb;balloon" class="ef-figure__link"></a>
+								  <div class="carousel__buttons carousel__buttons--dark">
+									<a href="#" class="carousel__buttons__button--prev mdl-button mdl-button--icon mdl-js-button">
+									  <i class="carousel-button__icon material-icons">&#xE408;</i>
+									</a>
+									<a href="#" class="carousel__buttons__button--next mdl-button mdl-button--icon mdl-js-button">
+									  <i class="carousel-button__icon material-icons">&#xE409;</i>
+									</a>
+								  </div>
+								  <a data-hide-if-empty="#$[id]_ilb;balloon" href="#$[id]_ilb;balloon" class="ef-figure__zoom">
+									<span class="ef-figure__button mdl-button mdl-button--icon mdl-js-button">
+									  <i class="ef-figure__icon material-icons">&#xE5D0;</i>
+									</span>
+								  </a>
+								  <script type="x-component/x-data">
+									{''''json'''':null,''''images'''':[{''''url'''':''''$[carouselImageUrl-1]'''',''''caption'''':''''$[carouselImageCaption-1]''''},{''''url'''':''''$[carouselImageUrl-2]'''',''''caption'''':''''$[carouselImageCaption-2]''''},{''''url'''':''''$[carouselImageUrl-3]'''',''''caption'''':''''$[carouselImageCaption-3]''''},{''''url'''':''''$[carouselImageUrl-4]'''',''''caption'''':''''$[carouselImageCaption-4]''''},{''''url'''':''''$[carouselImageUrl-5]'''',''''caption'''':''''$[carouselImageCaption-5]''''},{''''url'''':''''$[carouselImageUrl-6]'''',''''caption'''':''''$[carouselImageCaption-6]''''},{''''url'''':''''$[carouselImageUrl-7]'''',''''caption'''':''''$[carouselImageCaption-7]''''},{''''url'''':''''$[carouselImageUrl-8]'''',''''caption'''':''''$[carouselImageCaption-8]''''},{''''url'''':''''$[carouselImageUrl-9]'''',''''caption'''':''''$[carouselImageCaption-9]''''},{''''url'''':''''$[carouselImageUrl-10]'''',''''caption'''':''''$[carouselImageCaption-10]''''},{''''url'''':''''$[carouselImageUrl-11]'''',''''caption'''':''''$[carouselImageCaption-11]''''},{''''url'''':''''$[carouselImageUrl-12]'''',''''caption'''':''''$[carouselImageCaption-12]''''},{''''url'''':''''$[carouselImageUrl-13]'''',''''caption'''':''''$[carouselImageCaption-13]''''},{''''url'''':''''$[carouselImageUrl-14]'''',''''caption'''':''''$[carouselImageCaption-14]''''}]}
+								  </script>
+								</figure>
+								<div class="ef-padding ef-padding--with-fab" style="padding-bottom:8px;">
+								  <h1 class="ef-content__title">$[name]</h1>
+								  <h2 class="ef-content__subhead">$[snippet]</h2>
+								</div>
+								<div class="ef-padding">
+									<div class="ef-content__container">
+										<div class="dropdown">
+											<div id="menu" onclick="myFunction()" class="dropbtn toggle-none">
+												<div class="arrow toggle-down">
+													<img src="https://storage.googleapis.com/geteachkml4/arrow.png" height="14px"/>
+												</div>
+												<div id="layerMenu">
+													Click and select another map layer
+												</div>
+											</div>
+											<div id="myDropdown" class="dropdown-content">
+												<div id="layer1" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer1Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer1Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l1]</div>
+												<div id="layer2" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer2Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer2Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l2]</div>
+												<div id="layer3" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer3Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer3Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l3]</div>
+												<div id="layer4" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer4Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer4Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l4]</div>
+												<div id="layer5" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer5Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer5Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l5]</div>
+												<div id="layer6" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer6Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer6Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l6]</div>
+												<div id="layer7" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer7Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer7Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l7]</div>
+												<div id="layer8" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer8Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer8Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l8]</div>
+												<div id="layer9" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer9Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer9Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l9]</div>
+												<div id="layer10" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer10Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer10Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l10]</div>
+												<div id="layer11" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer11Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer11Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l11]</div>
+												<div id="layer12" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer12Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer12Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>$[l12]</div>
+												<div id="layer13" onclick="clickedLayer(this.id)" class="layers layerOff"><svg id="layer13Svg" width="20px" height="15px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svgPath"><path id="layer12Icon" d="M12.5,0.018C19.402,0.018 25.005,6.279 25.005,7.46C25.005,8.642 19.402,14.982 12.5,14.982C5.598,14.982 -0.005,8.569 -0.005,7.46C-0.005,6.352 5.598,0.018 12.5,0.018ZM12.504,1.924C15.548,1.924 18.019,4.395 18.019,7.439C18.019,10.483 15.548,12.954 12.504,12.954C9.46,12.954 6.989,10.483 6.989,7.439C6.989,4.395 9.46,1.924 12.504,1.924ZM12.5,5.481C13.615,5.481 14.519,6.385 14.519,7.5C14.519,8.615 13.615,9.519 12.5,9.519C11.385,9.519 10.481,8.615 10.481,7.5C10.481,6.385 11.385,5.481 12.5,5.481Z"></path></svg>Clear Layers - Google Earth</div>
+											</div>
+										</div>	
+										<div class="ef-content__description">
+											<p class="ef-content__description" style="margin-top:8px;">Description:</br>$[description]</p>
+											<p class="ef-content__description">Credit: $[credit]</p>
+											<p class="ef-content__description"><img src="https://geteach.com/images/mapslink.png" style="margin-bottom:3px"> Curated by: <a href="https://twitter.com/geteach" target="_blank">@geteach</a> for <a href="https://sites.google.com/view/earthedu-community/" target="_blank">Google Earth's Education Community</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="ef-footer ef-padding ef-480-width">
+									  <div class="ef-footer__logo">
+										  <a href="https://twitter.com/geteach"> 
+										  <img src="https://storage.googleapis.com/geteachkml4/logogeteachtemp.png" class="ef-content__logo" style="display: block;height: 100%;max-height: 28px;vertical-align: middle;width: auto;">
+										</a>
+									  </div>
+								  <div class="ef-footer__pagination">
+								  </div>
+								</div>
+								<div id="menuClick" style="display:none;">
+									<a href="#$[short]place1;balloon" id="layer1click"></a>
+									<a href="#$[short]place2;balloon" id="layer2click"></a>
+									<a href="#$[short]place3;balloon" id="layer3click"></a>
+									<a href="#$[short]place4;balloon" id="layer4click"></a>
+									<a href="#$[short]place5;balloon" id="layer5click"></a>
+									<a href="#$[short]place6;balloon" id="layer6click"></a>
+									<a href="#$[short]place7;balloon" id="layer7click"></a>
+									<a href="#$[short]place8;balloon" id="layer8click"></a>
+									<a href="#$[short]place9;balloon" id="layer9click"></a>
+									<a href="#$[short]place10;balloon" id="layer10click"></a>
+									<a href="#$[short]place11;balloon" id="layer11click"></a>
+									<a href="#$[short]place12;balloon" id="layer12click"></a>
+									<a href="#$[short]place13;balloon" id="layer13click"></a>
+									<a href="#ciaplacemarks;hide" class="hidelink" id="clickCIAHide"></a>
+									<a href="#hisplacemarks;hide" class="hidelink" id="clickHisHide"></a>	
+									<a href="#luplacemarks;hide" class="hidelink" id="clickLuHide"></a>	
+									<a href="#demplacemarks;hide" class="hidelink" id="clickDemHide"></a>													
+									<a href="#popplacemarks;hide" class="hidelink" id="clickPopHide"></a>	
+									<a href="#enplacemarks;hide" class="hidelink" id="clickEnHide"></a>											
+									<a href="#overview_human;balloon" class="overviewLink" id="clickOverview" ></a>										
+								</div>									
+							</main>
+						<script type="x-component/x-data">
+							{''''overlayIdsToHide'''':''''$[overlayIdsToHide]'''',''''overlayIdsToShow'''':''''$[overlayIdsToShow]'''',''''overlayHideTimeout'''':0}
+						 </script>
+						</div>   
+					<script>
+						function hideLinks(){
+							var elems = document.getElementsByClassName("hidelink");
+							for(var i=0; i<elems.length;i++) { elems[i].click(); }
+							document.getElementById('clickOverview').click();	
+						};
+					</script>	
+					<script src="https://storage.googleapis.com/geteachkml4/scripts/earthfeed.v22.x.min.js"></script>
+					<script>componentHandler.upgradeAllRegistered()</script>
+					</body>
+				</html>]]>
+			</text>
+			<bgColor>ff383226</bgColor>
+			<gx:displayMode>panel</gx:displayMode>
+		</BalloonStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>https://storage.googleapis.com/geteachkml4/blueMarble/world.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>		
+	<StyleMap id="12carousel">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#12carousel_n</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#12carousel_h</styleUrl>
+		</Pair>
+	</StyleMap>			
+	<Style id="carousel_lightbox_n">
+		<BalloonStyle>
+			<text><![CDATA[<!doctype html>
+				<html lang="en-US">
+				  <head>
+					<title>Simple Map</title>
+					<meta name="viewport" content="initial-scale=1.0">
+					<meta charset="utf-8">
+					<style>
+						#frameI {
+						position: absolute;
+						width:100%;
+						height: 100%; 
+						border: none;
+					}
+					</style>
+					<script>
+						var lockFunction =  window.screen.orientation.lock;
+						if (lockFunction.call(window.screen.orientation, 'landscape')) {
+								   console.log('Orientation locked')
+								} else {
+									console.error('There was a problem in locking the orientation')
+								}
+					</script>
+				  </head>
+				  <body style='width:100%;height:100%;'>
+					<iframe id='frameI' src='$[iframeUrl]' width='100%' height='100%'></iframe>
+				  </body>
+				</html>]]>
+			</text>
+			<bgColor>ff383226</bgColor>
+			<gx:displayMode>fullscreen</gx:displayMode>
+		</BalloonStyle>
+	</Style>
+	<Style id="carousel_lightbox_h">
+		<BalloonStyle>
+			<text><![CDATA[<!doctype html>
+				<html lang="en-US">
+				  <head>
+					<title>Simple Map</title>
+					<meta name="viewport" content="initial-scale=1.0">
+					<meta charset="utf-8">
+					<style>
+						#frameI {
+						position: absolute;
+						width:100%;
+						height: 100%; 
+						border: none;
+					}
+					</style>				
+				  </head>
+				  <body style='width:100%;height:100%;'>
+					<iframe id='frameI' src='$[iframeUrl]' width='100%' height='100%'></iframe>
+				  </body>
+				</html>]]>
+			</text>
+			<bgColor>ff383226</bgColor>
+			<gx:displayMode>fullscreen</gx:displayMode>
+		</BalloonStyle>
+	</Style>		
+	<StyleMap id="carousel_lightbox">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#carousel_lightbox_n</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#carousel_lightbox_h</styleUrl>
+		</Pair>
+	</StyleMap>	
+	<Folder id="Historic">
+		<name>1492 - Behaim</name>
+		<visibility>1</visibility>
+		<description><![CDATA[Martin Behaim's Erdapfel (1492) is the oldest existent globe of the Earth.]]></description>	
+		<styleUrl>#12carousel</styleUrl>		
+		<ExtendedData>
+			<Data name="carouselImageUrl-1">
+				<value>https://storage.googleapis.com/geteachhistoricmaps/history/1492Panel.jpg</value>
+			</Data>
+			<Data name="carouselImageCaption-1">
+				<value></value>
+			</Data>
+			<Data name="l1">
+				<value>1492 - Behaim</value>
+			</Data>	
+			<Data name="l2">
+				<value>1544 - Agnese</value>
+			</Data>	
+			<Data name="l3">
+				<value>1570 - Ortelius</value>
+			</Data>	
+			<Data name="l4">
+				<value>1589 - Jode</value>
+			</Data>	
+			<Data name="l5">
+				<value>1595 - Hondius</value>
+			</Data>	
+			<Data name="l6">
+				<value>1630 - Hondius</value>
+			</Data>	
+			<Data name="l7">
+				<value>1670 - de Wit</value>
+			</Data>	
+			<Data name="l8">
+				<value>1691 - Sanson</value>
+			</Data>	
+			<Data name="l9">
+				<value><![CDATA[1720 - de L'Isle]]></value>
+			</Data>	
+			<Data name="l10">
+				<value>1744 - Bowen</value>
+			</Data>	
+			<Data name="l11">
+				<value>1786 - Faden</value>
+			</Data>	
+			<Data name="l12">
+				<value>1794 - Dunn</value>
+			</Data>							
+			<Data name="overlayIdsToHide">
+				<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+			</Data>
+			<Data name="overlayIdsToShow">
+				<value>hisfolder1</value>
+			</Data>	
+			<Data name="idurl">
+				<value>layer1</value>
+			</Data>
+			<Data name="short">
+				<value>his</value>
+			</Data>
+			<Data name="credit">
+				<value><![CDATA[Germanisches Nationalmuseum, Nuremberg. Author: Germanisches Nationalmuseum, Nuremberg.  License: Creative Commons-by-SA 3.0]]></value>
+			</Data>				
+		</ExtendedData>		
+		<Folder id="hisplacemarks">
+			<visibility>1</visibility>
+			<name>Historic Maps</name>
+			<open>0</open>
+			<Folder id="hisfolder1">
+				<name>1492 - Behaim</name>
+				<visibility>0</visibility>
+				<GroundOverlay id="hisplace1">		
+					<name>1492 - Behaim</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1492-behaim/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1492-behaim/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Martin Behaim's Erdapfel (1492) is the oldest existent globe of the Earth.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1492Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>							
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder1</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer1</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>
+						<Data name="credit">
+							<value><![CDATA[Germanisches Nationalmuseum, Nuremberg. Author: Germanisches Nationalmuseum, Nuremberg.  License: Creative Commons-by-SA 3.0]]></value>
+						</Data>				
+					</ExtendedData>
+					<gx:balloonVisibility>1</gx:balloonVisibility>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bf1c2c39</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bf1c2c39</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>				
+			</Folder>
+			<Folder id="hisfolder2">
+				<name>1544 - Agnese</name>
+				<visibility>0</visibility>
+				<GroundOverlay id="hisplace2">
+					<name>1544 - Agnese</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1544-agnese/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1544-agnese/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Battista Agnese in 1544.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1544Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder2</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer2</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>							
+						<Data name="credit">
+							<value><![CDATA[Library of Congress, American Memory]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffc1edfe</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffc1edfe</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>				
+			</Folder>
+			<Folder id="hisfolder3">
+				<name>1570 - Ortelius</name>
+				<visibility>0</visibility>			
+				<GroundOverlay id="hisplace3">
+					<name>1570 - Ortelius</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1570-ortelius/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1570-ortelius/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Abraham Ortelius in 1570.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1570Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>							
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder3</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer3</value>
+						</Data>	
+						<Data name="short">
+							<value>his</value>
+						</Data>							
+						<Data name="credit">
+							<value><![CDATA[Library of Congress, Geography and Map Division]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bf8a8177</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffabc6d0</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>						
+			</Folder>
+			<Folder id="hisfolder4">
+				<name>1589 - Jode</name>
+				<visibility>0</visibility>				
+				<GroundOverlay id="hisplace4">
+					<name>1589 - Jode</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1589-jode/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1589-jode/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Cornelis de Jode in 1589.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1589Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>					
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder4</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer4</value>
+						</Data>	
+						<Data name="short">
+							<value>his</value>
+						</Data>
+						<Data name="credit">
+							<value><![CDATA[Wikimedia]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffc4e2ed</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ff99bbd2</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>				
+			</Folder>
+			<Folder id="hisfolder5">
+				<name>1595 - Hondius</name>
+				<visibility>0</visibility>				
+				<GroundOverlay id="hisplace5">
+					<name>1595 - Hondius</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1595-hondius/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1595-hondius/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Jodocus Hondius in 1595.]]></description>
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1595Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder5</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer5</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>							
+						<Data name="credit">
+							<value><![CDATA[Library of Congress]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bf49889d</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ff5491ab</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>					
+			</Folder>
+			<Folder id="hisfolder6">
+				<name>1630 - Hondius</name>
+				<visibility>0</visibility>				
+				<GroundOverlay id="hisplace6">
+					<name>1630 - Hondius</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1630-hondius/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1630-hondius/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Henrik Hondius in 1630 in Amsterdam.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1630Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder6</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer6</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[State Library of New South Wales]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bfcedee5</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bfe8ebf9</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>					
+			</Folder>	
+			<Folder id="hisfolder7">
+				<name>1670 - de Wit</name>
+				<visibility>0</visibility>					
+				<GroundOverlay id="hisplace7">
+					<name>1670 - de Wit</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1670-dewit/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1670-dewit/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Frederik de Wit 1670.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/DW1670Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>					
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder7</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer7</value>
+						</Data>	
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[Wikimedia]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffbddde8</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffbddde8</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>						
+			</Folder>
+			<Folder id="hisfolder8">
+				<name>1691 - Sanson</name>
+				<visibility>0</visibility>				
+				<GroundOverlay id="hisplace8">
+					<name>1691 - Sanson</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1691-sanson/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1691-sanson/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Nicholas Sanson and Alexis Hubert Jaillot in France.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1691Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>					
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder8</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer8</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[Wikimedia]]></value>
+						</Data>							
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffc7eaf4</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffc7eaf4</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>				
+			</Folder>
+			<Folder id="hisfolder9">
+				<name><![CDATA[1720 - de L'Isle]]></name>
+				<visibility>0</visibility>			
+				<GroundOverlay id="hisplace9">
+					<name><![CDATA[1720 - de L'Isle]]></name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1720-delisle/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1720-delisle/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Guillaume de L'Isle in 1720 in Paris.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/delisle1720Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder9</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer9</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>	
+						<Data name="credit">
+							<value><![CDATA[Library of Congress, Geography and Map Division]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>bf9dbed8</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffb5d6e9</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>					
+			</Folder>
+			<Folder id="hisfolder10">
+				<name>1744 - Bowen</name>
+				<visibility>0</visibility>				
+				<GroundOverlay id="hisplace10">
+					<name>1744 - Bowen</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1744-bowen/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1744-bowen/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Emmanuel Bowen in 1744.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/bowen1744Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>					
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder10</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer10</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[Wikimedia]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffa1c4ce</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffa1c4ce</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>					
+			</Folder>
+			<Folder id="hisfolder11">
+				<name>1786 - Faden</name>
+				<visibility>0</visibility>					
+				<GroundOverlay id="hisplace11">
+					<name>1786 - Faden</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1786-faden/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1786-faden/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[William Faden in 1786, London.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1786Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder11</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer11</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[Library of Congress, Geography and Map Division]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffd5f4f7</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffd5f4f7</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>						
+			</Folder>
+			<Folder id="hisfolder12">
+				<name>1794 - Dunn</name>
+				<visibility>0</visibility>					
+				<GroundOverlay id="hisplace12">
+					<name>1794 - Dunn</name>
+					<Icon>
+						<href>https://storage.googleapis.com/geteachhistoricmaps/history/1794-dunn/0/0/0.png</href>
+					</Icon>
+					<LatLonBox>
+						<north>90</north>
+						<south>-90</south>
+						<east>180</east>
+						<west>-180</west>
+					</LatLonBox>
+					<gx:MapTilePyramid>
+						<visibility>1</visibility>
+						<tileSize>256</tileSize>
+						<Link>
+							<href>https://storage.googleapis.com/geteachhistoricmaps/history/1794-dunn/$[level]/$[x]/$[y].png</href>
+						</Link>
+						<gx:tileScheme>webMercatorQuadtree</gx:tileScheme>
+						<gx:minLevel>0</gx:minLevel>
+						<gx:maxLevel>7</gx:maxLevel>
+					</gx:MapTilePyramid>
+					<snippet></snippet>
+					<description><![CDATA[Samuel Dunn and Thomas Kitchin in 1794, London.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1794Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>							
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder12</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer12</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+						<Data name="credit">
+							<value><![CDATA[Wikimedia]]></value>
+						</Data>						
+					</ExtendedData>
+				</GroundOverlay>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffd4e4eb</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,85.051129,100 0,90,100 360,90,100 360,85.051129,100 0,85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<Style>
+						<PolyStyle>
+							<color>ffd4e4eb</color>
+							<fill>1</fill>
+							<outline>0</outline>
+						</PolyStyle>
+					</Style>
+					<Polygon>
+						<extrude>1</extrude>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									0,-85.051129,100 0,-90,100 360,-90,100 360,-85.051129,100 0,-85.051129,100 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>						
+			</Folder>
+			<Folder id="hisfolder13">
+				<name><![CDATA[Today's Earth]]></name>
+				<visibility>0</visibility>				
+				<Placemark id="hisplace13">
+					<visibility>0</visibility>			
+					<name>Today's Earth - Google</name>
+					<snippet></snippet>
+					<description><![CDATA[Today's world as seen by various remote sensing technologies.]]></description>	
+					<styleUrl>#12carousel</styleUrl>					
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/mapsSatPanel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>	
+						<Data name="credit">
+							<value><![CDATA[Image Google Maps</br> Google Earth created and maintaned by <a href="https://www.google.com/earth/outreach/" target="_blank">Google Earth Outreach</a>]]></value>
+						</Data>						
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisplace1,hisplace2,hisplace3,hisplace4,hisplace5,hisplace6,hisplace7,hisplace8,hisplace9,hisplace10,hisplace11,hisplace12</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder13,hisplace13</value>
+						</Data>
+						<Data name="idurl">
+							<value>layer13</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>								
+					</ExtendedData>
+				</Placemark>
+			</Folder>		
+		</Folder>	
+		<Folder>
+			<name>Lightboxes - No need to touch</name>			
+			<Placemark id="hisplace1_ilb">
+				<name>1492 - Behaim</name>
+				<visibility>0</visibility>			
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer1]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace2_ilb">
+				<name>1544 - Agnese</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer2]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>		
+			<Placemark id="hisplace3_ilb">
+				<name>1570 - Ortelius</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer3]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace4_ilb">
+				<name>1589 - Jode</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer4]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace5_ilb">
+				<name>1595 - Hondius</name>
+				<visibility>0</visibility>				
+					<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer5]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace6_ilb">
+				<name>1630 - Hondius</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer6]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace7_ilb">
+				<name>1670 - de Wit</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer7]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace8_ilb">
+				<name>1691 - Sanson</name>
+				<visibility>0</visibility>			
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer8]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace9_ilb">
+				<name><![CDATA[1720 - de L'Isle]]></name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer9]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace10_ilb">
+				<name>1744 - Bowen</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer10]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace11_ilb">
+				<name>1786 - Faden</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer11]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace12_ilb">
+				<name>1794 - Dunn</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html#layer12]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="hisplace13_ilb">
+				<name>Today's Google Earth</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>
+			<Placemark id="Historic_ilb">
+				<name>Overview</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>			
+			<Placemark id="screen_ilb">
+				<name>Information</name>
+				<visibility>0</visibility>				
+				<styleUrl>#carousel_lightbox</styleUrl>
+				<ExtendedData>
+					<Data name="iframeUrl">
+						<value><![CDATA[https://geteach.com/maps/gemaps/historic.html]]></value>
+					</Data>	
+				</ExtendedData>				
+			</Placemark>			
+			<ScreenOverlay id="screen">	
+				<name>1492 - Behaim</name>
+				<Icon> <href>https://storage.googleapis.com/geteachkml4/infoGreyWhite2.png</href>
+				</Icon>
+					<description><![CDATA[Martin Behaim's Erdapfel (1492) is the oldest existent globe of the Earth.]]></description>	
+					<styleUrl>#12carousel</styleUrl>		
+					<ExtendedData>
+						<Data name="carouselImageUrl-1">
+							<value>https://storage.googleapis.com/geteachhistoricmaps/history/1492Panel.jpg</value>
+						</Data>
+						<Data name="carouselImageCaption-1">
+							<value></value>
+						</Data>
+						<Data name="l1">
+							<value>1492 - Behaim</value>
+						</Data>	
+						<Data name="l2">
+							<value>1544 - Agnese</value>
+						</Data>	
+						<Data name="l3">
+							<value>1570 - Ortelius</value>
+						</Data>	
+						<Data name="l4">
+							<value>1589 - Jode</value>
+						</Data>	
+						<Data name="l5">
+							<value>1595 - Hondius</value>
+						</Data>	
+						<Data name="l6">
+							<value>1630 - Hondius</value>
+						</Data>	
+						<Data name="l7">
+							<value>1670 - de Wit</value>
+						</Data>	
+						<Data name="l8">
+							<value>1691 - Sanson</value>
+						</Data>	
+						<Data name="l9">
+							<value><![CDATA[1720 - de L'Isle]]></value>
+						</Data>	
+						<Data name="l10">
+							<value>1744 - Bowen</value>
+						</Data>	
+						<Data name="l11">
+							<value>1786 - Faden</value>
+						</Data>	
+						<Data name="l12">
+							<value>1794 - Dunn</value>
+						</Data>							
+						<Data name="overlayIdsToHide">
+							<value>hisfolder1,hisfolder2,hisfolder3,hisfolder4,hisfolder5,hisfolder6,hisfolder7,hisfolder8,hisfolder9,hisfolder10,hisfolder11,hisfolder12,hisfolder13</value>
+						</Data>
+						<Data name="overlayIdsToShow">
+							<value>hisfolder1</value>
+						</Data>	
+						<Data name="idurl">
+							<value>layer1</value>
+						</Data>
+						<Data name="short">
+							<value>his</value>
+						</Data>
+						<Data name="credit">
+							<value><![CDATA[Germanisches Nationalmuseum, Nuremberg. Author: Germanisches Nationalmuseum, Nuremberg.  License: Creative Commons-by-SA 3.0]]></value>
+						</Data>				
+					</ExtendedData>
+				<overlayXY x="1.5" y="2.9" xunits="fraction" yunits="fraction"/>
+				<screenXY x="1" y="1" xunits="fraction" yunits="fraction"/>
+				<rotationXY x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+				<size x="40" y="40" xunits="pixels" yunits="pixels"/>
+			</ScreenOverlay>			
+		</Folder>
+	</Folder>
+</Document>
+</kml>	

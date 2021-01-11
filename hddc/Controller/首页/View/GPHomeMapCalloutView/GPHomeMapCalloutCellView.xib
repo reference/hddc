@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BDTableViewCell" rowHeight="50" id="QBr-UV-B86" customClass="BDTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QBr-UV-B86" id="hKW-hg-D4y">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-qK-9Xq">
+                        <rect key="frame" x="0.0" y="10" width="414" height="40"/>
+                        <color key="backgroundColor" name="紫"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="0gL-qK-9Xq" secondAttribute="bottom" id="CXt-N7-ssN"/>
+                    <constraint firstItem="0gL-qK-9Xq" firstAttribute="top" secondItem="hKW-hg-D4y" secondAttribute="top" constant="10" id="DrJ-3H-MHW"/>
+                    <constraint firstItem="0gL-qK-9Xq" firstAttribute="leading" secondItem="hKW-hg-D4y" secondAttribute="leading" id="Ug3-HS-uWg"/>
+                    <constraint firstAttribute="trailing" secondItem="0gL-qK-9Xq" secondAttribute="trailing" id="ejd-ZN-akK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outletCollection property="labels" destination="0gL-qK-9Xq" id="iqc-ZT-ArA"/>
+            </connections>
+            <point key="canvasLocation" x="112" y="98"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="紫">
+            <color red="0.68599998950958252" green="0.32199999690055847" blue="0.87100005149841309" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

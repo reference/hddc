@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="exJ-QM-vNe" customClass="BDView">
+            <rect key="frame" x="0.0" y="0.0" width="288" height="427"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQ5-lO-SL2">
+                    <rect key="frame" x="0.0" y="0.0" width="288" height="347"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OK3-vD-2rW">
+                            <rect key="frame" x="5" y="5" width="278" height="337"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="OK3-vD-2rW" firstAttribute="leading" secondItem="YQ5-lO-SL2" secondAttribute="leading" constant="5" id="Cft-Y4-eFY"/>
+                        <constraint firstAttribute="bottom" secondItem="OK3-vD-2rW" secondAttribute="bottom" constant="5" id="JVF-l3-PRG"/>
+                        <constraint firstAttribute="trailing" secondItem="OK3-vD-2rW" secondAttribute="trailing" constant="5" id="Lxi-NU-koj"/>
+                        <constraint firstItem="OK3-vD-2rW" firstAttribute="top" secondItem="YQ5-lO-SL2" secondAttribute="top" constant="5" id="Mw3-hI-lpa"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzp-7X-l9E">
+                    <rect key="frame" x="0.0" y="347" width="288" height="80"/>
+                    <state key="normal" image="icon_close"/>
+                    <connections>
+                        <action selector="onButtons:" destination="exJ-QM-vNe" eventType="touchUpInside" id="0ei-l1-1gK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YQ5-lO-SL2" secondAttribute="bottom" constant="80" id="2im-4Q-5zM"/>
+                <constraint firstAttribute="trailing" secondItem="YQ5-lO-SL2" secondAttribute="trailing" id="2q0-u2-cm4"/>
+                <constraint firstItem="YQ5-lO-SL2" firstAttribute="top" secondItem="exJ-QM-vNe" secondAttribute="top" id="9bR-IO-P0J"/>
+                <constraint firstAttribute="trailing" secondItem="Gzp-7X-l9E" secondAttribute="trailing" id="Ljr-yx-FPl"/>
+                <constraint firstAttribute="bottom" secondItem="Gzp-7X-l9E" secondAttribute="bottom" id="Ntf-tU-UH9"/>
+                <constraint firstItem="Gzp-7X-l9E" firstAttribute="top" secondItem="YQ5-lO-SL2" secondAttribute="bottom" id="chR-ld-UnT"/>
+                <constraint firstItem="YQ5-lO-SL2" firstAttribute="leading" secondItem="exJ-QM-vNe" secondAttribute="leading" id="dtu-CH-JEd"/>
+                <constraint firstItem="Gzp-7X-l9E" firstAttribute="leading" secondItem="exJ-QM-vNe" secondAttribute="leading" id="hD8-DB-77H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="textViews" destination="OK3-vD-2rW" id="WGM-8B-HnB"/>
+            </connections>
+            <point key="canvasLocation" x="-156.52173913043478" y="-46.540178571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_close" width="33.5" height="33.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

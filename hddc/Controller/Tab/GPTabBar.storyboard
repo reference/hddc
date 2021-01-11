@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hwE-nd-uTk">
+            <objects>
+                <tabBarController restorationIdentifier="GPTabBarController" storyboardIdentifier="GPTabBarController" id="iDJ-43-t2l" customClass="GPTabBarController" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="xF8-6B-7NY" customClass="BDTabBar">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" name="黄"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="selectedImageTintColor" name="red"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="fbX-PC-igM" kind="relationship" relationship="viewControllers" id="KsN-aD-3fo"/>
+                        <segue destination="DBW-Or-BeS" kind="relationship" relationship="viewControllers" id="SYE-eq-TlI"/>
+                        <segue destination="7Vg-7Z-cE9" kind="relationship" relationship="viewControllers" id="bca-ID-APb"/>
+                        <segue destination="hO3-KQ-Ovc" kind="relationship" relationship="viewControllers" id="C5r-sx-9Jb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-dK-uDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2219" y="-290"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="aae-v6-Yxl">
+            <objects>
+                <viewController restorationIdentifier="QKMineNaviController" storyboardIdentifier="QKMineNaviController" id="hO3-KQ-Ovc" customClass="ZXTabBarItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vcg-cq-XSB"/>
+                        <viewControllerLayoutGuide type="bottom" id="y3w-Go-Ju0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zp1-hV-pkE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2fh-0W-Yha"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="我的" image="person" catalog="system" selectedImage="person.fill" id="uVv-DC-W4D"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardID" value="GPMineNaviController"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="GPMine"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1CS-5b-VDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1086" y="683"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="x6R-6E-NqX">
+            <objects>
+                <viewController restorationIdentifier="QKHomeNaviController" storyboardIdentifier="QKHomeNaviController" id="fbX-PC-igM" customClass="ZXTabBarItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g44-kq-4A4"/>
+                        <viewControllerLayoutGuide type="bottom" id="NSt-R2-XXc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="grm-yo-qgN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bBg-Fm-g0f"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="首页" image="house" catalog="system" selectedImage="house.fill" id="2nO-dw-prf"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="GPHome"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardID" value="GPHomeNaviController"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pat-o5-vgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3320" y="682"/>
+        </scene>
+        <!--行情-->
+        <scene sceneID="9GN-77-axe">
+            <objects>
+                <viewController restorationIdentifier="QKScheduleNaviController" storyboardIdentifier="QKScheduleNaviController" id="DBW-Or-BeS" customClass="ZXTabBarItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ypP-oW-4T4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lql-dv-Tb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KsF-Ka-XfF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hx3-Jk-i7j"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="行情" image="info.circle" catalog="system" selectedImage="info.circle.fill" id="Ay8-Ox-wb4"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardID" value="GPQuotesNaviController"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="GPQuotes"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUt-9N-B8d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2570" y="682"/>
+        </scene>
+        <!--论坛-->
+        <scene sceneID="TNo-ol-8Lb">
+            <objects>
+                <viewController restorationIdentifier="QKForumNaviController" storyboardIdentifier="QKForumNaviController" id="7Vg-7Z-cE9" customClass="ZXTabBarItemController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0I4-L3-rhU"/>
+                        <viewControllerLayoutGuide type="bottom" id="56i-BL-rtC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zFY-Y6-qmt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0ld-EF-kkI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="论坛" image="ellipses.bubble" catalog="system" selectedImage="ellipses.bubble.fill" id="ZIF-Hq-tjM"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardID" value="GPForumNaviController"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="GPForum"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TWM-5L-zld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1804" y="682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ellipses.bubble" catalog="system" width="128" height="110"/>
+        <image name="ellipses.bubble.fill" catalog="system" width="128" height="110"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="red">
+            <color red="0.95686274509803915" green="0.062745098039215685" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="黄">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

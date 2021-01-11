@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="GPNormalPicker" id="juC-CB-m0X" customClass="GPNormalPicker">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1uc-Ya-vC4">
+                    <rect key="frame" x="0.0" y="52" width="414" height="220"/>
+                    <subviews>
+                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwC-u9-7B8">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                            <connections>
+                                <outlet property="dataSource" destination="juC-CB-m0X" id="Ful-Lo-rsb"/>
+                                <outlet property="delegate" destination="juC-CB-m0X" id="3xj-ra-D73"/>
+                            </connections>
+                        </pickerView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="8SI-Cn-Vqo"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="buK-oB-1ES">
+                    <rect key="frame" x="334" y="0.0" width="80" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="P2Z-au-XeA"/>
+                        <constraint firstAttribute="width" constant="80" id="xFh-AU-044"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" red="1" green="0.050980392159999999" blue="0.050980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtons:" destination="juC-CB-m0X" eventType="touchUpInside" id="pKZ-De-ybz"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tax-IA-CzU">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="jnq-0D-CdX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtons:" destination="juC-CB-m0X" eventType="touchUpInside" id="HrD-NZ-mcy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="2H3-sQ-uQg"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tax-IA-CzU" firstAttribute="top" secondItem="juC-CB-m0X" secondAttribute="top" id="4Oc-8G-LLG"/>
+                <constraint firstItem="2H3-sQ-uQg" firstAttribute="bottom" secondItem="1uc-Ya-vC4" secondAttribute="bottom" id="4i3-75-0dN"/>
+                <constraint firstItem="buK-oB-1ES" firstAttribute="top" secondItem="juC-CB-m0X" secondAttribute="top" id="5Rd-KB-GBk"/>
+                <constraint firstAttribute="trailing" secondItem="buK-oB-1ES" secondAttribute="trailing" id="70b-Mb-nzD"/>
+                <constraint firstItem="tax-IA-CzU" firstAttribute="leading" secondItem="2H3-sQ-uQg" secondAttribute="leading" id="B1I-Gt-EHU"/>
+                <constraint firstItem="1uc-Ya-vC4" firstAttribute="leading" secondItem="2H3-sQ-uQg" secondAttribute="leading" id="JMq-a5-c0J"/>
+                <constraint firstItem="1uc-Ya-vC4" firstAttribute="top" secondItem="tax-IA-CzU" secondAttribute="bottom" id="NjD-Fc-RuB"/>
+                <constraint firstItem="1uc-Ya-vC4" firstAttribute="top" secondItem="buK-oB-1ES" secondAttribute="bottom" id="pqq-Zd-vXC"/>
+                <constraint firstItem="2H3-sQ-uQg" firstAttribute="trailing" secondItem="1uc-Ya-vC4" secondAttribute="trailing" id="tD1-jE-lcM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="leftPicker" destination="xwC-u9-7B8" id="KCP-iA-5Vu"/>
+            </connections>
+            <point key="canvasLocation" x="173.91304347826087" y="70.3125"/>
+        </view>
+    </objects>
+</document>

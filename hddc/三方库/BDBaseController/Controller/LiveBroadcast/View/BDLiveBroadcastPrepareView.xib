@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BDLiveBroadcastPrepareView" id="iN0-l3-epB" customClass="BDLiveBroadcastPrepareView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zut-HL-UOz">
+                    <rect key="frame" x="49" y="110" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="给直播写个标题吧" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zTo-vj-4nE">
+                    <rect key="frame" x="49" y="151" width="325" height="40"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="j9l-3U-LnY"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                            <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMY-a4-U8O">
+                    <rect key="frame" x="49" y="216" width="120" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="x58-dZ-cTl"/>
+                        <constraint firstAttribute="height" constant="150" id="xpm-Rw-B7m"/>
+                    </constraints>
+                    <state key="normal" image="prepare-button-select-cover"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-vN-LLw" customClass="BDStackView">
+                    <rect key="frame" x="49" y="391" width="90" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ffk-xY-Kk6">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="竖屏" backgroundImage="prepare-button-left-unselected"/>
+                            <state key="selected" backgroundImage="prepare-button-left-selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxd-Su-bBj">
+                            <rect key="frame" x="45" y="0.0" width="45" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="横屏" backgroundImage="prepare-button-right-unselected"/>
+                            <state key="selected" backgroundImage="prepare-button-right-selected"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="2ws-oT-ZRR"/>
+                        <constraint firstAttribute="height" constant="30" id="Isc-zV-xp3"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjp-v8-anB">
+                    <rect key="frame" x="49" y="446" width="90" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="g4x-te-BTr"/>
+                        <constraint firstAttribute="width" constant="90" id="ulb-LU-ocY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="商品管理" backgroundImage="prepare-button-sku-manage"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已添加 0 件商品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyF-fR-BG2">
+                    <rect key="frame" x="159" y="452" width="109" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FBu-3B-mve" customClass="BDStackView">
+                    <rect key="frame" x="49" y="501" width="90" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUy-2l-vkK">
+                            <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="关闭" backgroundImage="prepare-button-left-unselected"/>
+                            <state key="selected" backgroundImage="prepare-button-left-selected"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwj-11-Tot">
+                            <rect key="frame" x="45" y="0.0" width="45" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="开启" backgroundImage="prepare-button-right-unselected"/>
+                            <state key="selected" backgroundImage="prepare-button-right-selected"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="MRX-xM-qgH"/>
+                        <constraint firstAttribute="height" constant="30" id="U4t-0Y-aUT"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约开播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBu-zr-2vn">
+                    <rect key="frame" x="159" y="507" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-hg-mmy">
+                    <rect key="frame" x="49" y="556" width="213" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="0.099365234375" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="89e-hA-auA"/>
+                        <constraint firstAttribute="width" constant="213" id="F1s-Wx-hwB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="选择预约开播时间">
+                        <color key="titleColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIS-AV-AQs">
+                    <rect key="frame" x="102.5" y="856" width="209" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="19u-iG-FbH"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="开播即代表你同意《铺小满直播协议》"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtO-Gq-ps2">
+                    <rect key="frame" x="114.5" y="786" width="185" height="50"/>
+                    <state key="normal" title="开始直播" backgroundImage="prepare-button-sku-manage"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CE1-MG-tlJ">
+                    <rect key="frame" x="49" y="786" width="25" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prepare-icon-美颜" translatesAutoresizingMaskIntoConstraints="NO" id="nyr-9h-Dq0">
+                            <rect key="frame" x="0.5" y="3" width="24.5" height="25"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美颜" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47C-RI-fSt">
+                            <rect key="frame" x="0.0" y="33" width="25" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk5-bI-EnO">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="50"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="5uP-Xi-qc0"/>
+                        <constraint firstItem="47C-RI-fSt" firstAttribute="centerX" secondItem="CE1-MG-tlJ" secondAttribute="centerX" id="66q-OO-oUP"/>
+                        <constraint firstItem="nyr-9h-Dq0" firstAttribute="centerX" secondItem="CE1-MG-tlJ" secondAttribute="centerX" id="ARh-Cw-vbn"/>
+                        <constraint firstItem="uk5-bI-EnO" firstAttribute="leading" secondItem="CE1-MG-tlJ" secondAttribute="leading" id="JaS-0V-epB"/>
+                        <constraint firstItem="uk5-bI-EnO" firstAttribute="top" secondItem="CE1-MG-tlJ" secondAttribute="top" id="OZB-dx-V0G"/>
+                        <constraint firstAttribute="bottom" secondItem="uk5-bI-EnO" secondAttribute="bottom" id="dnq-zQ-RDd"/>
+                        <constraint firstItem="47C-RI-fSt" firstAttribute="top" secondItem="nyr-9h-Dq0" secondAttribute="bottom" constant="5" id="dxF-wI-mpj"/>
+                        <constraint firstItem="nyr-9h-Dq0" firstAttribute="top" secondItem="CE1-MG-tlJ" secondAttribute="top" constant="3" id="g3I-GO-0dz"/>
+                        <constraint firstAttribute="trailing" secondItem="uk5-bI-EnO" secondAttribute="trailing" id="lhs-bZ-lBn"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7b-Fw-MgL">
+                    <rect key="frame" x="25" y="60" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TQp-Y0-1kF"/>
+                        <constraint firstAttribute="width" constant="40" id="sGb-0E-VLT"/>
+                    </constraints>
+                    <state key="normal" image="prepare-icon-back"/>
+                    <connections>
+                        <outlet property="topLayoutConstraint" destination="gG9-Gp-9Uq" id="tdj-bD-Za0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="L7b-Fw-MgL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="25" id="1MS-UD-les"/>
+                <constraint firstItem="cIS-AV-AQs" firstAttribute="top" secondItem="dtO-Gq-ps2" secondAttribute="bottom" constant="20" id="2Bu-um-rFy"/>
+                <constraint firstItem="zTo-vj-4nE" firstAttribute="top" secondItem="zut-HL-UOz" secondAttribute="bottom" constant="23" id="BBk-0Y-ICm"/>
+                <constraint firstAttribute="trailing" secondItem="zTo-vj-4nE" secondAttribute="trailing" constant="40" id="Cd0-Ed-V9P"/>
+                <constraint firstItem="Kjp-v8-anB" firstAttribute="top" secondItem="hLI-vN-LLw" secondAttribute="bottom" constant="25" id="FPd-uW-WaL"/>
+                <constraint firstItem="VMY-a4-U8O" firstAttribute="top" secondItem="zTo-vj-4nE" secondAttribute="bottom" constant="25" id="FaZ-8C-G6K"/>
+                <constraint firstItem="d4R-hg-mmy" firstAttribute="leading" secondItem="FBu-3B-mve" secondAttribute="leading" id="G3Z-K6-OMO"/>
+                <constraint firstItem="vyF-fR-BG2" firstAttribute="centerY" secondItem="Kjp-v8-anB" secondAttribute="centerY" id="Ghb-4h-Yps"/>
+                <constraint firstItem="CE1-MG-tlJ" firstAttribute="leading" secondItem="d4R-hg-mmy" secondAttribute="leading" id="Jiy-3W-Ugk"/>
+                <constraint firstItem="cIS-AV-AQs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LE9-si-vBx"/>
+                <constraint firstItem="QBu-zr-2vn" firstAttribute="leading" secondItem="FBu-3B-mve" secondAttribute="trailing" constant="20" id="O6j-ef-9pL"/>
+                <constraint firstItem="CE1-MG-tlJ" firstAttribute="bottom" secondItem="dtO-Gq-ps2" secondAttribute="bottom" id="Q40-y0-azp"/>
+                <constraint firstItem="vyF-fR-BG2" firstAttribute="leading" secondItem="Kjp-v8-anB" secondAttribute="trailing" constant="20" id="VfE-hC-gfE"/>
+                <constraint firstItem="zut-HL-UOz" firstAttribute="top" secondItem="L7b-Fw-MgL" secondAttribute="bottom" constant="10" id="Ze5-Hg-8Rl"/>
+                <constraint firstItem="FBu-3B-mve" firstAttribute="top" secondItem="Kjp-v8-anB" secondAttribute="bottom" constant="25" id="dtR-6o-iI5"/>
+                <constraint firstItem="zut-HL-UOz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="49" id="fuH-ZM-aw9"/>
+                <constraint firstItem="L7b-Fw-MgL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="gG9-Gp-9Uq"/>
+                <constraint firstItem="zTo-vj-4nE" firstAttribute="leading" secondItem="zut-HL-UOz" secondAttribute="leading" id="hFi-lk-Xai"/>
+                <constraint firstAttribute="bottom" secondItem="cIS-AV-AQs" secondAttribute="bottom" constant="10" id="hlc-l0-wNp"/>
+                <constraint firstItem="Kjp-v8-anB" firstAttribute="leading" secondItem="hLI-vN-LLw" secondAttribute="leading" id="iTE-gj-Jaj"/>
+                <constraint firstItem="hLI-vN-LLw" firstAttribute="leading" secondItem="VMY-a4-U8O" secondAttribute="leading" id="j6m-q4-46K"/>
+                <constraint firstItem="FBu-3B-mve" firstAttribute="leading" secondItem="Kjp-v8-anB" secondAttribute="leading" id="pWV-sG-wO8"/>
+                <constraint firstItem="hLI-vN-LLw" firstAttribute="top" secondItem="VMY-a4-U8O" secondAttribute="bottom" constant="25" id="quF-Av-5Yx"/>
+                <constraint firstItem="CE1-MG-tlJ" firstAttribute="top" secondItem="dtO-Gq-ps2" secondAttribute="top" id="t1o-7F-Xvz"/>
+                <constraint firstItem="dtO-Gq-ps2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="v9s-dh-BXs"/>
+                <constraint firstItem="QBu-zr-2vn" firstAttribute="centerY" secondItem="FBu-3B-mve" secondAttribute="centerY" id="xeX-fR-QIX"/>
+                <constraint firstItem="VMY-a4-U8O" firstAttribute="leading" secondItem="zTo-vj-4nE" secondAttribute="leading" id="yJ6-EU-DdM"/>
+                <constraint firstItem="d4R-hg-mmy" firstAttribute="top" secondItem="FBu-3B-mve" secondAttribute="bottom" constant="25" id="yRU-Cd-vb1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="appointmentSwitcherStackView" destination="FBu-3B-mve" id="IYw-Uh-W4y"/>
+                <outlet property="appointmentTimerButton" destination="d4R-hg-mmy" id="iGe-Hi-Yfl"/>
+                <outlet property="backBtn" destination="L7b-Fw-MgL" id="mWr-Cl-Pac"/>
+                <outlet property="coverButton" destination="VMY-a4-U8O" id="vpp-8o-ded"/>
+                <outlet property="protocolButton" destination="cIS-AV-AQs" id="Yd9-go-yOZ"/>
+                <outlet property="screenOrientationStackView" destination="hLI-vN-LLw" id="Clk-TU-E8W"/>
+                <outlet property="skuManageButton" destination="Kjp-v8-anB" id="kaY-sm-T36"/>
+                <outlet property="skusLabel" destination="vyF-fR-BG2" id="NKe-7t-dcH"/>
+                <outlet property="startLiveBroadcastButton" destination="dtO-Gq-ps2" id="Y4i-pH-4qt"/>
+                <outlet property="titleTextField" destination="zTo-vj-4nE" id="09y-nm-EG3"/>
+            </connections>
+            <point key="canvasLocation" x="-172.46376811594203" y="127.90178571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="prepare-button-left-selected" width="45" height="30"/>
+        <image name="prepare-button-left-unselected" width="45" height="30"/>
+        <image name="prepare-button-right-selected" width="45" height="30"/>
+        <image name="prepare-button-right-unselected" width="45" height="30"/>
+        <image name="prepare-button-select-cover" width="120" height="150"/>
+        <image name="prepare-button-sku-manage" width="185" height="50"/>
+        <image name="prepare-icon-back" width="10" height="16.5"/>
+        <image name="prepare-icon-美颜" width="24.5" height="25"/>
+    </resources>
+</document>

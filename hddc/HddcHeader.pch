@@ -1,0 +1,67 @@
+//
+//  BDGuPiao.pch
+//  BDGuPiao
+//
+//  Created by B-A-N on 2020/7/27.
+//  Copyright © 2020 B-A-N. All rights reserved.
+//
+
+#ifndef BDGuPiao_pch
+#define BDGuPiao_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AFNetworking/AFNetworking.h>
+//#import <BmobSDK/Bmob.h>
+#import <BDToolKit/BDToolKit.h>
+#import "BDBaseController.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <FLAnimatedImage/FLAnimatedImage.h>
+#import <FLAnimatedImage/FLAnimatedImageView.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <MJRefresh/MJRefresh.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <SDWebImage/SDWebImage.h>
+#import <StandardPageSize.h>
+#import <YYModel/YYModel.h>
+#import <ZXToolbox/ZXToolbox.h>
+#import <StandardHTTPResponse/StandardHTTPResponse.h>
+#import <IDMPhotoBrowser/IDMPhotoBrowser.h>
+//#import <TYCyclePagerView/TYCyclePagerView.h>
+#import <PYSearch/PYSearch.h>
+#import <ArcGIS/ArcGIS.h>
+#import <BRPickerView/BRPickerView.h>
+#import <MKDropdownMenu/MKDropdownMenu.h>
+//#import <SJVideoPlayer/SJVideoPlayer.h>
+#import <INTULocationManager/INTULocationManager.h>
+#import "KKBaseViewController.h"
+#import "KKBaseTableViewController.h"
+#import "StandardHTTPResponse.h"
+#import "GPNormalPicker.h"
+#import "BDArcGISUtil.h"
+#import "NSString+YYAdd.h"
+#import "BDArcGISGraphic.h"
+#import "GPForumType.h"
+#import "BDReachability.h"
+
+typedef enum {
+    InterfaceStatus_New = 0,//新增
+    InterfaceStatus_Edit, //编辑模式
+    InterfaceStatus_Show   //显示
+}InterfaceStatus; //表单界面展示状态
+
+//local
+#import "GPTaskQueue.h"
+#import "GPCityPicker.h"
+#import "YXAPI.h"
+#import "BDLocationTrace.h"
+
+
+#import "GPLoginHeader.h"
+#import "GPFormBaseController.h"
+
+
+#endif /* BDGuPiao_pch */

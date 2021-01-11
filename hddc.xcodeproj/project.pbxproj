@@ -1,0 +1,2808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842C48FC25ABEEEA0034E6DB /* YXTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46D725ABEEE90034E6DB /* YXTable.m */; };
+		842C48FD25ABEEEA0034E6DB /* GPTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46D925ABEEE90034E6DB /* GPTask.m */; };
+		842C48FE25ABEEEA0034E6DB /* GPTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46DA25ABEEE90034E6DB /* GPTaskQueue.m */; };
+		842C48FF25ABEEEA0034E6DB /* GPInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C46DD25ABEEE90034E6DB /* GPInfoView.xib */; };
+		842C490025ABEEEA0034E6DB /* GPNormalPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C46E025ABEEE90034E6DB /* GPNormalPicker.xib */; };
+		842C490125ABEEEA0034E6DB /* GPNormalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46E125ABEEE90034E6DB /* GPNormalPicker.m */; };
+		842C490225ABEEEA0034E6DB /* BDArcGISUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */; };
+		842C490325ABEEEA0034E6DB /* BDArcGISGraphic.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46E625ABEEE90034E6DB /* BDArcGISGraphic.m */; };
+		842C490425ABEEEA0034E6DB /* GPCityPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C46E925ABEEE90034E6DB /* GPCityPicker.xib */; };
+		842C490525ABEEEA0034E6DB /* GPCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46EA25ABEEE90034E6DB /* GPCityPicker.m */; };
+		842C490625ABEEEA0034E6DB /* YXTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46EC25ABEEE90034E6DB /* YXTrace.m */; };
+		842C490725ABEEEA0034E6DB /* BDLocationTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46EF25ABEEE90034E6DB /* BDLocationTrace.m */; };
+		842C490825ABEEEA0034E6DB /* FFInstanceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46F325ABEEE90034E6DB /* FFInstanceNode.m */; };
+		842C490925ABEEEA0034E6DB /* FFPropertyInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46F625ABEEE90034E6DB /* FFPropertyInspector.m */; };
+		842C490B25ABEEEA0034E6DB /* TianDiTuLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */; };
+		842C490C25ABEEEA0034E6DB /* TianDiTuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46FE25ABEEE90034E6DB /* TianDiTuLayer.m */; };
+		842C490D25ABEEEA0034E6DB /* AGSGoogleMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */; };
+		842C490F25ABEEEA0034E6DB /* HistoricMapsEarthEDU.kml in Resources */ = {isa = PBXBuildFile; fileRef = 842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */; };
+		842C491025ABEEEA0034E6DB /* BDHImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */; };
+		842C491125ABEEEA0034E6DB /* BDHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470A25ABEEE90034E6DB /* BDHAlbum.m */; };
+		842C491225ABEEEA0034E6DB /* BDHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470B25ABEEE90034E6DB /* BDHAsset.m */; };
+		842C491325ABEEEA0034E6DB /* BDHImageFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471225ABEEE90034E6DB /* BDHImageFlowViewController.m */; };
+		842C491425ABEEEA0034E6DB /* BDHAlbumTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471325ABEEE90034E6DB /* BDHAlbumTableViewController.m */; };
+		842C491525ABEEEA0034E6DB /* BDHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471525ABEEE90034E6DB /* BDHImagePickerController.m */; };
+		842C491625ABEEEA0034E6DB /* BDHPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471725ABEEE90034E6DB /* BDHPhotoBrowser.m */; };
+		842C491725ABEEEA0034E6DB /* BDHImageFetchOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471925ABEEE90034E6DB /* BDHImageFetchOperation.m */; };
+		842C491825ABEEEA0034E6DB /* BDHAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471D25ABEEE90034E6DB /* BDHAlbumCell.m */; };
+		842C491925ABEEEA0034E6DB /* BDHBadgeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C471E25ABEEE90034E6DB /* BDHBadgeLabel.m */; };
+		842C491A25ABEEEA0034E6DB /* BDHTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472325ABEEE90034E6DB /* BDHTapDetectingImageView.m */; };
+		842C491B25ABEEEA0034E6DB /* BDHFullImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472425ABEEE90034E6DB /* BDHFullImageButton.m */; };
+		842C491C25ABEEEA0034E6DB /* BDHAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472725ABEEE90034E6DB /* BDHAssetsViewCell.m */; };
+		842C491D25ABEEEA0034E6DB /* BDHUnAuthorizedTipsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472825ABEEE90034E6DB /* BDHUnAuthorizedTipsView.m */; };
+		842C491E25ABEEEA0034E6DB /* BDHBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472925ABEEE90034E6DB /* BDHBrowserCell.m */; };
+		842C491F25ABEEEA0034E6DB /* BDHSendButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C472A25ABEEE90034E6DB /* BDHSendButton.m */; };
+		842C492025ABEEEA0034E6DB /* BDHImagePicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = 842C472C25ABEEE90034E6DB /* BDHImagePicker.strings */; };
+		842C492125ABEEEA0034E6DB /* imageResources.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C472F25ABEEE90034E6DB /* imageResources.xcassets */; };
+		842C492225ABEEEA0034E6DB /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C473125ABEEE90034E6DB /* UIColor+Hex.m */; };
+		842C492325ABEEEA0034E6DB /* UIView+BDHImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C473525ABEEE90034E6DB /* UIView+BDHImagePicker.m */; };
+		842C492425ABEEEA0034E6DB /* UIViewController+BDHImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C473625ABEEE90034E6DB /* UIViewController+BDHImagePicker.m */; };
+		842C492525ABEEEA0034E6DB /* BDBaseController.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C473825ABEEE90034E6DB /* BDBaseController.xcassets */; };
+		842C492625ABEEEA0034E6DB /* BDBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C473C25ABEEE90034E6DB /* BDBaseCollectionViewController.m */; };
+		842C492725ABEEEA0034E6DB /* BDHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C473E25ABEEE90034E6DB /* BDHTTP.m */; };
+		842C492825ABEEEA0034E6DB /* BDBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C474225ABEEE90034E6DB /* BDBaseTableViewController.m */; };
+		842C492925ABEEEA0034E6DB /* BDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C474625ABEEE90034E6DB /* BDTextFieldCell.m */; };
+		842C492A25ABEEEA0034E6DB /* UITableViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C474A25ABEEE90034E6DB /* UITableViewController+HUD.m */; };
+		842C492B25ABEEEA0034E6DB /* UICollectionViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C474D25ABEEE90034E6DB /* UICollectionViewController+HUD.m */; };
+		842C492C25ABEEEA0034E6DB /* UIViewController+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C474F25ABEEE90034E6DB /* UIViewController+HUD.m */; };
+		842C492D25ABEEEA0034E6DB /* UITableView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C475325ABEEE90034E6DB /* UITableView+Refresh.m */; };
+		842C492E25ABEEEA0034E6DB /* BDScan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C475625ABEEE90034E6DB /* BDScan.storyboard */; };
+		842C492F25ABEEEA0034E6DB /* Frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475725ABEEE90034E6DB /* Frame@2x.png */; };
+		842C493025ABEEEA0034E6DB /* Frame@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475825ABEEE90034E6DB /* Frame@3x.png */; };
+		842C493125ABEEEA0034E6DB /* Line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475925ABEEE90034E6DB /* Line@2x.png */; };
+		842C493225ABEEEA0034E6DB /* Line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475A25ABEEE90034E6DB /* Line@3x.png */; };
+		842C493325ABEEEA0034E6DB /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475B25ABEEE90034E6DB /* Close@3x.png */; };
+		842C493425ABEEEA0034E6DB /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C475C25ABEEE90034E6DB /* Close@2x.png */; };
+		842C493525ABEEEA0034E6DB /* BDScanController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C475D25ABEEE90034E6DB /* BDScanController.m */; };
+		842C493625ABEEEA0034E6DB /* BDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C476125ABEEE90034E6DB /* BDWebViewController.m */; };
+		842C493725ABEEEA0034E6DB /* BDLiveBroadcast.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C476325ABEEE90034E6DB /* BDLiveBroadcast.xcassets */; };
+		842C493825ABEEEA0034E6DB /* BDLiveBroadcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C476425ABEEE90034E6DB /* BDLiveBroadcastController.m */; };
+		842C493925ABEEEA0034E6DB /* BDLiveBroadcastPrepareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C476625ABEEE90034E6DB /* BDLiveBroadcastPrepareView.m */; };
+		842C493A25ABEEEA0034E6DB /* BDLiveBroadcastPrepareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C476825ABEEE90034E6DB /* BDLiveBroadcastPrepareView.xib */; };
+		842C493B25ABEEEA0034E6DB /* BDLiveBroadcast.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C476925ABEEE90034E6DB /* BDLiveBroadcast.storyboard */; };
+		842C493C25ABEEEA0034E6DB /* BDBaseDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C476C25ABEEE90034E6DB /* BDBaseDefine.m */; };
+		842C493D25ABEEEA0034E6DB /* BDBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C476F25ABEEE90034E6DB /* BDBaseTabBarController.m */; };
+		842C493E25ABEEEA0034E6DB /* BDBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C477225ABEEE90034E6DB /* BDBaseViewController.m */; };
+		842C493F25ABEEEA0034E6DB /* BDBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C477625ABEEE90034E6DB /* BDBaseViewModel.m */; };
+		842C494025ABEEEA0034E6DB /* BDTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C477825ABEEE90034E6DB /* BDTabBar.m */; };
+		842C494125ABEEEA0034E6DB /* BDTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C477C25ABEEE90034E6DB /* BDTimePickerView.m */; };
+		842C494225ABEEEA0034E6DB /* BDTimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C477E25ABEEE90034E6DB /* BDTimePickerView.xib */; };
+		842C494325ABEEEA0034E6DB /* BDToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478025ABEEE90034E6DB /* BDToastView.m */; };
+		842C494425ABEEEA0034E6DB /* BDWebImageAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478425ABEEE90034E6DB /* BDWebImageAutoSize.m */; };
+		842C494525ABEEEA0034E6DB /* BDWebImageAutoSizeCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478525ABEEE90034E6DB /* BDWebImageAutoSizeCache.m */; };
+		842C494625ABEEEA0034E6DB /* UITableView+BDWebImageAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478625ABEEE90034E6DB /* UITableView+BDWebImageAutoSize.m */; };
+		842C494725ABEEEA0034E6DB /* UICollectionView+BDWebImageAutoSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478725ABEEE90034E6DB /* UICollectionView+BDWebImageAutoSize.m */; };
+		842C494825ABEEEA0034E6DB /* BDWebImageAutoSizeConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C478825ABEEE90034E6DB /* BDWebImageAutoSizeConst.m */; };
+		842C494B25ABEEEA0034E6DB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C479225ABEEE90034E6DB /* AppDelegate.m */; };
+		842C494C25ABEEEA0034E6DB /* YXHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C479725ABEEE90034E6DB /* YXHTTP.m */; };
+		842C494D25ABEEEA0034E6DB /* YXForumDataInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C479A25ABEEE90034E6DB /* YXForumDataInfoModel.m */; };
+		842C494E25ABEEEA0034E6DB /* YXAppInfomationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C479D25ABEEE90034E6DB /* YXAppInfomationModel.m */; };
+		842C494F25ABEEEA0034E6DB /* YXTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47A025ABEEE90034E6DB /* YXTaskModel.m */; };
+		842C495025ABEEEA0034E6DB /* YXUpdateImagesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47A425ABEEE90034E6DB /* YXUpdateImagesModel.m */; };
+		842C495125ABEEEA0034E6DB /* YXOSSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47A525ABEEE90034E6DB /* YXOSSModel.m */; };
+		842C495225ABEEEA0034E6DB /* YXAppBannerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47A925ABEEE90034E6DB /* YXAppBannerModel.m */; };
+		842C495325ABEEEA0034E6DB /* YXTracePointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47AC25ABEEE90034E6DB /* YXTracePointModel.m */; };
+		842C495425ABEEEA0034E6DB /* YXUserLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47B025ABEEE90034E6DB /* YXUserLoginModel.m */; };
+		842C495525ABEEEA0034E6DB /* YXUserUpdatePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47B125ABEEE90034E6DB /* YXUserUpdatePasswordModel.m */; };
+		842C495625ABEEEA0034E6DB /* YXUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47B325ABEEE90034E6DB /* YXUserModel.m */; };
+		842C495725ABEEEA0034E6DB /* YXForumSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47B525ABEEE90034E6DB /* YXForumSaver.m */; };
+		842C495825ABEEEA0034E6DB /* YXGeologicalSvyPlanningPtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47B925ABEEE90034E6DB /* YXGeologicalSvyPlanningPtModel.m */; };
+		842C495925ABEEEA0034E6DB /* YXGeologicalSvyPlanningLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47BB25ABEEE90034E6DB /* YXGeologicalSvyPlanningLineModel.m */; };
+		842C495A25ABEEEA0034E6DB /* YXGeophySvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47BF25ABEEE90034E6DB /* YXGeophySvyPointModel.m */; };
+		842C495B25ABEEEA0034E6DB /* YXGeophySvyLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47C225ABEEE90034E6DB /* YXGeophySvyLineModel.m */; };
+		842C495C25ABEEEA0034E6DB /* YXSlectionDictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47C525ABEEE90034E6DB /* YXSlectionDictModel.m */; };
+		842C495D25ABEEEA0034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 in Resources */ = {isa = PBXBuildFile; fileRef = 842C47C625ABEEE90034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 */; };
+		842C495E25ABEEEA0034E6DB /* YXSamplePointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47CA25ABEEE90034E6DB /* YXSamplePointModel.m */; };
+		842C495F25ABEEEA0034E6DB /* YXGeoGeomorphySvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47CE25ABEEE90034E6DB /* YXGeoGeomorphySvyPointModel.m */; };
+		842C496025ABEEEA0034E6DB /* YXFaultSvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47D125ABEEE90034E6DB /* YXFaultSvyPointModel.m */; };
+		842C496125ABEEEA0034E6DB /* YXStratigraphySvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47D525ABEEE90034E6DB /* YXStratigraphySvyPointModel.m */; };
+		842C496225ABEEEA0034E6DB /* YXTrenchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47D725ABEEE90034E6DB /* YXTrenchModel.m */; };
+		842C496325ABEEEA0034E6DB /* YXGeologicalSvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47DA25ABEEE90034E6DB /* YXGeologicalSvyPointModel.m */; };
+		842C496425ABEEEA0034E6DB /* YXGeologicalSvyLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47DE25ABEEE90034E6DB /* YXGeologicalSvyLineModel.m */; };
+		842C496525ABEEEA0034E6DB /* YXDrillHoleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47E225ABEEE90034E6DB /* YXDrillHoleModel.m */; };
+		842C496625ABEEEA0034E6DB /* YXFormListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47E525ABEEE90034E6DB /* YXFormListModel.m */; };
+		842C496725ABEEEA0034E6DB /* YXGeomorphySvySamplePointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47E925ABEEE90034E6DB /* YXGeomorphySvySamplePointModel.m */; };
+		842C496825ABEEEA0034E6DB /* YXGeomorphySvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47ED25ABEEE90034E6DB /* YXGeomorphySvyPointModel.m */; };
+		842C496925ABEEEA0034E6DB /* YXGeomorphySvyReProfModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47EF25ABEEE90034E6DB /* YXGeomorphySvyReProfModel.m */; };
+		842C496A25ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47F225ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.m */; };
+		842C496B25ABEEEA0034E6DB /* YXGeomorphySvyLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47F525ABEEEA0034E6DB /* YXGeomorphySvyLineModel.m */; };
+		842C496C25ABEEEA0034E6DB /* YXGeomorStationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47F825ABEEEA0034E6DB /* YXGeomorStationModel.m */; };
+		842C496D25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47FC25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.m */; };
+		842C496E25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C47FF25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m */; };
+		842C496F25ABEEEA0034E6DB /* YXVolcanicSamplePointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C480425ABEEEA0034E6DB /* YXVolcanicSamplePointModel.m */; };
+		842C497025ABEEEA0034E6DB /* YXLavaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C480725ABEEEA0034E6DB /* YXLavaModel.m */; };
+		842C497125ABEEEA0034E6DB /* YXCraterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C480925ABEEEA0034E6DB /* YXCraterModel.m */; };
+		842C497225ABEEEA0034E6DB /* YXVolcanicSvyPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C480D25ABEEEA0034E6DB /* YXVolcanicSvyPointModel.m */; };
+		842C497325ABEEEA0034E6DB /* YXProjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C481025ABEEEA0034E6DB /* YXProjectModel.m */; };
+		842C497425ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C481225ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.m */; };
+		842C497525ABEEEA0034E6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C481625ABEEEA0034E6DB /* Assets.xcassets */; };
+		842C497625ABEEEA0034E6DB /* GPHomeProgramListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C481925ABEEEA0034E6DB /* GPHomeProgramListController.m */; };
+		842C497725ABEEEA0034E6DB /* GPHomeMeCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C481B25ABEEEA0034E6DB /* GPHomeMeCenter.m */; };
+		842C497825ABEEEA0034E6DB /* BDSelectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C481F25ABEEEA0034E6DB /* BDSelectionModel.m */; };
+		842C497925ABEEEA0034E6DB /* GPHomeChangePasswordController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482025ABEEEA0034E6DB /* GPHomeChangePasswordController.m */; };
+		842C497A25ABEEEA0034E6DB /* GPMultiTracePointsUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482325ABEEEA0034E6DB /* GPMultiTracePointsUploader.m */; };
+		842C497B25ABEEEA0034E6DB /* GPForumJumper.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482525ABEEEA0034E6DB /* GPForumJumper.m */; };
+		842C497C25ABEEEA0034E6DB /* GPMultiForumUploader.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482725ABEEEA0034E6DB /* GPMultiForumUploader.m */; };
+		842C497D25ABEEEA0034E6DB /* GPArcGisMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482A25ABEEEA0034E6DB /* GPArcGisMapController.m */; };
+		842C497E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C482E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard */; };
+		842C497F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C482F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m */; };
+		842C498025ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C483125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard */; };
+		842C498125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C483225ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m */; };
+		842C498225ABEEEA0034E6DB /* GPTanCeTypeEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C483525ABEEEA0034E6DB /* GPTanCeTypeEntity.m */; };
+		842C498325ABEEEA0034E6DB /* BDReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C483925ABEEEA0034E6DB /* BDReachability.m */; };
+		842C498425ABEEEA0034E6DB /* GPForumType.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C483A25ABEEEA0034E6DB /* GPForumType.m */; };
+		842C498525ABEEEA0034E6DB /* GPImageEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C483C25ABEEEA0034E6DB /* GPImageEntity.m */; };
+		842C498625ABEEEA0034E6DB /* dixingType.json in Resources */ = {isa = PBXBuildFile; fileRef = 842C483D25ABEEEA0034E6DB /* dixingType.json */; };
+		842C498725ABEEEA0034E6DB /* GPGeophySvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C484025ABEEEA0034E6DB /* GPGeophySvyPoint.m */; };
+		842C498825ABEEEA0034E6DB /* GPGeophySvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C484125ABEEEA0034E6DB /* GPGeophySvyPoint.storyboard */; };
+		842C498925ABEEEA0034E6DB /* GPGeophySvyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C484525ABEEEA0034E6DB /* GPGeophySvyLine.m */; };
+		842C498A25ABEEEA0034E6DB /* GPGeophySvyLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C484625ABEEEA0034E6DB /* GPGeophySvyLine.storyboard */; };
+		842C498B25ABEEEA0034E6DB /* GPForumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C484725ABEEEA0034E6DB /* GPForumListController.m */; };
+		842C498C25ABEEEA0034E6DB /* GPTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C484825ABEEEA0034E6DB /* GPTask.storyboard */; };
+		842C498D25ABEEEA0034E6DB /* GPSamplePoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C484C25ABEEEA0034E6DB /* GPSamplePoint.storyboard */; };
+		842C498E25ABEEEA0034E6DB /* GPSamplePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C484D25ABEEEA0034E6DB /* GPSamplePoint.m */; };
+		842C498F25ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C485125ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m */; };
+		842C499025ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C485225ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard */; };
+		842C499125ABEEEA0034E6DB /* GPFaultSvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C485525ABEEEA0034E6DB /* GPFaultSvyPoint.storyboard */; };
+		842C499225ABEEEA0034E6DB /* GPFaultSvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C485625ABEEEA0034E6DB /* GPFaultSvyPoint.m */; };
+		842C499325ABEEEA0034E6DB /* GPStratigraphySvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C485925ABEEEA0034E6DB /* GPStratigraphySvyPoint.m */; };
+		842C499425ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C485A25ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard */; };
+		842C499525ABEEEA0034E6DB /* GPTrench.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C485D25ABEEEA0034E6DB /* GPTrench.storyboard */; };
+		842C499625ABEEEA0034E6DB /* GPTrench.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C485F25ABEEEA0034E6DB /* GPTrench.m */; };
+		842C499725ABEEEA0034E6DB /* GPGeologicalSvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C486125ABEEEA0034E6DB /* GPGeologicalSvyPoint.m */; };
+		842C499825ABEEEA0034E6DB /* GPGeologicalSvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C486325ABEEEA0034E6DB /* GPGeologicalSvyPoint.storyboard */; };
+		842C499925ABEEEA0034E6DB /* GPGeologicalSvyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C486525ABEEEA0034E6DB /* GPGeologicalSvyLine.m */; };
+		842C499A25ABEEEA0034E6DB /* GPGeologicalSvyLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C486725ABEEEA0034E6DB /* GPGeologicalSvyLine.storyboard */; };
+		842C499B25ABEEEA0034E6DB /* GPTaskMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C486925ABEEEA0034E6DB /* GPTaskMapController.m */; };
+		842C499C25ABEEEA0034E6DB /* GPDrillHole.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C486C25ABEEEA0034E6DB /* GPDrillHole.storyboard */; };
+		842C499D25ABEEEA0034E6DB /* GPDrillHole.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C486D25ABEEEA0034E6DB /* GPDrillHole.m */; };
+		842C499E25ABEEEA0034E6DB /* GPTaskImagesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C487125ABEEEA0034E6DB /* GPTaskImagesCollectionCell.xib */; };
+		842C499F25ABEEEA0034E6DB /* GPPintTuanTimePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C487225ABEEEA0034E6DB /* GPPintTuanTimePicker.xib */; };
+		842C49A025ABEEEA0034E6DB /* GPMapLayerPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C487525ABEEEA0034E6DB /* GPMapLayerPicker.xib */; };
+		842C49A125ABEEEA0034E6DB /* GPMapLayerPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C487625ABEEEA0034E6DB /* GPMapLayerPicker.m */; };
+		842C49A225ABEEEA0034E6DB /* GPDiXinTypePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C487825ABEEEA0034E6DB /* GPDiXinTypePicker.m */; };
+		842C49A325ABEEEA0034E6DB /* GPDiXinTypePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C487A25ABEEEA0034E6DB /* GPDiXinTypePicker.xib */; };
+		842C49A425ABEEEA0034E6DB /* GPTaskImagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C487D25ABEEEA0034E6DB /* GPTaskImagesCell.xib */; };
+		842C49A525ABEEEA0034E6DB /* GPTaskImagesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C487E25ABEEEA0034E6DB /* GPTaskImagesCell.m */; };
+		842C49A625ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C488125ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.m */; };
+		842C49A725ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C488225ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.storyboard */; };
+		842C49A825ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C488625ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard */; };
+		842C49A925ABEEEA0034E6DB /* GPGeomorphySvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C488725ABEEEA0034E6DB /* GPGeomorphySvyPoint.m */; };
+		842C49AA25ABEEEA0034E6DB /* GPGeomorphySvyReProf.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C488A25ABEEEA0034E6DB /* GPGeomorphySvyReProf.m */; };
+		842C49AB25ABEEEA0034E6DB /* GPGeomorphySvyReProf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C488B25ABEEEA0034E6DB /* GPGeomorphySvyReProf.storyboard */; };
+		842C49AC25ABEEEA0034E6DB /* GPGeomorphySvyRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C488D25ABEEEA0034E6DB /* GPGeomorphySvyRegion.m */; };
+		842C49AD25ABEEEA0034E6DB /* GPGeomorphySvyRegion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C488F25ABEEEA0034E6DB /* GPGeomorphySvyRegion.storyboard */; };
+		842C49AE25ABEEEA0034E6DB /* GPGeomorphySvyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C489125ABEEEA0034E6DB /* GPGeomorphySvyLine.m */; };
+		842C49AF25ABEEEA0034E6DB /* GPGeomorphySvyLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C489225ABEEEA0034E6DB /* GPGeomorphySvyLine.storyboard */; };
+		842C49B025ABEEEA0034E6DB /* GPGeomorStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C489625ABEEEA0034E6DB /* GPGeomorStation.m */; };
+		842C49B125ABEEEA0034E6DB /* GPGeomorStation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C489725ABEEEA0034E6DB /* GPGeomorStation.storyboard */; };
+		842C49B225ABEEEA0034E6DB /* GPGeochemicalSvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C489A25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.m */; };
+		842C49B325ABEEEA0034E6DB /* GPGeochemicalSvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C489C25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.storyboard */; };
+		842C49B425ABEEEA0034E6DB /* GPGeochemicalSvyLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C489E25ABEEEA0034E6DB /* GPGeochemicalSvyLine.m */; };
+		842C49B525ABEEEA0034E6DB /* GPGeochemicalSvyLine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C489F25ABEEEA0034E6DB /* GPGeochemicalSvyLine.storyboard */; };
+		842C49B625ABEEEA0034E6DB /* GPTaskListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48A125ABEEEA0034E6DB /* GPTaskListController.m */; };
+		842C49B725ABEEEA0034E6DB /* GPNewTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48A225ABEEEA0034E6DB /* GPNewTaskController.m */; };
+		842C49B825ABEEEA0034E6DB /* GPVolcanicSamplePoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48A625ABEEEA0034E6DB /* GPVolcanicSamplePoint.storyboard */; };
+		842C49B925ABEEEA0034E6DB /* GPVolcanicSamplePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48A725ABEEEA0034E6DB /* GPVolcanicSamplePoint.m */; };
+		842C49BA25ABEEEA0034E6DB /* GPLava.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48A925ABEEEA0034E6DB /* GPLava.storyboard */; };
+		842C49BB25ABEEEA0034E6DB /* GPLava.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48AA25ABEEEA0034E6DB /* GPLava.m */; };
+		842C49BC25ABEEEA0034E6DB /* GPCrater.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48AD25ABEEEA0034E6DB /* GPCrater.m */; };
+		842C49BD25ABEEEA0034E6DB /* GPCrater.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48AE25ABEEEA0034E6DB /* GPCrater.storyboard */; };
+		842C49BE25ABEEEA0034E6DB /* GPVolcanicSvyPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48B125ABEEEA0034E6DB /* GPVolcanicSvyPoint.m */; };
+		842C49BF25ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48B325ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard */; };
+		842C49C025ABEEEA0034E6DB /* GPFormBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48B525ABEEEA0034E6DB /* GPFormBaseController.m */; };
+		842C49C125ABEEEA0034E6DB /* GPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48B825ABEEEA0034E6DB /* GPHomeController.m */; };
+		842C49C225ABEEEA0034E6DB /* GPOfflineForumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48BA25ABEEEA0034E6DB /* GPOfflineForumListController.m */; };
+		842C49C325ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48BD25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.xib */; };
+		842C49C425ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48BF25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.m */; };
+		842C49C525ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48C225ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib */; };
+		842C49C625ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48C325ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m */; };
+		842C49C725ABEEEA0034E6DB /* GPHomeOfflinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48C625ABEEEA0034E6DB /* GPHomeOfflinePicker.xib */; };
+		842C49C825ABEEEA0034E6DB /* GPHomeOfflinePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48C725ABEEEA0034E6DB /* GPHomeOfflinePicker.m */; };
+		842C49C925ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48CA25ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib */; };
+		842C49CA25ABEEEA0034E6DB /* GPHomeMapCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48CB25ABEEEA0034E6DB /* GPHomeMapCalloutView.m */; };
+		842C49CB25ABEEEA0034E6DB /* GPHomeMapCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48CC25ABEEEA0034E6DB /* GPHomeMapCalloutView.xib */; };
+		842C49CC25ABEEEA0034E6DB /* GPHomeOnlinePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48CE25ABEEEA0034E6DB /* GPHomeOnlinePicker.xib */; };
+		842C49CD25ABEEEA0034E6DB /* GPHomeOnlinePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48CF25ABEEEA0034E6DB /* GPHomeOnlinePicker.m */; };
+		842C49CE25ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48D225ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m */; };
+		842C49CF25ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48D325ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib */; };
+		842C49D025ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842C48D625ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib */; };
+		842C49D125ABEEEA0034E6DB /* GPTraceZhiPaiPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48D825ABEEEA0034E6DB /* GPTraceZhiPaiPicker.m */; };
+		842C49D225ABEEEA0034E6DB /* GPHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48DA25ABEEEA0034E6DB /* GPHome.storyboard */; };
+		842C49D325ABEEEA0034E6DB /* GPTempLaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48DD25ABEEEA0034E6DB /* GPTempLaunchController.m */; };
+		842C49D425ABEEEA0034E6DB /* logo001@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C48DF25ABEEEA0034E6DB /* logo001@3x.png */; };
+		842C49D525ABEEEA0034E6DB /* logo001@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842C48E025ABEEEA0034E6DB /* logo001@2x.png */; };
+		842C49D625ABEEEA0034E6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48E125ABEEEA0034E6DB /* LaunchScreen.storyboard */; };
+		842C49D725ABEEEA0034E6DB /* GPTempLaunch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48E425ABEEEA0034E6DB /* GPTempLaunch.storyboard */; };
+		842C49D825ABEEEA0034E6DB /* GPLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48E625ABEEEA0034E6DB /* GPLoginController.m */; };
+		842C49D925ABEEEA0034E6DB /* GPLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48E825ABEEEA0034E6DB /* GPLogin.storyboard */; };
+		842C49DA25ABEEEA0034E6DB /* GPRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48EA25ABEEEA0034E6DB /* GPRegisterController.m */; };
+		842C49DB25ABEEEA0034E6DB /* GPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48ED25ABEEEA0034E6DB /* GPTabBarController.m */; };
+		842C49DC25ABEEEA0034E6DB /* GPTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48EE25ABEEEA0034E6DB /* GPTabBar.storyboard */; };
+		842C49DD25ABEEEA0034E6DB /* GPGuijiTrace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C48F225ABEEEA0034E6DB /* GPGuijiTrace.storyboard */; };
+		842C49DE25ABEEEA0034E6DB /* GPGuijiTraceMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F325ABEEEA0034E6DB /* GPGuijiTraceMapController.m */; };
+		842C49DF25ABEEEA0034E6DB /* KKBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F525ABEEEA0034E6DB /* KKBaseTableViewController.m */; };
+		842C49E025ABEEEA0034E6DB /* KKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F825ABEEEA0034E6DB /* KKBaseViewController.m */; };
+		842C49E125ABEEEA0034E6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F925ABEEEA0034E6DB /* main.m */; };
+		842C49E325ABEEEA0034E6DB /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 842C48FB25ABEEEA0034E6DB /* public_key.der */; };
+		89E8A2464E7C3BD0DD96BB63 /* Pods_hddc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC114E69BEBB539667F364AD /* Pods_hddc.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		842C46B625ABEC460034E6DB /* hddc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hddc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		842C46D525ABEEE90034E6DB /* GPTaskQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTaskQueue.h; sourceTree = "<group>"; };
+		842C46D725ABEEE90034E6DB /* YXTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTable.m; sourceTree = "<group>"; };
+		842C46D825ABEEE90034E6DB /* YXTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTable.h; sourceTree = "<group>"; };
+		842C46D925ABEEE90034E6DB /* GPTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTask.m; sourceTree = "<group>"; };
+		842C46DA25ABEEE90034E6DB /* GPTaskQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTaskQueue.m; sourceTree = "<group>"; };
+		842C46DB25ABEEE90034E6DB /* GPTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTask.h; sourceTree = "<group>"; };
+		842C46DD25ABEEE90034E6DB /* GPInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPInfoView.xib; sourceTree = "<group>"; };
+		842C46DF25ABEEE90034E6DB /* GPNormalPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPNormalPicker.h; sourceTree = "<group>"; };
+		842C46E025ABEEE90034E6DB /* GPNormalPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPNormalPicker.xib; sourceTree = "<group>"; };
+		842C46E125ABEEE90034E6DB /* GPNormalPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPNormalPicker.m; sourceTree = "<group>"; };
+		842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDArcGISUtil.m; sourceTree = "<group>"; };
+		842C46E425ABEEE90034E6DB /* BDArcGISGraphic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDArcGISGraphic.h; sourceTree = "<group>"; };
+		842C46E525ABEEE90034E6DB /* BDArcGISUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDArcGISUtil.h; sourceTree = "<group>"; };
+		842C46E625ABEEE90034E6DB /* BDArcGISGraphic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDArcGISGraphic.m; sourceTree = "<group>"; };
+		842C46E825ABEEE90034E6DB /* GPCityPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCityPicker.h; sourceTree = "<group>"; };
+		842C46E925ABEEE90034E6DB /* GPCityPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPCityPicker.xib; sourceTree = "<group>"; };
+		842C46EA25ABEEE90034E6DB /* GPCityPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCityPicker.m; sourceTree = "<group>"; };
+		842C46EC25ABEEE90034E6DB /* YXTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTrace.m; sourceTree = "<group>"; };
+		842C46ED25ABEEE90034E6DB /* BDLocationTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLocationTrace.h; sourceTree = "<group>"; };
+		842C46EE25ABEEE90034E6DB /* YXTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTrace.h; sourceTree = "<group>"; };
+		842C46EF25ABEEE90034E6DB /* BDLocationTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLocationTrace.m; sourceTree = "<group>"; };
+		842C46F325ABEEE90034E6DB /* FFInstanceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFInstanceNode.m; sourceTree = "<group>"; };
+		842C46F425ABEEE90034E6DB /* FFPropertyInspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPropertyInspector.h; sourceTree = "<group>"; };
+		842C46F525ABEEE90034E6DB /* FFInstanceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFInstanceNode.h; sourceTree = "<group>"; };
+		842C46F625ABEEE90034E6DB /* FFPropertyInspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPropertyInspector.m; sourceTree = "<group>"; };
+		842C46FC25ABEEE90034E6DB /* TianDiTuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianDiTuLayer.h; sourceTree = "<group>"; };
+		842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianDiTuLayerInfo.m; sourceTree = "<group>"; };
+		842C46FE25ABEEE90034E6DB /* TianDiTuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TianDiTuLayer.m; sourceTree = "<group>"; };
+		842C46FF25ABEEE90034E6DB /* TianDiTuLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianDiTuLayerInfo.h; sourceTree = "<group>"; };
+		842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSGoogleMapLayer.m; sourceTree = "<group>"; };
+		842C470325ABEEE90034E6DB /* AGSGoogleMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSGoogleMapLayer.h; sourceTree = "<group>"; };
+		842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HistoricMapsEarthEDU.kml; sourceTree = "<group>"; };
+		842C470625ABEEE90034E6DB /* BDHImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImagePicker.h; sourceTree = "<group>"; };
+		842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHImagePickerHelper.m; sourceTree = "<group>"; };
+		842C470A25ABEEE90034E6DB /* BDHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAlbum.m; sourceTree = "<group>"; };
+		842C470B25ABEEE90034E6DB /* BDHAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAsset.m; sourceTree = "<group>"; };
+		842C470C25ABEEE90034E6DB /* BDHAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHAsset.h; sourceTree = "<group>"; };
+		842C470D25ABEEE90034E6DB /* BDHAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHAlbum.h; sourceTree = "<group>"; };
+		842C470E25ABEEE90034E6DB /* BDHImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImagePickerHelper.h; sourceTree = "<group>"; };
+		842C471025ABEEE90034E6DB /* BDHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImagePickerController.h; sourceTree = "<group>"; };
+		842C471125ABEEE90034E6DB /* BDHPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHPhotoBrowser.h; sourceTree = "<group>"; };
+		842C471225ABEEE90034E6DB /* BDHImageFlowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHImageFlowViewController.m; sourceTree = "<group>"; };
+		842C471325ABEEE90034E6DB /* BDHAlbumTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAlbumTableViewController.m; sourceTree = "<group>"; };
+		842C471425ABEEE90034E6DB /* BDHImageFetchOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImageFetchOperation.h; sourceTree = "<group>"; };
+		842C471525ABEEE90034E6DB /* BDHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHImagePickerController.m; sourceTree = "<group>"; };
+		842C471625ABEEE90034E6DB /* BDHImageFlowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImageFlowViewController.h; sourceTree = "<group>"; };
+		842C471725ABEEE90034E6DB /* BDHPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHPhotoBrowser.m; sourceTree = "<group>"; };
+		842C471825ABEEE90034E6DB /* BDHAlbumTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHAlbumTableViewController.h; sourceTree = "<group>"; };
+		842C471925ABEEE90034E6DB /* BDHImageFetchOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHImageFetchOperation.m; sourceTree = "<group>"; };
+		842C471B25ABEEE90034E6DB /* BDHTapDetectingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHTapDetectingImageView.h; sourceTree = "<group>"; };
+		842C471C25ABEEE90034E6DB /* BDHFullImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHFullImageButton.h; sourceTree = "<group>"; };
+		842C471D25ABEEE90034E6DB /* BDHAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAlbumCell.m; sourceTree = "<group>"; };
+		842C471E25ABEEE90034E6DB /* BDHBadgeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHBadgeLabel.m; sourceTree = "<group>"; };
+		842C471F25ABEEE90034E6DB /* BDHSendButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHSendButton.h; sourceTree = "<group>"; };
+		842C472025ABEEE90034E6DB /* BDHBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHBrowserCell.h; sourceTree = "<group>"; };
+		842C472125ABEEE90034E6DB /* BDHUnAuthorizedTipsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHUnAuthorizedTipsView.h; sourceTree = "<group>"; };
+		842C472225ABEEE90034E6DB /* BDHAssetsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHAssetsViewCell.h; sourceTree = "<group>"; };
+		842C472325ABEEE90034E6DB /* BDHTapDetectingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHTapDetectingImageView.m; sourceTree = "<group>"; };
+		842C472425ABEEE90034E6DB /* BDHFullImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHFullImageButton.m; sourceTree = "<group>"; };
+		842C472525ABEEE90034E6DB /* BDHBadgeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHBadgeLabel.h; sourceTree = "<group>"; };
+		842C472625ABEEE90034E6DB /* BDHAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHAlbumCell.h; sourceTree = "<group>"; };
+		842C472725ABEEE90034E6DB /* BDHAssetsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAssetsViewCell.m; sourceTree = "<group>"; };
+		842C472825ABEEE90034E6DB /* BDHUnAuthorizedTipsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHUnAuthorizedTipsView.m; sourceTree = "<group>"; };
+		842C472925ABEEE90034E6DB /* BDHBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHBrowserCell.m; sourceTree = "<group>"; };
+		842C472A25ABEEE90034E6DB /* BDHSendButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHSendButton.m; sourceTree = "<group>"; };
+		842C472D25ABEEE90034E6DB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BDHImagePicker.strings"; sourceTree = "<group>"; };
+		842C472E25ABEEE90034E6DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BDHImagePicker.strings; sourceTree = "<group>"; };
+		842C472F25ABEEE90034E6DB /* imageResources.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imageResources.xcassets; sourceTree = "<group>"; };
+		842C473125ABEEE90034E6DB /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		842C473225ABEEE90034E6DB /* UIView+BDHImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BDHImagePicker.h"; sourceTree = "<group>"; };
+		842C473325ABEEE90034E6DB /* UIViewController+BDHImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BDHImagePicker.h"; sourceTree = "<group>"; };
+		842C473425ABEEE90034E6DB /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		842C473525ABEEE90034E6DB /* UIView+BDHImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BDHImagePicker.m"; sourceTree = "<group>"; };
+		842C473625ABEEE90034E6DB /* UIViewController+BDHImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BDHImagePicker.m"; sourceTree = "<group>"; };
+		842C473825ABEEE90034E6DB /* BDBaseController.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BDBaseController.xcassets; sourceTree = "<group>"; };
+		842C473B25ABEEE90034E6DB /* BDBaseCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseCollectionViewController.h; sourceTree = "<group>"; };
+		842C473C25ABEEE90034E6DB /* BDBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseCollectionViewController.m; sourceTree = "<group>"; };
+		842C473E25ABEEE90034E6DB /* BDHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHTTP.m; sourceTree = "<group>"; };
+		842C473F25ABEEE90034E6DB /* BDHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHTTP.h; sourceTree = "<group>"; };
+		842C474025ABEEE90034E6DB /* BDBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseController.h; sourceTree = "<group>"; };
+		842C474225ABEEE90034E6DB /* BDBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseTableViewController.m; sourceTree = "<group>"; };
+		842C474325ABEEE90034E6DB /* BDBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseTableViewController.h; sourceTree = "<group>"; };
+		842C474525ABEEE90034E6DB /* BDTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTextFieldCell.h; sourceTree = "<group>"; };
+		842C474625ABEEE90034E6DB /* BDTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTextFieldCell.m; sourceTree = "<group>"; };
+		842C474925ABEEE90034E6DB /* UITableViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+HUD.h"; sourceTree = "<group>"; };
+		842C474A25ABEEE90034E6DB /* UITableViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+HUD.m"; sourceTree = "<group>"; };
+		842C474C25ABEEE90034E6DB /* UICollectionViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewController+HUD.h"; sourceTree = "<group>"; };
+		842C474D25ABEEE90034E6DB /* UICollectionViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewController+HUD.m"; sourceTree = "<group>"; };
+		842C474F25ABEEE90034E6DB /* UIViewController+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HUD.m"; sourceTree = "<group>"; };
+		842C475025ABEEE90034E6DB /* UIViewController+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HUD.h"; sourceTree = "<group>"; };
+		842C475225ABEEE90034E6DB /* UITableView+Refresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Refresh.h"; sourceTree = "<group>"; };
+		842C475325ABEEE90034E6DB /* UITableView+Refresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Refresh.m"; sourceTree = "<group>"; };
+		842C475625ABEEE90034E6DB /* BDScan.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BDScan.storyboard; sourceTree = "<group>"; };
+		842C475725ABEEE90034E6DB /* Frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Frame@2x.png"; sourceTree = "<group>"; };
+		842C475825ABEEE90034E6DB /* Frame@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Frame@3x.png"; sourceTree = "<group>"; };
+		842C475925ABEEE90034E6DB /* Line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Line@2x.png"; sourceTree = "<group>"; };
+		842C475A25ABEEE90034E6DB /* Line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Line@3x.png"; sourceTree = "<group>"; };
+		842C475B25ABEEE90034E6DB /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
+		842C475C25ABEEE90034E6DB /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
+		842C475D25ABEEE90034E6DB /* BDScanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDScanController.m; sourceTree = "<group>"; };
+		842C475E25ABEEE90034E6DB /* BDScanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDScanController.h; sourceTree = "<group>"; };
+		842C476025ABEEE90034E6DB /* BDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDWebViewController.h; sourceTree = "<group>"; };
+		842C476125ABEEE90034E6DB /* BDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDWebViewController.m; sourceTree = "<group>"; };
+		842C476325ABEEE90034E6DB /* BDLiveBroadcast.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = BDLiveBroadcast.xcassets; sourceTree = "<group>"; };
+		842C476425ABEEE90034E6DB /* BDLiveBroadcastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLiveBroadcastController.m; sourceTree = "<group>"; };
+		842C476625ABEEE90034E6DB /* BDLiveBroadcastPrepareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDLiveBroadcastPrepareView.m; sourceTree = "<group>"; };
+		842C476725ABEEE90034E6DB /* BDLiveBroadcastPrepareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLiveBroadcastPrepareView.h; sourceTree = "<group>"; };
+		842C476825ABEEE90034E6DB /* BDLiveBroadcastPrepareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDLiveBroadcastPrepareView.xib; sourceTree = "<group>"; };
+		842C476925ABEEE90034E6DB /* BDLiveBroadcast.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BDLiveBroadcast.storyboard; sourceTree = "<group>"; };
+		842C476A25ABEEE90034E6DB /* BDLiveBroadcastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDLiveBroadcastController.h; sourceTree = "<group>"; };
+		842C476C25ABEEE90034E6DB /* BDBaseDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseDefine.m; sourceTree = "<group>"; };
+		842C476D25ABEEE90034E6DB /* BDBaseDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseDefine.h; sourceTree = "<group>"; };
+		842C476F25ABEEE90034E6DB /* BDBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseTabBarController.m; sourceTree = "<group>"; };
+		842C477025ABEEE90034E6DB /* BDBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseTabBarController.h; sourceTree = "<group>"; };
+		842C477225ABEEE90034E6DB /* BDBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseViewController.m; sourceTree = "<group>"; };
+		842C477325ABEEE90034E6DB /* BDBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseViewController.h; sourceTree = "<group>"; };
+		842C477525ABEEE90034E6DB /* BDBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDBaseViewModel.h; sourceTree = "<group>"; };
+		842C477625ABEEE90034E6DB /* BDBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDBaseViewModel.m; sourceTree = "<group>"; };
+		842C477825ABEEE90034E6DB /* BDTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTabBar.m; sourceTree = "<group>"; };
+		842C477925ABEEE90034E6DB /* BDTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTabBar.h; sourceTree = "<group>"; };
+		842C477C25ABEEE90034E6DB /* BDTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDTimePickerView.m; sourceTree = "<group>"; };
+		842C477D25ABEEE90034E6DB /* BDTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDTimePickerView.h; sourceTree = "<group>"; };
+		842C477E25ABEEE90034E6DB /* BDTimePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDTimePickerView.xib; sourceTree = "<group>"; };
+		842C478025ABEEE90034E6DB /* BDToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDToastView.m; sourceTree = "<group>"; };
+		842C478125ABEEE90034E6DB /* BDToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDToastView.h; sourceTree = "<group>"; };
+		842C478325ABEEE90034E6DB /* BDWebImageAutoSizeConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDWebImageAutoSizeConst.h; sourceTree = "<group>"; };
+		842C478425ABEEE90034E6DB /* BDWebImageAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDWebImageAutoSize.m; sourceTree = "<group>"; };
+		842C478525ABEEE90034E6DB /* BDWebImageAutoSizeCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDWebImageAutoSizeCache.m; sourceTree = "<group>"; };
+		842C478625ABEEE90034E6DB /* UITableView+BDWebImageAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BDWebImageAutoSize.m"; sourceTree = "<group>"; };
+		842C478725ABEEE90034E6DB /* UICollectionView+BDWebImageAutoSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+BDWebImageAutoSize.m"; sourceTree = "<group>"; };
+		842C478825ABEEE90034E6DB /* BDWebImageAutoSizeConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDWebImageAutoSizeConst.m; sourceTree = "<group>"; };
+		842C478925ABEEE90034E6DB /* BDWebImageAutoSizeCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDWebImageAutoSizeCache.h; sourceTree = "<group>"; };
+		842C478A25ABEEE90034E6DB /* BDWebImageAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDWebImageAutoSize.h; sourceTree = "<group>"; };
+		842C478B25ABEEE90034E6DB /* UITableView+BDWebImageAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BDWebImageAutoSize.h"; sourceTree = "<group>"; };
+		842C478C25ABEEE90034E6DB /* UICollectionView+BDWebImageAutoSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+BDWebImageAutoSize.h"; sourceTree = "<group>"; };
+		842C479225ABEEE90034E6DB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		842C479625ABEEE90034E6DB /* YXHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXHTTP.h; sourceTree = "<group>"; };
+		842C479725ABEEE90034E6DB /* YXHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXHTTP.m; sourceTree = "<group>"; };
+		842C479A25ABEEE90034E6DB /* YXForumDataInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXForumDataInfoModel.m; sourceTree = "<group>"; };
+		842C479B25ABEEE90034E6DB /* YXForumDataInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXForumDataInfoModel.h; sourceTree = "<group>"; };
+		842C479D25ABEEE90034E6DB /* YXAppInfomationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAppInfomationModel.m; sourceTree = "<group>"; };
+		842C479E25ABEEE90034E6DB /* YXAppInfomationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAppInfomationModel.h; sourceTree = "<group>"; };
+		842C47A025ABEEE90034E6DB /* YXTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTaskModel.m; sourceTree = "<group>"; };
+		842C47A125ABEEE90034E6DB /* YXTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTaskModel.h; sourceTree = "<group>"; };
+		842C47A325ABEEE90034E6DB /* YXOSSModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXOSSModel.h; sourceTree = "<group>"; };
+		842C47A425ABEEE90034E6DB /* YXUpdateImagesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUpdateImagesModel.m; sourceTree = "<group>"; };
+		842C47A525ABEEE90034E6DB /* YXOSSModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXOSSModel.m; sourceTree = "<group>"; };
+		842C47A625ABEEE90034E6DB /* YXUpdateImagesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUpdateImagesModel.h; sourceTree = "<group>"; };
+		842C47A825ABEEE90034E6DB /* YXAppBannerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAppBannerModel.h; sourceTree = "<group>"; };
+		842C47A925ABEEE90034E6DB /* YXAppBannerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXAppBannerModel.m; sourceTree = "<group>"; };
+		842C47AB25ABEEE90034E6DB /* YXTracePointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTracePointModel.h; sourceTree = "<group>"; };
+		842C47AC25ABEEE90034E6DB /* YXTracePointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTracePointModel.m; sourceTree = "<group>"; };
+		842C47AE25ABEEE90034E6DB /* YXUserUpdatePasswordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUserUpdatePasswordModel.h; sourceTree = "<group>"; };
+		842C47AF25ABEEE90034E6DB /* YXUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUserModel.h; sourceTree = "<group>"; };
+		842C47B025ABEEE90034E6DB /* YXUserLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUserLoginModel.m; sourceTree = "<group>"; };
+		842C47B125ABEEE90034E6DB /* YXUserUpdatePasswordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUserUpdatePasswordModel.m; sourceTree = "<group>"; };
+		842C47B225ABEEE90034E6DB /* YXUserLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXUserLoginModel.h; sourceTree = "<group>"; };
+		842C47B325ABEEE90034E6DB /* YXUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXUserModel.m; sourceTree = "<group>"; };
+		842C47B525ABEEE90034E6DB /* YXForumSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXForumSaver.m; sourceTree = "<group>"; };
+		842C47B825ABEEE90034E6DB /* YXGeologicalSvyPlanningPtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeologicalSvyPlanningPtModel.h; sourceTree = "<group>"; };
+		842C47B925ABEEE90034E6DB /* YXGeologicalSvyPlanningPtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeologicalSvyPlanningPtModel.m; sourceTree = "<group>"; };
+		842C47BB25ABEEE90034E6DB /* YXGeologicalSvyPlanningLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeologicalSvyPlanningLineModel.m; sourceTree = "<group>"; };
+		842C47BC25ABEEE90034E6DB /* YXGeologicalSvyPlanningLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeologicalSvyPlanningLineModel.h; sourceTree = "<group>"; };
+		842C47BF25ABEEE90034E6DB /* YXGeophySvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeophySvyPointModel.m; sourceTree = "<group>"; };
+		842C47C025ABEEE90034E6DB /* YXGeophySvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeophySvyPointModel.h; sourceTree = "<group>"; };
+		842C47C225ABEEE90034E6DB /* YXGeophySvyLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeophySvyLineModel.m; sourceTree = "<group>"; };
+		842C47C325ABEEE90034E6DB /* YXGeophySvyLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeophySvyLineModel.h; sourceTree = "<group>"; };
+		842C47C525ABEEE90034E6DB /* YXSlectionDictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSlectionDictModel.m; sourceTree = "<group>"; };
+		842C47C625ABEEE90034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 4330d398bfc148e2964492aead40b907.sqlite3; sourceTree = "<group>"; };
+		842C47C725ABEEE90034E6DB /* YXSlectionDictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSlectionDictModel.h; sourceTree = "<group>"; };
+		842C47CA25ABEEE90034E6DB /* YXSamplePointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSamplePointModel.m; sourceTree = "<group>"; };
+		842C47CB25ABEEE90034E6DB /* YXSamplePointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSamplePointModel.h; sourceTree = "<group>"; };
+		842C47CE25ABEEE90034E6DB /* YXGeoGeomorphySvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeoGeomorphySvyPointModel.m; sourceTree = "<group>"; };
+		842C47CF25ABEEE90034E6DB /* YXGeoGeomorphySvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeoGeomorphySvyPointModel.h; sourceTree = "<group>"; };
+		842C47D125ABEEE90034E6DB /* YXFaultSvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFaultSvyPointModel.m; sourceTree = "<group>"; };
+		842C47D225ABEEE90034E6DB /* YXFaultSvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFaultSvyPointModel.h; sourceTree = "<group>"; };
+		842C47D425ABEEE90034E6DB /* YXStratigraphySvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXStratigraphySvyPointModel.h; sourceTree = "<group>"; };
+		842C47D525ABEEE90034E6DB /* YXStratigraphySvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXStratigraphySvyPointModel.m; sourceTree = "<group>"; };
+		842C47D725ABEEE90034E6DB /* YXTrenchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXTrenchModel.m; sourceTree = "<group>"; };
+		842C47D825ABEEE90034E6DB /* YXTrenchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXTrenchModel.h; sourceTree = "<group>"; };
+		842C47DA25ABEEE90034E6DB /* YXGeologicalSvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeologicalSvyPointModel.m; sourceTree = "<group>"; };
+		842C47DB25ABEEE90034E6DB /* YXGeologicalSvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeologicalSvyPointModel.h; sourceTree = "<group>"; };
+		842C47DD25ABEEE90034E6DB /* YXGeologicalSvyLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeologicalSvyLineModel.h; sourceTree = "<group>"; };
+		842C47DE25ABEEE90034E6DB /* YXGeologicalSvyLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeologicalSvyLineModel.m; sourceTree = "<group>"; };
+		842C47DF25ABEEE90034E6DB /* YXForumSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXForumSaver.h; sourceTree = "<group>"; };
+		842C47E225ABEEE90034E6DB /* YXDrillHoleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXDrillHoleModel.m; sourceTree = "<group>"; };
+		842C47E325ABEEE90034E6DB /* YXDrillHoleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXDrillHoleModel.h; sourceTree = "<group>"; };
+		842C47E525ABEEE90034E6DB /* YXFormListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFormListModel.m; sourceTree = "<group>"; };
+		842C47E625ABEEE90034E6DB /* YXFormListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFormListModel.h; sourceTree = "<group>"; };
+		842C47E925ABEEE90034E6DB /* YXGeomorphySvySamplePointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorphySvySamplePointModel.m; sourceTree = "<group>"; };
+		842C47EA25ABEEE90034E6DB /* YXGeomorphySvySamplePointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorphySvySamplePointModel.h; sourceTree = "<group>"; };
+		842C47EC25ABEEE90034E6DB /* YXGeomorphySvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorphySvyPointModel.h; sourceTree = "<group>"; };
+		842C47ED25ABEEE90034E6DB /* YXGeomorphySvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorphySvyPointModel.m; sourceTree = "<group>"; };
+		842C47EF25ABEEE90034E6DB /* YXGeomorphySvyReProfModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorphySvyReProfModel.m; sourceTree = "<group>"; };
+		842C47F025ABEEE90034E6DB /* YXGeomorphySvyReProfModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorphySvyReProfModel.h; sourceTree = "<group>"; };
+		842C47F225ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorphySvyRegionModel.m; sourceTree = "<group>"; };
+		842C47F325ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorphySvyRegionModel.h; sourceTree = "<group>"; };
+		842C47F525ABEEEA0034E6DB /* YXGeomorphySvyLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorphySvyLineModel.m; sourceTree = "<group>"; };
+		842C47F625ABEEEA0034E6DB /* YXGeomorphySvyLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorphySvyLineModel.h; sourceTree = "<group>"; };
+		842C47F825ABEEEA0034E6DB /* YXGeomorStationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeomorStationModel.m; sourceTree = "<group>"; };
+		842C47F925ABEEEA0034E6DB /* YXGeomorStationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeomorStationModel.h; sourceTree = "<group>"; };
+		842C47FC25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeochemicalSvyPointModel.m; sourceTree = "<group>"; };
+		842C47FD25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeochemicalSvyPointModel.h; sourceTree = "<group>"; };
+		842C47FF25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXGeochemicalSvyLineModel.m; sourceTree = "<group>"; };
+		842C480025ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXGeochemicalSvyLineModel.h; sourceTree = "<group>"; };
+		842C480325ABEEEA0034E6DB /* YXVolcanicSamplePointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXVolcanicSamplePointModel.h; sourceTree = "<group>"; };
+		842C480425ABEEEA0034E6DB /* YXVolcanicSamplePointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXVolcanicSamplePointModel.m; sourceTree = "<group>"; };
+		842C480625ABEEEA0034E6DB /* YXLavaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLavaModel.h; sourceTree = "<group>"; };
+		842C480725ABEEEA0034E6DB /* YXLavaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLavaModel.m; sourceTree = "<group>"; };
+		842C480925ABEEEA0034E6DB /* YXCraterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCraterModel.m; sourceTree = "<group>"; };
+		842C480A25ABEEEA0034E6DB /* YXCraterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCraterModel.h; sourceTree = "<group>"; };
+		842C480C25ABEEEA0034E6DB /* YXVolcanicSvyPointModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXVolcanicSvyPointModel.h; sourceTree = "<group>"; };
+		842C480D25ABEEEA0034E6DB /* YXVolcanicSvyPointModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXVolcanicSvyPointModel.m; sourceTree = "<group>"; };
+		842C480F25ABEEEA0034E6DB /* YXProjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXProjectModel.h; sourceTree = "<group>"; };
+		842C481025ABEEEA0034E6DB /* YXProjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXProjectModel.m; sourceTree = "<group>"; };
+		842C481225ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAdministrativeDivisionsModel.m; sourceTree = "<group>"; };
+		842C481325ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAdministrativeDivisionsModel.h; sourceTree = "<group>"; };
+		842C481425ABEEEA0034E6DB /* YXAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXAPI.h; sourceTree = "<group>"; };
+		842C481525ABEEEA0034E6DB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		842C481625ABEEEA0034E6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		842C481925ABEEEA0034E6DB /* GPHomeProgramListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeProgramListController.m; sourceTree = "<group>"; };
+		842C481A25ABEEEA0034E6DB /* GPOfflineForumListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOfflineForumListController.h; sourceTree = "<group>"; };
+		842C481B25ABEEEA0034E6DB /* GPHomeMeCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeMeCenter.m; sourceTree = "<group>"; };
+		842C481C25ABEEEA0034E6DB /* GPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeController.h; sourceTree = "<group>"; };
+		842C481E25ABEEEA0034E6DB /* BDSelectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDSelectionModel.h; sourceTree = "<group>"; };
+		842C481F25ABEEEA0034E6DB /* BDSelectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDSelectionModel.m; sourceTree = "<group>"; };
+		842C482025ABEEEA0034E6DB /* GPHomeChangePasswordController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeChangePasswordController.m; sourceTree = "<group>"; };
+		842C482225ABEEEA0034E6DB /* GPForumJumper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPForumJumper.h; sourceTree = "<group>"; };
+		842C482325ABEEEA0034E6DB /* GPMultiTracePointsUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMultiTracePointsUploader.m; sourceTree = "<group>"; };
+		842C482425ABEEEA0034E6DB /* GPMultiForumUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMultiForumUploader.h; sourceTree = "<group>"; };
+		842C482525ABEEEA0034E6DB /* GPForumJumper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPForumJumper.m; sourceTree = "<group>"; };
+		842C482625ABEEEA0034E6DB /* GPMultiTracePointsUploader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMultiTracePointsUploader.h; sourceTree = "<group>"; };
+		842C482725ABEEEA0034E6DB /* GPMultiForumUploader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMultiForumUploader.m; sourceTree = "<group>"; };
+		842C482925ABEEEA0034E6DB /* GPTaskMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTaskMapController.h; sourceTree = "<group>"; };
+		842C482A25ABEEEA0034E6DB /* GPArcGisMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPArcGisMapController.m; sourceTree = "<group>"; };
+		842C482D25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeologicalSvyPlanningPt.h; sourceTree = "<group>"; };
+		842C482E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeologicalSvyPlanningPt.storyboard; sourceTree = "<group>"; };
+		842C482F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeologicalSvyPlanningPt.m; sourceTree = "<group>"; };
+		842C483125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeologicalSvyPlanningLine.storyboard; sourceTree = "<group>"; };
+		842C483225ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeologicalSvyPlanningLine.m; sourceTree = "<group>"; };
+		842C483325ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeologicalSvyPlanningLine.h; sourceTree = "<group>"; };
+		842C483525ABEEEA0034E6DB /* GPTanCeTypeEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTanCeTypeEntity.m; sourceTree = "<group>"; };
+		842C483625ABEEEA0034E6DB /* GPForumType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPForumType.h; sourceTree = "<group>"; };
+		842C483725ABEEEA0034E6DB /* BDReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDReachability.h; sourceTree = "<group>"; };
+		842C483825ABEEEA0034E6DB /* GPImageEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPImageEntity.h; sourceTree = "<group>"; };
+		842C483925ABEEEA0034E6DB /* BDReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDReachability.m; sourceTree = "<group>"; };
+		842C483A25ABEEEA0034E6DB /* GPForumType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPForumType.m; sourceTree = "<group>"; };
+		842C483B25ABEEEA0034E6DB /* GPTanCeTypeEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTanCeTypeEntity.h; sourceTree = "<group>"; };
+		842C483C25ABEEEA0034E6DB /* GPImageEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPImageEntity.m; sourceTree = "<group>"; };
+		842C483D25ABEEEA0034E6DB /* dixingType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dixingType.json; sourceTree = "<group>"; };
+		842C484025ABEEEA0034E6DB /* GPGeophySvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeophySvyPoint.m; sourceTree = "<group>"; };
+		842C484125ABEEEA0034E6DB /* GPGeophySvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeophySvyPoint.storyboard; sourceTree = "<group>"; };
+		842C484225ABEEEA0034E6DB /* GPGeophySvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeophySvyPoint.h; sourceTree = "<group>"; };
+		842C484425ABEEEA0034E6DB /* GPGeophySvyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeophySvyLine.h; sourceTree = "<group>"; };
+		842C484525ABEEEA0034E6DB /* GPGeophySvyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeophySvyLine.m; sourceTree = "<group>"; };
+		842C484625ABEEEA0034E6DB /* GPGeophySvyLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeophySvyLine.storyboard; sourceTree = "<group>"; };
+		842C484725ABEEEA0034E6DB /* GPForumListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPForumListController.m; sourceTree = "<group>"; };
+		842C484825ABEEEA0034E6DB /* GPTask.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTask.storyboard; sourceTree = "<group>"; };
+		842C484B25ABEEEA0034E6DB /* GPSamplePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSamplePoint.h; sourceTree = "<group>"; };
+		842C484C25ABEEEA0034E6DB /* GPSamplePoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPSamplePoint.storyboard; sourceTree = "<group>"; };
+		842C484D25ABEEEA0034E6DB /* GPSamplePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSamplePoint.m; sourceTree = "<group>"; };
+		842C484E25ABEEEA0034E6DB /* GPNewTaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPNewTaskController.h; sourceTree = "<group>"; };
+		842C485125ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeoGeomorphySvyPoint.m; sourceTree = "<group>"; };
+		842C485225ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeoGeomorphySvyPoint.storyboard; sourceTree = "<group>"; };
+		842C485325ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeoGeomorphySvyPoint.h; sourceTree = "<group>"; };
+		842C485525ABEEEA0034E6DB /* GPFaultSvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPFaultSvyPoint.storyboard; sourceTree = "<group>"; };
+		842C485625ABEEEA0034E6DB /* GPFaultSvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPFaultSvyPoint.m; sourceTree = "<group>"; };
+		842C485725ABEEEA0034E6DB /* GPFaultSvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPFaultSvyPoint.h; sourceTree = "<group>"; };
+		842C485925ABEEEA0034E6DB /* GPStratigraphySvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStratigraphySvyPoint.m; sourceTree = "<group>"; };
+		842C485A25ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPStratigraphySvyPoint.storyboard; sourceTree = "<group>"; };
+		842C485B25ABEEEA0034E6DB /* GPStratigraphySvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPStratigraphySvyPoint.h; sourceTree = "<group>"; };
+		842C485D25ABEEEA0034E6DB /* GPTrench.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTrench.storyboard; sourceTree = "<group>"; };
+		842C485E25ABEEEA0034E6DB /* GPTrench.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTrench.h; sourceTree = "<group>"; };
+		842C485F25ABEEEA0034E6DB /* GPTrench.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTrench.m; sourceTree = "<group>"; };
+		842C486125ABEEEA0034E6DB /* GPGeologicalSvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeologicalSvyPoint.m; sourceTree = "<group>"; };
+		842C486225ABEEEA0034E6DB /* GPGeologicalSvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeologicalSvyPoint.h; sourceTree = "<group>"; };
+		842C486325ABEEEA0034E6DB /* GPGeologicalSvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeologicalSvyPoint.storyboard; sourceTree = "<group>"; };
+		842C486525ABEEEA0034E6DB /* GPGeologicalSvyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeologicalSvyLine.m; sourceTree = "<group>"; };
+		842C486625ABEEEA0034E6DB /* GPGeologicalSvyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeologicalSvyLine.h; sourceTree = "<group>"; };
+		842C486725ABEEEA0034E6DB /* GPGeologicalSvyLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeologicalSvyLine.storyboard; sourceTree = "<group>"; };
+		842C486825ABEEEA0034E6DB /* GPTaskListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTaskListController.h; sourceTree = "<group>"; };
+		842C486925ABEEEA0034E6DB /* GPTaskMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTaskMapController.m; sourceTree = "<group>"; };
+		842C486C25ABEEEA0034E6DB /* GPDrillHole.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPDrillHole.storyboard; sourceTree = "<group>"; };
+		842C486D25ABEEEA0034E6DB /* GPDrillHole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDrillHole.m; sourceTree = "<group>"; };
+		842C486E25ABEEEA0034E6DB /* GPDrillHole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDrillHole.h; sourceTree = "<group>"; };
+		842C486F25ABEEEA0034E6DB /* GPArcGisMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPArcGisMapController.h; sourceTree = "<group>"; };
+		842C487125ABEEEA0034E6DB /* GPTaskImagesCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTaskImagesCollectionCell.xib; sourceTree = "<group>"; };
+		842C487225ABEEEA0034E6DB /* GPPintTuanTimePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPPintTuanTimePicker.xib; sourceTree = "<group>"; };
+		842C487425ABEEEA0034E6DB /* GPMapLayerPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPMapLayerPicker.h; sourceTree = "<group>"; };
+		842C487525ABEEEA0034E6DB /* GPMapLayerPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPMapLayerPicker.xib; sourceTree = "<group>"; };
+		842C487625ABEEEA0034E6DB /* GPMapLayerPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPMapLayerPicker.m; sourceTree = "<group>"; };
+		842C487825ABEEEA0034E6DB /* GPDiXinTypePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPDiXinTypePicker.m; sourceTree = "<group>"; };
+		842C487925ABEEEA0034E6DB /* GPDiXinTypePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPDiXinTypePicker.h; sourceTree = "<group>"; };
+		842C487A25ABEEEA0034E6DB /* GPDiXinTypePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPDiXinTypePicker.xib; sourceTree = "<group>"; };
+		842C487C25ABEEEA0034E6DB /* GPTaskImagesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTaskImagesCell.h; sourceTree = "<group>"; };
+		842C487D25ABEEEA0034E6DB /* GPTaskImagesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTaskImagesCell.xib; sourceTree = "<group>"; };
+		842C487E25ABEEEA0034E6DB /* GPTaskImagesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTaskImagesCell.m; sourceTree = "<group>"; };
+		842C488125ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorphySvySamplePoint.m; sourceTree = "<group>"; };
+		842C488225ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorphySvySamplePoint.storyboard; sourceTree = "<group>"; };
+		842C488325ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorphySvySamplePoint.h; sourceTree = "<group>"; };
+		842C488525ABEEEA0034E6DB /* GPGeomorphySvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorphySvyPoint.h; sourceTree = "<group>"; };
+		842C488625ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorphySvyPoint.storyboard; sourceTree = "<group>"; };
+		842C488725ABEEEA0034E6DB /* GPGeomorphySvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorphySvyPoint.m; sourceTree = "<group>"; };
+		842C488925ABEEEA0034E6DB /* GPGeomorphySvyReProf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorphySvyReProf.h; sourceTree = "<group>"; };
+		842C488A25ABEEEA0034E6DB /* GPGeomorphySvyReProf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorphySvyReProf.m; sourceTree = "<group>"; };
+		842C488B25ABEEEA0034E6DB /* GPGeomorphySvyReProf.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorphySvyReProf.storyboard; sourceTree = "<group>"; };
+		842C488D25ABEEEA0034E6DB /* GPGeomorphySvyRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorphySvyRegion.m; sourceTree = "<group>"; };
+		842C488E25ABEEEA0034E6DB /* GPGeomorphySvyRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorphySvyRegion.h; sourceTree = "<group>"; };
+		842C488F25ABEEEA0034E6DB /* GPGeomorphySvyRegion.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorphySvyRegion.storyboard; sourceTree = "<group>"; };
+		842C489125ABEEEA0034E6DB /* GPGeomorphySvyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorphySvyLine.m; sourceTree = "<group>"; };
+		842C489225ABEEEA0034E6DB /* GPGeomorphySvyLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorphySvyLine.storyboard; sourceTree = "<group>"; };
+		842C489325ABEEEA0034E6DB /* GPGeomorphySvyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorphySvyLine.h; sourceTree = "<group>"; };
+		842C489525ABEEEA0034E6DB /* GPGeomorStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeomorStation.h; sourceTree = "<group>"; };
+		842C489625ABEEEA0034E6DB /* GPGeomorStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeomorStation.m; sourceTree = "<group>"; };
+		842C489725ABEEEA0034E6DB /* GPGeomorStation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeomorStation.storyboard; sourceTree = "<group>"; };
+		842C489A25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeochemicalSvyPoint.m; sourceTree = "<group>"; };
+		842C489B25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeochemicalSvyPoint.h; sourceTree = "<group>"; };
+		842C489C25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeochemicalSvyPoint.storyboard; sourceTree = "<group>"; };
+		842C489E25ABEEEA0034E6DB /* GPGeochemicalSvyLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGeochemicalSvyLine.m; sourceTree = "<group>"; };
+		842C489F25ABEEEA0034E6DB /* GPGeochemicalSvyLine.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGeochemicalSvyLine.storyboard; sourceTree = "<group>"; };
+		842C48A025ABEEEA0034E6DB /* GPGeochemicalSvyLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGeochemicalSvyLine.h; sourceTree = "<group>"; };
+		842C48A125ABEEEA0034E6DB /* GPTaskListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTaskListController.m; sourceTree = "<group>"; };
+		842C48A225ABEEEA0034E6DB /* GPNewTaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPNewTaskController.m; sourceTree = "<group>"; };
+		842C48A525ABEEEA0034E6DB /* GPVolcanicSamplePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVolcanicSamplePoint.h; sourceTree = "<group>"; };
+		842C48A625ABEEEA0034E6DB /* GPVolcanicSamplePoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPVolcanicSamplePoint.storyboard; sourceTree = "<group>"; };
+		842C48A725ABEEEA0034E6DB /* GPVolcanicSamplePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVolcanicSamplePoint.m; sourceTree = "<group>"; };
+		842C48A925ABEEEA0034E6DB /* GPLava.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPLava.storyboard; sourceTree = "<group>"; };
+		842C48AA25ABEEEA0034E6DB /* GPLava.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLava.m; sourceTree = "<group>"; };
+		842C48AB25ABEEEA0034E6DB /* GPLava.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLava.h; sourceTree = "<group>"; };
+		842C48AD25ABEEEA0034E6DB /* GPCrater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPCrater.m; sourceTree = "<group>"; };
+		842C48AE25ABEEEA0034E6DB /* GPCrater.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPCrater.storyboard; sourceTree = "<group>"; };
+		842C48AF25ABEEEA0034E6DB /* GPCrater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPCrater.h; sourceTree = "<group>"; };
+		842C48B125ABEEEA0034E6DB /* GPVolcanicSvyPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPVolcanicSvyPoint.m; sourceTree = "<group>"; };
+		842C48B225ABEEEA0034E6DB /* GPVolcanicSvyPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPVolcanicSvyPoint.h; sourceTree = "<group>"; };
+		842C48B325ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPVolcanicSvyPoint.storyboard; sourceTree = "<group>"; };
+		842C48B525ABEEEA0034E6DB /* GPFormBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPFormBaseController.m; sourceTree = "<group>"; };
+		842C48B625ABEEEA0034E6DB /* GPFormBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPFormBaseController.h; sourceTree = "<group>"; };
+		842C48B725ABEEEA0034E6DB /* GPForumListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPForumListController.h; sourceTree = "<group>"; };
+		842C48B825ABEEEA0034E6DB /* GPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeController.m; sourceTree = "<group>"; };
+		842C48B925ABEEEA0034E6DB /* GPHomeMeCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeMeCenter.h; sourceTree = "<group>"; };
+		842C48BA25ABEEEA0034E6DB /* GPOfflineForumListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOfflineForumListController.m; sourceTree = "<group>"; };
+		842C48BD25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeTraceCollectionOfflinePopView.xib; sourceTree = "<group>"; };
+		842C48BE25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeTraceCollectionOfflinePopView.h; sourceTree = "<group>"; };
+		842C48BF25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeTraceCollectionOfflinePopView.m; sourceTree = "<group>"; };
+		842C48C125ABEEEA0034E6DB /* GPProjectZhiPaiPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPProjectZhiPaiPicker.h; sourceTree = "<group>"; };
+		842C48C225ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPProjectZhiPaiPicker.xib; sourceTree = "<group>"; };
+		842C48C325ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPProjectZhiPaiPicker.m; sourceTree = "<group>"; };
+		842C48C525ABEEEA0034E6DB /* GPHomeOfflinePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeOfflinePicker.h; sourceTree = "<group>"; };
+		842C48C625ABEEEA0034E6DB /* GPHomeOfflinePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeOfflinePicker.xib; sourceTree = "<group>"; };
+		842C48C725ABEEEA0034E6DB /* GPHomeOfflinePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeOfflinePicker.m; sourceTree = "<group>"; };
+		842C48C925ABEEEA0034E6DB /* GPHomeMapCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeMapCalloutView.h; sourceTree = "<group>"; };
+		842C48CA25ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeMapCalloutCellView.xib; sourceTree = "<group>"; };
+		842C48CB25ABEEEA0034E6DB /* GPHomeMapCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeMapCalloutView.m; sourceTree = "<group>"; };
+		842C48CC25ABEEEA0034E6DB /* GPHomeMapCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeMapCalloutView.xib; sourceTree = "<group>"; };
+		842C48CE25ABEEEA0034E6DB /* GPHomeOnlinePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeOnlinePicker.xib; sourceTree = "<group>"; };
+		842C48CF25ABEEEA0034E6DB /* GPHomeOnlinePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeOnlinePicker.m; sourceTree = "<group>"; };
+		842C48D025ABEEEA0034E6DB /* GPHomeOnlinePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeOnlinePicker.h; sourceTree = "<group>"; };
+		842C48D225ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPHomeTraceCollectionOnlinePopView.m; sourceTree = "<group>"; };
+		842C48D325ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPHomeTraceCollectionOnlinePopView.xib; sourceTree = "<group>"; };
+		842C48D425ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeTraceCollectionOnlinePopView.h; sourceTree = "<group>"; };
+		842C48D625ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPTraceZhiPaiPicker.xib; sourceTree = "<group>"; };
+		842C48D725ABEEEA0034E6DB /* GPTraceZhiPaiPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTraceZhiPaiPicker.h; sourceTree = "<group>"; };
+		842C48D825ABEEEA0034E6DB /* GPTraceZhiPaiPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTraceZhiPaiPicker.m; sourceTree = "<group>"; };
+		842C48D925ABEEEA0034E6DB /* GPHomeProgramListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeProgramListController.h; sourceTree = "<group>"; };
+		842C48DA25ABEEEA0034E6DB /* GPHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPHome.storyboard; sourceTree = "<group>"; };
+		842C48DB25ABEEEA0034E6DB /* GPHomeChangePasswordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPHomeChangePasswordController.h; sourceTree = "<group>"; };
+		842C48DD25ABEEEA0034E6DB /* GPTempLaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTempLaunchController.m; sourceTree = "<group>"; };
+		842C48DF25ABEEEA0034E6DB /* logo001@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo001@3x.png"; sourceTree = "<group>"; };
+		842C48E025ABEEEA0034E6DB /* logo001@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo001@2x.png"; sourceTree = "<group>"; };
+		842C48E225ABEEEA0034E6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		842C48E325ABEEEA0034E6DB /* GPTempLaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTempLaunchController.h; sourceTree = "<group>"; };
+		842C48E425ABEEEA0034E6DB /* GPTempLaunch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTempLaunch.storyboard; sourceTree = "<group>"; };
+		842C48E625ABEEEA0034E6DB /* GPLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLoginController.m; sourceTree = "<group>"; };
+		842C48E725ABEEEA0034E6DB /* GPRegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPRegisterController.h; sourceTree = "<group>"; };
+		842C48E825ABEEEA0034E6DB /* GPLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPLogin.storyboard; sourceTree = "<group>"; };
+		842C48E925ABEEEA0034E6DB /* GPLoginHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLoginHeader.h; sourceTree = "<group>"; };
+		842C48EA25ABEEEA0034E6DB /* GPRegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPRegisterController.m; sourceTree = "<group>"; };
+		842C48EB25ABEEEA0034E6DB /* GPLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLoginController.h; sourceTree = "<group>"; };
+		842C48ED25ABEEEA0034E6DB /* GPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTabBarController.m; sourceTree = "<group>"; };
+		842C48EE25ABEEEA0034E6DB /* GPTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPTabBar.storyboard; sourceTree = "<group>"; };
+		842C48EF25ABEEEA0034E6DB /* GPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTabBarController.h; sourceTree = "<group>"; };
+		842C48F125ABEEEA0034E6DB /* GPGuijiTraceMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPGuijiTraceMapController.h; sourceTree = "<group>"; };
+		842C48F225ABEEEA0034E6DB /* GPGuijiTrace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GPGuijiTrace.storyboard; sourceTree = "<group>"; };
+		842C48F325ABEEEA0034E6DB /* GPGuijiTraceMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPGuijiTraceMapController.m; sourceTree = "<group>"; };
+		842C48F525ABEEEA0034E6DB /* KKBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBaseTableViewController.m; sourceTree = "<group>"; };
+		842C48F625ABEEEA0034E6DB /* KKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBaseViewController.h; sourceTree = "<group>"; };
+		842C48F725ABEEEA0034E6DB /* KKBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKBaseTableViewController.h; sourceTree = "<group>"; };
+		842C48F825ABEEEA0034E6DB /* KKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKBaseViewController.m; sourceTree = "<group>"; };
+		842C48F925ABEEEA0034E6DB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		842C48FA25ABEEEA0034E6DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		842C48FB25ABEEEA0034E6DB /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
+		842C4A0B25ABF06E0034E6DB /* HddcHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HddcHeader.pch; sourceTree = "<group>"; };
+		AA4D0171574B00AEEB33F596 /* Pods-hddc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.debug.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.debug.xcconfig"; sourceTree = "<group>"; };
+		D913CCA0024C5C5A0A406A81 /* Pods-hddc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.release.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.release.xcconfig"; sourceTree = "<group>"; };
+		DC114E69BEBB539667F364AD /* Pods_hddc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hddc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		842C46B325ABEC460034E6DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89E8A2464E7C3BD0DD96BB63 /* Pods_hddc.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4273582A7BC34C5386077513 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC114E69BEBB539667F364AD /* Pods_hddc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		842C46AD25ABEC460034E6DB = {
+			isa = PBXGroup;
+			children = (
+				842C46B825ABEC460034E6DB /* hddc */,
+				842C46B725ABEC460034E6DB /* Products */,
+				94FB7C2E2A802B7F80781070 /* Pods */,
+				4273582A7BC34C5386077513 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		842C46B725ABEC460034E6DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842C46B625ABEC460034E6DB /* hddc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		842C46B825ABEC460034E6DB /* hddc */ = {
+			isa = PBXGroup;
+			children = (
+				842C481525ABEEEA0034E6DB /* AppDelegate.h */,
+				842C479225ABEEE90034E6DB /* AppDelegate.m */,
+				842C4A1025ABF4D70034E6DB /* System */,
+				842C46F025ABEEE90034E6DB /* 三方库 */,
+				842C46DC25ABEEE90034E6DB /* 通用 */,
+				842C46D425ABEEE90034E6DB /* Storage */,
+				842C479425ABEEE90034E6DB /* API */,
+				842C481725ABEEEA0034E6DB /* Controller */,
+			);
+			path = hddc;
+			sourceTree = "<group>";
+		};
+		842C46D425ABEEE90034E6DB /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				842C46D625ABEEE90034E6DB /* 数据库 */,
+				842C46D525ABEEE90034E6DB /* GPTaskQueue.h */,
+				842C46DA25ABEEE90034E6DB /* GPTaskQueue.m */,
+				842C46D925ABEEE90034E6DB /* GPTask.m */,
+				842C46DB25ABEEE90034E6DB /* GPTask.h */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		842C46D625ABEEE90034E6DB /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				842C46D725ABEEE90034E6DB /* YXTable.m */,
+				842C46D825ABEEE90034E6DB /* YXTable.h */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
+		842C46DC25ABEEE90034E6DB /* 通用 */ = {
+			isa = PBXGroup;
+			children = (
+				842C46DD25ABEEE90034E6DB /* GPInfoView.xib */,
+				842C46DE25ABEEE90034E6DB /* GPNormalPicker */,
+				842C46E225ABEEE90034E6DB /* ArcGISUtil */,
+				842C46E725ABEEE90034E6DB /* GPCityPicker */,
+				842C46EB25ABEEE90034E6DB /* BDLocationTrace */,
+			);
+			path = "通用";
+			sourceTree = "<group>";
+		};
+		842C46DE25ABEEE90034E6DB /* GPNormalPicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C46DF25ABEEE90034E6DB /* GPNormalPicker.h */,
+				842C46E025ABEEE90034E6DB /* GPNormalPicker.xib */,
+				842C46E125ABEEE90034E6DB /* GPNormalPicker.m */,
+			);
+			path = GPNormalPicker;
+			sourceTree = "<group>";
+		};
+		842C46E225ABEEE90034E6DB /* ArcGISUtil */ = {
+			isa = PBXGroup;
+			children = (
+				842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */,
+				842C46E425ABEEE90034E6DB /* BDArcGISGraphic.h */,
+				842C46E525ABEEE90034E6DB /* BDArcGISUtil.h */,
+				842C46E625ABEEE90034E6DB /* BDArcGISGraphic.m */,
+			);
+			path = ArcGISUtil;
+			sourceTree = "<group>";
+		};
+		842C46E725ABEEE90034E6DB /* GPCityPicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C46E825ABEEE90034E6DB /* GPCityPicker.h */,
+				842C46E925ABEEE90034E6DB /* GPCityPicker.xib */,
+				842C46EA25ABEEE90034E6DB /* GPCityPicker.m */,
+			);
+			path = GPCityPicker;
+			sourceTree = "<group>";
+		};
+		842C46EB25ABEEE90034E6DB /* BDLocationTrace */ = {
+			isa = PBXGroup;
+			children = (
+				842C46EC25ABEEE90034E6DB /* YXTrace.m */,
+				842C46ED25ABEEE90034E6DB /* BDLocationTrace.h */,
+				842C46EE25ABEEE90034E6DB /* YXTrace.h */,
+				842C46EF25ABEEE90034E6DB /* BDLocationTrace.m */,
+			);
+			path = BDLocationTrace;
+			sourceTree = "<group>";
+		};
+		842C46F025ABEEE90034E6DB /* 三方库 */ = {
+			isa = PBXGroup;
+			children = (
+				842C46F225ABEEE90034E6DB /* FFPropertyInspector */,
+				842C46FB25ABEEE90034E6DB /* TianDiTuLayer */,
+				842C470025ABEEE90034E6DB /* GoogleMapLayer */,
+				842C470525ABEEE90034E6DB /* BDHImagePicker */,
+				842C473725ABEEE90034E6DB /* BDBaseController */,
+			);
+			path = "三方库";
+			sourceTree = "<group>";
+		};
+		842C46F225ABEEE90034E6DB /* FFPropertyInspector */ = {
+			isa = PBXGroup;
+			children = (
+				842C46F325ABEEE90034E6DB /* FFInstanceNode.m */,
+				842C46F425ABEEE90034E6DB /* FFPropertyInspector.h */,
+				842C46F525ABEEE90034E6DB /* FFInstanceNode.h */,
+				842C46F625ABEEE90034E6DB /* FFPropertyInspector.m */,
+			);
+			path = FFPropertyInspector;
+			sourceTree = "<group>";
+		};
+		842C46FB25ABEEE90034E6DB /* TianDiTuLayer */ = {
+			isa = PBXGroup;
+			children = (
+				842C46FC25ABEEE90034E6DB /* TianDiTuLayer.h */,
+				842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */,
+				842C46FE25ABEEE90034E6DB /* TianDiTuLayer.m */,
+				842C46FF25ABEEE90034E6DB /* TianDiTuLayerInfo.h */,
+			);
+			path = TianDiTuLayer;
+			sourceTree = "<group>";
+		};
+		842C470025ABEEE90034E6DB /* GoogleMapLayer */ = {
+			isa = PBXGroup;
+			children = (
+				842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */,
+				842C470325ABEEE90034E6DB /* AGSGoogleMapLayer.h */,
+				842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */,
+			);
+			path = GoogleMapLayer;
+			sourceTree = "<group>";
+		};
+		842C470525ABEEE90034E6DB /* BDHImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C470625ABEEE90034E6DB /* BDHImagePicker.h */,
+				842C470725ABEEE90034E6DB /* Classes */,
+				842C472B25ABEEE90034E6DB /* Resources */,
+				842C473025ABEEE90034E6DB /* Support */,
+			);
+			path = BDHImagePicker;
+			sourceTree = "<group>";
+		};
+		842C470725ABEEE90034E6DB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */,
+				842C470925ABEEE90034E6DB /* Models */,
+				842C470E25ABEEE90034E6DB /* BDHImagePickerHelper.h */,
+				842C470F25ABEEE90034E6DB /* Controllers */,
+				842C471A25ABEEE90034E6DB /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		842C470925ABEEE90034E6DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				842C470A25ABEEE90034E6DB /* BDHAlbum.m */,
+				842C470B25ABEEE90034E6DB /* BDHAsset.m */,
+				842C470C25ABEEE90034E6DB /* BDHAsset.h */,
+				842C470D25ABEEE90034E6DB /* BDHAlbum.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		842C470F25ABEEE90034E6DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				842C471025ABEEE90034E6DB /* BDHImagePickerController.h */,
+				842C471125ABEEE90034E6DB /* BDHPhotoBrowser.h */,
+				842C471225ABEEE90034E6DB /* BDHImageFlowViewController.m */,
+				842C471325ABEEE90034E6DB /* BDHAlbumTableViewController.m */,
+				842C471425ABEEE90034E6DB /* BDHImageFetchOperation.h */,
+				842C471525ABEEE90034E6DB /* BDHImagePickerController.m */,
+				842C471625ABEEE90034E6DB /* BDHImageFlowViewController.h */,
+				842C471725ABEEE90034E6DB /* BDHPhotoBrowser.m */,
+				842C471825ABEEE90034E6DB /* BDHAlbumTableViewController.h */,
+				842C471925ABEEE90034E6DB /* BDHImageFetchOperation.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		842C471A25ABEEE90034E6DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				842C471B25ABEEE90034E6DB /* BDHTapDetectingImageView.h */,
+				842C471C25ABEEE90034E6DB /* BDHFullImageButton.h */,
+				842C471D25ABEEE90034E6DB /* BDHAlbumCell.m */,
+				842C471E25ABEEE90034E6DB /* BDHBadgeLabel.m */,
+				842C471F25ABEEE90034E6DB /* BDHSendButton.h */,
+				842C472025ABEEE90034E6DB /* BDHBrowserCell.h */,
+				842C472125ABEEE90034E6DB /* BDHUnAuthorizedTipsView.h */,
+				842C472225ABEEE90034E6DB /* BDHAssetsViewCell.h */,
+				842C472325ABEEE90034E6DB /* BDHTapDetectingImageView.m */,
+				842C472425ABEEE90034E6DB /* BDHFullImageButton.m */,
+				842C472525ABEEE90034E6DB /* BDHBadgeLabel.h */,
+				842C472625ABEEE90034E6DB /* BDHAlbumCell.h */,
+				842C472725ABEEE90034E6DB /* BDHAssetsViewCell.m */,
+				842C472825ABEEE90034E6DB /* BDHUnAuthorizedTipsView.m */,
+				842C472925ABEEE90034E6DB /* BDHBrowserCell.m */,
+				842C472A25ABEEE90034E6DB /* BDHSendButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		842C472B25ABEEE90034E6DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				842C472C25ABEEE90034E6DB /* BDHImagePicker.strings */,
+				842C472F25ABEEE90034E6DB /* imageResources.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		842C473025ABEEE90034E6DB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				842C473125ABEEE90034E6DB /* UIColor+Hex.m */,
+				842C473225ABEEE90034E6DB /* UIView+BDHImagePicker.h */,
+				842C473325ABEEE90034E6DB /* UIViewController+BDHImagePicker.h */,
+				842C473425ABEEE90034E6DB /* UIColor+Hex.h */,
+				842C473525ABEEE90034E6DB /* UIView+BDHImagePicker.m */,
+				842C473625ABEEE90034E6DB /* UIViewController+BDHImagePicker.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		842C473725ABEEE90034E6DB /* BDBaseController */ = {
+			isa = PBXGroup;
+			children = (
+				842C473825ABEEE90034E6DB /* BDBaseController.xcassets */,
+				842C473925ABEEE90034E6DB /* Controller */,
+				842C477A25ABEEE90034E6DB /* ToolKit */,
+			);
+			path = BDBaseController;
+			sourceTree = "<group>";
+		};
+		842C473925ABEEE90034E6DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				842C473A25ABEEE90034E6DB /* BDBaseCollectionViewController */,
+				842C473D25ABEEE90034E6DB /* BDHTTP */,
+				842C474025ABEEE90034E6DB /* BDBaseController.h */,
+				842C474125ABEEE90034E6DB /* BDBaseTableViewController */,
+				842C474425ABEEE90034E6DB /* BDTextFieldCell */,
+				842C474725ABEEE90034E6DB /* Category */,
+				842C475425ABEEE90034E6DB /* BDScanController */,
+				842C475F25ABEEE90034E6DB /* BDWebViewController */,
+				842C476225ABEEE90034E6DB /* LiveBroadcast */,
+				842C476B25ABEEE90034E6DB /* BDBaseDefine */,
+				842C476E25ABEEE90034E6DB /* BDBaseTabBarController */,
+				842C477125ABEEE90034E6DB /* BDBaseViewController */,
+				842C477425ABEEE90034E6DB /* BDBaseViewModel */,
+				842C477725ABEEE90034E6DB /* BDTabBar */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		842C473A25ABEEE90034E6DB /* BDBaseCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842C473B25ABEEE90034E6DB /* BDBaseCollectionViewController.h */,
+				842C473C25ABEEE90034E6DB /* BDBaseCollectionViewController.m */,
+			);
+			path = BDBaseCollectionViewController;
+			sourceTree = "<group>";
+		};
+		842C473D25ABEEE90034E6DB /* BDHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				842C473E25ABEEE90034E6DB /* BDHTTP.m */,
+				842C473F25ABEEE90034E6DB /* BDHTTP.h */,
+			);
+			path = BDHTTP;
+			sourceTree = "<group>";
+		};
+		842C474125ABEEE90034E6DB /* BDBaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842C474225ABEEE90034E6DB /* BDBaseTableViewController.m */,
+				842C474325ABEEE90034E6DB /* BDBaseTableViewController.h */,
+			);
+			path = BDBaseTableViewController;
+			sourceTree = "<group>";
+		};
+		842C474425ABEEE90034E6DB /* BDTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				842C474525ABEEE90034E6DB /* BDTextFieldCell.h */,
+				842C474625ABEEE90034E6DB /* BDTextFieldCell.m */,
+			);
+			path = BDTextFieldCell;
+			sourceTree = "<group>";
+		};
+		842C474725ABEEE90034E6DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				842C474825ABEEE90034E6DB /* UITableViewController+HUD */,
+				842C474B25ABEEE90034E6DB /* UICollectionViewController+HUD */,
+				842C474E25ABEEE90034E6DB /* UIViewController+HUD */,
+				842C475125ABEEE90034E6DB /* UITableView+Refresh */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		842C474825ABEEE90034E6DB /* UITableViewController+HUD */ = {
+			isa = PBXGroup;
+			children = (
+				842C474925ABEEE90034E6DB /* UITableViewController+HUD.h */,
+				842C474A25ABEEE90034E6DB /* UITableViewController+HUD.m */,
+			);
+			path = "UITableViewController+HUD";
+			sourceTree = "<group>";
+		};
+		842C474B25ABEEE90034E6DB /* UICollectionViewController+HUD */ = {
+			isa = PBXGroup;
+			children = (
+				842C474C25ABEEE90034E6DB /* UICollectionViewController+HUD.h */,
+				842C474D25ABEEE90034E6DB /* UICollectionViewController+HUD.m */,
+			);
+			path = "UICollectionViewController+HUD";
+			sourceTree = "<group>";
+		};
+		842C474E25ABEEE90034E6DB /* UIViewController+HUD */ = {
+			isa = PBXGroup;
+			children = (
+				842C474F25ABEEE90034E6DB /* UIViewController+HUD.m */,
+				842C475025ABEEE90034E6DB /* UIViewController+HUD.h */,
+			);
+			path = "UIViewController+HUD";
+			sourceTree = "<group>";
+		};
+		842C475125ABEEE90034E6DB /* UITableView+Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				842C475225ABEEE90034E6DB /* UITableView+Refresh.h */,
+				842C475325ABEEE90034E6DB /* UITableView+Refresh.m */,
+			);
+			path = "UITableView+Refresh";
+			sourceTree = "<group>";
+		};
+		842C475425ABEEE90034E6DB /* BDScanController */ = {
+			isa = PBXGroup;
+			children = (
+				842C475525ABEEE90034E6DB /* Res */,
+				842C475D25ABEEE90034E6DB /* BDScanController.m */,
+				842C475E25ABEEE90034E6DB /* BDScanController.h */,
+			);
+			path = BDScanController;
+			sourceTree = "<group>";
+		};
+		842C475525ABEEE90034E6DB /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				842C475625ABEEE90034E6DB /* BDScan.storyboard */,
+				842C475725ABEEE90034E6DB /* Frame@2x.png */,
+				842C475825ABEEE90034E6DB /* Frame@3x.png */,
+				842C475925ABEEE90034E6DB /* Line@2x.png */,
+				842C475A25ABEEE90034E6DB /* Line@3x.png */,
+				842C475B25ABEEE90034E6DB /* Close@3x.png */,
+				842C475C25ABEEE90034E6DB /* Close@2x.png */,
+			);
+			path = Res;
+			sourceTree = "<group>";
+		};
+		842C475F25ABEEE90034E6DB /* BDWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842C476025ABEEE90034E6DB /* BDWebViewController.h */,
+				842C476125ABEEE90034E6DB /* BDWebViewController.m */,
+			);
+			path = BDWebViewController;
+			sourceTree = "<group>";
+		};
+		842C476225ABEEE90034E6DB /* LiveBroadcast */ = {
+			isa = PBXGroup;
+			children = (
+				842C476325ABEEE90034E6DB /* BDLiveBroadcast.xcassets */,
+				842C476425ABEEE90034E6DB /* BDLiveBroadcastController.m */,
+				842C476525ABEEE90034E6DB /* View */,
+				842C476925ABEEE90034E6DB /* BDLiveBroadcast.storyboard */,
+				842C476A25ABEEE90034E6DB /* BDLiveBroadcastController.h */,
+			);
+			path = LiveBroadcast;
+			sourceTree = "<group>";
+		};
+		842C476525ABEEE90034E6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				842C476625ABEEE90034E6DB /* BDLiveBroadcastPrepareView.m */,
+				842C476725ABEEE90034E6DB /* BDLiveBroadcastPrepareView.h */,
+				842C476825ABEEE90034E6DB /* BDLiveBroadcastPrepareView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842C476B25ABEEE90034E6DB /* BDBaseDefine */ = {
+			isa = PBXGroup;
+			children = (
+				842C476C25ABEEE90034E6DB /* BDBaseDefine.m */,
+				842C476D25ABEEE90034E6DB /* BDBaseDefine.h */,
+			);
+			path = BDBaseDefine;
+			sourceTree = "<group>";
+		};
+		842C476E25ABEEE90034E6DB /* BDBaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				842C476F25ABEEE90034E6DB /* BDBaseTabBarController.m */,
+				842C477025ABEEE90034E6DB /* BDBaseTabBarController.h */,
+			);
+			path = BDBaseTabBarController;
+			sourceTree = "<group>";
+		};
+		842C477125ABEEE90034E6DB /* BDBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842C477225ABEEE90034E6DB /* BDBaseViewController.m */,
+				842C477325ABEEE90034E6DB /* BDBaseViewController.h */,
+			);
+			path = BDBaseViewController;
+			sourceTree = "<group>";
+		};
+		842C477425ABEEE90034E6DB /* BDBaseViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				842C477525ABEEE90034E6DB /* BDBaseViewModel.h */,
+				842C477625ABEEE90034E6DB /* BDBaseViewModel.m */,
+			);
+			path = BDBaseViewModel;
+			sourceTree = "<group>";
+		};
+		842C477725ABEEE90034E6DB /* BDTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				842C477825ABEEE90034E6DB /* BDTabBar.m */,
+				842C477925ABEEE90034E6DB /* BDTabBar.h */,
+			);
+			path = BDTabBar;
+			sourceTree = "<group>";
+		};
+		842C477A25ABEEE90034E6DB /* ToolKit */ = {
+			isa = PBXGroup;
+			children = (
+				842C477B25ABEEE90034E6DB /* BDTimePickerView */,
+				842C477F25ABEEE90034E6DB /* BDToastView */,
+				842C478225ABEEE90034E6DB /* BDWebImageAutoSize */,
+			);
+			path = ToolKit;
+			sourceTree = "<group>";
+		};
+		842C477B25ABEEE90034E6DB /* BDTimePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				842C477C25ABEEE90034E6DB /* BDTimePickerView.m */,
+				842C477D25ABEEE90034E6DB /* BDTimePickerView.h */,
+				842C477E25ABEEE90034E6DB /* BDTimePickerView.xib */,
+			);
+			path = BDTimePickerView;
+			sourceTree = "<group>";
+		};
+		842C477F25ABEEE90034E6DB /* BDToastView */ = {
+			isa = PBXGroup;
+			children = (
+				842C478025ABEEE90034E6DB /* BDToastView.m */,
+				842C478125ABEEE90034E6DB /* BDToastView.h */,
+			);
+			path = BDToastView;
+			sourceTree = "<group>";
+		};
+		842C478225ABEEE90034E6DB /* BDWebImageAutoSize */ = {
+			isa = PBXGroup;
+			children = (
+				842C478325ABEEE90034E6DB /* BDWebImageAutoSizeConst.h */,
+				842C478425ABEEE90034E6DB /* BDWebImageAutoSize.m */,
+				842C478525ABEEE90034E6DB /* BDWebImageAutoSizeCache.m */,
+				842C478625ABEEE90034E6DB /* UITableView+BDWebImageAutoSize.m */,
+				842C478725ABEEE90034E6DB /* UICollectionView+BDWebImageAutoSize.m */,
+				842C478825ABEEE90034E6DB /* BDWebImageAutoSizeConst.m */,
+				842C478925ABEEE90034E6DB /* BDWebImageAutoSizeCache.h */,
+				842C478A25ABEEE90034E6DB /* BDWebImageAutoSize.h */,
+				842C478B25ABEEE90034E6DB /* UITableView+BDWebImageAutoSize.h */,
+				842C478C25ABEEE90034E6DB /* UICollectionView+BDWebImageAutoSize.h */,
+			);
+			path = BDWebImageAutoSize;
+			sourceTree = "<group>";
+		};
+		842C479425ABEEE90034E6DB /* API */ = {
+			isa = PBXGroup;
+			children = (
+				842C481425ABEEEA0034E6DB /* YXAPI.h */,
+				842C479525ABEEE90034E6DB /* YXHTTP */,
+				842C479825ABEEE90034E6DB /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		842C479525ABEEE90034E6DB /* YXHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				842C479625ABEEE90034E6DB /* YXHTTP.h */,
+				842C479725ABEEE90034E6DB /* YXHTTP.m */,
+			);
+			path = YXHTTP;
+			sourceTree = "<group>";
+		};
+		842C479825ABEEE90034E6DB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				842C479925ABEEE90034E6DB /* 表单所有点 */,
+				842C479C25ABEEE90034E6DB /* 基础信息 */,
+				842C479F25ABEEE90034E6DB /* 任务 */,
+				842C47A225ABEEE90034E6DB /* 上传模块 */,
+				842C47A725ABEEE90034E6DB /* App模块 */,
+				842C47AA25ABEEE90034E6DB /* 轨迹采集 */,
+				842C47AD25ABEEE90034E6DB /* 用户模块 */,
+				842C47B425ABEEE90034E6DB /* 表单 */,
+				842C480E25ABEEEA0034E6DB /* 项目 */,
+				842C481125ABEEEA0034E6DB /* 获取基础数据 */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		842C479925ABEEE90034E6DB /* 表单所有点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C479A25ABEEE90034E6DB /* YXForumDataInfoModel.m */,
+				842C479B25ABEEE90034E6DB /* YXForumDataInfoModel.h */,
+			);
+			path = "表单所有点";
+			sourceTree = "<group>";
+		};
+		842C479C25ABEEE90034E6DB /* 基础信息 */ = {
+			isa = PBXGroup;
+			children = (
+				842C479D25ABEEE90034E6DB /* YXAppInfomationModel.m */,
+				842C479E25ABEEE90034E6DB /* YXAppInfomationModel.h */,
+			);
+			path = "基础信息";
+			sourceTree = "<group>";
+		};
+		842C479F25ABEEE90034E6DB /* 任务 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47A025ABEEE90034E6DB /* YXTaskModel.m */,
+				842C47A125ABEEE90034E6DB /* YXTaskModel.h */,
+			);
+			path = "任务";
+			sourceTree = "<group>";
+		};
+		842C47A225ABEEE90034E6DB /* 上传模块 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47A325ABEEE90034E6DB /* YXOSSModel.h */,
+				842C47A425ABEEE90034E6DB /* YXUpdateImagesModel.m */,
+				842C47A525ABEEE90034E6DB /* YXOSSModel.m */,
+				842C47A625ABEEE90034E6DB /* YXUpdateImagesModel.h */,
+			);
+			path = "上传模块";
+			sourceTree = "<group>";
+		};
+		842C47A725ABEEE90034E6DB /* App模块 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47A825ABEEE90034E6DB /* YXAppBannerModel.h */,
+				842C47A925ABEEE90034E6DB /* YXAppBannerModel.m */,
+			);
+			path = "App模块";
+			sourceTree = "<group>";
+		};
+		842C47AA25ABEEE90034E6DB /* 轨迹采集 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47AB25ABEEE90034E6DB /* YXTracePointModel.h */,
+				842C47AC25ABEEE90034E6DB /* YXTracePointModel.m */,
+			);
+			path = "轨迹采集";
+			sourceTree = "<group>";
+		};
+		842C47AD25ABEEE90034E6DB /* 用户模块 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47AE25ABEEE90034E6DB /* YXUserUpdatePasswordModel.h */,
+				842C47AF25ABEEE90034E6DB /* YXUserModel.h */,
+				842C47B025ABEEE90034E6DB /* YXUserLoginModel.m */,
+				842C47B125ABEEE90034E6DB /* YXUserUpdatePasswordModel.m */,
+				842C47B225ABEEE90034E6DB /* YXUserLoginModel.h */,
+				842C47B325ABEEE90034E6DB /* YXUserModel.m */,
+			);
+			path = "用户模块";
+			sourceTree = "<group>";
+		};
+		842C47B425ABEEE90034E6DB /* 表单 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47DF25ABEEE90034E6DB /* YXForumSaver.h */,
+				842C47B525ABEEE90034E6DB /* YXForumSaver.m */,
+				842C47B625ABEEE90034E6DB /* 区域调查 */,
+				842C47BD25ABEEE90034E6DB /* 地球物理探测 */,
+				842C47C425ABEEE90034E6DB /* 字典 */,
+				842C47C825ABEEE90034E6DB /* 野外采样 */,
+				842C47CC25ABEEE90034E6DB /* 地质调查 */,
+				842C47E025ABEEE90034E6DB /* 钻探调查 */,
+				842C47E425ABEEE90034E6DB /* 表单查询 */,
+				842C47E725ABEEE90034E6DB /* 地貌调查 */,
+				842C47FA25ABEEEA0034E6DB /* 地球化学探测 */,
+				842C480125ABEEEA0034E6DB /* 火山调查 */,
+			);
+			path = "表单";
+			sourceTree = "<group>";
+		};
+		842C47B625ABEEE90034E6DB /* 区域调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47B725ABEEE90034E6DB /* 地质调查规划点-点 */,
+				842C47BA25ABEEE90034E6DB /* 地质调查规划路线-线 */,
+			);
+			path = "区域调查";
+			sourceTree = "<group>";
+		};
+		842C47B725ABEEE90034E6DB /* 地质调查规划点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47B825ABEEE90034E6DB /* YXGeologicalSvyPlanningPtModel.h */,
+				842C47B925ABEEE90034E6DB /* YXGeologicalSvyPlanningPtModel.m */,
+			);
+			path = "地质调查规划点-点";
+			sourceTree = "<group>";
+		};
+		842C47BA25ABEEE90034E6DB /* 地质调查规划路线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47BB25ABEEE90034E6DB /* YXGeologicalSvyPlanningLineModel.m */,
+				842C47BC25ABEEE90034E6DB /* YXGeologicalSvyPlanningLineModel.h */,
+			);
+			path = "地质调查规划路线-线";
+			sourceTree = "<group>";
+		};
+		842C47BD25ABEEE90034E6DB /* 地球物理探测 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47BE25ABEEE90034E6DB /* 地球物理测点-点 */,
+				842C47C125ABEEE90034E6DB /* 地球物理测线-线 */,
+			);
+			path = "地球物理探测";
+			sourceTree = "<group>";
+		};
+		842C47BE25ABEEE90034E6DB /* 地球物理测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47BF25ABEEE90034E6DB /* YXGeophySvyPointModel.m */,
+				842C47C025ABEEE90034E6DB /* YXGeophySvyPointModel.h */,
+			);
+			path = "地球物理测点-点";
+			sourceTree = "<group>";
+		};
+		842C47C125ABEEE90034E6DB /* 地球物理测线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47C225ABEEE90034E6DB /* YXGeophySvyLineModel.m */,
+				842C47C325ABEEE90034E6DB /* YXGeophySvyLineModel.h */,
+			);
+			path = "地球物理测线-线";
+			sourceTree = "<group>";
+		};
+		842C47C425ABEEE90034E6DB /* 字典 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47C525ABEEE90034E6DB /* YXSlectionDictModel.m */,
+				842C47C625ABEEE90034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 */,
+				842C47C725ABEEE90034E6DB /* YXSlectionDictModel.h */,
+			);
+			path = "字典";
+			sourceTree = "<group>";
+		};
+		842C47C825ABEEE90034E6DB /* 野外采样 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47C925ABEEE90034E6DB /* 采样点-点 */,
+			);
+			path = "野外采样";
+			sourceTree = "<group>";
+		};
+		842C47C925ABEEE90034E6DB /* 采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47CA25ABEEE90034E6DB /* YXSamplePointModel.m */,
+				842C47CB25ABEEE90034E6DB /* YXSamplePointModel.h */,
+			);
+			path = "采样点-点";
+			sourceTree = "<group>";
+		};
+		842C47CC25ABEEE90034E6DB /* 地质调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47CD25ABEEE90034E6DB /* 地质地貌调查观测点-点 */,
+				842C47D025ABEEE90034E6DB /* 断层观测点-点 */,
+				842C47D325ABEEE90034E6DB /* 地层观测点-点 */,
+				842C47D625ABEEE90034E6DB /* 探槽-点 */,
+				842C47D925ABEEE90034E6DB /* 地质调查观测点-点 */,
+				842C47DC25ABEEE90034E6DB /* 地质调查路线-线 */,
+			);
+			path = "地质调查";
+			sourceTree = "<group>";
+		};
+		842C47CD25ABEEE90034E6DB /* 地质地貌调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47CE25ABEEE90034E6DB /* YXGeoGeomorphySvyPointModel.m */,
+				842C47CF25ABEEE90034E6DB /* YXGeoGeomorphySvyPointModel.h */,
+			);
+			path = "地质地貌调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C47D025ABEEE90034E6DB /* 断层观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47D125ABEEE90034E6DB /* YXFaultSvyPointModel.m */,
+				842C47D225ABEEE90034E6DB /* YXFaultSvyPointModel.h */,
+			);
+			path = "断层观测点-点";
+			sourceTree = "<group>";
+		};
+		842C47D325ABEEE90034E6DB /* 地层观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47D425ABEEE90034E6DB /* YXStratigraphySvyPointModel.h */,
+				842C47D525ABEEE90034E6DB /* YXStratigraphySvyPointModel.m */,
+			);
+			path = "地层观测点-点";
+			sourceTree = "<group>";
+		};
+		842C47D625ABEEE90034E6DB /* 探槽-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47D725ABEEE90034E6DB /* YXTrenchModel.m */,
+				842C47D825ABEEE90034E6DB /* YXTrenchModel.h */,
+			);
+			path = "探槽-点";
+			sourceTree = "<group>";
+		};
+		842C47D925ABEEE90034E6DB /* 地质调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47DA25ABEEE90034E6DB /* YXGeologicalSvyPointModel.m */,
+				842C47DB25ABEEE90034E6DB /* YXGeologicalSvyPointModel.h */,
+			);
+			path = "地质调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C47DC25ABEEE90034E6DB /* 地质调查路线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47DD25ABEEE90034E6DB /* YXGeologicalSvyLineModel.h */,
+				842C47DE25ABEEE90034E6DB /* YXGeologicalSvyLineModel.m */,
+			);
+			path = "地质调查路线-线";
+			sourceTree = "<group>";
+		};
+		842C47E025ABEEE90034E6DB /* 钻探调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47E125ABEEE90034E6DB /* 钻孔-点 */,
+			);
+			path = "钻探调查";
+			sourceTree = "<group>";
+		};
+		842C47E125ABEEE90034E6DB /* 钻孔-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47E225ABEEE90034E6DB /* YXDrillHoleModel.m */,
+				842C47E325ABEEE90034E6DB /* YXDrillHoleModel.h */,
+			);
+			path = "钻孔-点";
+			sourceTree = "<group>";
+		};
+		842C47E425ABEEE90034E6DB /* 表单查询 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47E525ABEEE90034E6DB /* YXFormListModel.m */,
+				842C47E625ABEEE90034E6DB /* YXFormListModel.h */,
+			);
+			path = "表单查询";
+			sourceTree = "<group>";
+		};
+		842C47E725ABEEE90034E6DB /* 地貌调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47E825ABEEE90034E6DB /* 微地貌测量采样点-点 */,
+				842C47EB25ABEEE90034E6DB /* 微地貌测量点-点 */,
+				842C47EE25ABEEE90034E6DB /* 微地貌面测量切线-线 */,
+				842C47F125ABEEE90034E6DB /* 微地貌测量面-面 */,
+				842C47F425ABEEEA0034E6DB /* 微地貌测量线-线 */,
+				842C47F725ABEEEA0034E6DB /* 微地貌测量基站点-点 */,
+			);
+			path = "地貌调查";
+			sourceTree = "<group>";
+		};
+		842C47E825ABEEE90034E6DB /* 微地貌测量采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47E925ABEEE90034E6DB /* YXGeomorphySvySamplePointModel.m */,
+				842C47EA25ABEEE90034E6DB /* YXGeomorphySvySamplePointModel.h */,
+			);
+			path = "微地貌测量采样点-点";
+			sourceTree = "<group>";
+		};
+		842C47EB25ABEEE90034E6DB /* 微地貌测量点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47EC25ABEEE90034E6DB /* YXGeomorphySvyPointModel.h */,
+				842C47ED25ABEEE90034E6DB /* YXGeomorphySvyPointModel.m */,
+			);
+			path = "微地貌测量点-点";
+			sourceTree = "<group>";
+		};
+		842C47EE25ABEEE90034E6DB /* 微地貌面测量切线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47EF25ABEEE90034E6DB /* YXGeomorphySvyReProfModel.m */,
+				842C47F025ABEEE90034E6DB /* YXGeomorphySvyReProfModel.h */,
+			);
+			path = "微地貌面测量切线-线";
+			sourceTree = "<group>";
+		};
+		842C47F125ABEEE90034E6DB /* 微地貌测量面-面 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47F225ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.m */,
+				842C47F325ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.h */,
+			);
+			path = "微地貌测量面-面";
+			sourceTree = "<group>";
+		};
+		842C47F425ABEEEA0034E6DB /* 微地貌测量线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47F525ABEEEA0034E6DB /* YXGeomorphySvyLineModel.m */,
+				842C47F625ABEEEA0034E6DB /* YXGeomorphySvyLineModel.h */,
+			);
+			path = "微地貌测量线-线";
+			sourceTree = "<group>";
+		};
+		842C47F725ABEEEA0034E6DB /* 微地貌测量基站点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47F825ABEEEA0034E6DB /* YXGeomorStationModel.m */,
+				842C47F925ABEEEA0034E6DB /* YXGeomorStationModel.h */,
+			);
+			path = "微地貌测量基站点-点";
+			sourceTree = "<group>";
+		};
+		842C47FA25ABEEEA0034E6DB /* 地球化学探测 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47FB25ABEEEA0034E6DB /* 地球化学探测测点-点 */,
+				842C47FE25ABEEEA0034E6DB /* 地球化学探测测线-线 */,
+			);
+			path = "地球化学探测";
+			sourceTree = "<group>";
+		};
+		842C47FB25ABEEEA0034E6DB /* 地球化学探测测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47FC25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.m */,
+				842C47FD25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.h */,
+			);
+			path = "地球化学探测测点-点";
+			sourceTree = "<group>";
+		};
+		842C47FE25ABEEEA0034E6DB /* 地球化学探测测线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C47FF25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m */,
+				842C480025ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.h */,
+			);
+			path = "地球化学探测测线-线";
+			sourceTree = "<group>";
+		};
+		842C480125ABEEEA0034E6DB /* 火山调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480225ABEEEA0034E6DB /* 火山采样点-点 */,
+				842C480525ABEEEA0034E6DB /* 熔岩流-面 */,
+				842C480825ABEEEA0034E6DB /* 火山口-点 */,
+				842C480B25ABEEEA0034E6DB /* 火山调查观测点-点 */,
+			);
+			path = "火山调查";
+			sourceTree = "<group>";
+		};
+		842C480225ABEEEA0034E6DB /* 火山采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480325ABEEEA0034E6DB /* YXVolcanicSamplePointModel.h */,
+				842C480425ABEEEA0034E6DB /* YXVolcanicSamplePointModel.m */,
+			);
+			path = "火山采样点-点";
+			sourceTree = "<group>";
+		};
+		842C480525ABEEEA0034E6DB /* 熔岩流-面 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480625ABEEEA0034E6DB /* YXLavaModel.h */,
+				842C480725ABEEEA0034E6DB /* YXLavaModel.m */,
+			);
+			path = "熔岩流-面";
+			sourceTree = "<group>";
+		};
+		842C480825ABEEEA0034E6DB /* 火山口-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480925ABEEEA0034E6DB /* YXCraterModel.m */,
+				842C480A25ABEEEA0034E6DB /* YXCraterModel.h */,
+			);
+			path = "火山口-点";
+			sourceTree = "<group>";
+		};
+		842C480B25ABEEEA0034E6DB /* 火山调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480C25ABEEEA0034E6DB /* YXVolcanicSvyPointModel.h */,
+				842C480D25ABEEEA0034E6DB /* YXVolcanicSvyPointModel.m */,
+			);
+			path = "火山调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C480E25ABEEEA0034E6DB /* 项目 */ = {
+			isa = PBXGroup;
+			children = (
+				842C480F25ABEEEA0034E6DB /* YXProjectModel.h */,
+				842C481025ABEEEA0034E6DB /* YXProjectModel.m */,
+			);
+			path = "项目";
+			sourceTree = "<group>";
+		};
+		842C481125ABEEEA0034E6DB /* 获取基础数据 */ = {
+			isa = PBXGroup;
+			children = (
+				842C481225ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.m */,
+				842C481325ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.h */,
+			);
+			path = "获取基础数据";
+			sourceTree = "<group>";
+		};
+		842C481725ABEEEA0034E6DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				842C48F425ABEEEA0034E6DB /* Base */,
+				842C48EC25ABEEEA0034E6DB /* Tab */,
+				842C48DC25ABEEEA0034E6DB /* Launch */,
+				842C481825ABEEEA0034E6DB /* 首页 */,
+				842C48E525ABEEEA0034E6DB /* 登录注册 */,
+				842C48F025ABEEEA0034E6DB /* 轨迹采集 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		842C481825ABEEEA0034E6DB /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48DA25ABEEEA0034E6DB /* GPHome.storyboard */,
+				842C481C25ABEEEA0034E6DB /* GPHomeController.h */,
+				842C48B825ABEEEA0034E6DB /* GPHomeController.m */,
+				842C48B925ABEEEA0034E6DB /* GPHomeMeCenter.h */,
+				842C481B25ABEEEA0034E6DB /* GPHomeMeCenter.m */,
+				842C48D925ABEEEA0034E6DB /* GPHomeProgramListController.h */,
+				842C481925ABEEEA0034E6DB /* GPHomeProgramListController.m */,
+				842C481A25ABEEEA0034E6DB /* GPOfflineForumListController.h */,
+				842C48BA25ABEEEA0034E6DB /* GPOfflineForumListController.m */,
+				842C48DB25ABEEEA0034E6DB /* GPHomeChangePasswordController.h */,
+				842C482025ABEEEA0034E6DB /* GPHomeChangePasswordController.m */,
+				842C48BB25ABEEEA0034E6DB /* View */,
+				842C482125ABEEEA0034E6DB /* Utils */,
+				842C481D25ABEEEA0034E6DB /* Entity */,
+				842C482825ABEEEA0034E6DB /* 表单 */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		842C481D25ABEEEA0034E6DB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				842C481E25ABEEEA0034E6DB /* BDSelectionModel.h */,
+				842C481F25ABEEEA0034E6DB /* BDSelectionModel.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		842C482125ABEEEA0034E6DB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				842C482225ABEEEA0034E6DB /* GPForumJumper.h */,
+				842C482525ABEEEA0034E6DB /* GPForumJumper.m */,
+				842C482425ABEEEA0034E6DB /* GPMultiForumUploader.h */,
+				842C482725ABEEEA0034E6DB /* GPMultiForumUploader.m */,
+				842C482625ABEEEA0034E6DB /* GPMultiTracePointsUploader.h */,
+				842C482325ABEEEA0034E6DB /* GPMultiTracePointsUploader.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		842C482825ABEEEA0034E6DB /* 表单 */ = {
+			isa = PBXGroup;
+			children = (
+				842C484825ABEEEA0034E6DB /* GPTask.storyboard */,
+				842C484E25ABEEEA0034E6DB /* GPNewTaskController.h */,
+				842C48A225ABEEEA0034E6DB /* GPNewTaskController.m */,
+				842C486825ABEEEA0034E6DB /* GPTaskListController.h */,
+				842C48A125ABEEEA0034E6DB /* GPTaskListController.m */,
+				842C482925ABEEEA0034E6DB /* GPTaskMapController.h */,
+				842C486925ABEEEA0034E6DB /* GPTaskMapController.m */,
+				842C486F25ABEEEA0034E6DB /* GPArcGisMapController.h */,
+				842C482A25ABEEEA0034E6DB /* GPArcGisMapController.m */,
+				842C48B725ABEEEA0034E6DB /* GPForumListController.h */,
+				842C484725ABEEEA0034E6DB /* GPForumListController.m */,
+				842C48B425ABEEEA0034E6DB /* Base */,
+				842C487025ABEEEA0034E6DB /* View */,
+				842C483425ABEEEA0034E6DB /* Entity */,
+				842C482B25ABEEEA0034E6DB /* 区域调查 */,
+				842C483E25ABEEEA0034E6DB /* 地球物理探测 */,
+				842C484925ABEEEA0034E6DB /* 野外采样 */,
+				842C484F25ABEEEA0034E6DB /* 地质调查 */,
+				842C486A25ABEEEA0034E6DB /* 钻探调查 */,
+				842C487F25ABEEEA0034E6DB /* 地貌调查 */,
+				842C489825ABEEEA0034E6DB /* 地球化学探测 */,
+				842C48A325ABEEEA0034E6DB /* 火山调查 */,
+			);
+			path = "表单";
+			sourceTree = "<group>";
+		};
+		842C482B25ABEEEA0034E6DB /* 区域调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C482C25ABEEEA0034E6DB /* 地质调查规划点-点 */,
+				842C483025ABEEEA0034E6DB /* 地质调查规划路线-线 */,
+			);
+			path = "区域调查";
+			sourceTree = "<group>";
+		};
+		842C482C25ABEEEA0034E6DB /* 地质调查规划点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C482D25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.h */,
+				842C482E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard */,
+				842C482F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m */,
+			);
+			path = "地质调查规划点-点";
+			sourceTree = "<group>";
+		};
+		842C483025ABEEEA0034E6DB /* 地质调查规划路线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C483125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard */,
+				842C483225ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m */,
+				842C483325ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.h */,
+			);
+			path = "地质调查规划路线-线";
+			sourceTree = "<group>";
+		};
+		842C483425ABEEEA0034E6DB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				842C483525ABEEEA0034E6DB /* GPTanCeTypeEntity.m */,
+				842C483625ABEEEA0034E6DB /* GPForumType.h */,
+				842C483725ABEEEA0034E6DB /* BDReachability.h */,
+				842C483825ABEEEA0034E6DB /* GPImageEntity.h */,
+				842C483925ABEEEA0034E6DB /* BDReachability.m */,
+				842C483A25ABEEEA0034E6DB /* GPForumType.m */,
+				842C483B25ABEEEA0034E6DB /* GPTanCeTypeEntity.h */,
+				842C483C25ABEEEA0034E6DB /* GPImageEntity.m */,
+				842C483D25ABEEEA0034E6DB /* dixingType.json */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		842C483E25ABEEEA0034E6DB /* 地球物理探测 */ = {
+			isa = PBXGroup;
+			children = (
+				842C483F25ABEEEA0034E6DB /* 地球物理测点-点 */,
+				842C484325ABEEEA0034E6DB /* 地球物理测线-线 */,
+			);
+			path = "地球物理探测";
+			sourceTree = "<group>";
+		};
+		842C483F25ABEEEA0034E6DB /* 地球物理测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C484025ABEEEA0034E6DB /* GPGeophySvyPoint.m */,
+				842C484125ABEEEA0034E6DB /* GPGeophySvyPoint.storyboard */,
+				842C484225ABEEEA0034E6DB /* GPGeophySvyPoint.h */,
+			);
+			path = "地球物理测点-点";
+			sourceTree = "<group>";
+		};
+		842C484325ABEEEA0034E6DB /* 地球物理测线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C484425ABEEEA0034E6DB /* GPGeophySvyLine.h */,
+				842C484525ABEEEA0034E6DB /* GPGeophySvyLine.m */,
+				842C484625ABEEEA0034E6DB /* GPGeophySvyLine.storyboard */,
+			);
+			path = "地球物理测线-线";
+			sourceTree = "<group>";
+		};
+		842C484925ABEEEA0034E6DB /* 野外采样 */ = {
+			isa = PBXGroup;
+			children = (
+				842C484A25ABEEEA0034E6DB /* 采样点-点 */,
+			);
+			path = "野外采样";
+			sourceTree = "<group>";
+		};
+		842C484A25ABEEEA0034E6DB /* 采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C484B25ABEEEA0034E6DB /* GPSamplePoint.h */,
+				842C484C25ABEEEA0034E6DB /* GPSamplePoint.storyboard */,
+				842C484D25ABEEEA0034E6DB /* GPSamplePoint.m */,
+			);
+			path = "采样点-点";
+			sourceTree = "<group>";
+		};
+		842C484F25ABEEEA0034E6DB /* 地质调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C485025ABEEEA0034E6DB /* 地质地貌调查观测点-点 */,
+				842C485425ABEEEA0034E6DB /* 断层观测点-点 */,
+				842C485825ABEEEA0034E6DB /* 地层观测点-点 */,
+				842C485C25ABEEEA0034E6DB /* 探槽-点 */,
+				842C486025ABEEEA0034E6DB /* 地质调查观测点-点 */,
+				842C486425ABEEEA0034E6DB /* 地质调查路线-线 */,
+			);
+			path = "地质调查";
+			sourceTree = "<group>";
+		};
+		842C485025ABEEEA0034E6DB /* 地质地貌调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C485125ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m */,
+				842C485225ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard */,
+				842C485325ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.h */,
+			);
+			path = "地质地貌调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C485425ABEEEA0034E6DB /* 断层观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C485525ABEEEA0034E6DB /* GPFaultSvyPoint.storyboard */,
+				842C485625ABEEEA0034E6DB /* GPFaultSvyPoint.m */,
+				842C485725ABEEEA0034E6DB /* GPFaultSvyPoint.h */,
+			);
+			path = "断层观测点-点";
+			sourceTree = "<group>";
+		};
+		842C485825ABEEEA0034E6DB /* 地层观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C485925ABEEEA0034E6DB /* GPStratigraphySvyPoint.m */,
+				842C485A25ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard */,
+				842C485B25ABEEEA0034E6DB /* GPStratigraphySvyPoint.h */,
+			);
+			path = "地层观测点-点";
+			sourceTree = "<group>";
+		};
+		842C485C25ABEEEA0034E6DB /* 探槽-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C485D25ABEEEA0034E6DB /* GPTrench.storyboard */,
+				842C485E25ABEEEA0034E6DB /* GPTrench.h */,
+				842C485F25ABEEEA0034E6DB /* GPTrench.m */,
+			);
+			path = "探槽-点";
+			sourceTree = "<group>";
+		};
+		842C486025ABEEEA0034E6DB /* 地质调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C486125ABEEEA0034E6DB /* GPGeologicalSvyPoint.m */,
+				842C486225ABEEEA0034E6DB /* GPGeologicalSvyPoint.h */,
+				842C486325ABEEEA0034E6DB /* GPGeologicalSvyPoint.storyboard */,
+			);
+			path = "地质调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C486425ABEEEA0034E6DB /* 地质调查路线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C486525ABEEEA0034E6DB /* GPGeologicalSvyLine.m */,
+				842C486625ABEEEA0034E6DB /* GPGeologicalSvyLine.h */,
+				842C486725ABEEEA0034E6DB /* GPGeologicalSvyLine.storyboard */,
+			);
+			path = "地质调查路线-线";
+			sourceTree = "<group>";
+		};
+		842C486A25ABEEEA0034E6DB /* 钻探调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C486B25ABEEEA0034E6DB /* 钻孔-点 */,
+			);
+			path = "钻探调查";
+			sourceTree = "<group>";
+		};
+		842C486B25ABEEEA0034E6DB /* 钻孔-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C486C25ABEEEA0034E6DB /* GPDrillHole.storyboard */,
+				842C486D25ABEEEA0034E6DB /* GPDrillHole.m */,
+				842C486E25ABEEEA0034E6DB /* GPDrillHole.h */,
+			);
+			path = "钻孔-点";
+			sourceTree = "<group>";
+		};
+		842C487025ABEEEA0034E6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				842C487125ABEEEA0034E6DB /* GPTaskImagesCollectionCell.xib */,
+				842C487225ABEEEA0034E6DB /* GPPintTuanTimePicker.xib */,
+				842C487325ABEEEA0034E6DB /* GPMapLayerPicker */,
+				842C487725ABEEEA0034E6DB /* GPDiXinTypePicker */,
+				842C487B25ABEEEA0034E6DB /* GPTaskImagesCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842C487325ABEEEA0034E6DB /* GPMapLayerPicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C487425ABEEEA0034E6DB /* GPMapLayerPicker.h */,
+				842C487525ABEEEA0034E6DB /* GPMapLayerPicker.xib */,
+				842C487625ABEEEA0034E6DB /* GPMapLayerPicker.m */,
+			);
+			path = GPMapLayerPicker;
+			sourceTree = "<group>";
+		};
+		842C487725ABEEEA0034E6DB /* GPDiXinTypePicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C487825ABEEEA0034E6DB /* GPDiXinTypePicker.m */,
+				842C487925ABEEEA0034E6DB /* GPDiXinTypePicker.h */,
+				842C487A25ABEEEA0034E6DB /* GPDiXinTypePicker.xib */,
+			);
+			path = GPDiXinTypePicker;
+			sourceTree = "<group>";
+		};
+		842C487B25ABEEEA0034E6DB /* GPTaskImagesCell */ = {
+			isa = PBXGroup;
+			children = (
+				842C487C25ABEEEA0034E6DB /* GPTaskImagesCell.h */,
+				842C487D25ABEEEA0034E6DB /* GPTaskImagesCell.xib */,
+				842C487E25ABEEEA0034E6DB /* GPTaskImagesCell.m */,
+			);
+			path = GPTaskImagesCell;
+			sourceTree = "<group>";
+		};
+		842C487F25ABEEEA0034E6DB /* 地貌调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C488025ABEEEA0034E6DB /* 微地貌测量采样点-点 */,
+				842C488425ABEEEA0034E6DB /* 微地貌测量点-点 */,
+				842C488825ABEEEA0034E6DB /* 微地貌面测量切线-线 */,
+				842C488C25ABEEEA0034E6DB /* 微地貌测量面-面 */,
+				842C489025ABEEEA0034E6DB /* 微地貌测量线-线 */,
+				842C489425ABEEEA0034E6DB /* 微地貌测量基站点-点 */,
+			);
+			path = "地貌调查";
+			sourceTree = "<group>";
+		};
+		842C488025ABEEEA0034E6DB /* 微地貌测量采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C488125ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.m */,
+				842C488225ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.storyboard */,
+				842C488325ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.h */,
+			);
+			path = "微地貌测量采样点-点";
+			sourceTree = "<group>";
+		};
+		842C488425ABEEEA0034E6DB /* 微地貌测量点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C488525ABEEEA0034E6DB /* GPGeomorphySvyPoint.h */,
+				842C488625ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard */,
+				842C488725ABEEEA0034E6DB /* GPGeomorphySvyPoint.m */,
+			);
+			path = "微地貌测量点-点";
+			sourceTree = "<group>";
+		};
+		842C488825ABEEEA0034E6DB /* 微地貌面测量切线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C488925ABEEEA0034E6DB /* GPGeomorphySvyReProf.h */,
+				842C488A25ABEEEA0034E6DB /* GPGeomorphySvyReProf.m */,
+				842C488B25ABEEEA0034E6DB /* GPGeomorphySvyReProf.storyboard */,
+			);
+			path = "微地貌面测量切线-线";
+			sourceTree = "<group>";
+		};
+		842C488C25ABEEEA0034E6DB /* 微地貌测量面-面 */ = {
+			isa = PBXGroup;
+			children = (
+				842C488D25ABEEEA0034E6DB /* GPGeomorphySvyRegion.m */,
+				842C488E25ABEEEA0034E6DB /* GPGeomorphySvyRegion.h */,
+				842C488F25ABEEEA0034E6DB /* GPGeomorphySvyRegion.storyboard */,
+			);
+			path = "微地貌测量面-面";
+			sourceTree = "<group>";
+		};
+		842C489025ABEEEA0034E6DB /* 微地貌测量线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C489125ABEEEA0034E6DB /* GPGeomorphySvyLine.m */,
+				842C489225ABEEEA0034E6DB /* GPGeomorphySvyLine.storyboard */,
+				842C489325ABEEEA0034E6DB /* GPGeomorphySvyLine.h */,
+			);
+			path = "微地貌测量线-线";
+			sourceTree = "<group>";
+		};
+		842C489425ABEEEA0034E6DB /* 微地貌测量基站点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C489525ABEEEA0034E6DB /* GPGeomorStation.h */,
+				842C489625ABEEEA0034E6DB /* GPGeomorStation.m */,
+				842C489725ABEEEA0034E6DB /* GPGeomorStation.storyboard */,
+			);
+			path = "微地貌测量基站点-点";
+			sourceTree = "<group>";
+		};
+		842C489825ABEEEA0034E6DB /* 地球化学探测 */ = {
+			isa = PBXGroup;
+			children = (
+				842C489925ABEEEA0034E6DB /* 地球化学探测测点-点 */,
+				842C489D25ABEEEA0034E6DB /* 地球化学探测测线-线 */,
+			);
+			path = "地球化学探测";
+			sourceTree = "<group>";
+		};
+		842C489925ABEEEA0034E6DB /* 地球化学探测测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C489A25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.m */,
+				842C489B25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.h */,
+				842C489C25ABEEEA0034E6DB /* GPGeochemicalSvyPoint.storyboard */,
+			);
+			path = "地球化学探测测点-点";
+			sourceTree = "<group>";
+		};
+		842C489D25ABEEEA0034E6DB /* 地球化学探测测线-线 */ = {
+			isa = PBXGroup;
+			children = (
+				842C489E25ABEEEA0034E6DB /* GPGeochemicalSvyLine.m */,
+				842C489F25ABEEEA0034E6DB /* GPGeochemicalSvyLine.storyboard */,
+				842C48A025ABEEEA0034E6DB /* GPGeochemicalSvyLine.h */,
+			);
+			path = "地球化学探测测线-线";
+			sourceTree = "<group>";
+		};
+		842C48A325ABEEEA0034E6DB /* 火山调查 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48A425ABEEEA0034E6DB /* 火山采样点-点 */,
+				842C48A825ABEEEA0034E6DB /* 熔岩流-面 */,
+				842C48AC25ABEEEA0034E6DB /* 火山口-点 */,
+				842C48B025ABEEEA0034E6DB /* 火山调查观测点-点 */,
+			);
+			path = "火山调查";
+			sourceTree = "<group>";
+		};
+		842C48A425ABEEEA0034E6DB /* 火山采样点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48A525ABEEEA0034E6DB /* GPVolcanicSamplePoint.h */,
+				842C48A625ABEEEA0034E6DB /* GPVolcanicSamplePoint.storyboard */,
+				842C48A725ABEEEA0034E6DB /* GPVolcanicSamplePoint.m */,
+			);
+			path = "火山采样点-点";
+			sourceTree = "<group>";
+		};
+		842C48A825ABEEEA0034E6DB /* 熔岩流-面 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48A925ABEEEA0034E6DB /* GPLava.storyboard */,
+				842C48AA25ABEEEA0034E6DB /* GPLava.m */,
+				842C48AB25ABEEEA0034E6DB /* GPLava.h */,
+			);
+			path = "熔岩流-面";
+			sourceTree = "<group>";
+		};
+		842C48AC25ABEEEA0034E6DB /* 火山口-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48AD25ABEEEA0034E6DB /* GPCrater.m */,
+				842C48AE25ABEEEA0034E6DB /* GPCrater.storyboard */,
+				842C48AF25ABEEEA0034E6DB /* GPCrater.h */,
+			);
+			path = "火山口-点";
+			sourceTree = "<group>";
+		};
+		842C48B025ABEEEA0034E6DB /* 火山调查观测点-点 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48B125ABEEEA0034E6DB /* GPVolcanicSvyPoint.m */,
+				842C48B225ABEEEA0034E6DB /* GPVolcanicSvyPoint.h */,
+				842C48B325ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard */,
+			);
+			path = "火山调查观测点-点";
+			sourceTree = "<group>";
+		};
+		842C48B425ABEEEA0034E6DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				842C48B525ABEEEA0034E6DB /* GPFormBaseController.m */,
+				842C48B625ABEEEA0034E6DB /* GPFormBaseController.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		842C48BB25ABEEEA0034E6DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				842C48BC25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView */,
+				842C48C025ABEEEA0034E6DB /* GPProjectZhiPaiPicker */,
+				842C48C425ABEEEA0034E6DB /* GPHomeOfflinePicker */,
+				842C48C825ABEEEA0034E6DB /* GPHomeMapCalloutView */,
+				842C48CD25ABEEEA0034E6DB /* GPHomeOnlinePicker */,
+				842C48D125ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView */,
+				842C48D525ABEEEA0034E6DB /* GPTraceZhiPaiPicker */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842C48BC25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView */ = {
+			isa = PBXGroup;
+			children = (
+				842C48BD25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.xib */,
+				842C48BE25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.h */,
+				842C48BF25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.m */,
+			);
+			path = GPHomeTraceCollectionOfflinePopView;
+			sourceTree = "<group>";
+		};
+		842C48C025ABEEEA0034E6DB /* GPProjectZhiPaiPicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C48C125ABEEEA0034E6DB /* GPProjectZhiPaiPicker.h */,
+				842C48C225ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib */,
+				842C48C325ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m */,
+			);
+			path = GPProjectZhiPaiPicker;
+			sourceTree = "<group>";
+		};
+		842C48C425ABEEEA0034E6DB /* GPHomeOfflinePicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C48C525ABEEEA0034E6DB /* GPHomeOfflinePicker.h */,
+				842C48C625ABEEEA0034E6DB /* GPHomeOfflinePicker.xib */,
+				842C48C725ABEEEA0034E6DB /* GPHomeOfflinePicker.m */,
+			);
+			path = GPHomeOfflinePicker;
+			sourceTree = "<group>";
+		};
+		842C48C825ABEEEA0034E6DB /* GPHomeMapCalloutView */ = {
+			isa = PBXGroup;
+			children = (
+				842C48C925ABEEEA0034E6DB /* GPHomeMapCalloutView.h */,
+				842C48CA25ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib */,
+				842C48CB25ABEEEA0034E6DB /* GPHomeMapCalloutView.m */,
+				842C48CC25ABEEEA0034E6DB /* GPHomeMapCalloutView.xib */,
+			);
+			path = GPHomeMapCalloutView;
+			sourceTree = "<group>";
+		};
+		842C48CD25ABEEEA0034E6DB /* GPHomeOnlinePicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C48CE25ABEEEA0034E6DB /* GPHomeOnlinePicker.xib */,
+				842C48CF25ABEEEA0034E6DB /* GPHomeOnlinePicker.m */,
+				842C48D025ABEEEA0034E6DB /* GPHomeOnlinePicker.h */,
+			);
+			path = GPHomeOnlinePicker;
+			sourceTree = "<group>";
+		};
+		842C48D125ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView */ = {
+			isa = PBXGroup;
+			children = (
+				842C48D225ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m */,
+				842C48D325ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib */,
+				842C48D425ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.h */,
+			);
+			path = GPHomeTraceCollectionOnlinePopView;
+			sourceTree = "<group>";
+		};
+		842C48D525ABEEEA0034E6DB /* GPTraceZhiPaiPicker */ = {
+			isa = PBXGroup;
+			children = (
+				842C48D625ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib */,
+				842C48D725ABEEEA0034E6DB /* GPTraceZhiPaiPicker.h */,
+				842C48D825ABEEEA0034E6DB /* GPTraceZhiPaiPicker.m */,
+			);
+			path = GPTraceZhiPaiPicker;
+			sourceTree = "<group>";
+		};
+		842C48DC25ABEEEA0034E6DB /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				842C48DE25ABEEEA0034E6DB /* res */,
+				842C48E125ABEEEA0034E6DB /* LaunchScreen.storyboard */,
+				842C48E425ABEEEA0034E6DB /* GPTempLaunch.storyboard */,
+				842C48DD25ABEEEA0034E6DB /* GPTempLaunchController.m */,
+				842C48E325ABEEEA0034E6DB /* GPTempLaunchController.h */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		842C48DE25ABEEEA0034E6DB /* res */ = {
+			isa = PBXGroup;
+			children = (
+				842C48DF25ABEEEA0034E6DB /* logo001@3x.png */,
+				842C48E025ABEEEA0034E6DB /* logo001@2x.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		842C48E525ABEEEA0034E6DB /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48E825ABEEEA0034E6DB /* GPLogin.storyboard */,
+				842C48E625ABEEEA0034E6DB /* GPLoginController.m */,
+				842C48E725ABEEEA0034E6DB /* GPRegisterController.h */,
+				842C48E925ABEEEA0034E6DB /* GPLoginHeader.h */,
+				842C48EA25ABEEEA0034E6DB /* GPRegisterController.m */,
+				842C48EB25ABEEEA0034E6DB /* GPLoginController.h */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		842C48EC25ABEEEA0034E6DB /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				842C48EE25ABEEEA0034E6DB /* GPTabBar.storyboard */,
+				842C48ED25ABEEEA0034E6DB /* GPTabBarController.m */,
+				842C48EF25ABEEEA0034E6DB /* GPTabBarController.h */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		842C48F025ABEEEA0034E6DB /* 轨迹采集 */ = {
+			isa = PBXGroup;
+			children = (
+				842C48F225ABEEEA0034E6DB /* GPGuijiTrace.storyboard */,
+				842C48F125ABEEEA0034E6DB /* GPGuijiTraceMapController.h */,
+				842C48F325ABEEEA0034E6DB /* GPGuijiTraceMapController.m */,
+			);
+			path = "轨迹采集";
+			sourceTree = "<group>";
+		};
+		842C48F425ABEEEA0034E6DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				842C48F625ABEEEA0034E6DB /* KKBaseViewController.h */,
+				842C48F825ABEEEA0034E6DB /* KKBaseViewController.m */,
+				842C48F725ABEEEA0034E6DB /* KKBaseTableViewController.h */,
+				842C48F525ABEEEA0034E6DB /* KKBaseTableViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		842C4A1025ABF4D70034E6DB /* System */ = {
+			isa = PBXGroup;
+			children = (
+				842C481625ABEEEA0034E6DB /* Assets.xcassets */,
+				842C48FA25ABEEEA0034E6DB /* Info.plist */,
+				842C48F925ABEEEA0034E6DB /* main.m */,
+				842C48FB25ABEEEA0034E6DB /* public_key.der */,
+				842C4A0B25ABF06E0034E6DB /* HddcHeader.pch */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		94FB7C2E2A802B7F80781070 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA4D0171574B00AEEB33F596 /* Pods-hddc.debug.xcconfig */,
+				D913CCA0024C5C5A0A406A81 /* Pods-hddc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		842C46B525ABEC460034E6DB /* hddc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842C46CF25ABEC480034E6DB /* Build configuration list for PBXNativeTarget "hddc" */;
+			buildPhases = (
+				2BD5D183EA53748A5AEDE14D /* [CP] Check Pods Manifest.lock */,
+				842C46B225ABEC460034E6DB /* Sources */,
+				842C46B325ABEC460034E6DB /* Frameworks */,
+				842C46B425ABEC460034E6DB /* Resources */,
+				CF6BEE4C9A91B04561C38968 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hddc;
+			productName = hddc;
+			productReference = 842C46B625ABEC460034E6DB /* hddc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		842C46AE25ABEC460034E6DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					842C46B525ABEC460034E6DB = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 842C46B125ABEC460034E6DB /* Build configuration list for PBXProject "hddc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 842C46AD25ABEC460034E6DB;
+			productRefGroup = 842C46B725ABEC460034E6DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				842C46B525ABEC460034E6DB /* hddc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		842C46B425ABEC460034E6DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842C49CF25ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.xib in Resources */,
+				842C49DC25ABEEEA0034E6DB /* GPTabBar.storyboard in Resources */,
+				842C493425ABEEEA0034E6DB /* Close@2x.png in Resources */,
+				842C49AB25ABEEEA0034E6DB /* GPGeomorphySvyReProf.storyboard in Resources */,
+				842C497E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard in Resources */,
+				842C493225ABEEEA0034E6DB /* Line@3x.png in Resources */,
+				842C48FF25ABEEEA0034E6DB /* GPInfoView.xib in Resources */,
+				842C498625ABEEEA0034E6DB /* dixingType.json in Resources */,
+				842C499525ABEEEA0034E6DB /* GPTrench.storyboard in Resources */,
+				842C492E25ABEEEA0034E6DB /* BDScan.storyboard in Resources */,
+				842C49D625ABEEEA0034E6DB /* LaunchScreen.storyboard in Resources */,
+				842C49D225ABEEEA0034E6DB /* GPHome.storyboard in Resources */,
+				842C49B525ABEEEA0034E6DB /* GPGeochemicalSvyLine.storyboard in Resources */,
+				842C499125ABEEEA0034E6DB /* GPFaultSvyPoint.storyboard in Resources */,
+				842C49BD25ABEEEA0034E6DB /* GPCrater.storyboard in Resources */,
+				842C498825ABEEEA0034E6DB /* GPGeophySvyPoint.storyboard in Resources */,
+				842C497525ABEEEA0034E6DB /* Assets.xcassets in Resources */,
+				842C49B825ABEEEA0034E6DB /* GPVolcanicSamplePoint.storyboard in Resources */,
+				842C49D525ABEEEA0034E6DB /* logo001@2x.png in Resources */,
+				842C49BF25ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard in Resources */,
+				842C490025ABEEEA0034E6DB /* GPNormalPicker.xib in Resources */,
+				842C492525ABEEEA0034E6DB /* BDBaseController.xcassets in Resources */,
+				842C499025ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard in Resources */,
+				842C49C925ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib in Resources */,
+				842C499425ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard in Resources */,
+				842C49D025ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib in Resources */,
+				842C49C725ABEEEA0034E6DB /* GPHomeOfflinePicker.xib in Resources */,
+				842C498D25ABEEEA0034E6DB /* GPSamplePoint.storyboard in Resources */,
+				842C493125ABEEEA0034E6DB /* Line@2x.png in Resources */,
+				842C49BA25ABEEEA0034E6DB /* GPLava.storyboard in Resources */,
+				842C49A325ABEEEA0034E6DB /* GPDiXinTypePicker.xib in Resources */,
+				842C49C525ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib in Resources */,
+				842C495D25ABEEEA0034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 in Resources */,
+				842C49D425ABEEEA0034E6DB /* logo001@3x.png in Resources */,
+				842C49A025ABEEEA0034E6DB /* GPMapLayerPicker.xib in Resources */,
+				842C498C25ABEEEA0034E6DB /* GPTask.storyboard in Resources */,
+				842C49A725ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.storyboard in Resources */,
+				842C499825ABEEEA0034E6DB /* GPGeologicalSvyPoint.storyboard in Resources */,
+				842C493025ABEEEA0034E6DB /* Frame@3x.png in Resources */,
+				842C49CB25ABEEEA0034E6DB /* GPHomeMapCalloutView.xib in Resources */,
+				842C49D925ABEEEA0034E6DB /* GPLogin.storyboard in Resources */,
+				842C493B25ABEEEA0034E6DB /* BDLiveBroadcast.storyboard in Resources */,
+				842C498025ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard in Resources */,
+				842C499C25ABEEEA0034E6DB /* GPDrillHole.storyboard in Resources */,
+				842C49AF25ABEEEA0034E6DB /* GPGeomorphySvyLine.storyboard in Resources */,
+				842C493A25ABEEEA0034E6DB /* BDLiveBroadcastPrepareView.xib in Resources */,
+				842C49A825ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard in Resources */,
+				842C49DD25ABEEEA0034E6DB /* GPGuijiTrace.storyboard in Resources */,
+				842C49B325ABEEEA0034E6DB /* GPGeochemicalSvyPoint.storyboard in Resources */,
+				842C492025ABEEEA0034E6DB /* BDHImagePicker.strings in Resources */,
+				842C492F25ABEEEA0034E6DB /* Frame@2x.png in Resources */,
+				842C499E25ABEEEA0034E6DB /* GPTaskImagesCollectionCell.xib in Resources */,
+				842C49D725ABEEEA0034E6DB /* GPTempLaunch.storyboard in Resources */,
+				842C49E325ABEEEA0034E6DB /* public_key.der in Resources */,
+				842C49C325ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.xib in Resources */,
+				842C49AD25ABEEEA0034E6DB /* GPGeomorphySvyRegion.storyboard in Resources */,
+				842C499F25ABEEEA0034E6DB /* GPPintTuanTimePicker.xib in Resources */,
+				842C493325ABEEEA0034E6DB /* Close@3x.png in Resources */,
+				842C49CC25ABEEEA0034E6DB /* GPHomeOnlinePicker.xib in Resources */,
+				842C498A25ABEEEA0034E6DB /* GPGeophySvyLine.storyboard in Resources */,
+				842C492125ABEEEA0034E6DB /* imageResources.xcassets in Resources */,
+				842C493725ABEEEA0034E6DB /* BDLiveBroadcast.xcassets in Resources */,
+				842C499A25ABEEEA0034E6DB /* GPGeologicalSvyLine.storyboard in Resources */,
+				842C49B125ABEEEA0034E6DB /* GPGeomorStation.storyboard in Resources */,
+				842C494225ABEEEA0034E6DB /* BDTimePickerView.xib in Resources */,
+				842C49A425ABEEEA0034E6DB /* GPTaskImagesCell.xib in Resources */,
+				842C490F25ABEEEA0034E6DB /* HistoricMapsEarthEDU.kml in Resources */,
+				842C490425ABEEEA0034E6DB /* GPCityPicker.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2BD5D183EA53748A5AEDE14D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hddc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF6BEE4C9A91B04561C38968 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hddc/Pods-hddc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hddc/Pods-hddc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hddc/Pods-hddc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		842C46B225ABEC460034E6DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842C496025ABEEEA0034E6DB /* YXFaultSvyPointModel.m in Sources */,
+				842C49BE25ABEEEA0034E6DB /* GPVolcanicSvyPoint.m in Sources */,
+				842C491025ABEEEA0034E6DB /* BDHImagePickerHelper.m in Sources */,
+				842C491F25ABEEEA0034E6DB /* BDHSendButton.m in Sources */,
+				842C496425ABEEEA0034E6DB /* YXGeologicalSvyLineModel.m in Sources */,
+				842C498725ABEEEA0034E6DB /* GPGeophySvyPoint.m in Sources */,
+				842C497225ABEEEA0034E6DB /* YXVolcanicSvyPointModel.m in Sources */,
+				842C496625ABEEEA0034E6DB /* YXFormListModel.m in Sources */,
+				842C497125ABEEEA0034E6DB /* YXCraterModel.m in Sources */,
+				842C494C25ABEEEA0034E6DB /* YXHTTP.m in Sources */,
+				842C49CD25ABEEEA0034E6DB /* GPHomeOnlinePicker.m in Sources */,
+				842C493825ABEEEA0034E6DB /* BDLiveBroadcastController.m in Sources */,
+				842C494325ABEEEA0034E6DB /* BDToastView.m in Sources */,
+				842C491125ABEEEA0034E6DB /* BDHAlbum.m in Sources */,
+				842C49DF25ABEEEA0034E6DB /* KKBaseTableViewController.m in Sources */,
+				842C492925ABEEEA0034E6DB /* BDTextFieldCell.m in Sources */,
+				842C490825ABEEEA0034E6DB /* FFInstanceNode.m in Sources */,
+				842C498325ABEEEA0034E6DB /* BDReachability.m in Sources */,
+				842C494E25ABEEEA0034E6DB /* YXAppInfomationModel.m in Sources */,
+				842C496925ABEEEA0034E6DB /* YXGeomorphySvyReProfModel.m in Sources */,
+				842C49B225ABEEEA0034E6DB /* GPGeochemicalSvyPoint.m in Sources */,
+				842C498225ABEEEA0034E6DB /* GPTanCeTypeEntity.m in Sources */,
+				842C495125ABEEEA0034E6DB /* YXOSSModel.m in Sources */,
+				842C49D825ABEEEA0034E6DB /* GPLoginController.m in Sources */,
+				842C498125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m in Sources */,
+				842C48FE25ABEEEA0034E6DB /* GPTaskQueue.m in Sources */,
+				842C491925ABEEEA0034E6DB /* BDHBadgeLabel.m in Sources */,
+				842C493E25ABEEEA0034E6DB /* BDBaseViewController.m in Sources */,
+				842C49AA25ABEEEA0034E6DB /* GPGeomorphySvyReProf.m in Sources */,
+				842C49DB25ABEEEA0034E6DB /* GPTabBarController.m in Sources */,
+				842C499D25ABEEEA0034E6DB /* GPDrillHole.m in Sources */,
+				842C490125ABEEEA0034E6DB /* GPNormalPicker.m in Sources */,
+				842C497325ABEEEA0034E6DB /* YXProjectModel.m in Sources */,
+				842C497A25ABEEEA0034E6DB /* GPMultiTracePointsUploader.m in Sources */,
+				842C494F25ABEEEA0034E6DB /* YXTaskModel.m in Sources */,
+				842C499625ABEEEA0034E6DB /* GPTrench.m in Sources */,
+				842C498F25ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m in Sources */,
+				842C497625ABEEEA0034E6DB /* GPHomeProgramListController.m in Sources */,
+				842C492B25ABEEEA0034E6DB /* UICollectionViewController+HUD.m in Sources */,
+				842C494625ABEEEA0034E6DB /* UITableView+BDWebImageAutoSize.m in Sources */,
+				842C496325ABEEEA0034E6DB /* YXGeologicalSvyPointModel.m in Sources */,
+				842C49E025ABEEEA0034E6DB /* KKBaseViewController.m in Sources */,
+				842C49C225ABEEEA0034E6DB /* GPOfflineForumListController.m in Sources */,
+				842C495425ABEEEA0034E6DB /* YXUserLoginModel.m in Sources */,
+				842C49C625ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m in Sources */,
+				842C497C25ABEEEA0034E6DB /* GPMultiForumUploader.m in Sources */,
+				842C491325ABEEEA0034E6DB /* BDHImageFlowViewController.m in Sources */,
+				842C496525ABEEEA0034E6DB /* YXDrillHoleModel.m in Sources */,
+				842C49B725ABEEEA0034E6DB /* GPNewTaskController.m in Sources */,
+				842C491A25ABEEEA0034E6DB /* BDHTapDetectingImageView.m in Sources */,
+				842C492725ABEEEA0034E6DB /* BDHTTP.m in Sources */,
+				842C496125ABEEEA0034E6DB /* YXStratigraphySvyPointModel.m in Sources */,
+				842C494D25ABEEEA0034E6DB /* YXForumDataInfoModel.m in Sources */,
+				842C491725ABEEEA0034E6DB /* BDHImageFetchOperation.m in Sources */,
+				842C492A25ABEEEA0034E6DB /* UITableViewController+HUD.m in Sources */,
+				842C495025ABEEEA0034E6DB /* YXUpdateImagesModel.m in Sources */,
+				842C491B25ABEEEA0034E6DB /* BDHFullImageButton.m in Sources */,
+				842C490D25ABEEEA0034E6DB /* AGSGoogleMapLayer.m in Sources */,
+				842C49D125ABEEEA0034E6DB /* GPTraceZhiPaiPicker.m in Sources */,
+				842C499325ABEEEA0034E6DB /* GPStratigraphySvyPoint.m in Sources */,
+				842C495525ABEEEA0034E6DB /* YXUserUpdatePasswordModel.m in Sources */,
+				842C49AE25ABEEEA0034E6DB /* GPGeomorphySvyLine.m in Sources */,
+				842C493F25ABEEEA0034E6DB /* BDBaseViewModel.m in Sources */,
+				842C493525ABEEEA0034E6DB /* BDScanController.m in Sources */,
+				842C497825ABEEEA0034E6DB /* BDSelectionModel.m in Sources */,
+				842C498525ABEEEA0034E6DB /* GPImageEntity.m in Sources */,
+				842C494425ABEEEA0034E6DB /* BDWebImageAutoSize.m in Sources */,
+				842C495A25ABEEEA0034E6DB /* YXGeophySvyPointModel.m in Sources */,
+				842C490225ABEEEA0034E6DB /* BDArcGISUtil.m in Sources */,
+				842C49E125ABEEEA0034E6DB /* main.m in Sources */,
+				842C495B25ABEEEA0034E6DB /* YXGeophySvyLineModel.m in Sources */,
+				842C494525ABEEEA0034E6DB /* BDWebImageAutoSizeCache.m in Sources */,
+				842C493D25ABEEEA0034E6DB /* BDBaseTabBarController.m in Sources */,
+				842C494025ABEEEA0034E6DB /* BDTabBar.m in Sources */,
+				842C49A125ABEEEA0034E6DB /* GPMapLayerPicker.m in Sources */,
+				842C495225ABEEEA0034E6DB /* YXAppBannerModel.m in Sources */,
+				842C499225ABEEEA0034E6DB /* GPFaultSvyPoint.m in Sources */,
+				842C490B25ABEEEA0034E6DB /* TianDiTuLayerInfo.m in Sources */,
+				842C491425ABEEEA0034E6DB /* BDHAlbumTableViewController.m in Sources */,
+				842C490525ABEEEA0034E6DB /* GPCityPicker.m in Sources */,
+				842C492825ABEEEA0034E6DB /* BDBaseTableViewController.m in Sources */,
+				842C496C25ABEEEA0034E6DB /* YXGeomorStationModel.m in Sources */,
+				842C494825ABEEEA0034E6DB /* BDWebImageAutoSizeConst.m in Sources */,
+				842C496725ABEEEA0034E6DB /* YXGeomorphySvySamplePointModel.m in Sources */,
+				842C496A25ABEEEA0034E6DB /* YXGeomorphySvyRegionModel.m in Sources */,
+				842C495E25ABEEEA0034E6DB /* YXSamplePointModel.m in Sources */,
+				842C49BC25ABEEEA0034E6DB /* GPCrater.m in Sources */,
+				842C49CA25ABEEEA0034E6DB /* GPHomeMapCalloutView.m in Sources */,
+				842C494725ABEEEA0034E6DB /* UICollectionView+BDWebImageAutoSize.m in Sources */,
+				842C499B25ABEEEA0034E6DB /* GPTaskMapController.m in Sources */,
+				842C493C25ABEEEA0034E6DB /* BDBaseDefine.m in Sources */,
+				842C495825ABEEEA0034E6DB /* YXGeologicalSvyPlanningPtModel.m in Sources */,
+				842C499925ABEEEA0034E6DB /* GPGeologicalSvyLine.m in Sources */,
+				842C498E25ABEEEA0034E6DB /* GPSamplePoint.m in Sources */,
+				842C492425ABEEEA0034E6DB /* UIViewController+BDHImagePicker.m in Sources */,
+				842C49BB25ABEEEA0034E6DB /* GPLava.m in Sources */,
+				842C497925ABEEEA0034E6DB /* GPHomeChangePasswordController.m in Sources */,
+				842C490625ABEEEA0034E6DB /* YXTrace.m in Sources */,
+				842C499725ABEEEA0034E6DB /* GPGeologicalSvyPoint.m in Sources */,
+				842C490325ABEEEA0034E6DB /* BDArcGISGraphic.m in Sources */,
+				842C490C25ABEEEA0034E6DB /* TianDiTuLayer.m in Sources */,
+				842C491825ABEEEA0034E6DB /* BDHAlbumCell.m in Sources */,
+				842C492225ABEEEA0034E6DB /* UIColor+Hex.m in Sources */,
+				842C496E25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m in Sources */,
+				842C490925ABEEEA0034E6DB /* FFPropertyInspector.m in Sources */,
+				842C497D25ABEEEA0034E6DB /* GPArcGisMapController.m in Sources */,
+				842C48FC25ABEEEA0034E6DB /* YXTable.m in Sources */,
+				842C492325ABEEEA0034E6DB /* UIView+BDHImagePicker.m in Sources */,
+				842C496B25ABEEEA0034E6DB /* YXGeomorphySvyLineModel.m in Sources */,
+				842C49DE25ABEEEA0034E6DB /* GPGuijiTraceMapController.m in Sources */,
+				842C496D25ABEEEA0034E6DB /* YXGeochemicalSvyPointModel.m in Sources */,
+				842C491C25ABEEEA0034E6DB /* BDHAssetsViewCell.m in Sources */,
+				842C492625ABEEEA0034E6DB /* BDBaseCollectionViewController.m in Sources */,
+				842C498925ABEEEA0034E6DB /* GPGeophySvyLine.m in Sources */,
+				842C495925ABEEEA0034E6DB /* YXGeologicalSvyPlanningLineModel.m in Sources */,
+				842C494B25ABEEEA0034E6DB /* AppDelegate.m in Sources */,
+				842C491E25ABEEEA0034E6DB /* BDHBrowserCell.m in Sources */,
+				842C49C025ABEEEA0034E6DB /* GPFormBaseController.m in Sources */,
+				842C49B625ABEEEA0034E6DB /* GPTaskListController.m in Sources */,
+				842C49B025ABEEEA0034E6DB /* GPGeomorStation.m in Sources */,
+				842C495625ABEEEA0034E6DB /* YXUserModel.m in Sources */,
+				842C49A925ABEEEA0034E6DB /* GPGeomorphySvyPoint.m in Sources */,
+				842C49B925ABEEEA0034E6DB /* GPVolcanicSamplePoint.m in Sources */,
+				842C49A225ABEEEA0034E6DB /* GPDiXinTypePicker.m in Sources */,
+				842C49AC25ABEEEA0034E6DB /* GPGeomorphySvyRegion.m in Sources */,
+				842C493625ABEEEA0034E6DB /* BDWebViewController.m in Sources */,
+				842C496225ABEEEA0034E6DB /* YXTrenchModel.m in Sources */,
+				842C491225ABEEEA0034E6DB /* BDHAsset.m in Sources */,
+				842C492C25ABEEEA0034E6DB /* UIViewController+HUD.m in Sources */,
+				842C49D325ABEEEA0034E6DB /* GPTempLaunchController.m in Sources */,
+				842C495C25ABEEEA0034E6DB /* YXSlectionDictModel.m in Sources */,
+				842C491D25ABEEEA0034E6DB /* BDHUnAuthorizedTipsView.m in Sources */,
+				842C497F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m in Sources */,
+				842C493925ABEEEA0034E6DB /* BDLiveBroadcastPrepareView.m in Sources */,
+				842C496F25ABEEEA0034E6DB /* YXVolcanicSamplePointModel.m in Sources */,
+				842C49C125ABEEEA0034E6DB /* GPHomeController.m in Sources */,
+				842C497025ABEEEA0034E6DB /* YXLavaModel.m in Sources */,
+				842C498B25ABEEEA0034E6DB /* GPForumListController.m in Sources */,
+				842C495325ABEEEA0034E6DB /* YXTracePointModel.m in Sources */,
+				842C498425ABEEEA0034E6DB /* GPForumType.m in Sources */,
+				842C49DA25ABEEEA0034E6DB /* GPRegisterController.m in Sources */,
+				842C497725ABEEEA0034E6DB /* GPHomeMeCenter.m in Sources */,
+				842C48FD25ABEEEA0034E6DB /* GPTask.m in Sources */,
+				842C49B425ABEEEA0034E6DB /* GPGeochemicalSvyLine.m in Sources */,
+				842C491525ABEEEA0034E6DB /* BDHImagePickerController.m in Sources */,
+				842C495725ABEEEA0034E6DB /* YXForumSaver.m in Sources */,
+				842C496825ABEEEA0034E6DB /* YXGeomorphySvyPointModel.m in Sources */,
+				842C49CE25ABEEEA0034E6DB /* GPHomeTraceCollectionOnlinePopView.m in Sources */,
+				842C495F25ABEEEA0034E6DB /* YXGeoGeomorphySvyPointModel.m in Sources */,
+				842C497B25ABEEEA0034E6DB /* GPForumJumper.m in Sources */,
+				842C49A625ABEEEA0034E6DB /* GPGeomorphySvySamplePoint.m in Sources */,
+				842C491625ABEEEA0034E6DB /* BDHPhotoBrowser.m in Sources */,
+				842C49C825ABEEEA0034E6DB /* GPHomeOfflinePicker.m in Sources */,
+				842C490725ABEEEA0034E6DB /* BDLocationTrace.m in Sources */,
+				842C497425ABEEEA0034E6DB /* GPAdministrativeDivisionsModel.m in Sources */,
+				842C49C425ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView.m in Sources */,
+				842C49A525ABEEEA0034E6DB /* GPTaskImagesCell.m in Sources */,
+				842C492D25ABEEEA0034E6DB /* UITableView+Refresh.m in Sources */,
+				842C494125ABEEEA0034E6DB /* BDTimePickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		842C472C25ABEEE90034E6DB /* BDHImagePicker.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842C472D25ABEEE90034E6DB /* zh-Hans */,
+				842C472E25ABEEE90034E6DB /* en */,
+			);
+			name = BDHImagePicker.strings;
+			sourceTree = "<group>";
+		};
+		842C48E125ABEEEA0034E6DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				842C48E225ABEEEA0034E6DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		842C46CD25ABEC480034E6DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		842C46CE25ABEC480034E6DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842C46D025ABEC480034E6DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA4D0171574B00AEEB33F596 /* Pods-hddc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336J5A22YK;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/hddc/HddcHeader.pch";
+				INFOPLIST_FILE = hddc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.red.hddc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842C46D125ABEC480034E6DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D913CCA0024C5C5A0A406A81 /* Pods-hddc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 336J5A22YK;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/hddc/HddcHeader.pch";
+				INFOPLIST_FILE = hddc/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.red.hddc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		842C46B125ABEC460034E6DB /* Build configuration list for PBXProject "hddc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842C46CD25ABEC480034E6DB /* Debug */,
+				842C46CE25ABEC480034E6DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842C46CF25ABEC480034E6DB /* Build configuration list for PBXNativeTarget "hddc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842C46D025ABEC480034E6DB /* Debug */,
+				842C46D125ABEC480034E6DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 842C46AE25ABEC460034E6DB /* Project object */;
+}

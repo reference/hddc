@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="p5x-5c-05g" customClass="GPHomeMapCalloutView">
+            <rect key="frame" x="0.0" y="0.0" width="221" height="210"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="liY-U0-Kji">
+                    <rect key="frame" x="10" y="0.0" width="201" height="150"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="p5x-5c-05g" id="2IM-Bl-wpY"/>
+                        <outlet property="delegate" destination="p5x-5c-05g" id="W37-xh-qsw"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwF-OL-Mzp">
+                    <rect key="frame" x="10" y="160" width="201" height="40"/>
+                    <color key="backgroundColor" name="color_light_blue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="oZh-GE-Cvh"/>
+                    </constraints>
+                    <state key="normal" title="新建表单">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onNew:" destination="p5x-5c-05g" eventType="touchUpInside" id="GXu-fG-Djn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="liY-U0-Kji" secondAttribute="trailing" constant="10" id="91i-iQ-YHt"/>
+                <constraint firstItem="liY-U0-Kji" firstAttribute="top" secondItem="p5x-5c-05g" secondAttribute="top" id="JMz-tU-mui"/>
+                <constraint firstItem="liY-U0-Kji" firstAttribute="leading" secondItem="p5x-5c-05g" secondAttribute="leading" constant="10" id="QAf-pn-83J"/>
+                <constraint firstAttribute="trailing" secondItem="TwF-OL-Mzp" secondAttribute="trailing" constant="10" id="cRX-1X-f9I"/>
+                <constraint firstItem="TwF-OL-Mzp" firstAttribute="leading" secondItem="p5x-5c-05g" secondAttribute="leading" constant="10" id="rrr-r3-APG"/>
+                <constraint firstAttribute="bottom" secondItem="TwF-OL-Mzp" secondAttribute="bottom" constant="10" id="sYw-8G-v1R"/>
+                <constraint firstItem="TwF-OL-Mzp" firstAttribute="top" secondItem="liY-U0-Kji" secondAttribute="bottom" constant="10" id="wyb-EO-BKY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="tableViews" destination="liY-U0-Kji" id="Jb4-l6-AOs"/>
+            </connections>
+            <point key="canvasLocation" x="-189.13043478260872" y="-86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="color_light_blue">
+            <color red="0.36899998784065247" green="0.72200000286102295" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,59 @@
+/**
+ MIT License
+ 
+ Copyright (c) 2018 Scott Ban (https://github.com/reference/BDToolKit)
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all
+ copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+ */
+#import <ArcGIS/ArcGIS.h>
+
+typedef enum{
+    TDT_VECTOR = 0, ///<天地图矢量服务>
+    TDT_IMAGE, ///<天地图影像务>
+    TDT_TERRAIN, ///<天地图地形服务>
+}TianDiTuLayerType;
+
+typedef enum{
+    TDT_CN = 0, ///<天地图中文标注服务>
+    TDT_EN, ///<天地图英文标注服务>
+    
+}TianDiTuLanguageType;
+
+typedef enum{
+    TDT_MERCATOR = 0, ///<天地图墨卡托服务>
+    TDT_2000, ///<天地图2000服务>
+}TianDiTuSpatialReferenceType;
+
+@interface TianDiTuLayerInfo : NSObject
+@property(nonatomic,retain)NSString *layername;
+@property(nonatomic,retain)NSString *servicename;
+@property(nonatomic,retain)NSString *tilematrixset;
+@property(nonatomic,retain)AGSSpatialReference *sp;
+@property(nonatomic,retain,readwrite)AGSEnvelope *fullExtent;
+@property(nonatomic,retain)AGSPoint *origin;
+@property(nonatomic,retain)NSMutableArray *lods;
+@property(nonatomic,retain)AGSTileInfo *tileInfo;
+
+-(instancetype)initwithlayerType:(TianDiTuLayerType)layerType SpatialReferenceWKID:(TianDiTuSpatialReferenceType)sptype;
+
+-(instancetype)initwithlayerType:(TianDiTuLayerType)layerType LanguageType:(TianDiTuLanguageType)lan SpatialReferenceWKID:(TianDiTuSpatialReferenceType)sptype;
+
+-(NSString *)getTianDiTuServiceURL;
+
+@end

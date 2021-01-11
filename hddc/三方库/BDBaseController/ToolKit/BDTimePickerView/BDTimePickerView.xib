@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="BDTimePickerView" id="FRG-dE-bpR" customClass="BDTimePickerView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="8Wm-mD-I1R">
+                    <rect key="frame" x="0.0" y="50" width="414" height="203"/>
+                    <locale key="locale" localeIdentifier="zh_CN"/>
+                </datePicker>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hz8-dT-zzb">
+                    <rect key="frame" x="354" y="10" width="50" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="XbT-Df-M4H"/>
+                        <constraint firstAttribute="height" constant="30" id="amX-12-zHj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="确定">
+                        <color key="titleColor" red="0.85098039219999999" green="0.0" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onButtons:" destination="FRG-dE-bpR" eventType="touchUpInside" id="qao-9w-azn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5a-xk-Fe5">
+                    <rect key="frame" x="10" y="10" width="50" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0AA-S1-cae"/>
+                        <constraint firstAttribute="width" constant="50" id="IIB-xD-v1Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="onButtons:" destination="FRG-dE-bpR" eventType="touchUpInside" id="W71-UJ-CJy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Krs-Ey-C1F"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Krs-Ey-C1F" firstAttribute="trailing" secondItem="hz8-dT-zzb" secondAttribute="trailing" constant="10" id="HMW-HT-Hu9"/>
+                <constraint firstItem="8Wm-mD-I1R" firstAttribute="top" secondItem="hz8-dT-zzb" secondAttribute="bottom" constant="10" id="OMh-8b-0c9"/>
+                <constraint firstItem="c5a-xk-Fe5" firstAttribute="top" secondItem="FRG-dE-bpR" secondAttribute="top" constant="10" id="hSb-x9-OyC"/>
+                <constraint firstItem="Krs-Ey-C1F" firstAttribute="trailing" secondItem="8Wm-mD-I1R" secondAttribute="trailing" id="rNL-g7-j2I"/>
+                <constraint firstItem="8Wm-mD-I1R" firstAttribute="leading" secondItem="FRG-dE-bpR" secondAttribute="leading" id="sNA-bn-lBR"/>
+                <constraint firstItem="Krs-Ey-C1F" firstAttribute="bottom" secondItem="8Wm-mD-I1R" secondAttribute="bottom" id="xCw-gj-Zv5"/>
+                <constraint firstItem="c5a-xk-Fe5" firstAttribute="leading" secondItem="FRG-dE-bpR" secondAttribute="leading" constant="10" id="zDC-fv-paM"/>
+                <constraint firstItem="hz8-dT-zzb" firstAttribute="top" secondItem="FRG-dE-bpR" secondAttribute="top" constant="10" id="zDq-7h-JEy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="YXYuYueAliveTimePickerView"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="datePicker" destination="8Wm-mD-I1R" id="eCm-Vr-vXI"/>
+            </connections>
+            <point key="canvasLocation" x="13.043478260869566" y="112.16517857142857"/>
+        </view>
+    </objects>
+</document>
