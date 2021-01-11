@@ -791,9 +791,9 @@
 			isa = PBXGroup;
 			children = (
 				842C46FC25ABEEE90034E6DB /* TianDiTuLayer.h */,
-				842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */,
 				842C46FE25ABEEE90034E6DB /* TianDiTuLayer.m */,
 				842C46FF25ABEEE90034E6DB /* TianDiTuLayerInfo.h */,
+				842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */,
 			);
 			path = TianDiTuLayer;
 			sourceTree = "<group>";
