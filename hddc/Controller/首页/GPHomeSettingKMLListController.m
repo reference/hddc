@@ -91,6 +91,7 @@ typedef enum {
                             tb.userId = [YXUserModel currentUser].userId;
                             tb.projectId = project.projectId;
                             tb.taskId = task.taskId;
+                            tb.rowid = [NSString randomKey];
                             [tb bg_saveAsync:^(BOOL isSuccess) {
                                 if (isSuccess) {
                                     NSLog(@"指派成功");
@@ -259,13 +260,14 @@ typedef enum {
                 [BDToastView showActivity:@"保存中..."];
                 
                 YXTable *tb = [YXTable new];
-                GPKmlKmzShpEntity *entity = [GPKmlKmzShpEntity new];
-                entity.fileNameWithSuffix = entity.data;
-                tb.encodedData = [entity yy_modelToJSONString];
+                GPKmlKmzShpEntity *model = [GPKmlKmzShpEntity new];
+                model.fileNameWithSuffix = entity.data;
+                tb.encodedData = [model yy_modelToJSONString];
                 tb.tableName = NSStringFromClass(GPKmlKmzShpEntity.class);
                 tb.userId = [YXUserModel currentUser].userId;
                 tb.projectId = project.projectId;
                 tb.taskId = task.taskId;
+                tb.rowid = [NSString randomKey];
                 [tb bg_saveAsync:^(BOOL isSuccess) {
                     if (isSuccess) {
                         NSLog(@"指派成功");

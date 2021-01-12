@@ -19,5 +19,4 @@
     [self.indicatorView startAnimating];
 }
 
-//加载
 @end

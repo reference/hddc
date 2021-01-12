@@ -1658,8 +1658,8 @@
 				842C48F425ABEEEA0034E6DB /* Base */,
 				842C48EC25ABEEEA0034E6DB /* Tab */,
 				842C48DC25ABEEEA0034E6DB /* Launch */,
-				842C481825ABEEEA0034E6DB /* 首页 */,
 				842C48E525ABEEEA0034E6DB /* 登录注册 */,
+				842C481825ABEEEA0034E6DB /* 首页 */,
 				842C48F025ABEEEA0034E6DB /* 轨迹采集 */,
 			);
 			path = Controller;
@@ -2221,8 +2221,8 @@
 				842C48DE25ABEEEA0034E6DB /* res */,
 				842C48E125ABEEEA0034E6DB /* LaunchScreen.storyboard */,
 				842C48E425ABEEEA0034E6DB /* GPTempLaunch.storyboard */,
-				842C48DD25ABEEEA0034E6DB /* GPTempLaunchController.m */,
 				842C48E325ABEEEA0034E6DB /* GPTempLaunchController.h */,
+				842C48DD25ABEEEA0034E6DB /* GPTempLaunchController.m */,
 			);
 			path = Launch;
 			sourceTree = "<group>";

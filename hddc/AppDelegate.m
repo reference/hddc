@@ -32,12 +32,6 @@
 //        NSLog(@"%@",pingItem);
 //    }];
     
-    //启动任务管理器
-//    [[GPTaskQueue instance] start];
-    
-//    YXUserModel *user = [YXUserModel new];
-//    user.userId = @"atat";
-//    [user saveAsCurrent];
     
     //regist fuck gis
     [[FuckAGSPlatform instance] registAppWithId:@"fxdefkjsokfhi3025kdi2"];
@@ -67,10 +61,10 @@
     }];
 
     if ([YXUserModel isLogin]) {
-//        [self goTempLaunch];
-//        [self reLogin];
-        [self api_relogin];
-        [self gotoHome];
+        [self goTempLaunch];
+        [self reLogin];
+//        [self api_relogin];
+//        [self gotoHome];
     }else{
         [NSThread sleepForTimeInterval:1.5];
         [self gotoLogin];

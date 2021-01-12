@@ -18,8 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.labels labelForTag:0].text = [[YXUserModel currentUser].relName substringWithRange:NSMakeRange(0, 1)];
-    [self.labels labelForTag:1].text = [YXUserModel currentUser].relName;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -43,7 +41,7 @@
 - (IBAction)onLogout:(UIButton *)b
 {
     [self alertText:@"您确定要退出登录么？" sureTitle:@"确定" sureAction:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:BDUserNotificationLogout object:nil];
+        [YXUserModel logout];
     }];
 }
 
