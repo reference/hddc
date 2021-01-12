@@ -13,6 +13,7 @@
 
 #import <PPSPing/PPSPingServices.h>
 #import <UserNotifications/UserNotifications.h>
+#import "GPHomeSettingKMLListController.h"
 
 //高德地图
 #define GaoDeMapAppKey @"cb9e415529134e663f9d0182d930d02f"
@@ -37,6 +38,9 @@
 //    YXUserModel *user = [YXUserModel new];
 //    user.userId = @"atat";
 //    [user saveAsCurrent];
+    
+    //regist fuck gis
+    [[FuckAGSPlatform instance] registAppWithId:@"fxdefkjsokfhi3025kdi2"];
     
     //map
     [AGSArcGISRuntimeEnvironment setLicenseKey:@"runtimelite,1000,rud3292847818,none,LHH93PJPXL0JLMZ59229" error:nil];
@@ -185,9 +189,24 @@
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
+    NSLog(@"application = %@",app);
+    NSLog(@"url = %@",url);
+    
+    if (![YXUserModel isLogin]) {
+        return YES;
+    }
     /*外部文件访问本应用,会传递参数过来*/
-     NSLog(@"application = %@",app);
-     NSLog(@"url = %@",url);
+    NSString *fileNameWithSuffix = [url.absoluteString componentsSeparatedByString:@"/"].lastObject;
+    NSString *suffix = [fileNameWithSuffix componentsSeparatedByString:@"."].lastObject;
+    if ([[suffix lowercaseString] isEqualToString:@"kml"] || [[suffix lowercaseString] isEqualToString:@"kmz"] || [[suffix lowercaseString] isEqualToString:@"shp"]) {
+        NSData *fileData = [NSData dataWithContentsOfURL:url];
+        NSString *localFilePath = [NSFileManager documentFile:fileNameWithSuffix inDirectory:@"web"];
+        [fileData writeToFile:localFilePath atomically:YES];
+        
+        ZXNavigationController *nav = self.window.rootViewController;
+        [nav.rootViewController pushViewControllerClass:GPHomeSettingKMLListController.class inStoryboard:@"GPHome"];
+    }
+    
     return YES;
 }
 @end

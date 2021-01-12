@@ -1,0 +1,6 @@
+framework module FuckAGS {
+  umbrella header "FuckAGS.h"
+
+  export *
+  module * { export * }
+}

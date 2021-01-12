@@ -107,6 +107,23 @@
     return [YXTable bg_find:NSStringFromClass(YXTable.class) where:where];
 }
 
++ (NSArray <YXTable *> *)findTablesByName:(NSString *)tName userId:(NSString *)uId
+{
+    NSString* where = [NSString stringWithFormat:@"where %@=%@ and %@=%@"
+                       ,bg_sqlKey(@"userId"),bg_sqlValue(uId)
+                       ,bg_sqlKey(@"tableName"),bg_sqlValue(tName)];
+    return [YXTable bg_find:NSStringFromClass(YXTable.class) where:where];
+}
+
++ (NSArray <YXTable *> *)findTablesByName:(NSString *)tName taskId:(NSString *)tid userId:(NSString *)uId
+{
+    NSString* where = [NSString stringWithFormat:@"where %@=%@ and %@=%@ and %@=%@"
+                       ,bg_sqlKey(@"userId"),bg_sqlValue(uId)
+                       ,bg_sqlKey(@"taskId"),bg_sqlValue(tid)
+                       ,bg_sqlKey(@"tableName"),bg_sqlValue(tName)];
+    return [YXTable bg_find:NSStringFromClass(YXTable.class) where:where];
+}
+
 + (NSArray <YXTable *> *)findTablesWithoutBelongByUserId:(NSString *)uId forumType:(NSInteger)type
 {
     NSString* where = [NSString stringWithFormat:@"where %@=%@ and %@ is null and %@ is null and %@=%@"

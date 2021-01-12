@@ -8,6 +8,7 @@
 
 #import "GPHomeMeCenter.h"
 #import "GPHomeChangePasswordController.h"
+#import "GPHomeSettingKMLListController.h"
 
 @interface GPHomeMeCenter ()
 
@@ -31,6 +32,12 @@
 - (IBAction)onChangePassword:(UIButton *)b
 {
     [self pushViewControllerClass:GPHomeChangePasswordController.class inStoryboard:@"GPHome"];
+}
+
+- (IBAction)onKmlKmzShp:(UIButton *)b
+{
+    [self pushViewControllerClass:GPHomeSettingKMLListController.class inStoryboard:@"GPHome"];
+
 }
 
 - (IBAction)onLogout:(UIButton *)b

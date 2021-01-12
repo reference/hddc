@@ -234,8 +234,27 @@
 		842C49E025ABEEEA0034E6DB /* KKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F825ABEEEA0034E6DB /* KKBaseViewController.m */; };
 		842C49E125ABEEEA0034E6DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C48F925ABEEEA0034E6DB /* main.m */; };
 		842C49E325ABEEEA0034E6DB /* public_key.der in Resources */ = {isa = PBXBuildFile; fileRef = 842C48FB25ABEEEA0034E6DB /* public_key.der */; };
+		84A3E7FA25AC23D0002C70D0 /* FuckAGS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A3E7F925AC23D0002C70D0 /* FuckAGS.framework */; };
+		84A3E80125AC2415002C70D0 /* FuckAGS.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84A3E80025AC2415002C70D0 /* FuckAGS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84A3E80725AC28E3002C70D0 /* GPHomeSettingKMLListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3E80625AC28E3002C70D0 /* GPHomeSettingKMLListController.m */; };
+		84A3E80A25AC3DD5002C70D0 /* GPKmlKmzShpEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3E80925AC3DD5002C70D0 /* GPKmlKmzShpEntity.m */; };
+		84A3E80E25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3E80D25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m */; };
+		84A3E81025AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3E80F25AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib */; };
 		89E8A2464E7C3BD0DD96BB63 /* Pods_hddc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC114E69BEBB539667F364AD /* Pods_hddc.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84A3E7FD25AC23E7002C70D0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				84A3E80125AC2415002C70D0 /* FuckAGS.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		842C46B625ABEC460034E6DB /* hddc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hddc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -631,6 +650,15 @@
 		842C48FA25ABEEEA0034E6DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842C48FB25ABEEEA0034E6DB /* public_key.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = public_key.der; sourceTree = "<group>"; };
 		842C4A0B25ABF06E0034E6DB /* HddcHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HddcHeader.pch; sourceTree = "<group>"; };
+		84A3E7F925AC23D0002C70D0 /* FuckAGS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FuckAGS.framework; path = "hddc/三方库/FuckAGS.framework"; sourceTree = "<group>"; };
+		84A3E80025AC2415002C70D0 /* FuckAGS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FuckAGS.framework; sourceTree = "<group>"; };
+		84A3E80525AC28E3002C70D0 /* GPHomeSettingKMLListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPHomeSettingKMLListController.h; sourceTree = "<group>"; };
+		84A3E80625AC28E3002C70D0 /* GPHomeSettingKMLListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPHomeSettingKMLListController.m; sourceTree = "<group>"; };
+		84A3E80825AC3DD5002C70D0 /* GPKmlKmzShpEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPKmlKmzShpEntity.h; sourceTree = "<group>"; };
+		84A3E80925AC3DD5002C70D0 /* GPKmlKmzShpEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPKmlKmzShpEntity.m; sourceTree = "<group>"; };
+		84A3E80C25AC4B6B002C70D0 /* GPFileZhiPaiPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFileZhiPaiPicker.h; sourceTree = "<group>"; };
+		84A3E80D25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPFileZhiPaiPicker.m; sourceTree = "<group>"; };
+		84A3E80F25AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPFileZhiPaiPicker.xib; sourceTree = "<group>"; };
 		AA4D0171574B00AEEB33F596 /* Pods-hddc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.debug.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.debug.xcconfig"; sourceTree = "<group>"; };
 		D913CCA0024C5C5A0A406A81 /* Pods-hddc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.release.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.release.xcconfig"; sourceTree = "<group>"; };
 		DC114E69BEBB539667F364AD /* Pods_hddc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hddc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -642,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E8A2464E7C3BD0DD96BB63 /* Pods_hddc.framework in Frameworks */,
+				84A3E7FA25AC23D0002C70D0 /* FuckAGS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +680,7 @@
 		4273582A7BC34C5386077513 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84A3E7F925AC23D0002C70D0 /* FuckAGS.framework */,
 				DC114E69BEBB539667F364AD /* Pods_hddc.framework */,
 			);
 			name = Frameworks;
@@ -767,6 +797,7 @@
 		842C46F025ABEEE90034E6DB /* 三方库 */ = {
 			isa = PBXGroup;
 			children = (
+				84A3E80025AC2415002C70D0 /* FuckAGS.framework */,
 				842C46F225ABEEE90034E6DB /* FFPropertyInspector */,
 				842C46FB25ABEEE90034E6DB /* TianDiTuLayer */,
 				842C470025ABEEE90034E6DB /* GoogleMapLayer */,
@@ -1640,14 +1671,16 @@
 				842C48DA25ABEEEA0034E6DB /* GPHome.storyboard */,
 				842C481C25ABEEEA0034E6DB /* GPHomeController.h */,
 				842C48B825ABEEEA0034E6DB /* GPHomeController.m */,
-				842C48B925ABEEEA0034E6DB /* GPHomeMeCenter.h */,
-				842C481B25ABEEEA0034E6DB /* GPHomeMeCenter.m */,
 				842C48D925ABEEEA0034E6DB /* GPHomeProgramListController.h */,
 				842C481925ABEEEA0034E6DB /* GPHomeProgramListController.m */,
 				842C481A25ABEEEA0034E6DB /* GPOfflineForumListController.h */,
 				842C48BA25ABEEEA0034E6DB /* GPOfflineForumListController.m */,
 				842C48DB25ABEEEA0034E6DB /* GPHomeChangePasswordController.h */,
 				842C482025ABEEEA0034E6DB /* GPHomeChangePasswordController.m */,
+				842C48B925ABEEEA0034E6DB /* GPHomeMeCenter.h */,
+				842C481B25ABEEEA0034E6DB /* GPHomeMeCenter.m */,
+				84A3E80525AC28E3002C70D0 /* GPHomeSettingKMLListController.h */,
+				84A3E80625AC28E3002C70D0 /* GPHomeSettingKMLListController.m */,
 				842C48BB25ABEEEA0034E6DB /* View */,
 				842C482125ABEEEA0034E6DB /* Utils */,
 				842C481D25ABEEEA0034E6DB /* Entity */,
@@ -1661,6 +1694,8 @@
 			children = (
 				842C481E25ABEEEA0034E6DB /* BDSelectionModel.h */,
 				842C481F25ABEEEA0034E6DB /* BDSelectionModel.m */,
+				84A3E80825AC3DD5002C70D0 /* GPKmlKmzShpEntity.h */,
+				84A3E80925AC3DD5002C70D0 /* GPKmlKmzShpEntity.m */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -2097,6 +2132,7 @@
 		842C48BB25ABEEEA0034E6DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84A3E80B25AC4B43002C70D0 /* GPFileZhiPaiPicker */,
 				842C48BC25ABEEEA0034E6DB /* GPHomeTraceCollectionOfflinePopView */,
 				842C48C025ABEEEA0034E6DB /* GPProjectZhiPaiPicker */,
 				842C48C425ABEEEA0034E6DB /* GPHomeOfflinePicker */,
@@ -2121,8 +2157,8 @@
 		842C48C025ABEEEA0034E6DB /* GPProjectZhiPaiPicker */ = {
 			isa = PBXGroup;
 			children = (
-				842C48C125ABEEEA0034E6DB /* GPProjectZhiPaiPicker.h */,
 				842C48C225ABEEEA0034E6DB /* GPProjectZhiPaiPicker.xib */,
+				842C48C125ABEEEA0034E6DB /* GPProjectZhiPaiPicker.h */,
 				842C48C325ABEEEA0034E6DB /* GPProjectZhiPaiPicker.m */,
 			);
 			path = GPProjectZhiPaiPicker;
@@ -2131,8 +2167,8 @@
 		842C48C425ABEEEA0034E6DB /* GPHomeOfflinePicker */ = {
 			isa = PBXGroup;
 			children = (
-				842C48C525ABEEEA0034E6DB /* GPHomeOfflinePicker.h */,
 				842C48C625ABEEEA0034E6DB /* GPHomeOfflinePicker.xib */,
+				842C48C525ABEEEA0034E6DB /* GPHomeOfflinePicker.h */,
 				842C48C725ABEEEA0034E6DB /* GPHomeOfflinePicker.m */,
 			);
 			path = GPHomeOfflinePicker;
@@ -2256,6 +2292,16 @@
 			name = System;
 			sourceTree = "<group>";
 		};
+		84A3E80B25AC4B43002C70D0 /* GPFileZhiPaiPicker */ = {
+			isa = PBXGroup;
+			children = (
+				84A3E80C25AC4B6B002C70D0 /* GPFileZhiPaiPicker.h */,
+				84A3E80D25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m */,
+				84A3E80F25AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib */,
+			);
+			path = GPFileZhiPaiPicker;
+			sourceTree = "<group>";
+		};
 		94FB7C2E2A802B7F80781070 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2277,6 +2323,7 @@
 				842C46B325ABEC460034E6DB /* Frameworks */,
 				842C46B425ABEC460034E6DB /* Resources */,
 				CF6BEE4C9A91B04561C38968 /* [CP] Embed Pods Frameworks */,
+				84A3E7FD25AC23E7002C70D0 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -2348,6 +2395,7 @@
 				842C492525ABEEEA0034E6DB /* BDBaseController.xcassets in Resources */,
 				842C499025ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard in Resources */,
 				842C49C925ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib in Resources */,
+				84A3E81025AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib in Resources */,
 				842C499425ABEEEA0034E6DB /* GPStratigraphySvyPoint.storyboard in Resources */,
 				842C49D025ABEEEA0034E6DB /* GPTraceZhiPaiPicker.xib in Resources */,
 				842C49C725ABEEEA0034E6DB /* GPHomeOfflinePicker.xib in Resources */,
@@ -2460,6 +2508,7 @@
 				842C491125ABEEEA0034E6DB /* BDHAlbum.m in Sources */,
 				842C49DF25ABEEEA0034E6DB /* KKBaseTableViewController.m in Sources */,
 				842C492925ABEEEA0034E6DB /* BDTextFieldCell.m in Sources */,
+				84A3E80A25AC3DD5002C70D0 /* GPKmlKmzShpEntity.m in Sources */,
 				842C490825ABEEEA0034E6DB /* FFInstanceNode.m in Sources */,
 				842C498325ABEEEA0034E6DB /* BDReachability.m in Sources */,
 				842C494E25ABEEEA0034E6DB /* YXAppInfomationModel.m in Sources */,
@@ -2534,6 +2583,7 @@
 				842C49CA25ABEEEA0034E6DB /* GPHomeMapCalloutView.m in Sources */,
 				842C494725ABEEEA0034E6DB /* UICollectionView+BDWebImageAutoSize.m in Sources */,
 				842C499B25ABEEEA0034E6DB /* GPTaskMapController.m in Sources */,
+				84A3E80725AC28E3002C70D0 /* GPHomeSettingKMLListController.m in Sources */,
 				842C493C25ABEEEA0034E6DB /* BDBaseDefine.m in Sources */,
 				842C495825ABEEEA0034E6DB /* YXGeologicalSvyPlanningPtModel.m in Sources */,
 				842C499925ABEEEA0034E6DB /* GPGeologicalSvyLine.m in Sources */,
@@ -2547,6 +2597,7 @@
 				842C490C25ABEEEA0034E6DB /* TianDiTuLayer.m in Sources */,
 				842C491825ABEEEA0034E6DB /* BDHAlbumCell.m in Sources */,
 				842C492225ABEEEA0034E6DB /* UIColor+Hex.m in Sources */,
+				84A3E80E25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m in Sources */,
 				842C496E25ABEEEA0034E6DB /* YXGeochemicalSvyLineModel.m in Sources */,
 				842C490925ABEEEA0034E6DB /* FFPropertyInspector.m in Sources */,
 				842C497D25ABEEEA0034E6DB /* GPArcGisMapController.m in Sources */,
@@ -2749,6 +2800,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 336J5A22YK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/hddc/三方库",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/hddc/HddcHeader.pch";
 				INFOPLIST_FILE = hddc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2769,6 +2824,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 336J5A22YK;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/hddc/三方库",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/hddc/HddcHeader.pch";
 				INFOPLIST_FILE = hddc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

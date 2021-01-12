@@ -80,6 +80,12 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param type 1到24
 + (NSArray <YXTable *> *)findTablesWithoutBelongByUserId:(NSString *)uId forumType:(NSInteger)type;
 
+/// <#Description#>
+/// @param tName <#tName description#>
+/// @param uId <#uId description#>
++ (NSArray <YXTable *> *)findTablesByName:(NSString *)tName userId:(NSString *)uId;
++ (NSArray <YXTable *> *)findTablesByName:(NSString *)tName taskId:(NSString *)tid userId:(NSString *)uId;
+
 /// 根据row id删除
 /// @param rowId rowid
 + (BOOL)deleteRowById:(NSString *)rowId;

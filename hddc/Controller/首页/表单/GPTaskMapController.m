@@ -49,7 +49,7 @@
 @property (nonatomic, strong) IBOutlet AGSMapView *mapView;
 @property (nonatomic, strong) AGSMap *map;
 @property (nonatomic, strong) AGSLocationDisplay *locationDisplay;
-
+@property (nonatomic, assign) BOOL loaded;
 @end
 
 @implementation GPTaskMapController
@@ -84,9 +84,32 @@
     //显示用户当前位置
     [self onCurrentLocation:nil];
     
-    //显示任务区域
-//    NSArray *graphics = [BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos];
-    [[BDArcGISUtil ins] drawGraphics:[BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos]];
+    if (self.loaded == NO) {
+        self.loaded = YES;
+        //显示任务区域
+    //    NSArray *graphics = [BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos];
+        [[BDArcGISUtil ins] drawGraphics:[BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos]];
+        
+        //加载kml kmz shp
+        NSArray *tbs = [YXTable findTablesByName:NSStringFromClass(GPKmlKmzShpEntity.class) taskId:self.taskModel.taskId userId:[YXUserModel currentUser].userId];
+        for (YXTable *tb in tbs) {
+            GPKmlKmzShpEntity *entity = [YXTable decodeDataInTable:tb];
+            //查看是否文件存在 如果文件存在再显示
+            NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
+            BOOL fileExist = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
+            if (fileExist) {
+                NSString *suffix = [entity.fileNameWithSuffix componentsSeparatedByString:@"."].lastObject;
+                if ([[suffix lowercaseString] isEqualToString:@"kml"]) {
+                    [[FuckAGSPlatform instance] addKMLFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+                }else if ([[suffix lowercaseString] isEqualToString:@"kmz"]) {
+                    [[FuckAGSPlatform instance] addKMZFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+                }else if ([[suffix lowercaseString] isEqualToString:@"shp"]) {
+                    [[FuckAGSPlatform instance] addSHPFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+                }
+            }
+        }
+    }
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
