@@ -28,7 +28,7 @@
 
 + (void)requestDetailWithUUID:(NSString *)uuid completion:(void(^)(YXStratigraphySvyPointModel *m,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcWyStratigraphysvypoints/%@", YX_HOST,uuid];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyStratigraphysvypoints/%@", YX_HOST,uuid];
 
     [YXHTTP requestWithURL:url
                     params:nil

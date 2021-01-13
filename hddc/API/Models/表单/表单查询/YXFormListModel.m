@@ -17,7 +17,7 @@
                            type:(NSInteger)type
                      completion:(void(^)(NSArray <YXFormListModel *> *ms,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcAppForminfo/findAppFormData", YX_HOST];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/findAppFormData", YX_HOST];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     if (page>0) {
         [param setInteger:page forKey:@"curPage"];

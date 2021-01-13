@@ -28,7 +28,7 @@
 
 + (void)requestDetailWithUUID:(NSString *)uuid completion:(void(^)(YXSamplePointModel *m,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcWySamplepoints/%@", YX_HOST,uuid];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWySamplepoints/%@", YX_HOST,uuid];
 
     [YXHTTP requestWithURL:url
                     params:nil

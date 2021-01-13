@@ -30,7 +30,7 @@
 
 + (void)requestDetailWithUUID:(NSString *)uuid completion:(void(^)(YXLavaModel *m,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcWyLavas/%@", YX_HOST,uuid];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyLavas/%@", YX_HOST,uuid];
 
     [YXHTTP requestWithURL:url
                     params:nil

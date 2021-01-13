@@ -12,7 +12,7 @@
 
 + (void)requestUserId:(NSString *)uid completion:(void(^)(NSArray <YXForumDataInfoModel *> *ms,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcAppForminfo/findAppFormDataInfo", YX_HOST];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/findAppFormDataInfo", YX_HOST];
     [YXHTTP requestWithURL:url
                     params:@{@"userId":uid}
                       body:nil

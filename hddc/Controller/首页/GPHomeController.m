@@ -180,8 +180,12 @@ typedef enum {
     
     //设置采集状态UI
     
+    [BDAudioPlayer playSoundWithType:BDSoundType_ShakePeek];
+    
     [[self.bottomOnlineToolbar.buttons buttonForTag:1] setTitle:_editMode == EditMode_off ? @"开始采集" : @"结束采集" forState:UIControlStateNormal];
+    [[self.bottomOnlineToolbar.buttons buttonForTag:1] setTitleColor:_editMode == EditMode_off ? [UIColor blackColor] : [UIColor redColor] forState:UIControlStateNormal];
     [[self.bottomOfflineToolbar.buttons buttonForTag:1] setTitle:_editMode == EditMode_off ? @"开始采集" : @"结束采集" forState:UIControlStateNormal];
+    [[self.bottomOfflineToolbar.buttons buttonForTag:1] setTitleColor:_editMode == EditMode_off ? [UIColor blackColor] : [UIColor redColor] forState:UIControlStateNormal];
 
 }
 

@@ -66,6 +66,6 @@ typedef enum {
 
 #import "GPLoginHeader.h"
 #import "GPFormBaseController.h"
-
+#import "GPForumJumper.h"
 
 #endif /* BDGuPiao_pch */

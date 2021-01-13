@@ -12,7 +12,7 @@
 
 + (void)requestDetailWithUUID:(NSString *)uuid completion:(void(^)(YXGeologicalSvyPlanningLineModel *m,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcWyGeologicalsvyplanninglines/%@", YX_HOST,uuid];
+    NSString *url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeologicalsvyplanninglines/%@", YX_HOST,uuid];
 
     [YXHTTP requestWithURL:url
                     params:nil
