@@ -131,4 +131,124 @@
     }
     return nil;
 }
+
++ (void)loadGeoJsonFileAtPath:(NSURL *)path
+{
+    if (path != nil) {
+        NSMutableArray *bdArcGisGraphics = [NSMutableArray array];
+        NSData *jsonData = [NSData dataWithContentsOfFile:path.absoluteString];
+        if (jsonData == nil) {
+            NSLog(@"json data is nil");
+            return;
+        }
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:nil];
+        if (dic) {
+            ///@see https://geojson.org/
+            // 解析 GeometryCollection
+            if ([dic[@"type"] isEqualToString:@"GeometryCollection"]) {
+                NSArray *geometries = dic[@"geometries"];
+                for (int i=0;i<geometries.count;i++) {
+                    // too big will crash
+                    if (i == 100000) {
+                        break;
+                    }
+                    NSDictionary *geometrie = geometries[i];
+                    NSString *type = geometrie[@"type"];
+                    //Point, LineString, Polygon, MultiPoint, MultiLineString,MultiPolygon
+                    if ([type isEqualToString:@"Point"]) {
+                        NSArray *pt = geometrie[@"coordinates"];
+                        
+                        AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([pt.lastObject doubleValue], [pt.firstObject doubleValue])];
+                        
+                        [[BDArcGISUtil ins] drawPoint:point];
+                        NSLog(@"lat:%.6f lon:%.6f",[pt.lastObject doubleValue],[pt.firstObject doubleValue]);
+                    }
+                    else if ([type isEqualToString:@"LineString"]) {
+                        NSMutableArray *linePoints = [NSMutableArray array];
+                        NSArray <NSArray *> *pts = geometrie[@"coordinates"];
+                        for (NSArray *latLonPts in pts) {
+                            AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([latLonPts.lastObject doubleValue], [latLonPts.firstObject doubleValue])];
+                            [linePoints addObject:point];
+                        }
+                        //draw line
+                        [[BDArcGISUtil ins] drawMultiLinesByPoints:linePoints];
+                    }
+                    else if ([type isEqualToString:@"Polygon"]) {
+                        NSMutableArray *polyPoints = [NSMutableArray array];
+                        NSArray <NSArray *> *pts = geometrie[@"coordinates"];
+                        for (NSArray *allPoints in pts) {
+                            for (NSArray *latLonPts in allPoints) {
+                                AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([latLonPts.lastObject doubleValue], [latLonPts.firstObject doubleValue])];
+                                [polyPoints addObject:point];
+                            }
+                        }
+                        //draw polygon
+                        [[BDArcGISUtil ins] drawPolygonWithPoints:polyPoints];
+                    }
+                    else if ([type isEqualToString:@"MultiPoint"]) {
+                        
+                    }
+                    else if ([type isEqualToString:@"MultiLineString"]) {
+                        
+                    }
+                    else if ([type isEqualToString:@"MultiPolygon"]) {
+                        
+                    }
+                }
+            }
+            // 解析 FeatureCollection
+            if ([dic[@"type"] isEqualToString:@"FeatureCollection"]) {
+                NSArray *features = dic[@"features"];
+                for (int i=0;i<features.count;i++) {
+                    NSDictionary *feature = features[i];
+                    NSString *type = feature[@"type"];
+                    if ([type isEqualToString:@"Feature"]) {
+                        NSDictionary *geometry = feature[@"geometry"];
+                        type = geometry[@"type"];
+                        //Point, LineString, Polygon, MultiPoint, MultiLineString,MultiPolygon
+                        if ([type isEqualToString:@"Point"]) {
+                            NSArray *pt = geometry[@"coordinates"];
+                            
+                            AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([pt.lastObject doubleValue], [pt.firstObject doubleValue])];
+                            
+                            [[BDArcGISUtil ins] drawPoint:point];
+                            NSLog(@"lat:%.6f lon:%.6f",[pt.lastObject doubleValue],[pt.firstObject doubleValue]);
+                        }
+                        else if ([type isEqualToString:@"LineString"]) {
+                            NSMutableArray *linePoints = [NSMutableArray array];
+                            NSArray <NSArray *> *pts = geometry[@"coordinates"];
+                            for (NSArray *latLonPts in pts) {
+                                AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([latLonPts.lastObject doubleValue], [latLonPts.firstObject doubleValue])];
+                                [linePoints addObject:point];
+                            }
+                            //draw line
+                            [[BDArcGISUtil ins] drawMultiLinesByPoints:linePoints];
+                        }
+                        else if ([type isEqualToString:@"Polygon"]) {
+                            NSMutableArray *polyPoints = [NSMutableArray array];
+                            NSArray <NSArray *> *pts = geometry[@"coordinates"];
+                            for (NSArray *allPoints in pts) {
+                                for (NSArray *latLonPts in allPoints) {
+                                    AGSPoint *point = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([latLonPts.lastObject doubleValue], [latLonPts.firstObject doubleValue])];
+                                    [polyPoints addObject:point];
+                                }
+                            }
+                            //draw polygon
+                            [[BDArcGISUtil ins] drawPolygonWithPoints:polyPoints];
+                        }
+                        else if ([type isEqualToString:@"MultiPoint"]) {
+                            
+                        }
+                        else if ([type isEqualToString:@"MultiLineString"]) {
+                            
+                        }
+                        else if ([type isEqualToString:@"MultiPolygon"]) {
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @end

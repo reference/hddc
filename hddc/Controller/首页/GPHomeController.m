@@ -111,8 +111,6 @@ typedef enum {
     //显示任务区域
 //    NSArray *graphics = [BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos];
 //    [[BDArcGISUtil ins] drawGraphics:[BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos]];
-    
-    
 }
 
 - (void)viewDidDisappear:(BOOL)animated

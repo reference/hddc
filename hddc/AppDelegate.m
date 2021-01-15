@@ -186,13 +186,10 @@
     NSLog(@"application = %@",app);
     NSLog(@"url = %@",url);
     
-    if (![YXUserModel isLogin]) {
-        return YES;
-    }
     /*外部文件访问本应用,会传递参数过来*/
     NSString *fileNameWithSuffix = [url.absoluteString componentsSeparatedByString:@"/"].lastObject;
     NSString *suffix = [fileNameWithSuffix componentsSeparatedByString:@"."].lastObject;
-    if ([[suffix lowercaseString] isEqualToString:@"kml"] || [[suffix lowercaseString] isEqualToString:@"kmz"] || [[suffix lowercaseString] isEqualToString:@"shp"]) {
+    if ([[suffix lowercaseString] isEqualToString:@"kml"] || [[suffix lowercaseString] isEqualToString:@"kmz"] || [[suffix lowercaseString] isEqualToString:@"shp"] || [[suffix lowercaseString] isEqualToString:@"json"] || [[suffix lowercaseString] isEqualToString:@"geojson"]) {
         NSData *fileData = [NSData dataWithContentsOfURL:url];
         NSString *localFilePath = [NSFileManager documentFile:fileNameWithSuffix inDirectory:@"web"];
         [fileData writeToFile:localFilePath atomically:YES];

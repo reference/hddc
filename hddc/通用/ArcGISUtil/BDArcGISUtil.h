@@ -59,6 +59,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (AGSGraphic *)pinAtPoint:(AGSPoint *)point;
 - (AGSGraphic *)pinAtPoint:(AGSPoint *)point identifier:(NSString *)identifier;
 - (AGSGraphic *)pinAtPoint:(AGSPoint *)point info:(NSDictionary *)info;
+- (AGSGraphic *)pinAtPoint:(AGSPoint *)point info:(NSDictionary *)info image:(UIImage *)img;
+- (void)removePinAtByInfo:(NSDictionary *)info;
 - (void)removePinByIdentifier:(NSString *)identifier;
 - (void)clearAllOverlaies;
 - (AGSGraphic *)addMultiPinsAtPoints:(NSArray <AGSPoint *> *)points;

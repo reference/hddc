@@ -14,6 +14,7 @@
 {
     NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcCjHistorypointss", YX_HOST];
 
+    body.createUser = [YXUserModel currentUser].userId;
     [YXHTTP requestWithURL:url
                     params:nil
                       body:[body yy_modelToJSONObject]

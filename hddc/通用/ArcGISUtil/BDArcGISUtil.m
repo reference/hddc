@@ -24,6 +24,7 @@
 #import "BDArcGISUtil.h"
 
 #define color_line [UIColor colorNamed:@"color_light_blue"]
+//#define color_line [UIColor redColor]
 
 @implementation BDArcGISUtil
 
@@ -242,6 +243,23 @@
     // Add polygon graphic to graphics overlay.
     [self.graphicsOverlay.graphics addObject:graphic];
     return graphic;
+}
+
+- (AGSGraphic *)pinAtPoint:(AGSPoint *)point info:(NSDictionary *)info image:(UIImage *)image
+{
+    AGSPictureMarkerSymbol *pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:image];
+    pictureMarkerSymbol.width =
+    pictureMarkerSymbol.height = 20;
+    //设置属性值  用于传参  在代理方法中可以获取到
+    AGSGraphic *graphic = [AGSGraphic graphicWithGeometry:point symbol:pictureMarkerSymbol attributes:info];
+    // Add polygon graphic to graphics overlay.
+    [self.graphicsOverlay.graphics addObject:graphic];
+    return graphic;
+}
+
+- (void)removePinAtByInfo:(NSDictionary *)info
+{
+    [self removePinByIdentifier:info[@"id"]];
 }
 
 - (void)removePinByIdentifier:(NSString *)identifier

@@ -766,8 +766,8 @@
 			isa = PBXGroup;
 			children = (
 				842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */,
-				842C46E425ABEEE90034E6DB /* BDArcGISGraphic.h */,
 				842C46E525ABEEE90034E6DB /* BDArcGISUtil.h */,
+				842C46E425ABEEE90034E6DB /* BDArcGISGraphic.h */,
 				842C46E625ABEEE90034E6DB /* BDArcGISGraphic.m */,
 			);
 			path = ArcGISUtil;

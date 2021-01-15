@@ -74,6 +74,10 @@
                 }else if ([[suffix lowercaseString] isEqualToString:@"shp"]) {
                     [[FuckAGSPlatform instance] addSHPFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
                 }
+                else if ([[suffix lowercaseString] isEqualToString:@"json"] || [[suffix lowercaseString] isEqualToString:@"geojson"]) {
+                    NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
+                    [BDArcGISGraphic loadGeoJsonFileAtPath:[NSURL URLWithString:filePath]];
+                }
             }
         }
     }
@@ -99,8 +103,9 @@
 - (void)geoView:(AGSGeoView *)geoView didTapAtScreenPoint:(CGPoint)screenPoint mapPoint:(AGSPoint *)mapPoint
 {
     //
-    [[BDArcGISUtil ins] clearAllOverlaies];
-    [[BDArcGISUtil ins] pinAtPoint:mapPoint];
+//    [[BDArcGISUtil ins] clearAllOverlaies];
+    [[BDArcGISUtil ins] removePinAtByInfo:@{@"id":@"pin"}];
+    [[BDArcGISUtil ins] pinAtPoint:mapPoint info:@{@"id":@"pin"} image:__IMG(@"icon-pin")];
     
     GPDiXinTypePicker *select = [GPDiXinTypePicker popUpInController:self];
     select.onCancel = ^{
