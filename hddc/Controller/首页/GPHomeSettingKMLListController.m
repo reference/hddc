@@ -244,8 +244,8 @@ typedef enum {
     BDSelectionModel *entity = self.dataArray[indexPath.row];
     //是否选择
     [cell.buttons buttonForTag:0].selected = entity.isSelected;
-    //
-    cell.labels.firstObject.text = entity.data;
+    //url 解码 因为名字有可能是编码过的
+    cell.labels.firstObject.text = [entity.data stringByURLDecode];
     cell.onClickedButtons = ^(NSInteger tag) {
         //关联任务
         //关联任务
