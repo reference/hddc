@@ -11,7 +11,7 @@
 #import "TianDiTuLayer.h"
 #import "GPMapLayerPicker.h"
 #import "GPDiXinTypePicker.h"
-
+#import <INTULocationManager/INTULocationManager.h>
 
 @interface GPTaskMapController ()<AGSGeoViewTouchDelegate>
 @property (nonatomic, strong) IBOutlet AGSMapView *mapView;
@@ -107,20 +107,28 @@
     [[BDArcGISUtil ins] removePinAtByInfo:@{@"id":@"pin"}];
     [[BDArcGISUtil ins] pinAtPoint:mapPoint info:@{@"id":@"pin"} image:__IMG(@"icon-pin")];
     
+    // 地址反查
     GPDiXinTypePicker *select = [GPDiXinTypePicker popUpInController:self];
     select.onCancel = ^{
         [self.window dismissViewAnimated:YES completion:nil];
     };
     select.onDone = ^(NSString *type) {
         [self.window dismissViewAnimated:YES completion:^{
-            [GPForumJumper jumpToForumWithType:type
-                            fromViewController:self
-                                     taskModel:self.taskModel
-                                  projectModel:self.projectModel
-                                         point:mapPoint
-                               interfaceStatus:InterfaceStatus_New
-                                         forum:nil
-                                         table:nil];
+            [BDToastView showActivity:@"位置信息获取中..."];
+            [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+                [BDToastView dismiss];
+                
+                [GPForumJumper jumpToForumWithType:type
+                                fromViewController:self
+                                         taskModel:self.taskModel
+                                      projectModel:self.projectModel
+                                             point:mapPoint
+                                           address:address
+                                   interfaceStatus:InterfaceStatus_New
+                                             forum:nil
+                                             table:nil];
+            }];
+            
         }];
     };
 }

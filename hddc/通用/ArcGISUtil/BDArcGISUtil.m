@@ -344,6 +344,35 @@
 }
 
 
+- (void)reverseGeocodeInPoint:(AGSPoint *)point completion:(void(^)(NSString *address,NSError *error))completion
+{
+    //22.540681,=114.061324
+    CLLocation *newLocation=[[CLLocation alloc]initWithLatitude:point.toCLLocationCoordinate2D.latitude longitude: point.toCLLocationCoordinate2D.longitude];
+    CLGeocoder *geocoder=[[CLGeocoder alloc] init];
+    [geocoder reverseGeocodeLocation:newLocation
+                   completionHandler:^(NSArray *placemarks,
+                                       NSError *error)
+     {
+         CLPlacemark *placemark=[placemarks objectAtIndex:0];
+         NSLog(@"我我的:%@\n country:%@\n postalCode:%@\n ISOcountryCode:%@\n ocean:%@\n inlandWater:%@\n locality:%@\n subLocality:%@ \n administrativeArea:%@\n subAdministrativeArea:%@\n thoroughfare:%@\n subThoroughfare:%@\n",
+               placemark.name,
+               placemark.country,
+               placemark.postalCode,
+               placemark.ISOcountryCode,
+               placemark.ocean,
+               placemark.inlandWater,
+               placemark.administrativeArea,
+               placemark.subAdministrativeArea,
+               placemark.locality,
+               placemark.subLocality,
+               placemark.thoroughfare,
+               placemark.subThoroughfare);
+        if (completion) {
+            NSString *address = [NSString stringWithFormat:@"%@",placemark.name];
+            completion(address,error);
+        }
+     }];
+}
 #pragma mark - test
 
 

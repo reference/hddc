@@ -227,7 +227,21 @@ typedef enum {
             picker.onDone = ^(YXProject * _Nonnull project, YXTaskModel * _Nonnull task, NSString * forumType) {
                 [self.window dismissViewAnimated:YES completion:^{
                     //表单采集
-                    [GPForumJumper jumpToForumWithType:forumType fromViewController:self taskModel:task projectModel:project point:point interfaceStatus:InterfaceStatus_New forum:nil table:nil];
+                    [BDToastView showActivity:@"位置信息获取中..."];
+                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+                        [BDToastView dismiss];
+                        
+                        [GPForumJumper jumpToForumWithType:forumType
+                                        fromViewController:self
+                                                 taskModel:task
+                                              projectModel:project
+                                                     point:point
+                                                   address:address
+                                           interfaceStatus:InterfaceStatus_New
+                                                     forum:nil
+                                                     table:nil];
+                    }];
+                    
                 }];
             };
             [self popView:picker position:Position_Middle];
@@ -241,7 +255,20 @@ typedef enum {
             picker.onDone = ^(NSString * forumType) {
                 [self.window dismissViewAnimated:YES completion:^{
                     //表单采集
-                    [GPForumJumper jumpToForumWithType:forumType fromViewController:self taskModel:nil projectModel:nil point:point interfaceStatus:InterfaceStatus_New forum:nil table:nil];
+                    [BDToastView showActivity:@"位置信息获取中..."];
+                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+                        [BDToastView dismiss];
+                        
+                        [GPForumJumper jumpToForumWithType:forumType
+                                        fromViewController:self
+                                                 taskModel:nil
+                                              projectModel:nil
+                                                     point:point
+                                                   address:address
+                                           interfaceStatus:InterfaceStatus_New
+                                                     forum:nil
+                                                     table:nil];
+                    }];
                 }];
             };
             [self popView:picker position:Position_Middle];
@@ -283,7 +310,7 @@ typedef enum {
                         YXFormListModel *flm = [YXFormListModel new];
                         flm.uuid = forumInfoModel.uuid;
                         //goto forum detail
-                        [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",forumInfoModel.type] fromViewController:self taskModel:nil projectModel:nil point:mapPoint interfaceStatus:InterfaceStatus_Show forum:flm table:nil];
+                        [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",forumInfoModel.type] fromViewController:self taskModel:nil projectModel:nil point:mapPoint address:nil interfaceStatus:InterfaceStatus_Show forum:flm table:nil];
                     };
                     //add customer view
                     self.mapView.callout.customView = customView;

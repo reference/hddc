@@ -189,7 +189,7 @@ typedef enum {
             //
             [self alertText:@"删除后数据将无法恢复，您确定要删除么？" sureTitle:@"确定" sureAction:^{
                 //批量修改
-                [BDToastView showActivity:@"保存中..."];
+                [BDToastView showActivity:@"删除中..."];
                 for (BDSelectionModel *m in self.dataArray) {
                     YXTable *tb = m.data;
                     if (m.isSelected) {
@@ -262,7 +262,7 @@ typedef enum {
             //
             [self alertText:@"删除后数据将无法恢复，您确定要删除么？" sureTitle:@"确定" sureAction:^{
                 //批量修改
-                [BDToastView showActivity:@"保存中..."];
+                [BDToastView showActivity:@"删除中..."];
                 for (BDSelectionModel *m in self.dataArray) {
                     YXTrace *tb = m.data;
                     if (m.isSelected) {

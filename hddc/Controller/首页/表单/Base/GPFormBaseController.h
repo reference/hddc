@@ -26,6 +26,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *province;
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *city;
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *zone;
+
+//详细地址
+@property (nonatomic, strong) NSString *address;
+
 // 10 个图片的实体
 @property (nonatomic, strong) NSMutableArray <GPImageEntity *> *imageEntities;
 

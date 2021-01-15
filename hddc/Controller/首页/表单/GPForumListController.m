@@ -166,6 +166,7 @@
                                      taskModel:self.taskModel
                                   projectModel:self.projectModel
                                          point:nil
+                                       address:nil
                                interfaceStatus:InterfaceStatus_Show
                                          forum:m
                                          table:nil];
@@ -193,6 +194,7 @@
                                      taskModel:self.taskModel
                                   projectModel:self.projectModel
                                          point:nil
+                                       address:nil
                                interfaceStatus:InterfaceStatus_Edit
                                          forum:model
                                          table:table];

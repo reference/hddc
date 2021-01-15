@@ -765,8 +765,8 @@
 		842C46E225ABEEE90034E6DB /* ArcGISUtil */ = {
 			isa = PBXGroup;
 			children = (
-				842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */,
 				842C46E525ABEEE90034E6DB /* BDArcGISUtil.h */,
+				842C46E325ABEEE90034E6DB /* BDArcGISUtil.m */,
 				842C46E425ABEEE90034E6DB /* BDArcGISGraphic.h */,
 				842C46E625ABEEE90034E6DB /* BDArcGISGraphic.m */,
 			);
@@ -787,8 +787,8 @@
 			isa = PBXGroup;
 			children = (
 				842C46EC25ABEEE90034E6DB /* YXTrace.m */,
-				842C46ED25ABEEE90034E6DB /* BDLocationTrace.h */,
 				842C46EE25ABEEE90034E6DB /* YXTrace.h */,
+				842C46ED25ABEEE90034E6DB /* BDLocationTrace.h */,
 				842C46EF25ABEEE90034E6DB /* BDLocationTrace.m */,
 			);
 			path = BDLocationTrace;
@@ -2123,8 +2123,8 @@
 		842C48B425ABEEEA0034E6DB /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				842C48B525ABEEEA0034E6DB /* GPFormBaseController.m */,
 				842C48B625ABEEEA0034E6DB /* GPFormBaseController.h */,
+				842C48B525ABEEEA0034E6DB /* GPFormBaseController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";

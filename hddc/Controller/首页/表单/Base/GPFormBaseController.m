@@ -230,6 +230,12 @@
     [self.textFields textFieldForTag:1].text = [[NSNumber numberWithDouble:coordinate.latitude] stringValue];
 }
 
+- (void)setAddress:(NSString *)address
+{
+    _address = address;
+    self.textViews.firstObject.text = _address;
+}
+
 #pragma mark action
 
 - (IBAction)onChooseProvice:(UIButton *)b

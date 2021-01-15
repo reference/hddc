@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
                   taskModel:(YXTaskModel *)taskModel
                projectModel:(YXProject *)projectModel
                       point:(AGSPoint *)mapPoint
+                    address:(NSString *)address
             interfaceStatus:(InterfaceStatus)interfaceStatus
                       forum:(YXFormListModel *)forum
                       table:(YXTable *)table;
