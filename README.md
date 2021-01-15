@@ -37,7 +37,7 @@
 
 - 开发人员
 
-  > IOS © 班殿宏
+  > IOS © [班殿宏](https://scottban.live)
   > Android © [王超](https://blog.csdn.net/weixin_43966262?spm=1001.2101.3001.5113)
 
 - 公司
