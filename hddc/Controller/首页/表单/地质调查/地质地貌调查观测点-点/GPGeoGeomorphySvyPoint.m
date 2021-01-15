@@ -125,8 +125,8 @@
     [self.labels labelForTag:5].text = [m.isinmap boolValue] ? @"是" : @"否";
     //符号或标注旋转角度
     [self.textFields textFieldForTag:18].text = m.lastangle;
-    //备注
-    [self.textFields textFieldForTag:19].text = m.remark;
+    //描述
+    [self.textFields textFieldForTag:19].text = m.commentInfo;
 }
 
 //填充数据
@@ -210,8 +210,8 @@
     body.isinmap = [[[self.labels labelForTag:5].text trim] isEqualToString:@"显示"] ? @"1" : @"0";
     //符号或标注旋转角度
     body.lastangle = [[self.textFields textFieldForTag:18].text trim];
-    //备注
-    body.remark = [[self.textFields textFieldForTag:19].text trim];
+    //描述
+    body.commentInfo = [[self.textFields textFieldForTag:19].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];
