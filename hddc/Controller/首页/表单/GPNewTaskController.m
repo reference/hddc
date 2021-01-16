@@ -14,6 +14,9 @@
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *province;
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *city;
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *zone;
+@property (nonatomic, strong) IBOutlet UILabel *provinceLabel;
+@property (nonatomic, strong) IBOutlet UILabel *cityLabel;
+@property (nonatomic, strong) IBOutlet UILabel *zoneLabel;
 @property (nonatomic, strong) NSString *mapInfo;
 @end
 
@@ -44,13 +47,15 @@
     [self.textFields textFieldForTag:0].text = self.taskModel.taskId;
     //任务名称
     [self.textFields textFieldForTag:1].text = self.taskModel.taskName;
+    
     if (self.isModify) {
         //省
-        [[self.buttons buttonForTag:0] setTitle:self.taskModel.province forState:UIControlStateNormal];
+        self.provinceLabel.text = self.taskModel.province;
         //试
-        [[self.buttons buttonForTag:1] setTitle:self.taskModel.city forState:UIControlStateNormal];
+        self.cityLabel.text = self.taskModel.city;
         //区
-        [[self.buttons buttonForTag:2] setTitle:self.taskModel.area forState:UIControlStateNormal];
+        self.zoneLabel.text = self.taskModel.area;
+
         //确认修改
         [[self.buttons buttonForTag:3] setTitle:@"确认修改" forState:UIControlStateNormal];
     }else{
@@ -73,7 +78,7 @@
     selector.onDone = ^(GPAdministrativeDivisionsModel * _Nonnull model) {
         [self.window dismissViewAnimated:YES completion:^{
             self.province = model;
-            [[self.buttons buttonForTag:0] setTitle:model.divisionName forState:UIControlStateNormal];
+            self.provinceLabel.text = model.divisionName;
             
             //
             self.city = self.zone = nil;
@@ -81,13 +86,14 @@
             //禁用第二级联动选项
             if ([model.divisionType isEqualToString:@"Municipality"]) {
                 [self.buttons buttonForTag:1].enabled = NO;
-                [[self.buttons buttonForTag:1] setTitle:model.divisionName forState:UIControlStateNormal];
+                self.cityLabel.text = model.divisionName;
             }else{
                 [self.buttons buttonForTag:1].enabled = YES;
-                [[self.buttons buttonForTag:1] setTitle:@"选择市" forState:UIControlStateNormal];
+                self.cityLabel.text = @"选择市";
             }
             //zone
-            [[self.buttons buttonForTag:2] setTitle:@"选择区" forState:UIControlStateNormal];
+            self.zoneLabel.text = @"选择区";
+
         }];
     };
 }
@@ -104,12 +110,12 @@
     selector.onDone = ^(GPAdministrativeDivisionsModel * _Nonnull model) {
         [self.window dismissViewAnimated:YES completion:^{
             self.city = model;
-            [[self.buttons buttonForTag:1] setTitle:model.divisionName forState:UIControlStateNormal];
-            
+            self.cityLabel.text = model.divisionName;
+
             //
             self.zone = nil;
             //zone
-            [[self.buttons buttonForTag:2] setTitle:@"选择区" forState:UIControlStateNormal];
+            self.zoneLabel.text = @"选择区";
         }];
     };
 }
@@ -130,7 +136,7 @@
     selector.onDone = ^(GPAdministrativeDivisionsModel * _Nonnull model) {
         [self.window dismissViewAnimated:YES completion:^{
             self.zone = model;
-            [[self.buttons buttonForTag:2] setTitle:model.divisionName forState:UIControlStateNormal];
+            self.zoneLabel.text = model.divisionName;
         }];
     };
 }
@@ -199,11 +205,11 @@
         //id
         body.id = self.taskModel.id;
         //省
-        body.province = self.province.divisionName.length > 0 ? self.province.divisionName : self.taskModel.province;
+        body.province = self.provinceLabel.text;
         //市
-        body.city = self.city.divisionName.length > 0 ? self.city.divisionName : self.taskModel.city;
+        body.city = self.cityLabel.text;
         //区
-        body.area = self.zone.divisionName.length > 0 ? self.zone.divisionName : self.taskModel.area;
+        body.area = self.zoneLabel.text;
         //地图范围
         body.mapInfos = self.mapInfo ? self.mapInfo : self.taskModel.mapInfos;
     }else{

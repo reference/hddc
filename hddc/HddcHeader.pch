@@ -38,6 +38,7 @@
 //#import <SJVideoPlayer/SJVideoPlayer.h>
 #import <INTULocationManager/INTULocationManager.h>
 #import <FuckAGS/FuckAGS.h>
+#import <Bugly/Bugly.h>
 
 //
 #import "KKBaseViewController.h"

@@ -31,7 +31,7 @@
 //    [self.service startWithCallbackHandler:^(PPSPingSummary *pingItem, NSArray *pingItems) {
 //        NSLog(@"%@",pingItem);
 //    }];
-    
+    [Bugly startWithAppId:@"e1c73bc497"];
     
     //regist fuck gis
     [[FuckAGSPlatform instance] registAppWithId:@"fxdefkjsokfhi3025kdi2"];

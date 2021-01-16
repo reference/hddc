@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '12.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
 target 'hddc' do
@@ -60,4 +60,7 @@ target 'hddc' do
 #  pod 'BmobSDK'
 #  pod 'QMUIKit'
 #  pod 'OpenSSL'
+
+  #bugly
+  pod 'Bugly'
 end

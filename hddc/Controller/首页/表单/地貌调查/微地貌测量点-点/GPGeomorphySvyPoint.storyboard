@@ -97,6 +97,7 @@
                         <outletCollection property="titleLabels" destination="NZs-Lx-vZW" id="Nyh-ug-AOA"/>
                         <outletCollection property="titleLabels" destination="6h3-Ye-aqq" id="Lq5-b8-rrj"/>
                         <outletCollection property="titleLabels" destination="lGJ-rj-tjQ" id="huf-JN-gTL"/>
+                        <outletCollection property="titleLabels" destination="EEX-Qy-diA" id="VzH-IT-ylv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYx-vn-USw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -878,7 +879,7 @@
     <resources>
         <image name="arrar_down" width="20" height="20"/>
         <namedColor name="color_border">
-            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color_heavy_blue">
             <color red="0.32499998807907104" green="0.46299999952316284" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
