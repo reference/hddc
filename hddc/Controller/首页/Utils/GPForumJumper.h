@@ -23,7 +23,11 @@ NS_ASSUME_NONNULL_BEGIN
                   taskModel:(YXTaskModel *)taskModel
                projectModel:(YXProject *)projectModel
                       point:(AGSPoint *)mapPoint
+                   province:(NSString *)province
+                       city:(NSString *)city
+                       zone:(NSString *)zone
                     address:(NSString *)address
+              isOffLineMode:(BOOL)isOffLineMode
             interfaceStatus:(InterfaceStatus)interfaceStatus
                       forum:(YXFormListModel *)forum
                       table:(YXTable *)table;

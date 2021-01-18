@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -109,23 +110,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Gsa-Hh-irt">
                     <rect key="frame" x="16" y="160" width="286" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T16-Ai-r0U">
-                            <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="取消"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="6"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onCancelled:" destination="wad-lj-rFA" eventType="touchUpInside" id="OLv-5J-Y6F"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqp-f4-6Zx">
-                            <rect key="frame" x="151" y="0.0" width="135" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                             <color key="backgroundColor" name="color_light_blue"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title="确认"/>
@@ -137,6 +123,21 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="onDone:" destination="wad-lj-rFA" eventType="touchUpInside" id="4lG-yQ-1H3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T16-Ai-r0U">
+                            <rect key="frame" x="151" y="0.0" width="135" height="40"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="取消"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onCancelled:" destination="wad-lj-rFA" eventType="touchUpInside" id="OLv-5J-Y6F"/>
                             </connections>
                         </button>
                     </subviews>

@@ -139,7 +139,7 @@
     //taskid
     body.taskId = self.taskModel.taskId;
     //projectid =
-    body.projectId = self.projectModel.projectId;
+    body.projectcode = self.projectModel.projectId;
     //userid
     body.userId = [YXUserModel currentUser].userId;
     //create
@@ -164,7 +164,7 @@
     //测线长度 [米]
     body.length = [[self.textFields textFieldForTag:7].text trim];
     //测线所属探测工程编号
-    body.projectcode = [[self.textFields textFieldForTag:8].text trim];
+    body.projectId = [[self.textFields textFieldForTag:8].text trim];
     //测线代码
     body.fieldid = [[self.textFields textFieldForTag:9].text trim];
     //收集地球物理测线来源补充说明来源

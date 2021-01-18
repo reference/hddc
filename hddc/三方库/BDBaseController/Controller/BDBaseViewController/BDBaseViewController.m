@@ -133,7 +133,7 @@
 - (void)alertText:(NSString *)text sureTitle:(NSString *)sure sureAction:(void (^)(void))handler
 {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:text preferredStyle:UIAlertControllerStyleAlert];
-    [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"确定", nil)
+    [alert addAction:[UIAlertAction actionWithTitle:sure?sure:@"确定"
                                                         style:UIAlertActionStyleDefault
                                             handler:^(UIAlertAction * _Nonnull action) {
         if (handler) {

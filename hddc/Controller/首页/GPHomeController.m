@@ -228,7 +228,7 @@ typedef enum {
                 [self.window dismissViewAnimated:YES completion:^{
                     //表单采集
                     [BDToastView showActivity:@"位置信息获取中..."];
-                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString *province,NSString *city,NSString *zone,NSString *address,NSError *error) {
                         [BDToastView dismiss];
                         
                         [GPForumJumper jumpToForumWithType:forumType
@@ -236,7 +236,11 @@ typedef enum {
                                                  taskModel:task
                                               projectModel:project
                                                      point:point
+                                                  province:province
+                                                      city:city
+                                                      zone:zone
                                                    address:address
+                                             isOffLineMode:NO
                                            interfaceStatus:InterfaceStatus_New
                                                      forum:nil
                                                      table:nil];
@@ -256,7 +260,7 @@ typedef enum {
                 [self.window dismissViewAnimated:YES completion:^{
                     //表单采集
                     [BDToastView showActivity:@"位置信息获取中..."];
-                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+                    [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString *province,NSString *city,NSString *zone,NSString *address,NSError *error) {
                         [BDToastView dismiss];
                         
                         [GPForumJumper jumpToForumWithType:forumType
@@ -264,7 +268,11 @@ typedef enum {
                                                  taskModel:nil
                                               projectModel:nil
                                                      point:point
+                                                  province:province
+                                                      city:city
+                                                      zone:zone
                                                    address:address
+                                             isOffLineMode:YES
                                            interfaceStatus:InterfaceStatus_New
                                                      forum:nil
                                                      table:nil];
@@ -310,7 +318,19 @@ typedef enum {
                         YXFormListModel *flm = [YXFormListModel new];
                         flm.uuid = forumInfoModel.uuid;
                         //goto forum detail
-                        [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",forumInfoModel.type] fromViewController:self taskModel:nil projectModel:nil point:mapPoint address:nil interfaceStatus:InterfaceStatus_Show forum:flm table:nil];
+                        [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",forumInfoModel.type]
+                                        fromViewController:self
+                                                 taskModel:nil
+                                              projectModel:nil
+                                                     point:mapPoint
+                                                  province:nil
+                                                      city:nil
+                                                      zone:nil
+                                                   address:nil
+                                             isOffLineMode:NO
+                                           interfaceStatus:InterfaceStatus_Show
+                                                     forum:flm
+                                                     table:nil];
                     };
                     //add customer view
                     self.mapView.callout.customView = customView;
@@ -376,6 +396,16 @@ typedef enum {
 //轨迹采集
 - (IBAction)onTraceCollect:(UIButton *)b
 {
+    if ([INTULocationManager locationServicesState] == INTULocationServicesStateDisabled || [INTULocationManager locationServicesState] == INTULocationServicesStateDenied) {
+        [self alertText:@"您的定位服务未开启，是否前往设置？" sureTitle:@"设置" sureAction:^{
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                    [[UIApplication sharedApplication] openURL:url options:nil completionHandler:nil];
+                }
+        }];
+        return;
+    }
+    
     // dissmiss any callout
     [self.mapView.callout dismiss];
     

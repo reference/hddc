@@ -47,7 +47,11 @@
                   taskModel:(YXTaskModel *)taskModel
                projectModel:(YXProject *)projectModel
                       point:(AGSPoint *)mapPoint
+                   province:(NSString *)province
+                       city:(NSString *)city
+                       zone:(NSString *)zone
                     address:(NSString *)address
+              isOffLineMode:(BOOL)isOffLineMode
             interfaceStatus:(InterfaceStatus)interfaceStatus
                       forum:(YXFormListModel *)forum
                       table:(YXTable *)table
@@ -59,6 +63,9 @@
             [vc pushViewControllerClass:GPGeologicalSvyPlanningLine.class inStoryboard:NSStringFromClass(GPGeologicalSvyPlanningLine.class) block:^(UIViewController *viewController) {
                 GPGeologicalSvyPlanningLine *vc = (GPGeologicalSvyPlanningLine *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -66,6 +73,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -75,6 +83,9 @@
             [vc pushViewControllerClass:GPGeologicalSvyPlanningPt.class inStoryboard:NSStringFromClass(GPGeologicalSvyPlanningPt.class) block:^(UIViewController *viewController) {
                 GPGeologicalSvyPlanningPt *vc = (GPGeologicalSvyPlanningPt *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -82,6 +93,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -91,6 +103,9 @@
             [vc pushViewControllerClass:GPFaultSvyPoint.class inStoryboard:NSStringFromClass(GPFaultSvyPoint.class) block:^(UIViewController *viewController) {
                 GPFaultSvyPoint *vc = (GPFaultSvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -98,6 +113,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -107,6 +123,9 @@
             [vc pushViewControllerClass:GPGeoGeomorphySvyPoint.class inStoryboard:NSStringFromClass(GPGeoGeomorphySvyPoint.class) block:^(UIViewController *viewController) {
                 GPGeoGeomorphySvyPoint *vc = (GPGeoGeomorphySvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -114,6 +133,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -123,6 +143,9 @@
             [vc pushViewControllerClass:GPGeologicalSvyLine.class inStoryboard:NSStringFromClass(GPGeologicalSvyLine.class) block:^(UIViewController *viewController) {
                 GPGeologicalSvyLine *vc = (GPGeologicalSvyLine *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -130,6 +153,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -139,6 +163,9 @@
             [vc pushViewControllerClass:GPGeologicalSvyPoint.class inStoryboard:NSStringFromClass(GPGeologicalSvyPoint.class) block:^(UIViewController *viewController) {
                 GPGeologicalSvyPoint *vc = (GPGeologicalSvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -146,6 +173,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -155,6 +183,9 @@
             [vc pushViewControllerClass:GPStratigraphySvyPoint.class inStoryboard:NSStringFromClass(GPStratigraphySvyPoint.class) block:^(UIViewController *viewController) {
                 GPStratigraphySvyPoint *vc = (GPStratigraphySvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -162,6 +193,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
             
         }
@@ -172,6 +204,9 @@
             [vc pushViewControllerClass:GPTrench.class inStoryboard:NSStringFromClass(GPTrench.class) block:^(UIViewController *viewController) {
                 GPTrench *vc = (GPTrench *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -179,6 +214,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -188,6 +224,9 @@
             [vc pushViewControllerClass:GPGeomorphySvyLine.class inStoryboard:NSStringFromClass(GPGeomorphySvyLine.class) block:^(UIViewController *viewController) {
                 GPGeomorphySvyLine *vc = (GPGeomorphySvyLine *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -195,6 +234,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -204,6 +244,9 @@
             [vc pushViewControllerClass:GPGeomorphySvyPoint.class inStoryboard:NSStringFromClass(GPGeomorphySvyPoint.class) block:^(UIViewController *viewController) {
                 GPGeomorphySvyPoint *vc = (GPGeomorphySvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -211,6 +254,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -220,6 +264,9 @@
             [vc pushViewControllerClass:GPGeomorphySvyRegion.class inStoryboard:NSStringFromClass(GPGeomorphySvyRegion.class) block:^(UIViewController *viewController) {
                 GPGeomorphySvyRegion *vc = (GPGeomorphySvyRegion *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -227,6 +274,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -236,6 +284,9 @@
             [vc pushViewControllerClass:GPGeomorphySvyReProf.class inStoryboard:NSStringFromClass(GPGeomorphySvyReProf.class) block:^(UIViewController *viewController) {
                 GPGeomorphySvyReProf *vc = (GPGeomorphySvyReProf *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -243,6 +294,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -252,6 +304,9 @@
             [vc pushViewControllerClass:GPGeomorphySvySamplePoint.class inStoryboard:NSStringFromClass(GPGeomorphySvySamplePoint.class) block:^(UIViewController *viewController) {
                 GPGeomorphySvySamplePoint *vc = (GPGeomorphySvySamplePoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -259,6 +314,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -268,6 +324,9 @@
             [vc pushViewControllerClass:GPGeomorStation.class inStoryboard:NSStringFromClass(GPGeomorStation.class) block:^(UIViewController *viewController) {
                 GPGeomorStation *vc = (GPGeomorStation *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -275,6 +334,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -284,6 +344,9 @@
             [vc pushViewControllerClass:GPDrillHole.class inStoryboard:NSStringFromClass(GPDrillHole.class) block:^(UIViewController *viewController) {
                 GPDrillHole *vc = (GPDrillHole *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -291,6 +354,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -300,6 +364,9 @@
             [vc pushViewControllerClass:GPSamplePoint.class inStoryboard:NSStringFromClass(GPSamplePoint.class) block:^(UIViewController *viewController) {
                 GPSamplePoint *vc = (GPSamplePoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -307,6 +374,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -316,6 +384,9 @@
             [vc pushViewControllerClass:GPGeophySvyLine.class inStoryboard:NSStringFromClass(GPGeophySvyLine.class) block:^(UIViewController *viewController) {
                 GPGeophySvyLine *vc = (GPGeophySvyLine *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -323,6 +394,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -332,6 +404,9 @@
             [vc pushViewControllerClass:GPGeophySvyPoint.class inStoryboard:NSStringFromClass(GPGeophySvyPoint.class) block:^(UIViewController *viewController) {
                 GPGeophySvyPoint *vc = (GPGeophySvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -339,6 +414,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -348,6 +424,9 @@
             [vc pushViewControllerClass:GPGeochemicalSvyLine.class inStoryboard:NSStringFromClass(GPGeochemicalSvyLine.class) block:^(UIViewController *viewController) {
                 GPGeochemicalSvyLine *vc = (GPGeochemicalSvyLine *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -355,6 +434,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -364,6 +444,9 @@
             [vc pushViewControllerClass:GPGeochemicalSvyPoint.class inStoryboard:NSStringFromClass(GPGeochemicalSvyPoint.class) block:^(UIViewController *viewController) {
                 GPGeochemicalSvyPoint *vc = (GPGeochemicalSvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -371,6 +454,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -380,6 +464,9 @@
             [vc pushViewControllerClass:GPCrater.class inStoryboard:NSStringFromClass(GPCrater.class) block:^(UIViewController *viewController) {
                 GPCrater *vc = (GPCrater *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -387,6 +474,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -396,6 +484,9 @@
             [vc pushViewControllerClass:GPLava.class inStoryboard:NSStringFromClass(GPLava.class) block:^(UIViewController *viewController) {
                 GPLava *vc = (GPLava *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -403,6 +494,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -412,6 +504,9 @@
             [vc pushViewControllerClass:GPVolcanicSamplePoint.class inStoryboard:NSStringFromClass(GPVolcanicSamplePoint.class) block:^(UIViewController *viewController) {
                 GPVolcanicSamplePoint *vc = (GPVolcanicSamplePoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -419,6 +514,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;
@@ -428,6 +524,9 @@
             [vc pushViewControllerClass:GPVolcanicSvyPoint.class inStoryboard:NSStringFromClass(GPVolcanicSvyPoint.class) block:^(UIViewController *viewController) {
                 GPVolcanicSvyPoint *vc = (GPVolcanicSvyPoint *)viewController;
                 vc.coordinate = [mapPoint toCLLocationCoordinate2D];
+                vc.provinceStr = province;
+                vc.cityStr = city;
+                vc.zoneStr = zone;
                 vc.address = address;
                 vc.projectModel = projectModel;
                 vc.interfaceStatus = interfaceStatus;
@@ -435,6 +534,7 @@
                 vc.table = table;
                 vc.type = type;
                 vc.taskModel = taskModel;
+                vc.isOffLineMode = isOffLineMode;
             }];
         }
             break;

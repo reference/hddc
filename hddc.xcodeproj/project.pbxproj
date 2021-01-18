@@ -240,6 +240,7 @@
 		84A3E80A25AC3DD5002C70D0 /* GPKmlKmzShpEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3E80925AC3DD5002C70D0 /* GPKmlKmzShpEntity.m */; };
 		84A3E80E25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A3E80D25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m */; };
 		84A3E81025AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84A3E80F25AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib */; };
+		84EBD69225B571770071CAED /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 84EBD69125B571770071CAED /* Location.gpx */; };
 		89E8A2464E7C3BD0DD96BB63 /* Pods_hddc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC114E69BEBB539667F364AD /* Pods_hddc.framework */; };
 /* End PBXBuildFile section */
 
@@ -659,6 +660,7 @@
 		84A3E80C25AC4B6B002C70D0 /* GPFileZhiPaiPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPFileZhiPaiPicker.h; sourceTree = "<group>"; };
 		84A3E80D25AC4B6B002C70D0 /* GPFileZhiPaiPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPFileZhiPaiPicker.m; sourceTree = "<group>"; };
 		84A3E80F25AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GPFileZhiPaiPicker.xib; sourceTree = "<group>"; };
+		84EBD69125B571770071CAED /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		AA4D0171574B00AEEB33F596 /* Pods-hddc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.debug.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.debug.xcconfig"; sourceTree = "<group>"; };
 		D913CCA0024C5C5A0A406A81 /* Pods-hddc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hddc.release.xcconfig"; path = "Target Support Files/Pods-hddc/Pods-hddc.release.xcconfig"; sourceTree = "<group>"; };
 		DC114E69BEBB539667F364AD /* Pods_hddc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hddc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1376,8 +1378,8 @@
 		842C47C425ABEEE90034E6DB /* 字典 */ = {
 			isa = PBXGroup;
 			children = (
-				842C47C525ABEEE90034E6DB /* YXSlectionDictModel.m */,
 				842C47C625ABEEE90034E6DB /* 4330d398bfc148e2964492aead40b907.sqlite3 */,
+				842C47C525ABEEE90034E6DB /* YXSlectionDictModel.m */,
 				842C47C725ABEEE90034E6DB /* YXSlectionDictModel.h */,
 			);
 			path = "字典";
@@ -1731,11 +1733,11 @@
 				842C487025ABEEEA0034E6DB /* View */,
 				842C483425ABEEEA0034E6DB /* Entity */,
 				842C482B25ABEEEA0034E6DB /* 区域调查 */,
-				842C483E25ABEEEA0034E6DB /* 地球物理探测 */,
 				842C484925ABEEEA0034E6DB /* 野外采样 */,
 				842C484F25ABEEEA0034E6DB /* 地质调查 */,
 				842C486A25ABEEEA0034E6DB /* 钻探调查 */,
 				842C487F25ABEEEA0034E6DB /* 地貌调查 */,
+				842C483E25ABEEEA0034E6DB /* 地球物理探测 */,
 				842C489825ABEEEA0034E6DB /* 地球化学探测 */,
 				842C48A325ABEEEA0034E6DB /* 火山调查 */,
 			);
@@ -1754,8 +1756,8 @@
 		842C482C25ABEEEA0034E6DB /* 地质调查规划点-点 */ = {
 			isa = PBXGroup;
 			children = (
-				842C482D25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.h */,
 				842C482E25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.storyboard */,
+				842C482D25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.h */,
 				842C482F25ABEEEA0034E6DB /* GPGeologicalSvyPlanningPt.m */,
 			);
 			path = "地质调查规划点-点";
@@ -1774,14 +1776,14 @@
 		842C483425ABEEEA0034E6DB /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				842C483525ABEEEA0034E6DB /* GPTanCeTypeEntity.m */,
 				842C483625ABEEEA0034E6DB /* GPForumType.h */,
-				842C483725ABEEEA0034E6DB /* BDReachability.h */,
-				842C483825ABEEEA0034E6DB /* GPImageEntity.h */,
-				842C483925ABEEEA0034E6DB /* BDReachability.m */,
 				842C483A25ABEEEA0034E6DB /* GPForumType.m */,
-				842C483B25ABEEEA0034E6DB /* GPTanCeTypeEntity.h */,
+				842C483725ABEEEA0034E6DB /* BDReachability.h */,
+				842C483925ABEEEA0034E6DB /* BDReachability.m */,
+				842C483825ABEEEA0034E6DB /* GPImageEntity.h */,
 				842C483C25ABEEEA0034E6DB /* GPImageEntity.m */,
+				842C483525ABEEEA0034E6DB /* GPTanCeTypeEntity.m */,
+				842C483B25ABEEEA0034E6DB /* GPTanCeTypeEntity.h */,
 				842C483D25ABEEEA0034E6DB /* dixingType.json */,
 			);
 			path = Entity;
@@ -1993,8 +1995,8 @@
 		842C488425ABEEEA0034E6DB /* 微地貌测量点-点 */ = {
 			isa = PBXGroup;
 			children = (
-				842C488525ABEEEA0034E6DB /* GPGeomorphySvyPoint.h */,
 				842C488625ABEEEA0034E6DB /* GPGeomorphySvyPoint.storyboard */,
+				842C488525ABEEEA0034E6DB /* GPGeomorphySvyPoint.h */,
 				842C488725ABEEEA0034E6DB /* GPGeomorphySvyPoint.m */,
 			);
 			path = "微地貌测量点-点";
@@ -2288,6 +2290,7 @@
 				842C48F925ABEEEA0034E6DB /* main.m */,
 				842C48FB25ABEEEA0034E6DB /* public_key.der */,
 				842C4A0B25ABF06E0034E6DB /* HddcHeader.pch */,
+				84EBD69125B571770071CAED /* Location.gpx */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -2393,6 +2396,7 @@
 				842C49BF25ABEEEA0034E6DB /* GPVolcanicSvyPoint.storyboard in Resources */,
 				842C490025ABEEEA0034E6DB /* GPNormalPicker.xib in Resources */,
 				842C492525ABEEEA0034E6DB /* BDBaseController.xcassets in Resources */,
+				84EBD69225B571770071CAED /* Location.gpx in Resources */,
 				842C499025ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard in Resources */,
 				842C49C925ABEEEA0034E6DB /* GPHomeMapCalloutCellView.xib in Resources */,
 				84A3E81025AC4DD3002C70D0 /* GPFileZhiPaiPicker.xib in Resources */,

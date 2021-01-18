@@ -82,4 +82,19 @@
            }];
 }
 
++ (void)requestTaskCodeByProjectId:(NSString *)pid completion:(void(^)(NSString *code,NSError *error))completion
+{
+    NSString *url = [NSString stringWithFormat:@"%@/taskCode/%@", YX_HOST,[pid stringByAddingURLQueryPercentAllowedCharacterSet]];
+    [YXHTTP requestWithURL:url
+                    params:nil
+                      body:nil
+             responseClass:StandardHTTPResponse.class
+         responseDataClass:@{@"data":NSString.class}
+           completion:^(id responseObject, NSError *error) {
+                StandardHTTPResponse *resp = responseObject;
+                if (completion) {
+                    completion(resp.data,error);
+                }
+           }];
+}
 @end

@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)unSelectGraphic:(AGSGraphic *)graphic;
 
 // 地址
-- (void)reverseGeocodeInPoint:(AGSPoint *)point completion:(void(^)(NSString *address,NSError *error))completion;
+- (void)reverseGeocodeInPoint:(AGSPoint *)point completion:(void(^)(NSString *province,NSString *city,NSString *zone,NSString *address,NSError *error))completion;
 @end
 
 NS_ASSUME_NONNULL_END

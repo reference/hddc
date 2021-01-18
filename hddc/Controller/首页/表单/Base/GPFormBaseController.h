@@ -28,7 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) GPAdministrativeDivisionsModel *zone;
 
 //详细地址
+@property (nonatomic, strong) NSString *provinceStr;
+@property (nonatomic, strong) NSString *cityStr;
+@property (nonatomic, strong) NSString *zoneStr;
 @property (nonatomic, strong) NSString *address;
+
+//是否离线模式 如果是离线模式 底部的提交按钮隐藏
+@property (nonatomic, assign) BOOL isOffLineMode;
 
 // 10 个图片的实体
 @property (nonatomic, strong) NSMutableArray <GPImageEntity *> *imageEntities;

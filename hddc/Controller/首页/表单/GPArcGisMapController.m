@@ -57,6 +57,9 @@
         for (UIButton *b in self.functionView.buttons) {
             b.selected = btn == b;
         }
+        //结束上一个采集
+        [self geoView:nil didDoubleTapAtScreenPoint:CGPointZero mapPoint:nil completion:nil];
+        
         switch (btn.tag) {
             case 0:
                 self.currGraphicType = GraphicType_Polygon;

@@ -115,7 +115,7 @@
     select.onDone = ^(NSString *type) {
         [self.window dismissViewAnimated:YES completion:^{
             [BDToastView showActivity:@"位置信息获取中..."];
-            [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString * _Nonnull address, NSError * _Nonnull error) {
+            [[BDArcGISUtil ins] reverseGeocodeInPoint:mapPoint completion:^(NSString *province,NSString *city,NSString *zone,NSString *address,NSError *error) {
                 [BDToastView dismiss];
                 
                 [GPForumJumper jumpToForumWithType:type
@@ -123,7 +123,11 @@
                                          taskModel:self.taskModel
                                       projectModel:self.projectModel
                                              point:mapPoint
+                                          province:province
+                                              city:city
+                                              zone:zone
                                            address:address
+                                     isOffLineMode:NO
                                    interfaceStatus:InterfaceStatus_New
                                              forum:nil
                                              table:nil];

@@ -191,6 +191,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)requestTasksWithPage:(NSInteger )page projectId:(NSString *)projectId completion:(void(^)(YXTaskApiModel *m,NSError *error))completion;
 //请求所有的
 + (void)requestAllTasksWithProjectId:(NSString *)projectId completion:(void(^)(YXTaskApiModel *m,NSError *error))completion;
+
+/// 获取任务id
+/// @param pid projectid
++ (void)requestTaskCodeByProjectId:(NSString *)pid completion:(void(^)(NSString *code,NSError *error))completion;
 @end
 
 NS_ASSUME_NONNULL_END

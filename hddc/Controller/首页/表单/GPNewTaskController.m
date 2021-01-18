@@ -35,20 +35,39 @@
     //
     [self.textFields textFieldForTag:2].text = self.projectModel.projectName;
     
+    if (self.isModify == NO) {
+        [self loadTaskCode];
+    }
+    
+}
+
+#pragma mark - api
+
+- (void)loadTaskCode
+{
+    [BDToastView showActivity:@"初始化任务中..."];
+    [YXTaskApiModel requestTaskCodeByProjectId:self.projectModel.projectId completion:^(NSString * _Nonnull code, NSError * _Nonnull error) {
+        if (error) {
+            [BDToastView showText:error.localizedDescription];
+        }
+        else{
+            [BDToastView dismiss];
+            [self.textFields textFieldForTag:0].enabled = code;
+        }
+    }];
 }
 
 - (void)setupUI
 {
     //任务编号和任务名称不能修改
-    [self.textFields textFieldForTag:0].enabled = !self.isModify;
     [self.textFields textFieldForTag:1].enabled = !self.isModify;
     
-    //任务编号
-    [self.textFields textFieldForTag:0].text = self.taskModel.taskId;
     //任务名称
     [self.textFields textFieldForTag:1].text = self.taskModel.taskName;
     
     if (self.isModify) {
+        //任务编号
+        [self.textFields textFieldForTag:0].text = self.taskModel.taskId;
         //省
         self.provinceLabel.text = self.taskModel.province;
         //试

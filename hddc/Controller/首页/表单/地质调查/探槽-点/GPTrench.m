@@ -283,7 +283,7 @@
         return;
     }
     [BDToastView showActivity:nil];;
-    [YXSlectionDictModel requestDictWithType:FormType_Trench code:@"CVD-16-Direction    " completion:^(NSArray <YXSlectionDictModel *> * _Nonnull ms, NSError * _Nonnull error) {
+    [YXSlectionDictModel requestDictWithType:FormType_Trench code:@"CVD-16-Direction" completion:^(NSArray <YXSlectionDictModel *> * _Nonnull ms, NSError * _Nonnull error) {
         if (error) {
             [BDToastView showText:error.localizedDescription];
         }else{

@@ -163,23 +163,8 @@
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="o5F-93-eUT">
                     <rect key="frame" x="16" y="255" width="286" height="40"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd9-GT-PwS">
-                            <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
-                            <color key="backgroundColor" systemColor="systemRedColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="取消"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                    <real key="value" value="6"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="onCancelled:" destination="Xct-Mb-fI8" eventType="touchUpInside" id="UQG-GH-Ysw"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hST-zB-xj7">
-                            <rect key="frame" x="151" y="0.0" width="135" height="40"/>
+                            <rect key="frame" x="0.0" y="0.0" width="135" height="40"/>
                             <color key="backgroundColor" name="color_light_blue"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" title="确认"/>
@@ -191,6 +176,21 @@
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="onDone:" destination="Xct-Mb-fI8" eventType="touchUpInside" id="sjh-Hw-o54"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rd9-GT-PwS">
+                            <rect key="frame" x="151" y="0.0" width="135" height="40"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="取消"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onCancelled:" destination="Xct-Mb-fI8" eventType="touchUpInside" id="UQG-GH-Ysw"/>
                             </connections>
                         </button>
                     </subviews>

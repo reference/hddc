@@ -90,6 +90,10 @@
     NSArray *subForumArray = dic[self.selectedForum];
     [self.subForumArray setArray:subForumArray];
     [self.subForumTypeMenu reloadAllComponents];
+    
+    //默认选择第一项
+    self.selectedSubForumInfo = self.subForumArray[0];
+    [self.labels labelForTag:1].text = self.selectedSubForumInfo[@"name"];
 }
 
 - (IBAction)onCancelled:(UIButton *)b

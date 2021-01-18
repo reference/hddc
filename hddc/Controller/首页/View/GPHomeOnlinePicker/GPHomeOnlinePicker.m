@@ -117,6 +117,11 @@
         }else{
             [self.tasksArray setArray:m.rows];
             [self.taskMenu reloadAllComponents];
+            
+            self.taskModel = self.tasksArray.firstObject;
+            if (self.taskMenu) {
+                [self.labels labelForTag:1].text = self.taskModel.taskName;
+            }
         }
     }];
 }
@@ -144,6 +149,10 @@
     NSArray *subForumArray = dic[self.selectedForum];
     [self.subForumArray setArray:subForumArray];
     [self.subForumTypeMenu reloadAllComponents];
+    
+    //默认选择第一项
+    self.selectedSubForumInfo = self.subForumArray[0];
+    [self.labels labelForTag:3].text = self.selectedSubForumInfo[@"name"];
 }
 
 - (IBAction)onCancelled:(UIButton *)b

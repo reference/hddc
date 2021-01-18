@@ -344,7 +344,7 @@
 }
 
 
-- (void)reverseGeocodeInPoint:(AGSPoint *)point completion:(void(^)(NSString *address,NSError *error))completion
+- (void)reverseGeocodeInPoint:(AGSPoint *)point completion:(void(^)(NSString *province,NSString *city,NSString *zone,NSString *address,NSError *error))completion
 {
     //22.540681,=114.061324
     CLLocation *newLocation=[[CLLocation alloc]initWithLatitude:point.toCLLocationCoordinate2D.latitude longitude: point.toCLLocationCoordinate2D.longitude];
@@ -354,7 +354,7 @@
                                        NSError *error)
      {
          CLPlacemark *placemark=[placemarks objectAtIndex:0];
-         NSLog(@"我我的:%@\n country:%@\n postalCode:%@\n ISOcountryCode:%@\n ocean:%@\n inlandWater:%@\n locality:%@\n subLocality:%@ \n administrativeArea:%@\n subAdministrativeArea:%@\n thoroughfare:%@\n subThoroughfare:%@\n",
+         NSLog(@"地址:%@\n country:%@\n postalCode:%@\n ISOcountryCode:%@\n ocean:%@\n inlandWater:%@\n locality:%@\n subLocality:%@ \n administrativeArea:%@\n subAdministrativeArea:%@\n thoroughfare:%@\n subThoroughfare:%@\n",
                placemark.name,
                placemark.country,
                placemark.postalCode,
@@ -368,8 +368,15 @@
                placemark.thoroughfare,
                placemark.subThoroughfare);
         if (completion) {
-            NSString *address = [NSString stringWithFormat:@"%@",placemark.name];
-            completion(address,error);
+            NSString *a = [NSString stringWithFormat:@"%@",placemark.thoroughfare?placemark.thoroughfare:placemark.name];
+//            NSString *p = [NSString stringWithFormat:@"%@",placemark.locality];
+//            NSString *c = [NSString stringWithFormat:@"%@",placemark.administrativeArea];
+//            NSString *z = [NSString stringWithFormat:@"%@",placemark.subAdministrativeArea];
+            NSDictionary *dic = placemark.addressDictionary;
+            NSString *p = dic[@"State"];
+            NSString *c = dic[@"City"];
+            NSString *z = dic[@"SubLocality"];
+            completion((p.length > 0 ? p : c),c,z,a,error);
         }
      }];
 }

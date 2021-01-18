@@ -129,7 +129,7 @@
     //taskid
     body.taskId = self.taskModel.taskId;
     //projectid =
-    body.projectId = self.projectModel.projectId;
+    body.projectcode = self.projectModel.projectId;
     //userid
     body.userId = [YXUserModel currentUser].userId;
     //create
@@ -153,7 +153,7 @@
     //测线终点纬度
     body.endlatitude = [[self.textFields textFieldForTag:8].text trim];
     //测线所属工程编号
-    body.projectcode = [[self.textFields textFieldForTag:9].text trim];
+    body.projectId = [[self.textFields textFieldForTag:9].text trim];
     //测点数
     body.svypointnum = [[self.textFields textFieldForTag:10].text trim];
     //内插点

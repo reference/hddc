@@ -80,6 +80,14 @@
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier
+{
+    if ([extensionPointIdentifier isEqualToString:@"com.apple.keyboard-service"]) {
+        return NO;
+    }
+    return YES;
+}
+
 - (void)goMap
 {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"GPTask" bundle:nil];

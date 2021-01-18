@@ -283,6 +283,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 //@Column(name="task_id")
 @property (nonatomic, strong) NSString *taskId;
+@property (nonatomic, strong) NSString *projectcode;
 /**
  * 项目ID
  */

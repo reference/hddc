@@ -166,7 +166,11 @@
                                      taskModel:self.taskModel
                                   projectModel:self.projectModel
                                          point:nil
+                                      province:nil
+                                          city:nil
+                                          zone:nil
                                        address:nil
+                                 isOffLineMode:NO
                                interfaceStatus:InterfaceStatus_Show
                                          forum:m
                                          table:nil];
@@ -194,7 +198,11 @@
                                      taskModel:self.taskModel
                                   projectModel:self.projectModel
                                          point:nil
+                                      province:nil
+                                          city:nil
+                                          zone:nil
                                        address:nil
+                                 isOffLineMode:NO
                                interfaceStatus:InterfaceStatus_Edit
                                          forum:model
                                          table:table];

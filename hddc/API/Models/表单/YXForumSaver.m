@@ -30,10 +30,10 @@
         url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorphysvyregions", YX_HOST];
     }
     else if ([body isKindOfClass:YXGeomorphySvyReProfModel.class]) {
-        url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorphysvysamplepoints", YX_HOST];
+        url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorphysvyreprofs", YX_HOST];
     }
     else if ([body isKindOfClass:YXGeomorphySvySamplePointModel.class]) {
-        url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorphysvyreprofs", YX_HOST];
+        url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorphysvysamplepoints", YX_HOST];
     }
     else if ([body isKindOfClass:YXGeomorStationModel.class]) {
         url = [NSString stringWithFormat:@"%@/hddcAppForminfo/hddcWyGeomorstations", YX_HOST];

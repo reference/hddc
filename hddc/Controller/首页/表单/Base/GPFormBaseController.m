@@ -78,9 +78,17 @@
         case InterfaceStatus_Edit:
             [self setUpUIByModel:[YXTable decodeDataInTable:self.table]];
             break;
-            
+        case InterfaceStatus_New:
+            [self setUpAddress];
+            break;
         default:
             break;
+    }
+    
+    //
+    if (self.isOffLineMode) {
+        //覆盖保存按钮
+        self.tableViews.firstObject.bottomLayoutConstraint.constant = -50;
     }
 }
 
@@ -92,6 +100,25 @@
             //hilight star *
             [lb setTextColor:UIColor.redColor range:NSMakeRange(0, 1)];
         }
+    }
+}
+
+- (void)setUpAddress
+{
+    if (self.provinceStr.length) {
+        self.provinceLabel.text = self.provinceStr;
+        self.province = [GPAdministrativeDivisionsModel new];
+        self.province.divisionName = self.provinceStr;
+    }
+    if (self.cityStr.length) {
+        self.cityLabel.text = self.cityStr;
+        self.city = [GPAdministrativeDivisionsModel new];
+        self.city.divisionName = self.cityStr;
+    }
+    if (self.zoneStr.length) {
+        self.zoneLabel.text = self.zoneStr;
+        self.zone = [GPAdministrativeDivisionsModel new];
+        self.zone.divisionName = self.zoneStr;
     }
 }
 

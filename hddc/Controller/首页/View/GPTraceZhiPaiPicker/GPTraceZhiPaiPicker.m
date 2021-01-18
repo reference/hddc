@@ -89,6 +89,11 @@
         }else{
             [self.tasksArray setArray:m.rows];
             [self.taskMenu reloadAllComponents];
+            
+            self.taskModel = self.tasksArray.firstObject;
+            if (self.taskMenu) {
+                [self.labels labelForTag:1].text = self.taskModel.taskName;
+            }
         }
     }];
 }
