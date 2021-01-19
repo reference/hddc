@@ -22,13 +22,24 @@
 - (IBAction)onNew:(UIButton *)b
 {
     if (self.didAddNew) {
-        AGSPoint *mpPoint = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake(self.forumDataInfoModels.firstObject.lat,self.forumDataInfoModels.firstObject.lon)];
+        id model = self.forumDataInfoModels.firstObject;
+        AGSPoint *mpPoint = nil;
+        if ([model isKindOfClass:YXForumDataInfoModel.class]) {
+            YXForumDataInfoModel *m = model;
+            mpPoint = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake(m.lat,m.lon)];
+        }
+        else{
+            YXTable *tb = model;
+            id datamodel = [YXTable decodeDataInTable:tb];
+            NSDictionary *mInfo = [datamodel yy_modelToJSONObject];
+            mpPoint = [AGSPoint pointWithCLLocationCoordinate2D:CLLocationCoordinate2DMake([mInfo[@"lat"] doubleValue],[mInfo[@"lon"] doubleValue])];
+        }
 
         self.didAddNew(mpPoint);
     }
 }
 
-- (void)setForumDataInfoModels:(NSArray<YXForumDataInfoModel *> *)forumDataInfoModels
+- (void)setForumDataInfoModels:(NSArray *)forumDataInfoModels
 {
     _forumDataInfoModels = forumDataInfoModels;
     
@@ -58,8 +69,17 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(BDTableViewCell.class)];
-    YXForumDataInfoModel *m = self.forumDataInfoModels[indexPath.row];
-    cell.labels.firstObject.text = [GPForumType nameOfType:m.type];
+    id model = self.forumDataInfoModels[indexPath.row];
+    if ([model isKindOfClass:YXForumDataInfoModel.class]) {
+        YXForumDataInfoModel *m = model;
+        cell.labels.firstObject.text = [GPForumType nameOfType:m.type];
+    }
+    else{
+        YXTable *tb = model;
+        id datamodel = [YXTable decodeDataInTable:tb];
+        NSDictionary *mInfo = [datamodel yy_modelToJSONObject];
+        cell.labels.firstObject.text = [GPForumType nameOfType:[mInfo[@"type"] integerValue]];
+    }
     return cell;
 }
 
@@ -68,7 +88,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    YXForumDataInfoModel *m = self.forumDataInfoModels[indexPath.row];
+    id m = self.forumDataInfoModels[indexPath.row];
 
     if (self.didSelectForum) {
         self.didSelectForum(m);

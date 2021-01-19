@@ -148,6 +148,9 @@
 
 - (IBAction)onSave:(UIButton *)b
 {
+    //结束上一个采集
+    [self geoView:nil didDoubleTapAtScreenPoint:CGPointZero mapPoint:nil completion:nil];
+    
     //编码坐标给服务器，参见YXTaskModel.h的mapinfo字段说明或者BDArcGISGraphic的-(NSString*)encode;说明
     NSString *curMapInfo = [BDArcGISGraphic multiEncodeByGraphics:self.graphics];
     if (self.selectedMapCallback) {

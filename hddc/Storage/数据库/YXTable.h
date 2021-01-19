@@ -86,6 +86,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSArray <YXTable *> *)findTablesByName:(NSString *)tName userId:(NSString *)uId;
 + (NSArray <YXTable *> *)findTablesByName:(NSString *)tName taskId:(NSString *)tid userId:(NSString *)uId;
 
+/// 查询某个用户所有本地表单
+/// @param uId userid
++ (NSArray <YXTable *> *)findAllLocalForumWithUserId:(NSString *)uId;
+
 /// 根据row id删除
 /// @param rowId rowid
 + (BOOL)deleteRowById:(NSString *)rowId;

@@ -466,7 +466,20 @@ typedef enum {
         cell.onClickedButtons = ^(NSInteger tag) {
             //编辑表单
             
-            [self gotoDetailWithForumListModel:model type:self.curType interfaceStatus:InterfaceStatus_Edit table:table];
+//            [self gotoDetailWithForumListModel:model type:self.curType interfaceStatus:InterfaceStatus_Edit table:table];
+            [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",self.curType]
+                            fromViewController:self
+                                     taskModel:self.taskModel
+                                  projectModel:self.projectModel
+                                         point:nil
+                                      province:nil
+                                          city:nil
+                                          zone:nil
+                                       address:nil
+                                 isOffLineMode:NO
+                               interfaceStatus:InterfaceStatus_Edit
+                                         forum:model
+                                         table:table];
         };
     }
     else {

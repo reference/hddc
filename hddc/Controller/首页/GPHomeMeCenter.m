@@ -10,15 +10,7 @@
 #import "GPHomeChangePasswordController.h"
 #import "GPHomeSettingKMLListController.h"
 
-@interface GPHomeMeCenter ()
-
-@end
-
 @implementation GPHomeMeCenter
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -35,7 +27,6 @@
 - (IBAction)onKmlKmzShp:(UIButton *)b
 {
     [self pushViewControllerClass:GPHomeSettingKMLListController.class inStoryboard:@"GPHome"];
-
 }
 
 - (IBAction)onLogout:(UIButton *)b

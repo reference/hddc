@@ -76,7 +76,9 @@
             [self.projectMenu reloadAllComponents];
             
             self.projectModel = self.projectsArray.firstObject;
-            [self onTask:nil];
+            if (self.projectModel) {
+                [self onTask:nil];
+            }
         }
     }];
 }
@@ -90,10 +92,8 @@
             [self.tasksArray setArray:m.rows];
             [self.taskMenu reloadAllComponents];
             
-            self.taskModel = self.tasksArray.firstObject;
-            if (self.taskMenu) {
-                [self.labels labelForTag:1].text = self.taskModel.taskName;
-            }
+            self.taskModel = nil;
+            [self.labels labelForTag:1].text = @"选择任务";
         }
     }];
 }

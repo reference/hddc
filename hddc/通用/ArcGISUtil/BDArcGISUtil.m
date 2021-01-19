@@ -245,6 +245,18 @@
     return graphic;
 }
 
+- (AGSGraphic *)pinAtPoint:(AGSPoint *)point info:(NSDictionary *)info icon:(UIImage *)icon
+{
+    AGSPictureMarkerSymbol *pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:icon];
+    pictureMarkerSymbol.width =
+    pictureMarkerSymbol.height = 20;
+    //设置属性值  用于传参  在代理方法中可以获取到
+    AGSGraphic *graphic = [AGSGraphic graphicWithGeometry:point symbol:pictureMarkerSymbol attributes:info];
+    // Add polygon graphic to graphics overlay.
+    [self.graphicsOverlay.graphics addObject:graphic];
+    return graphic;
+}
+
 - (AGSGraphic *)pinAtPoint:(AGSPoint *)point info:(NSDictionary *)info image:(UIImage *)image
 {
     AGSPictureMarkerSymbol *pictureMarkerSymbol  = [AGSPictureMarkerSymbol pictureMarkerSymbolWithImage:image];

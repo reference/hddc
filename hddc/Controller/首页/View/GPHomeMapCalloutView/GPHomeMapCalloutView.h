@@ -11,8 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface GPHomeMapCalloutView : BDView
-@property (nonatomic, strong) NSArray <YXForumDataInfoModel *> *forumDataInfoModels;
-@property (nonatomic, copy) void (^didSelectForum)(YXForumDataInfoModel *forumInfoModel);
+//YXForumDataInfoModel or YXTable
+@property (nonatomic, strong) NSArray *forumDataInfoModels;
+//YXForumDataInfoModel or YXTable
+@property (nonatomic, copy) void (^didSelectForum)(id model);
 @property (nonatomic, copy) void (^didAddNew)(AGSPoint *point);
 @end
 

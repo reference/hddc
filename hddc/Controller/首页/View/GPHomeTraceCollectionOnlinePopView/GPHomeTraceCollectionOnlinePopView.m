@@ -87,7 +87,9 @@
             [self.projectMenu reloadAllComponents];
             
             self.projectModel = self.projectsArray.firstObject;
-            [self onTask:nil];
+            if (self.projectModel) {
+                [self onTask:nil];
+            }
         }
     }];
 }

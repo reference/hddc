@@ -86,10 +86,10 @@ typedef enum {
 //    [AGSGoogleMapLayer loadAGSGoogleMapLayer:self.map type:GoogleMap_TERRAIN];
     //
     //毛玻璃效果
-    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
-    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
-    effectView.frame = CGRectMake(0, 0, self.bottomToolbarHolder.width, self.bottomToolbarHolder.height);
-    [self.bottomToolbarHolder insertSubview:effectView atIndex:0];
+//    UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+//    effectView.frame = CGRectMake(0, 0, self.bottomToolbarHolder.width, self.bottomToolbarHolder.height);
+//    [self.bottomToolbarHolder insertSubview:effectView atIndex:0];
     
     //在线/离线模式
     self.mode = LineMode_on;
@@ -132,6 +132,8 @@ typedef enum {
     [super viewDidAppear:animated];
     ///加载所有的表单列表
     [self apiLoadAllForums];
+    ///离线所有本地表单
+    [self loadAllLocalForums];
 }
 
 #pragma mark - api
@@ -146,12 +148,37 @@ typedef enum {
                 for (YXForumDataInfoModel *m in ms) {
                     CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(m.lat,m.lon);
                     [[BDArcGISUtil ins] pinAtPoint:[AGSPoint pointWithCLLocationCoordinate2D:coords]
-                                              info:[m yy_modelToJSONObject]];
+                                              info:[m yy_modelToJSONObject]
+                                              icon:__IMG(@"icon_file_online")];
                 }
             }
         }];
     }
 }
+
+- (void)loadAllLocalForums
+{
+    if ([YXUserModel isLogin]) {
+        NSArray *tables = [YXTable findAllLocalForumWithUserId:[YXUserModel currentUser].userId];
+        for (YXTable *tb in tables) {
+            // decode data
+            id model = [YXTable decodeDataInTable:tb];
+            // 过滤掉kmlkmz表
+            if ([model isKindOfClass:GPKmlKmzShpEntity.class]) {
+                continue;
+            }
+            
+            //表单
+            NSDictionary *info = [model yy_modelToJSONObject];
+            CLLocationCoordinate2D coords = CLLocationCoordinate2DMake([info[@"lat"] doubleValue],[info[@"lon"] doubleValue]);
+            [[BDArcGISUtil ins] pinAtPoint:[AGSPoint pointWithCLLocationCoordinate2D:coords]
+                                      info:[tb yy_modelToJSONObject]
+                                      icon:__IMG(@"icon_file_offline")];
+        }
+    }
+}
+
+#pragma mark - setter
 
 - (void)setMode:(LineMode)mode
 {
@@ -297,7 +324,13 @@ typedef enum {
                 for (AGSGraphic *graphic in identifyResult.graphics) {
                     NSLog(@"info %@",graphic.attributes);
                     YXForumDataInfoModel *m = [YXForumDataInfoModel yy_modelWithJSON:[graphic.attributes yy_modelToJSONObject]];
-                    [forumDataInfoModels addObject:m];
+                    if (m.uuid.length > 0) {
+                        [forumDataInfoModels addObject:m];
+                    }else{
+                        //本地数据
+                        YXTable *tb = [YXTable yy_modelWithJSON:[graphic.attributes yy_modelToJSONObject]];
+                        [forumDataInfoModels addObject:tb];
+                    }
                 }
                 
                 // if info is exsit 弹出框
@@ -311,26 +344,62 @@ typedef enum {
                         addNewForum(point);
                     };
                     //did select item
-                    customView.didSelectForum = ^(YXForumDataInfoModel * _Nonnull forumInfoModel) {
+                    customView.didSelectForum = ^(id model) {
                         // dismiss callout
                         [geoView.callout dismiss];
-                        // build a forum list model
-                        YXFormListModel *flm = [YXFormListModel new];
-                        flm.uuid = forumInfoModel.uuid;
-                        //goto forum detail
-                        [GPForumJumper jumpToForumWithType:[NSString stringWithFormat:@"%li",forumInfoModel.type]
-                                        fromViewController:self
-                                                 taskModel:nil
-                                              projectModel:nil
-                                                     point:mapPoint
-                                                  province:nil
-                                                      city:nil
-                                                      zone:nil
-                                                   address:nil
-                                             isOffLineMode:NO
-                                           interfaceStatus:InterfaceStatus_Show
-                                                     forum:flm
-                                                     table:nil];
+                        
+                        // 判断模型
+                        NSString *type = nil;
+                        if ([model isKindOfClass:YXForumDataInfoModel.class]) {
+                            // model
+                            YXForumDataInfoModel *forumInfoModel = model;
+                            
+                            // build a forum list model
+                            YXFormListModel *flm = [YXFormListModel new];
+                            flm.uuid = forumInfoModel.uuid;
+                            
+                            //type
+                            type = [NSString stringWithFormat:@"%li",forumInfoModel.type];
+                            
+                            //goto forum detail
+                            [GPForumJumper jumpToForumWithType:type
+                                            fromViewController:self
+                                                     taskModel:nil
+                                                  projectModel:nil
+                                                         point:mapPoint
+                                                      province:nil
+                                                          city:nil
+                                                          zone:nil
+                                                       address:nil
+                                                 isOffLineMode:NO
+                                               interfaceStatus:InterfaceStatus_Show
+                                                         forum:flm
+                                                         table:nil];
+                        }
+                        else{
+                            // 本地数据
+                            YXTable *tb = model;
+                            // model
+                            id encodedDataModel = [YXTable decodeDataInTable:tb];
+                            // transfer to dictionary
+                            NSDictionary *dataInfo = [encodedDataModel yy_modelToJSONObject];
+                            // type
+                            type = dataInfo[@"type"];
+                            
+                            [GPForumJumper jumpToForumWithType:type
+                                            fromViewController:self
+                                                     taskModel:nil
+                                                  projectModel:nil
+                                                         point:nil
+                                                      province:nil
+                                                          city:nil
+                                                          zone:nil
+                                                       address:nil
+                                                 isOffLineMode:YES
+                                               interfaceStatus:InterfaceStatus_Edit
+                                                         forum:nil
+                                                         table:tb];
+                        }
                     };
                     //add customer view
                     self.mapView.callout.customView = customView;

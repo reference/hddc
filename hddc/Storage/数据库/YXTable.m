@@ -124,6 +124,13 @@
     return [YXTable bg_find:NSStringFromClass(YXTable.class) where:where];
 }
 
++ (NSArray <YXTable *> *)findAllLocalForumWithUserId:(NSString *)uId
+{
+    NSString* where = [NSString stringWithFormat:@"where %@=%@ and %@ between 0 and 25"
+                       ,bg_sqlKey(@"userId"),bg_sqlValue(uId),bg_sqlKey(@"type")];
+    return [YXTable bg_find:NSStringFromClass(YXTable.class) where:where];
+}
+
 + (NSArray <YXTable *> *)findTablesWithoutBelongByUserId:(NSString *)uId forumType:(NSInteger)type
 {
     NSString* where = [NSString stringWithFormat:@"where %@=%@ and %@ is null and %@ is null and %@=%@"
