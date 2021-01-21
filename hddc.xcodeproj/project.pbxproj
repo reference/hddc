@@ -24,7 +24,6 @@
 		842C490B25ABEEEA0034E6DB /* TianDiTuLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46FD25ABEEE90034E6DB /* TianDiTuLayerInfo.m */; };
 		842C490C25ABEEEA0034E6DB /* TianDiTuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C46FE25ABEEE90034E6DB /* TianDiTuLayer.m */; };
 		842C490D25ABEEEA0034E6DB /* AGSGoogleMapLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */; };
-		842C490F25ABEEEA0034E6DB /* HistoricMapsEarthEDU.kml in Resources */ = {isa = PBXBuildFile; fileRef = 842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */; };
 		842C491025ABEEEA0034E6DB /* BDHImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */; };
 		842C491125ABEEEA0034E6DB /* BDHAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470A25ABEEE90034E6DB /* BDHAlbum.m */; };
 		842C491225ABEEEA0034E6DB /* BDHAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 842C470B25ABEEE90034E6DB /* BDHAsset.m */; };
@@ -290,7 +289,6 @@
 		842C46FF25ABEEE90034E6DB /* TianDiTuLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TianDiTuLayerInfo.h; sourceTree = "<group>"; };
 		842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSGoogleMapLayer.m; sourceTree = "<group>"; };
 		842C470325ABEEE90034E6DB /* AGSGoogleMapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSGoogleMapLayer.h; sourceTree = "<group>"; };
-		842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HistoricMapsEarthEDU.kml; sourceTree = "<group>"; };
 		842C470625ABEEE90034E6DB /* BDHImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDHImagePicker.h; sourceTree = "<group>"; };
 		842C470825ABEEE90034E6DB /* BDHImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHImagePickerHelper.m; sourceTree = "<group>"; };
 		842C470A25ABEEE90034E6DB /* BDHAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDHAlbum.m; sourceTree = "<group>"; };
@@ -834,9 +832,8 @@
 		842C470025ABEEE90034E6DB /* GoogleMapLayer */ = {
 			isa = PBXGroup;
 			children = (
-				842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */,
 				842C470325ABEEE90034E6DB /* AGSGoogleMapLayer.h */,
-				842C470425ABEEE90034E6DB /* HistoricMapsEarthEDU.kml */,
+				842C470125ABEEE90034E6DB /* AGSGoogleMapLayer.m */,
 			);
 			path = GoogleMapLayer;
 			sourceTree = "<group>";
@@ -1254,8 +1251,8 @@
 		842C479F25ABEEE90034E6DB /* 任务 */ = {
 			isa = PBXGroup;
 			children = (
-				842C47A025ABEEE90034E6DB /* YXTaskModel.m */,
 				842C47A125ABEEE90034E6DB /* YXTaskModel.h */,
+				842C47A025ABEEE90034E6DB /* YXTaskModel.m */,
 			);
 			path = "任务";
 			sourceTree = "<group>";
@@ -1767,8 +1764,8 @@
 			isa = PBXGroup;
 			children = (
 				842C483125ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.storyboard */,
-				842C483225ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m */,
 				842C483325ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.h */,
+				842C483225ABEEEA0034E6DB /* GPGeologicalSvyPlanningLine.m */,
 			);
 			path = "地质调查规划路线-线";
 			sourceTree = "<group>";
@@ -2442,7 +2439,6 @@
 				842C49B125ABEEEA0034E6DB /* GPGeomorStation.storyboard in Resources */,
 				842C494225ABEEEA0034E6DB /* BDTimePickerView.xib in Resources */,
 				842C49A425ABEEEA0034E6DB /* GPTaskImagesCell.xib in Resources */,
-				842C490F25ABEEEA0034E6DB /* HistoricMapsEarthEDU.kml in Resources */,
 				842C490425ABEEEA0034E6DB /* GPCityPicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

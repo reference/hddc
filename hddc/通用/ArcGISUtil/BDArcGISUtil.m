@@ -380,7 +380,7 @@
                placemark.thoroughfare,
                placemark.subThoroughfare);
         if (completion) {
-            NSString *a = [NSString stringWithFormat:@"%@",placemark.thoroughfare?placemark.thoroughfare:placemark.name];
+//            NSString *a = [NSString stringWithFormat:@"%@",placemark.thoroughfare?placemark.thoroughfare:placemark.name];
 //            NSString *p = [NSString stringWithFormat:@"%@",placemark.locality];
 //            NSString *c = [NSString stringWithFormat:@"%@",placemark.administrativeArea];
 //            NSString *z = [NSString stringWithFormat:@"%@",placemark.subAdministrativeArea];
@@ -388,6 +388,8 @@
             NSString *p = dic[@"State"];
             NSString *c = dic[@"City"];
             NSString *z = dic[@"SubLocality"];
+            NSString *a = dic[@"FormattedAddressLines"][0];
+            a = [a stringByReplacingOccurrencesOfString:@"中国" withString:@""];
             completion((p.length > 0 ? p : c),c,z,a,error);
         }
      }];

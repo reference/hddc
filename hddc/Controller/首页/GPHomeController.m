@@ -216,11 +216,6 @@ typedef enum {
 
 #pragma mark - api
 
-- (void)loadAllForumPoints
-{
-    
-}
-
 //轨迹采集
 - (void)apiSubmitTracePoints
 {

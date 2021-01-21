@@ -56,44 +56,45 @@
         self.loaded = YES;
         //显示任务区域
     //    NSArray *graphics = [BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos];
-        [[BDArcGISUtil ins] drawGraphics:[BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos]];
         
-        //加载kml kmz shp
-        NSArray *tbs = [YXTable findTablesByName:NSStringFromClass(GPKmlKmzShpEntity.class) taskId:self.taskModel.taskId userId:[YXUserModel currentUser].userId];
-        for (YXTable *tb in tbs) {
-            GPKmlKmzShpEntity *entity = [YXTable decodeDataInTable:tb];
-            //查看是否文件存在 如果文件存在再显示
-            NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
-            BOOL fileExist = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
-            if (fileExist) {
-                NSString *suffix = [entity.fileNameWithSuffix componentsSeparatedByString:@"."].lastObject;
-                if ([[suffix lowercaseString] isEqualToString:@"kml"]) {
-                    [[FuckAGSPlatform instance] addKMLFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
-                }else if ([[suffix lowercaseString] isEqualToString:@"kmz"]) {
-                    [[FuckAGSPlatform instance] addKMZFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
-                }else if ([[suffix lowercaseString] isEqualToString:@"shp"]) {
-                    [[FuckAGSPlatform instance] addSHPFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
-                }
-                else if ([[suffix lowercaseString] isEqualToString:@"json"] || [[suffix lowercaseString] isEqualToString:@"geojson"]) {
-                    NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
-                    [BDArcGISGraphic loadGeoJsonFileAtPath:[NSURL URLWithString:filePath]];
-                }
+    }
+    
+    [[BDArcGISUtil ins] drawGraphics:[BDArcGISGraphic decodeMapInfo:self.taskModel.mapInfos]];
+    
+    //加载kml kmz shp
+    NSArray *tbs = [YXTable findTablesByName:NSStringFromClass(GPKmlKmzShpEntity.class) taskId:self.taskModel.taskId userId:[YXUserModel currentUser].userId];
+    for (YXTable *tb in tbs) {
+        GPKmlKmzShpEntity *entity = [YXTable decodeDataInTable:tb];
+        //查看是否文件存在 如果文件存在再显示
+        NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
+        BOOL fileExist = [[NSFileManager defaultManager] fileExistsAtPath:filePath];
+        if (fileExist) {
+            NSString *suffix = [entity.fileNameWithSuffix componentsSeparatedByString:@"."].lastObject;
+            if ([[suffix lowercaseString] isEqualToString:@"kml"]) {
+                [[FuckAGSPlatform instance] addKMLFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+            }else if ([[suffix lowercaseString] isEqualToString:@"kmz"]) {
+                [[FuckAGSPlatform instance] addKMZFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+            }else if ([[suffix lowercaseString] isEqualToString:@"shp"]) {
+                [[FuckAGSPlatform instance] addSHPFileWithName:entity.fileNameWithSuffix inMap:self.mapView];
+            }
+            else if ([[suffix lowercaseString] isEqualToString:@"json"] || [[suffix lowercaseString] isEqualToString:@"geojson"]) {
+                NSString *filePath = [NSFileManager documentFile:entity.fileNameWithSuffix inDirectory:@"web"];
+                [BDArcGISGraphic loadGeoJsonFileAtPath:[NSURL URLWithString:filePath]];
             }
         }
     }
-    
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
+    
     //
     if (self.mapView.locationDisplay.started) {
         [self.mapView.locationDisplay stop];
     }
     //overlay
     [self.mapView.graphicsOverlays removeObject:[BDArcGISUtil ins].graphicsOverlay];
-    
 }
 
 #pragma mark - api

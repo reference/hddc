@@ -84,7 +84,7 @@
 
 + (void)requestTaskCodeByProjectId:(NSString *)pid completion:(void(^)(NSString *code,NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/taskCode/%@", YX_HOST,[pid stringByAddingURLQueryPercentAllowedCharacterSet]];
+    NSString *url = [NSString stringWithFormat:@"%@/app/taskCode/%@", YX_HOST,[pid stringByAddingURLQueryPercentAllowedCharacterSet]];
     [YXHTTP requestWithURL:url
                     params:nil
                       body:nil

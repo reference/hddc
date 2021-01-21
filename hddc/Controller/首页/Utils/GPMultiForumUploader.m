@@ -52,257 +52,29 @@
 {
     id model = [YXTable decodeDataInTable:table];
     
+    //
+    NSMutableDictionary *mInfo = [NSMutableDictionary dictionary];
+    [mInfo setDictionary:[model yy_modelToJSONObject]];
+    
     //check whether has images
-    NSArray *images = nil;//
-    
-    if ([model isKindOfClass:YXGeologicalSvyPlanningLineModel.class]) {
-        YXGeologicalSvyPlanningLineModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
+    NSArray *images = nil;
+    NSString *extends7 = mInfo[@"extends7"];
+    if (extends7.length > 0) {
+        images = [extends7 componentsSeparatedByString:@","];
     }
-    else if ([model isKindOfClass:YXGeologicalSvyPlanningPtModel.class]) {
-        YXGeologicalSvyPlanningPtModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorphySvyLineModel.class]) {
-        YXGeomorphySvyLineModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorphySvyPointModel.class]) {
-        YXGeomorphySvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorphySvyRegionModel.class]) {
-        YXGeomorphySvyRegionModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorphySvyReProfModel.class]) {
-        YXGeomorphySvyReProfModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorphySvySamplePointModel.class]) {
-        YXGeomorphySvySamplePointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeomorStationModel.class]) {
-        YXGeomorStationModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeochemicalSvyLineModel.class]) {
-        YXGeochemicalSvyLineModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeochemicalSvyPointModel.class]) {
-        YXGeochemicalSvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeophySvyLineModel.class]) {
-        YXGeophySvyLineModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeophySvyPointModel.class]) {
-        YXGeophySvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXStratigraphySvyPointModel.class]) {
-        YXStratigraphySvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeoGeomorphySvyPointModel.class]) {
-        YXGeoGeomorphySvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeologicalSvyLineModel.class]) {
-        YXGeologicalSvyLineModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXGeologicalSvyPointModel.class]) {
-        YXGeologicalSvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXFaultSvyPointModel.class]) {
-        YXFaultSvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXTrenchModel.class]) {
-        YXTrenchModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXVolcanicSvyPointModel.class]) {
-        YXVolcanicSvyPointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXVolcanicSamplePointModel.class]) {
-        YXVolcanicSamplePointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXCraterModel.class]) {
-        YXCraterModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXLavaModel.class]) {
-        YXLavaModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXSamplePointModel.class]) {
-        YXSamplePointModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    else if ([model isKindOfClass:YXDrillHoleModel.class]) {
-        YXDrillHoleModel *m = model;
-        images = [m.extends7 componentsSeparatedByString:@","];
-        m.taskId = self.task.taskId;
-        m.projectId = self.project.projectId;
-    }
-    
-    
-    
-    //prepare
+    //
+    [mInfo setObject:self.task.taskId forKey:@"taskId"];
+    [mInfo setObject:self.project.projectId forKey:@"projectId"];
+
     //submit
     void (^submitRequest)(NSString *imgUrls) = ^(NSString *imgUrls) {
         if (imgUrls.length) {
-            if ([model isKindOfClass:YXGeologicalSvyPlanningLineModel.class]) {
-                YXGeologicalSvyPlanningLineModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeologicalSvyPlanningPtModel.class]) {
-                YXGeologicalSvyPlanningPtModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorphySvyLineModel.class]) {
-                YXGeomorphySvyLineModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorphySvyPointModel.class]) {
-                YXGeomorphySvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorphySvyRegionModel.class]) {
-                YXGeomorphySvyRegionModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorphySvyReProfModel.class]) {
-                YXGeomorphySvyReProfModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorphySvySamplePointModel.class]) {
-                YXGeomorphySvySamplePointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeomorStationModel.class]) {
-                YXGeomorStationModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeochemicalSvyLineModel.class]) {
-                YXGeochemicalSvyLineModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeochemicalSvyPointModel.class]) {
-                YXGeochemicalSvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeophySvyLineModel.class]) {
-                YXGeophySvyLineModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeophySvyPointModel.class]) {
-                YXGeophySvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXStratigraphySvyPointModel.class]) {
-                YXStratigraphySvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeoGeomorphySvyPointModel.class]) {
-                YXGeoGeomorphySvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeologicalSvyLineModel.class]) {
-                YXGeologicalSvyLineModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXGeologicalSvyPointModel.class]) {
-                YXGeologicalSvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXFaultSvyPointModel.class]) {
-                YXFaultSvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXTrenchModel.class]) {
-                YXTrenchModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXVolcanicSvyPointModel.class]) {
-                YXVolcanicSvyPointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXVolcanicSamplePointModel.class]) {
-                YXVolcanicSamplePointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXCraterModel.class]) {
-                YXCraterModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXLavaModel.class]) {
-                YXLavaModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXSamplePointModel.class]) {
-                YXSamplePointModel *m = model;
-                m.extends7 = imgUrls;
-            }
-            else if ([model isKindOfClass:YXDrillHoleModel.class]) {
-                YXDrillHoleModel *m = model;
-                m.extends7 = imgUrls;
+            //
+            if (imgUrls.length) {
+                [mInfo setObject:imgUrls forKey:@"extends7"];
             }
         }
+        
         [YXForumSaver saveWithBody:model completion:^(NSError * _Nonnull error) {
             if (error) {
                 if (self.didError) {

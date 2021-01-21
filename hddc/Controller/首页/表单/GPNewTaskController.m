@@ -52,7 +52,7 @@
         }
         else{
             [BDToastView dismiss];
-            [self.textFields textFieldForTag:0].enabled = code;
+            [self.textFields textFieldForTag:0].text = code;
         }
     }];
 }

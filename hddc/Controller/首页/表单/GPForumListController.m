@@ -57,6 +57,7 @@
     
     //远程 已提交
     if (self.segmentControl.selectedSegmentIndex == 0) {
+        [BDToastView showActivity:@"加载中..."];
         [YXFormListModel requestProjectsWithPage:page
                                           userId:[YXUserModel currentUser].userId
                                           taskId:self.taskModel.taskId
@@ -66,6 +67,7 @@
             if (error) {
                 [BDToastView showText:error.localizedDescription];
             }else{
+                [BDToastView dismiss];
                 [self.dataArray addObjectsFromArray:ms];
             }
             [self.tableViews.firstObject reloadData];
