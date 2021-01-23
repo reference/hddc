@@ -515,8 +515,18 @@
         NSString *json = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSLog(@"%@",json);
         StandardHTTPResponse *resp = [StandardHTTPResponse yy_modelWithJSON:json];
+        
         if (completion) {
-            completion(resp, nil);
+            if (resp == nil) {
+#if DEBUG
+                completion(nil, [NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:json}]);
+#else
+                completion(nil, [NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:@"图片上传失败。"}]);
+                [Bugly reportError:[NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:json}]];
+#endif
+            }else{
+                completion(resp,nil);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
@@ -556,7 +566,16 @@
         NSLog(@"%@",json);
         StandardHTTPResponse *resp = [StandardHTTPResponse yy_modelWithJSON:json];
         if (completion) {
-            completion(resp, nil);
+            if (resp == nil) {
+#if DEBUG
+                completion(nil, [NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:json}]);
+#else
+                completion(nil, [NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:@"图片上传失败。"}]);
+                [Bugly reportError:[NSError errorWithDomain:NSCocoaErrorDomain code:-11000 userInfo:@{NSLocalizedDescriptionKey:json}]];
+#endif
+            }else{
+                completion(resp,nil);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
