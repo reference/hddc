@@ -80,6 +80,7 @@
     return YES;
 }
 
+// 爱谁谁
 - (BOOL)application:(UIApplication *)application shouldAllowExtensionPointIdentifier:(NSString *)extensionPointIdentifier
 {
     if ([extensionPointIdentifier isEqualToString:@"com.apple.keyboard-service"]) {

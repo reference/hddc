@@ -16,39 +16,6 @@
 #import "GPMultiForumUploader.h"
 #import "GPMultiTracePointsUploader.h"
 
-//tasks form
-#import "GPGeologicalSvyPlanningLine.h"
-#import "GPGeologicalSvyPlanningPt.h"
-
-#import "GPFaultSvyPoint.h"
-#import "GPGeoGeomorphySvyPoint.h"
-#import "GPGeologicalSvyLine.h"
-#import "GPGeologicalSvyPoint.h"
-#import "GPStratigraphySvyPoint.h"
-#import "GPTrench.h"
-
-#import "GPGeomorphySvyLine.h"
-#import "GPGeomorphySvyPoint.h"
-#import "GPGeomorphySvyRegion.h"
-#import "GPGeomorphySvyReProf.h"
-#import "GPGeomorphySvySamplePoint.h"
-#import "GPGeomorStation.h"
-
-#import "GPDrillHole.h"
-
-#import "GPSamplePoint.h"
-
-#import "GPGeophySvyLine.h"
-#import "GPGeophySvyPoint.h"
-
-#import "GPGeochemicalSvyLine.h"
-#import "GPGeochemicalSvyPoint.h"
-
-#import "GPCrater.h"
-#import "GPLava.h"
-#import "GPVolcanicSamplePoint.h"
-#import "GPVolcanicSvyPoint.h"
-
 typedef enum {
     EditMode_Off = 0,
     EditMode_On

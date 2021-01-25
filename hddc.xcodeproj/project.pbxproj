@@ -2238,12 +2238,12 @@
 		842C48E525ABEEEA0034E6DB /* 登录注册 */ = {
 			isa = PBXGroup;
 			children = (
+				842C48E925ABEEEA0034E6DB /* GPLoginHeader.h */,
 				842C48E825ABEEEA0034E6DB /* GPLogin.storyboard */,
+				842C48EB25ABEEEA0034E6DB /* GPLoginController.h */,
 				842C48E625ABEEEA0034E6DB /* GPLoginController.m */,
 				842C48E725ABEEEA0034E6DB /* GPRegisterController.h */,
-				842C48E925ABEEEA0034E6DB /* GPLoginHeader.h */,
 				842C48EA25ABEEEA0034E6DB /* GPRegisterController.m */,
-				842C48EB25ABEEEA0034E6DB /* GPLoginController.h */,
 			);
 			path = "登录注册";
 			sourceTree = "<group>";
