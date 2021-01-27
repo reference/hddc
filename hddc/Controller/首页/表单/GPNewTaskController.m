@@ -71,7 +71,11 @@
         //省
         self.provinceLabel.text = self.taskModel.province;
         //试
-        self.cityLabel.text = self.taskModel.city;
+        if ([self.taskModel.province isEqualToString:@"北京市"] || [self.taskModel.province isEqualToString:@"天津市"] || [self.taskModel.province isEqualToString:@"上海市"] || [self.taskModel.province isEqualToString:@"重庆市"]) {
+            self.cityLabel.text = self.taskModel.province;
+        }else{
+            self.cityLabel.text = self.taskModel.city;
+        }
         //区
         self.zoneLabel.text = self.taskModel.area;
 
