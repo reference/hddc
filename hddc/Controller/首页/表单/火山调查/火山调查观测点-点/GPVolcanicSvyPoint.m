@@ -94,7 +94,7 @@
     //拍摄者
     [self.textFields textFieldForTag:12].text = m.photographer;
     //备注
-    [self.textFields textFieldForTag:13].text = m.remark;
+    [self.textFields textFieldForTag:13].text = m.commentInfo;
     //工程编号
     [self.textFields textFieldForTag:14].text = m.projectcode;
     //送样总数
@@ -168,7 +168,7 @@
     //拍摄者
     body.photographer = [[self.textFields textFieldForTag:12].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:13].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:13].text trim];
     //工程编号
     body.projectcode = [[self.textFields textFieldForTag:14].text trim];
     //送样总数

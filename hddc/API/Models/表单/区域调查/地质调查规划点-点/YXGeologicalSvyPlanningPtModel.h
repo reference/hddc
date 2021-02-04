@@ -65,6 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString *projectId;
 @property (nonatomic, strong) NSString *village;
 @property (nonatomic, strong) NSString *svymethods;
+@property (nonatomic, strong) NSString *commentInfo;
 @property (nonatomic, strong) NSString *city;
 @property (nonatomic, strong) NSString *examineUser;
 @property (nonatomic, strong) NSString *createTime;

@@ -71,7 +71,7 @@
     //观测方法
     [self.textFields textFieldForTag:5].text = m.svymethods;
     //备注
-    [self.textFields textFieldForTag:6].text = m.remark;
+    [self.textFields textFieldForTag:6].text = m.commentInfo;
     
 }
 
@@ -116,7 +116,7 @@
     //观测方法
     body.svymethods = [[self.textFields textFieldForTag:5].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:6].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:6].text trim];
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];
     return body;

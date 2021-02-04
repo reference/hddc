@@ -95,7 +95,7 @@
     //拍摄者
     [self.textFields textFieldForTag:12].text = m.photographer;
     //备注
-    [self.textFields textFieldForTag:13].text = m.remark;
+    [self.textFields textFieldForTag:13].text = m.commentInfo;
     //熔岩流符号代码
     [self.textFields textFieldForTag:14].text = m.type;
     //熔岩流规模
@@ -167,7 +167,7 @@
     //拍摄者
     body.photographer = [[self.textFields textFieldForTag:12].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:13].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:13].text trim];
     //熔岩流符号代码
     body.type = [[self.textFields textFieldForTag:14].text trim];
     //熔岩流规模

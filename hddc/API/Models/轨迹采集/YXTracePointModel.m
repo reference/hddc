@@ -12,7 +12,7 @@
 
 + (void)saveWithBody:(YXTracePointModel *)body completion:(void(^)(NSError *error))completion
 {
-    NSString *url = [NSString stringWithFormat:@"%@/hddc/hddcCjHistorypointss", YX_HOST];
+    NSString *url = [NSString stringWithFormat:@"%@/app/saveHddcCjHistorypoints", YX_HOST];
 
     body.createUser = [YXUserModel currentUser].userId;
     [YXHTTP requestWithURL:url

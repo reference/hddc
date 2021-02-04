@@ -100,7 +100,7 @@
     //显示码（制图用）
     [self.textFields textFieldForTag:15].text = m.showcode;
     //备注
-    [self.textFields textFieldForTag:16].text = m.remark;
+    [self.textFields textFieldForTag:16].text = m.commentInfo;
 }
 
 //填充数据
@@ -167,7 +167,7 @@
     //显示码（制图用）
     body.showcode = [[self.textFields textFieldForTag:15].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:16].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:16].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

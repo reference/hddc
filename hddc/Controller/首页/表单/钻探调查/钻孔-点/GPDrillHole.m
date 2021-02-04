@@ -124,7 +124,7 @@
     //岩芯照片原始档案编号
     [self.textFields textFieldForTag:26].text = m.corephotoArwid;
     //备注
-    [self.textFields textFieldForTag:27].text = m.remark;
+    [self.textFields textFieldForTag:27].text = m.commentInfo;
 }
 
 //填充数据
@@ -215,7 +215,7 @@
     //岩芯照片原始档案编号
     body.corephotoArwid = [[self.textFields textFieldForTag:26].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:27].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:27].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

@@ -1826,8 +1826,8 @@
 		842C484A25ABEEEA0034E6DB /* 采样点-点 */ = {
 			isa = PBXGroup;
 			children = (
-				842C484B25ABEEEA0034E6DB /* GPSamplePoint.h */,
 				842C484C25ABEEEA0034E6DB /* GPSamplePoint.storyboard */,
+				842C484B25ABEEEA0034E6DB /* GPSamplePoint.h */,
 				842C484D25ABEEEA0034E6DB /* GPSamplePoint.m */,
 			);
 			path = "采样点-点";

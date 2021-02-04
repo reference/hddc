@@ -94,7 +94,7 @@
     //采集样品总数
     [self.textFields textFieldForTag:4].text = m.collectedsamplecount;
     //备注
-    [self.textFields textFieldForTag:5].text = m.remark;
+    [self.textFields textFieldForTag:5].text = m.commentInfo;
     //微地貌测量工程编号
     [self.textFields textFieldForTag:6].text = m.geomorphysvyprjid;
     //送样总数
@@ -142,7 +142,7 @@
     //采集样品总数
     body.collectedsamplecount = [[self.textFields textFieldForTag:4].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:5].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:5].text trim];
     //微地貌测量工程编号
     body.geomorphysvyprjid = [[self.textFields textFieldForTag:6].text trim];
     //送样总数

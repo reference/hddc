@@ -114,7 +114,7 @@
     [self.labels labelForTag:5].text = [m.isstratigraphypoint boolValue] ? @"是" : @"否";
 
     //备注
-    [self.textFields textFieldForTag:16].text = m.remark;
+    [self.textFields textFieldForTag:16].text = m.commentInfo;
 }
 
 //填充数据
@@ -191,7 +191,7 @@
     //是否在图中显示
     body.isstratigraphypoint = [[[self.labels labelForTag:5].text trim] isEqualToString:@"显示"] ? @"1" : @"0";
     //备注
-    body.remark = [[self.textFields textFieldForTag:16].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:16].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

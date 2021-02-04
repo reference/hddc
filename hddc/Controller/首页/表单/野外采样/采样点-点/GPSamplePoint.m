@@ -102,7 +102,7 @@
     //采样数据来源点编号
     [self.textFields textFieldForTag:5].text = m.samplesourceid;
     //备注
-    [self.textFields textFieldForTag:6].text = m.remark;
+    [self.textFields textFieldForTag:6].text = m.commentInfo;
 }
 
 //填充数据
@@ -157,7 +157,7 @@
     //采样数据来源点编号
     body.samplesourceid = [[self.textFields textFieldForTag:5].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:6].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:6].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

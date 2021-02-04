@@ -71,7 +71,7 @@
     //测线编号
     [self.textFields textFieldForTag:4].text = m.svylineid;
     //备注
-    [self.textFields textFieldForTag:5].text = m.remark;
+    [self.textFields textFieldForTag:5].text = m.commentInfo;
     //拐点标注名称
     [self.textFields textFieldForTag:6].text = m.labelinfo;
     //探测方法
@@ -122,7 +122,7 @@
     //测线编号
     body.svylineid = [[self.textFields textFieldForTag:4].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:5].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:5].text trim];
     //拐点标注名称
     body.labelinfo = [[self.textFields textFieldForTag:6].text trim];
     //探测方法

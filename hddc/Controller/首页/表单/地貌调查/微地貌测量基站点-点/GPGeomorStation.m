@@ -68,7 +68,7 @@
     //高程【米】
     [self.textFields textFieldForTag:3].text = m.elevation;
     //备注
-    [self.textFields textFieldForTag:4].text = m.remark;
+    [self.textFields textFieldForTag:4].text = m.commentInfo;
     //微地貌测量工程编号
     [self.textFields textFieldForTag:5].text = m.geomorphysvyprjid;
 }
@@ -110,7 +110,7 @@
     //高程【米】
     body.elevation = [[self.textFields textFieldForTag:3].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:4].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:4].text trim];
     //微地貌测量工程编号
     body.geomorphysvyprjid = [[self.textFields textFieldForTag:5].text trim];
     

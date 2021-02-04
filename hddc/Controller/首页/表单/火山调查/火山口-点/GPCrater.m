@@ -109,8 +109,8 @@
     [self.textFields textFieldForTag:19].text = m.photodescArwid;
     //拍摄者
     [self.textFields textFieldForTag:20].text = m.photographer;
-    //remark
-    [self.textFields textFieldForTag:21].text = m.remark;
+    //commentInfo
+    [self.textFields textFieldForTag:21].text = m.commentInfo;
     //锥体底部直径
     [self.textFields textFieldForTag:22].text = m.bottomdiameter;
     //火口垣直径
@@ -195,8 +195,8 @@
     body.photodescArwid = [[self.textFields textFieldForTag:19].text trim];
     //拍摄者
     body.photographer = [[self.textFields textFieldForTag:20].text trim];
-    //remark
-    body.remark = [[self.textFields textFieldForTag:21].text trim];
+    //commentInfo
+    body.commentInfo = [[self.textFields textFieldForTag:21].text trim];
     //锥体底部直径
     body.bottomdiameter = [[self.textFields textFieldForTag:22].text trim];
     //火口垣直径

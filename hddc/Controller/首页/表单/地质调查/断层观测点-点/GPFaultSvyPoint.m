@@ -136,7 +136,7 @@
     //符号或标注旋转角度
     [self.textFields textFieldForTag:22].text = m.lastangle;
     //备注
-    [self.textFields textFieldForTag:23].text = m.remark;
+    [self.textFields textFieldForTag:23].text = m.commentInfo;
 }
 
 //填充数据
@@ -227,7 +227,7 @@
     //符号或标注旋转角度
     body.lastangle = [[self.textFields textFieldForTag:22].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:23].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:23].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

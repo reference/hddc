@@ -72,7 +72,7 @@
     //测线名称
     [self.textFields textFieldForTag:6].text = m.name;
     //备注
-    [self.textFields textFieldForTag:7].text = m.remark;
+    [self.textFields textFieldForTag:7].text = m.commentInfo;
 }
 
 //填充数据
@@ -118,7 +118,7 @@
     //测线名称
     body.name = [[self.textFields textFieldForTag:6].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:7].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:7].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

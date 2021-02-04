@@ -82,7 +82,7 @@
         self.symbolinfoModel.dictItemCode = m.symbolinfo;
     }
     //备注
-    [self.textFields textFieldForTag:6].text = m.remark;
+    [self.textFields textFieldForTag:6].text = m.commentInfo;
     //标注名称
     [self.textFields textFieldForTag:7].text = m.labelinfo;
 }
@@ -133,7 +133,7 @@
     body.symbolinfo = self.symbolinfoModel.dictItemCode;
     body.symbolinfoName = self.symbolinfoModel.dictItemName;
     //备注
-    body.remark = [[self.textFields textFieldForTag:6].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:6].text trim];
     //标注名称
     body.labelinfo = [[self.textFields textFieldForTag:7].text trim];
     

@@ -23,11 +23,11 @@
  */
 
 #if DEBUG
-//#define YX_HOST @"http://10.19.7.231:8086"
-#define YX_HOST @"http://10.19.41.110:8086"
+//#define YX_HOST @"http://10.19.7.231:8086/hdc"
+#define YX_HOST @"http://10.19.41.110:8086/hdc"
 //#define YX_HOST @"http://113.200.69.213/hddc"
 #else
-#define YX_HOST @"http://10.19.41.110:8086"
+#define YX_HOST @"http://10.19.41.110:8086/hdc"
 #endif
 
 #define HOST @"192.168.1.128"

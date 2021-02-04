@@ -74,7 +74,7 @@
     //高程【米】
     [self.textFields textFieldForTag:7].text = m.elevation;
     //备注
-    [self.textFields textFieldForTag:8].text = m.remark;
+    [self.textFields textFieldForTag:8].text = m.commentInfo;
 }
 
 //填充数据
@@ -122,7 +122,7 @@
     //高程【米】
     body.elevation = [[self.textFields textFieldForTag:7].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:8].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:8].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

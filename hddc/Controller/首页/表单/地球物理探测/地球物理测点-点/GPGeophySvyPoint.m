@@ -92,7 +92,7 @@
     //拐点标注名称
     [self.textFields textFieldForTag:7].text = m.labelinfo;
     //备注
-    [self.textFields textFieldForTag:8].text = m.remark;
+    [self.textFields textFieldForTag:8].text = m.commentInfo;
 }
 
 //填充数据
@@ -146,7 +146,7 @@
     //拐点标注名称
     body.labelinfo = [[self.textFields textFieldForTag:7].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:8].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:8].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];

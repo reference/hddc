@@ -78,7 +78,7 @@
     //测量区域名称
     [self.textFields textFieldForTag:8].text = m.name;
     //备注
-    [self.textFields textFieldForTag:9].text = m.remark;
+    [self.textFields textFieldForTag:9].text = m.commentInfo;
 }
 
 //填充数据
@@ -128,7 +128,7 @@
     //测量区域名称
     body.name = [[self.textFields textFieldForTag:8].text trim];
     //备注
-    body.remark = [[self.textFields textFieldForTag:9].text trim];
+    body.commentInfo = [[self.textFields textFieldForTag:9].text trim];
     
     //图片
     body.extends7 = [GPFormBaseController localPathsOfImageEntities:self.imageEntities];
