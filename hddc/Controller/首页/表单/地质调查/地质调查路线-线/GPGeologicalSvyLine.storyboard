@@ -96,6 +96,7 @@
                         <outletCollection property="titleLabels" destination="AOg-GP-UIl" id="7yF-GL-lZB"/>
                         <outletCollection property="titleLabels" destination="0zP-ra-uHd" id="XQK-P9-Q2N"/>
                         <outletCollection property="textFields" destination="F8r-gK-Spm" id="Ipl-BB-9gg"/>
+                        <outletCollection property="buttons" destination="mt8-1r-ZzG" id="mIz-6V-qoZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80O-ve-n5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -459,16 +460,27 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dcc-zP-As3">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt8-1r-ZzG">
+                                            <rect key="frame" x="368" y="0.0" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="AVe-tT-4Uu"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="Y3j-hp-fgz" eventType="touchUpInside" id="jcv-fy-nOP"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Dcc-zP-As3" secondAttribute="trailing" constant="4" id="8Uu-rF-hLw"/>
+                                        <constraint firstItem="mt8-1r-ZzG" firstAttribute="leading" secondItem="Dcc-zP-As3" secondAttribute="trailing" id="3hR-Jl-Hj0"/>
+                                        <constraint firstAttribute="trailing" secondItem="mt8-1r-ZzG" secondAttribute="trailing" id="5Hc-tD-50Z"/>
                                         <constraint firstAttribute="trailing" secondItem="HMJ-6x-iPp" secondAttribute="trailing" id="CIK-Rr-pzX"/>
                                         <constraint firstItem="HMJ-6x-iPp" firstAttribute="top" secondItem="Dcc-zP-As3" secondAttribute="bottom" id="Dhw-nm-8FH"/>
                                         <constraint firstItem="HMJ-6x-iPp" firstAttribute="top" secondItem="qif-Lg-cfd" secondAttribute="bottom" id="GTn-EO-7NI"/>
@@ -478,7 +490,9 @@
                                         <constraint firstItem="HMJ-6x-iPp" firstAttribute="leading" secondItem="qQe-qP-8ZD" secondAttribute="leading" id="M0F-rb-fyb"/>
                                         <constraint firstItem="v8b-dd-SFd" firstAttribute="leading" secondItem="qQe-qP-8ZD" secondAttribute="leading" id="QGP-Pm-ebP"/>
                                         <constraint firstItem="gR7-0I-EDx" firstAttribute="leading" secondItem="qQe-qP-8ZD" secondAttribute="leading" constant="120" id="Rst-BW-iMz"/>
+                                        <constraint firstItem="mt8-1r-ZzG" firstAttribute="top" secondItem="qQe-qP-8ZD" secondAttribute="top" id="UKx-sd-1rJ"/>
                                         <constraint firstItem="gR7-0I-EDx" firstAttribute="leading" secondItem="qif-Lg-cfd" secondAttribute="trailing" id="XMC-fx-Qd0"/>
+                                        <constraint firstItem="HMJ-6x-iPp" firstAttribute="top" secondItem="mt8-1r-ZzG" secondAttribute="bottom" id="YLd-ye-x5T"/>
                                         <constraint firstAttribute="bottom" secondItem="HMJ-6x-iPp" secondAttribute="bottom" id="ad8-pP-1b2"/>
                                         <constraint firstAttribute="trailing" secondItem="v8b-dd-SFd" secondAttribute="trailing" id="gcu-jX-oku"/>
                                         <constraint firstItem="v8b-dd-SFd" firstAttribute="top" secondItem="qQe-qP-8ZD" secondAttribute="top" id="iOB-Fr-c7V"/>
@@ -758,8 +772,9 @@
     </scenes>
     <resources>
         <image name="arrar_down" width="20" height="20"/>
+        <image name="icon_question" width="20" height="20"/>
         <namedColor name="color_border">
-            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color_heavy_blue">
             <color red="0.32499998807907104" green="0.46299999952316284" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -118,6 +118,7 @@
                         <outletCollection property="buttons" destination="L4W-PG-Dud" id="alL-7j-lCT"/>
                         <outletCollection property="buttons" destination="VmV-Qp-3Q0" id="rkb-XJ-JPr"/>
                         <outletCollection property="buttons" destination="BUH-fs-KC8" id="IRm-Nd-Fuo"/>
+                        <outletCollection property="buttons" destination="Dh9-if-LRf" id="evi-PE-4Za"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDB-ZS-yyo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -481,12 +482,22 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写探槽编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tfb-td-qho">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="51"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="51"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dh9-if-LRf">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="51.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="k02-rs-8Qg"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="30W-pK-E9U" eventType="touchUpInside" id="3Zj-VH-8f9"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -497,15 +508,18 @@
                                         <constraint firstItem="Yh3-qi-DAh" firstAttribute="leading" secondItem="75q-Nw-gI5" secondAttribute="leading" constant="120" id="FNl-Lf-WU8"/>
                                         <constraint firstItem="NZg-Ny-pLR" firstAttribute="top" secondItem="l8o-Sk-ugG" secondAttribute="bottom" id="GBa-Tn-vId"/>
                                         <constraint firstItem="Tfb-td-qho" firstAttribute="top" secondItem="tA3-FE-06Q" secondAttribute="bottom" id="HBr-0x-RYd"/>
-                                        <constraint firstAttribute="trailing" secondItem="Tfb-td-qho" secondAttribute="trailing" constant="4" id="JIs-a3-bbI"/>
+                                        <constraint firstItem="Dh9-if-LRf" firstAttribute="leading" secondItem="Tfb-td-qho" secondAttribute="trailing" id="MJz-G2-mj4"/>
                                         <constraint firstAttribute="trailing" secondItem="tA3-FE-06Q" secondAttribute="trailing" id="XXP-zH-OQk"/>
                                         <constraint firstAttribute="trailing" secondItem="NZg-Ny-pLR" secondAttribute="trailing" id="a2w-oi-ekd"/>
                                         <constraint firstItem="l8o-Sk-ugG" firstAttribute="top" secondItem="tA3-FE-06Q" secondAttribute="bottom" id="e3f-bF-G6k"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dh9-if-LRf" secondAttribute="bottom" id="edT-dq-ybN"/>
                                         <constraint firstItem="l8o-Sk-ugG" firstAttribute="leading" secondItem="75q-Nw-gI5" secondAttribute="leading" id="fgu-mO-1vw"/>
                                         <constraint firstAttribute="bottom" secondItem="NZg-Ny-pLR" secondAttribute="bottom" id="g1k-Mi-W3R"/>
                                         <constraint firstItem="NZg-Ny-pLR" firstAttribute="top" secondItem="Tfb-td-qho" secondAttribute="bottom" id="gQF-ej-fBC"/>
                                         <constraint firstItem="Yh3-qi-DAh" firstAttribute="top" secondItem="tA3-FE-06Q" secondAttribute="bottom" id="j7l-TC-Zy0"/>
                                         <constraint firstItem="tA3-FE-06Q" firstAttribute="top" secondItem="75q-Nw-gI5" secondAttribute="top" id="kNK-1N-OnX"/>
+                                        <constraint firstItem="Dh9-if-LRf" firstAttribute="top" secondItem="tA3-FE-06Q" secondAttribute="bottom" id="kgm-dz-laR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dh9-if-LRf" secondAttribute="trailing" id="tLp-6a-BHS"/>
                                         <constraint firstItem="NZg-Ny-pLR" firstAttribute="leading" secondItem="75q-Nw-gI5" secondAttribute="leading" id="w2W-il-n4n"/>
                                     </constraints>
                                 </view>

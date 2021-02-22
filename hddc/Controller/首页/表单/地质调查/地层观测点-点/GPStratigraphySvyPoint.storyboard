@@ -112,6 +112,7 @@
                         <outletCollection property="titleLabels" destination="fN1-kr-WT2" id="bjj-Yt-Wn9"/>
                         <outletCollection property="titleLabels" destination="jw4-qv-CMZ" id="toV-cD-2gb"/>
                         <outletCollection property="titleLabels" destination="ERE-72-TrA" id="IuG-Vg-V2Q"/>
+                        <outletCollection property="buttons" destination="Ta8-tk-DpR" id="epW-7b-TII"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sme-JG-p7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -475,12 +476,22 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写地层点编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RI-xn-jKB">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ta8-tk-DpR">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="b44-N5-CLz"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="ZoQ-Ly-euC" eventType="touchUpInside" id="JEU-fk-jgB"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
@@ -491,8 +502,9 @@
                                         <constraint firstItem="1GK-z7-NQm" firstAttribute="top" secondItem="3RI-xn-jKB" secondAttribute="bottom" id="JSj-Hv-bNv"/>
                                         <constraint firstItem="3RI-xn-jKB" firstAttribute="top" secondItem="oBG-La-AFT" secondAttribute="bottom" id="QFp-SR-HZB"/>
                                         <constraint firstAttribute="trailing" secondItem="oBG-La-AFT" secondAttribute="trailing" id="RKD-SU-yfD"/>
+                                        <constraint firstItem="Ta8-tk-DpR" firstAttribute="top" secondItem="oBG-La-AFT" secondAttribute="bottom" id="cAI-p0-YQL"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ta8-tk-DpR" secondAttribute="bottom" id="dqY-Dq-2Sl"/>
                                         <constraint firstItem="1GK-z7-NQm" firstAttribute="top" secondItem="sTB-NJ-qiL" secondAttribute="bottom" id="duH-Ce-HTA"/>
-                                        <constraint firstAttribute="trailing" secondItem="3RI-xn-jKB" secondAttribute="trailing" constant="4" id="eFu-wP-Gvu"/>
                                         <constraint firstItem="427-oT-RxN" firstAttribute="leading" secondItem="iFA-xk-TaX" secondAttribute="leading" id="gkV-rm-wNP"/>
                                         <constraint firstItem="sTB-NJ-qiL" firstAttribute="leading" secondItem="iFA-xk-TaX" secondAttribute="leading" constant="120" id="i0s-Ci-aSd"/>
                                         <constraint firstItem="1GK-z7-NQm" firstAttribute="top" secondItem="427-oT-RxN" secondAttribute="bottom" id="j6y-VB-oex"/>
@@ -501,6 +513,8 @@
                                         <constraint firstItem="sTB-NJ-qiL" firstAttribute="top" secondItem="oBG-La-AFT" secondAttribute="bottom" id="p3b-WC-Nbq"/>
                                         <constraint firstItem="sTB-NJ-qiL" firstAttribute="leading" secondItem="427-oT-RxN" secondAttribute="trailing" id="pwM-Vr-yd1"/>
                                         <constraint firstAttribute="trailing" secondItem="1GK-z7-NQm" secondAttribute="trailing" id="rDe-Yf-Dnu"/>
+                                        <constraint firstItem="Ta8-tk-DpR" firstAttribute="leading" secondItem="3RI-xn-jKB" secondAttribute="trailing" id="rEh-e8-D3q"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ta8-tk-DpR" secondAttribute="trailing" id="rQs-Q0-RhD"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQf-e2-dgx">
@@ -1987,7 +2001,7 @@
         <image name="arrar_down" width="20" height="20"/>
         <image name="icon_question" width="20" height="20"/>
         <namedColor name="color_border">
-            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color_heavy_blue">
             <color red="0.32499998807907104" green="0.46299999952316284" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

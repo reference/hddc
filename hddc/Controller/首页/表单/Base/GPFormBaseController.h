@@ -79,6 +79,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)judgeBaseDataWhenFinished:(void(^)(BOOL pass))completion;
 //没有id字段的校验
 - (void)judgeBaseDataWithoutIdWhenFinished:(void(^)(BOOL pass))completion;
+
+//ID
+- (IBAction)onIDInfo:(UIButton *)b;
 @end
 
 NS_ASSUME_NONNULL_END

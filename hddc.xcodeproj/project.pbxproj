@@ -810,8 +810,8 @@
 		842C46F225ABEEE90034E6DB /* FFPropertyInspector */ = {
 			isa = PBXGroup;
 			children = (
-				842C46F325ABEEE90034E6DB /* FFInstanceNode.m */,
 				842C46F525ABEEE90034E6DB /* FFInstanceNode.h */,
+				842C46F325ABEEE90034E6DB /* FFInstanceNode.m */,
 				842C46F425ABEEE90034E6DB /* FFPropertyInspector.h */,
 				842C46F625ABEEE90034E6DB /* FFPropertyInspector.m */,
 			);
@@ -1849,9 +1849,9 @@
 		842C485025ABEEEA0034E6DB /* 地质地貌调查观测点-点 */ = {
 			isa = PBXGroup;
 			children = (
-				842C485125ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m */,
 				842C485225ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.storyboard */,
 				842C485325ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.h */,
+				842C485125ABEEEA0034E6DB /* GPGeoGeomorphySvyPoint.m */,
 			);
 			path = "地质地貌调查观测点-点";
 			sourceTree = "<group>";
@@ -2798,6 +2798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 336J5A22YK;
@@ -2816,6 +2817,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.css.ActiveFaultInfoCollection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;

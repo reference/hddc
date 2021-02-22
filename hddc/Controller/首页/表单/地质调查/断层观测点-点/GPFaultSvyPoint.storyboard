@@ -119,6 +119,7 @@
                         <outletCollection property="titleLabels" destination="RFl-nK-z1s" id="sCL-V5-8tS"/>
                         <outletCollection property="titleLabels" destination="LMu-tA-8rP" id="7RB-1j-cZQ"/>
                         <outletCollection property="titleLabels" destination="K55-UD-90a" id="kNC-dM-nej"/>
+                        <outletCollection property="buttons" destination="BYs-sZ-ros" id="Qaz-BK-l3L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ktC-rx-aEZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -482,19 +483,31 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写产状点编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VkY-FK-HvN">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYs-sZ-ros">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="jOX-Zt-k0z"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="eHq-nW-msk" eventType="touchUpInside" id="GEd-PJ-JwK"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstItem="BYs-sZ-ros" firstAttribute="top" secondItem="zvh-Jl-uln" secondAttribute="bottom" id="0Ob-Z4-CKD"/>
+                                        <constraint firstItem="BYs-sZ-ros" firstAttribute="leading" secondItem="VkY-FK-HvN" secondAttribute="trailing" id="53b-vj-oEA"/>
                                         <constraint firstItem="OfB-PC-Fb5" firstAttribute="leading" secondItem="IYA-qD-NhM" secondAttribute="leading" id="54Y-Ih-bgM"/>
                                         <constraint firstItem="qLC-Aq-KFL" firstAttribute="leading" secondItem="IYA-qD-NhM" secondAttribute="leading" id="5sF-Fg-Dmu"/>
+                                        <constraint firstAttribute="trailing" secondItem="BYs-sZ-ros" secondAttribute="trailing" id="6hl-Go-Pjh"/>
                                         <constraint firstItem="VkY-FK-HvN" firstAttribute="top" secondItem="zvh-Jl-uln" secondAttribute="bottom" id="8Mo-lN-EuL"/>
-                                        <constraint firstAttribute="trailing" secondItem="VkY-FK-HvN" secondAttribute="trailing" constant="4" id="BKO-aO-UC7"/>
                                         <constraint firstAttribute="trailing" secondItem="qLC-Aq-KFL" secondAttribute="trailing" id="BvJ-et-UYo"/>
                                         <constraint firstItem="qLC-Aq-KFL" firstAttribute="top" secondItem="OuA-Nl-KTM" secondAttribute="bottom" id="EHs-Mt-PY8"/>
                                         <constraint firstItem="OuA-Nl-KTM" firstAttribute="leading" secondItem="OfB-PC-Fb5" secondAttribute="trailing" id="FdR-G0-Rdb"/>
@@ -503,6 +516,7 @@
                                         <constraint firstItem="OfB-PC-Fb5" firstAttribute="top" secondItem="zvh-Jl-uln" secondAttribute="bottom" id="TVX-0v-NLC"/>
                                         <constraint firstAttribute="bottom" secondItem="qLC-Aq-KFL" secondAttribute="bottom" id="XJM-Jh-Zyw"/>
                                         <constraint firstItem="OuA-Nl-KTM" firstAttribute="top" secondItem="zvh-Jl-uln" secondAttribute="bottom" id="eEr-g1-Fac"/>
+                                        <constraint firstAttribute="bottom" secondItem="BYs-sZ-ros" secondAttribute="bottom" id="kHB-Df-rq5"/>
                                         <constraint firstItem="VkY-FK-HvN" firstAttribute="leading" secondItem="OuA-Nl-KTM" secondAttribute="trailing" constant="4" id="l4n-9n-DB8"/>
                                         <constraint firstItem="zvh-Jl-uln" firstAttribute="leading" secondItem="IYA-qD-NhM" secondAttribute="leading" id="mhV-Ab-sfI"/>
                                         <constraint firstItem="zvh-Jl-uln" firstAttribute="top" secondItem="IYA-qD-NhM" secondAttribute="top" id="tXP-9U-ES9"/>

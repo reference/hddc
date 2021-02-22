@@ -95,6 +95,7 @@
                         <outletCollection property="titleLabels" destination="UIc-0Q-9pf" id="ijl-ZF-RD1"/>
                         <outletCollection property="titleLabels" destination="7Vd-UF-9Zf" id="g7a-bD-O3a"/>
                         <outletCollection property="titleLabels" destination="pdP-CU-wi7" id="7b8-eR-AZ4"/>
+                        <outletCollection property="buttons" destination="hN2-AR-Q8m" id="d1E-GV-T8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Wm-Ft-IkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -458,7 +459,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写测点编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eRM-zL-JlM">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -469,11 +470,22 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN2-AR-Q8m">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="LKD-WN-ivM"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="tM3-Tr-9du" eventType="touchUpInside" id="aLC-UH-IOD"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="AAg-aU-8CD" firstAttribute="top" secondItem="Bkl-nP-GGA" secondAttribute="top" id="4VQ-zJ-fOZ"/>
                                         <constraint firstItem="AAg-aU-8CD" firstAttribute="leading" secondItem="Bkl-nP-GGA" secondAttribute="leading" id="90F-8a-yoL"/>
+                                        <constraint firstItem="hN2-AR-Q8m" firstAttribute="top" secondItem="AAg-aU-8CD" secondAttribute="bottom" id="97c-js-d0t"/>
                                         <constraint firstAttribute="trailing" secondItem="AAg-aU-8CD" secondAttribute="trailing" id="FMv-Yq-bcZ"/>
                                         <constraint firstItem="35Y-HR-Rxy" firstAttribute="top" secondItem="x3j-Ft-YmJ" secondAttribute="bottom" id="FXe-Gy-iIy"/>
                                         <constraint firstItem="bVD-cI-h0s" firstAttribute="leading" secondItem="x3j-Ft-YmJ" secondAttribute="trailing" id="HlM-zA-efg"/>
@@ -481,6 +493,9 @@
                                         <constraint firstAttribute="trailing" secondItem="35Y-HR-Rxy" secondAttribute="trailing" id="RfY-GX-kyv"/>
                                         <constraint firstItem="bVD-cI-h0s" firstAttribute="leading" secondItem="Bkl-nP-GGA" secondAttribute="leading" constant="120" id="SRm-YI-caA"/>
                                         <constraint firstItem="35Y-HR-Rxy" firstAttribute="top" secondItem="bVD-cI-h0s" secondAttribute="bottom" id="TdW-tu-iwH"/>
+                                        <constraint firstAttribute="bottom" secondItem="hN2-AR-Q8m" secondAttribute="bottom" id="VKs-GJ-KnC"/>
+                                        <constraint firstAttribute="trailing" secondItem="hN2-AR-Q8m" secondAttribute="trailing" id="WXd-fb-WFh"/>
+                                        <constraint firstItem="hN2-AR-Q8m" firstAttribute="leading" secondItem="eRM-zL-JlM" secondAttribute="trailing" id="XiL-KG-QKV"/>
                                         <constraint firstItem="35Y-HR-Rxy" firstAttribute="leading" secondItem="Bkl-nP-GGA" secondAttribute="leading" id="ZXz-q7-ahx"/>
                                         <constraint firstItem="eRM-zL-JlM" firstAttribute="top" secondItem="AAg-aU-8CD" secondAttribute="bottom" id="ZZR-To-geD"/>
                                         <constraint firstItem="35Y-HR-Rxy" firstAttribute="top" secondItem="eRM-zL-JlM" secondAttribute="bottom" id="biU-QP-Va2"/>
@@ -488,7 +503,6 @@
                                         <constraint firstItem="x3j-Ft-YmJ" firstAttribute="top" secondItem="AAg-aU-8CD" secondAttribute="bottom" id="nuC-VA-p9V"/>
                                         <constraint firstItem="eRM-zL-JlM" firstAttribute="leading" secondItem="bVD-cI-h0s" secondAttribute="trailing" constant="4" id="r5L-tn-GID"/>
                                         <constraint firstItem="x3j-Ft-YmJ" firstAttribute="leading" secondItem="Bkl-nP-GGA" secondAttribute="leading" id="sMs-2P-dS5"/>
-                                        <constraint firstAttribute="trailing" secondItem="eRM-zL-JlM" secondAttribute="trailing" constant="4" id="wOE-qz-FeM"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYY-v2-FJW">
@@ -731,8 +745,9 @@
     </scenes>
     <resources>
         <image name="arrar_down" width="20" height="20"/>
+        <image name="icon_question" width="20" height="20"/>
         <namedColor name="color_border">
-            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color_heavy_blue">
             <color red="0.32499998807907104" green="0.46299999952316284" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

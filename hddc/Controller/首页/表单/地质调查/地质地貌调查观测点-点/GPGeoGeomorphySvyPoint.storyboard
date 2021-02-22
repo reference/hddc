@@ -478,21 +478,33 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写观测点编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4TM-hN-oUO">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYM-jj-XFh">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="DjS-J9-G0D"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="uJM-cb-2JB" eventType="touchUpInside" id="8Aw-rb-OFl"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="y6S-ab-EM2" firstAttribute="top" secondItem="LO3-JS-auH" secondAttribute="bottom" id="2Aq-dw-Grt"/>
                                         <constraint firstItem="LO3-JS-auH" firstAttribute="leading" secondItem="ErA-Dd-RMa" secondAttribute="leading" id="3XQ-fq-2iJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="QYM-jj-XFh" secondAttribute="bottom" id="6kP-NJ-bS1"/>
                                         <constraint firstItem="db7-D6-oT3" firstAttribute="top" secondItem="NOT-TZ-OIg" secondAttribute="bottom" id="6zU-xW-LLF"/>
                                         <constraint firstItem="db7-D6-oT3" firstAttribute="leading" secondItem="LO3-JS-auH" secondAttribute="trailing" id="BZ2-lp-OsG"/>
                                         <constraint firstItem="NOT-TZ-OIg" firstAttribute="leading" secondItem="ErA-Dd-RMa" secondAttribute="leading" id="CW3-oq-isP"/>
                                         <constraint firstItem="4TM-hN-oUO" firstAttribute="leading" secondItem="db7-D6-oT3" secondAttribute="trailing" constant="4" id="Jbl-em-xm2"/>
+                                        <constraint firstAttribute="trailing" secondItem="QYM-jj-XFh" secondAttribute="trailing" id="M7S-tN-nhM"/>
                                         <constraint firstAttribute="trailing" secondItem="NOT-TZ-OIg" secondAttribute="trailing" id="MGL-n2-BH1"/>
                                         <constraint firstAttribute="trailing" secondItem="y6S-ab-EM2" secondAttribute="trailing" id="NU8-Ij-2Sg"/>
                                         <constraint firstItem="LO3-JS-auH" firstAttribute="top" secondItem="NOT-TZ-OIg" secondAttribute="bottom" id="ODB-PF-28c"/>
@@ -503,7 +515,8 @@
                                         <constraint firstItem="NOT-TZ-OIg" firstAttribute="top" secondItem="ErA-Dd-RMa" secondAttribute="top" id="gEG-xp-ViB"/>
                                         <constraint firstItem="y6S-ab-EM2" firstAttribute="leading" secondItem="ErA-Dd-RMa" secondAttribute="leading" id="gtj-zx-2rf"/>
                                         <constraint firstItem="y6S-ab-EM2" firstAttribute="top" secondItem="4TM-hN-oUO" secondAttribute="bottom" id="sjb-ro-i8X"/>
-                                        <constraint firstAttribute="trailing" secondItem="4TM-hN-oUO" secondAttribute="trailing" constant="4" id="zBf-ss-8Ko"/>
+                                        <constraint firstItem="QYM-jj-XFh" firstAttribute="leading" secondItem="4TM-hN-oUO" secondAttribute="trailing" id="wVI-9X-ixV"/>
+                                        <constraint firstItem="QYM-jj-XFh" firstAttribute="top" secondItem="NOT-TZ-OIg" secondAttribute="bottom" id="zXe-HX-DQT"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ib-9X-HPM">

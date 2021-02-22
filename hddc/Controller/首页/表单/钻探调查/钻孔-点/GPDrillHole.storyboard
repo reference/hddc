@@ -117,6 +117,7 @@
                         <outletCollection property="titleLabels" destination="AIy-lG-g8m" id="on7-0A-aUk"/>
                         <outletCollection property="titleLabels" destination="wTq-N8-Wr0" id="gUr-p6-KsX"/>
                         <outletCollection property="labels" destination="t9D-T3-qjN" id="fuN-Ei-bSL"/>
+                        <outletCollection property="buttons" destination="iRD-Ph-NkY" id="SjJ-Tk-C4D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REP-rn-pjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -480,32 +481,45 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写钻孔编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vv3-C1-w83">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRD-Ph-NkY">
+                                            <rect key="frame" x="368" y="0.5" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="bM0-by-AMA"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                            <connections>
+                                                <action selector="onIDInfo:" destination="nEN-sR-H5t" eventType="touchUpInside" id="9ip-Tl-QbT"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="XHl-we-HXX" firstAttribute="top" secondItem="2Vj-0G-0Ev" secondAttribute="bottom" id="0hx-8o-9eL"/>
                                         <constraint firstItem="a9i-QE-bKd" firstAttribute="leading" secondItem="2Vj-0G-0Ev" secondAttribute="trailing" id="0se-kQ-gcS"/>
                                         <constraint firstAttribute="bottom" secondItem="XHl-we-HXX" secondAttribute="bottom" id="4CE-4u-vwM"/>
-                                        <constraint firstAttribute="trailing" secondItem="Vv3-C1-w83" secondAttribute="trailing" constant="4" id="9f2-Rt-XXO"/>
+                                        <constraint firstItem="iRD-Ph-NkY" firstAttribute="leading" secondItem="Vv3-C1-w83" secondAttribute="trailing" id="9eZ-tA-KCE"/>
                                         <constraint firstItem="a9i-QE-bKd" firstAttribute="leading" secondItem="x5r-Ny-XUv" secondAttribute="leading" constant="120" id="Cf3-gV-VWa"/>
                                         <constraint firstItem="Vv3-C1-w83" firstAttribute="top" secondItem="ysg-jd-LFS" secondAttribute="bottom" id="ErJ-Jo-Lwr"/>
                                         <constraint firstItem="XHl-we-HXX" firstAttribute="top" secondItem="a9i-QE-bKd" secondAttribute="bottom" id="GCD-EC-0lJ"/>
                                         <constraint firstAttribute="trailing" secondItem="XHl-we-HXX" secondAttribute="trailing" id="NA5-Sq-h8i"/>
                                         <constraint firstAttribute="trailing" secondItem="ysg-jd-LFS" secondAttribute="trailing" id="OmM-3i-1Go"/>
+                                        <constraint firstAttribute="trailing" secondItem="iRD-Ph-NkY" secondAttribute="trailing" id="Vi5-x3-ZaF"/>
                                         <constraint firstItem="ysg-jd-LFS" firstAttribute="top" secondItem="x5r-Ny-XUv" secondAttribute="top" id="amd-Nz-W4I"/>
                                         <constraint firstItem="a9i-QE-bKd" firstAttribute="top" secondItem="ysg-jd-LFS" secondAttribute="bottom" id="hGu-4s-3QM"/>
                                         <constraint firstItem="ysg-jd-LFS" firstAttribute="leading" secondItem="x5r-Ny-XUv" secondAttribute="leading" id="hR1-SA-ncP"/>
                                         <constraint firstItem="Vv3-C1-w83" firstAttribute="leading" secondItem="a9i-QE-bKd" secondAttribute="trailing" constant="4" id="iSW-OU-5JH"/>
                                         <constraint firstItem="2Vj-0G-0Ev" firstAttribute="top" secondItem="ysg-jd-LFS" secondAttribute="bottom" id="lsD-NA-ghU"/>
+                                        <constraint firstItem="iRD-Ph-NkY" firstAttribute="top" secondItem="ysg-jd-LFS" secondAttribute="bottom" id="lty-sz-2wi"/>
                                         <constraint firstItem="XHl-we-HXX" firstAttribute="leading" secondItem="x5r-Ny-XUv" secondAttribute="leading" id="oyk-pG-gLQ"/>
                                         <constraint firstItem="XHl-we-HXX" firstAttribute="top" secondItem="Vv3-C1-w83" secondAttribute="bottom" id="pHb-nZ-PIv"/>
                                         <constraint firstItem="2Vj-0G-0Ev" firstAttribute="leading" secondItem="x5r-Ny-XUv" secondAttribute="leading" id="wqp-Mo-lTE"/>
+                                        <constraint firstAttribute="bottom" secondItem="iRD-Ph-NkY" secondAttribute="bottom" id="yuK-3I-xaa"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7g-BF-HuT">
@@ -2256,8 +2270,9 @@
     </scenes>
     <resources>
         <image name="arrar_down" width="20" height="20"/>
+        <image name="icon_question" width="20" height="20"/>
         <namedColor name="color_border">
-            <color red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="color_heavy_blue">
             <color red="0.32499998807907104" green="0.46299999952316284" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

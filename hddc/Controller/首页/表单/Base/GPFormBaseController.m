@@ -355,6 +355,17 @@
     [self.tableViews.firstObject reloadData];
 }
 
+/// id sho
+- (IBAction)onIDInfo:(UIButton *)b
+{
+    BDView *v = [UINib viewForNib:@"GPInfoView"];
+    v.textViews.firstObject.text = @"长度17位，前9位，行政区划代码6位+3位专题号，后8位自定义编码，字母数字均可，不足8位#补齐3位专题号，用户自己设置。一般就是100，101，102...,201,202";
+    [self popView:v position:Position_Middle];
+    v.onClickedButtonsCallback = ^(UIButton *btn) {
+        [self.window dismissViewAnimated:YES completion:nil];
+    };
+}
+
 #pragma mark - UITableViewDataSource
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

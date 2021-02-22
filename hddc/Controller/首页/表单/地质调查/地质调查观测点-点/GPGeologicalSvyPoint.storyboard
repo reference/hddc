@@ -476,20 +476,30 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请填写观测点编号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Uh-Zb-GkF">
-                                            <rect key="frame" x="125" y="0.5" width="285" height="59"/>
+                                            <rect key="frame" x="125" y="0.5" width="243" height="59"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                         </textField>
+                                        <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utr-St-hh5">
+                                            <rect key="frame" x="368" y="0.0" width="46" height="59.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="46" id="3td-uq-EeC"/>
+                                            </constraints>
+                                            <state key="normal" image="icon_question"/>
+                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
+                                        <constraint firstItem="utr-St-hh5" firstAttribute="leading" secondItem="5Uh-Zb-GkF" secondAttribute="trailing" id="3Sg-WJ-oig"/>
+                                        <constraint firstAttribute="trailing" secondItem="utr-St-hh5" secondAttribute="trailing" id="6rg-YV-VG1"/>
                                         <constraint firstItem="7ih-NM-8r2" firstAttribute="leading" secondItem="0m5-3G-YqT" secondAttribute="trailing" id="8qH-Bp-Bqb"/>
                                         <constraint firstItem="7ih-NM-8r2" firstAttribute="leading" secondItem="F7G-QG-p3T" secondAttribute="leading" constant="120" id="CDi-9h-EiS"/>
                                         <constraint firstItem="5Uh-Zb-GkF" firstAttribute="leading" secondItem="7ih-NM-8r2" secondAttribute="trailing" constant="4" id="ECz-IX-Dbc"/>
                                         <constraint firstItem="5Uh-Zb-GkF" firstAttribute="top" secondItem="wuB-Be-b6K" secondAttribute="bottom" id="Gjl-Xg-8qe"/>
                                         <constraint firstItem="wuB-Be-b6K" firstAttribute="top" secondItem="F7G-QG-p3T" secondAttribute="top" id="PxL-DU-pG8"/>
+                                        <constraint firstItem="utr-St-hh5" firstAttribute="top" secondItem="F7G-QG-p3T" secondAttribute="top" id="QPB-qS-0UE"/>
                                         <constraint firstItem="0m5-3G-YqT" firstAttribute="leading" secondItem="F7G-QG-p3T" secondAttribute="leading" id="cRq-Ql-yxg"/>
                                         <constraint firstItem="JV4-yj-jJK" firstAttribute="top" secondItem="7ih-NM-8r2" secondAttribute="bottom" id="dFo-Bt-33r"/>
                                         <constraint firstAttribute="trailing" secondItem="JV4-yj-jJK" secondAttribute="trailing" id="eDG-ps-ifd"/>
@@ -500,8 +510,8 @@
                                         <constraint firstAttribute="bottom" secondItem="JV4-yj-jJK" secondAttribute="bottom" id="mLn-ti-O7f"/>
                                         <constraint firstItem="JV4-yj-jJK" firstAttribute="leading" secondItem="F7G-QG-p3T" secondAttribute="leading" id="nry-Ll-WCz"/>
                                         <constraint firstItem="7ih-NM-8r2" firstAttribute="top" secondItem="wuB-Be-b6K" secondAttribute="bottom" id="pKV-lR-ZFD"/>
+                                        <constraint firstItem="JV4-yj-jJK" firstAttribute="top" secondItem="utr-St-hh5" secondAttribute="bottom" id="sFZ-kT-gBY"/>
                                         <constraint firstItem="wuB-Be-b6K" firstAttribute="leading" secondItem="F7G-QG-p3T" secondAttribute="leading" id="vx2-MW-mMI"/>
-                                        <constraint firstAttribute="trailing" secondItem="5Uh-Zb-GkF" secondAttribute="trailing" constant="4" id="wp6-TX-3XF"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hku-Dw-UCs">
@@ -2047,6 +2057,7 @@
     </scenes>
     <resources>
         <image name="arrar_down" width="20" height="20"/>
+        <image name="icon_question" width="20" height="20"/>
         <namedColor name="color_border">
             <color red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

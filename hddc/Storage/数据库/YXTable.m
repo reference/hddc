@@ -90,7 +90,7 @@
     //get class
     Class cls = NSClassFromString(tb.tableName);
     //decode data
-    NSDictionary *decodedData = [NSJSONSerialization JSONObjectWithData:[tb.encodedData dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];;
+    NSDictionary *decodedData = [NSJSONSerialization JSONObjectWithData:[tb.encodedData dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:nil];
     
     //使用一个模型代替所有，每个模型都不会被强转
     return [cls yy_modelWithDictionary:decodedData];
