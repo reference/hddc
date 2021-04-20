@@ -60,7 +60,8 @@
             NSString *filePath = [NSFileManager documentFile:entity.localPath];
             cell.imageViews.firstObject.image = [UIImage imageWithContentsOfFile:filePath];
         }else{
-            [cell.imageViews.firstObject sd_setImageWithURL:[NSURL URLWithString:entity.url]];
+            NSString *url = [entity.url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+            [cell.imageViews.firstObject sd_setImageWithURL:[NSURL URLWithString:url]];
         }
         //隐藏删除按钮
         cell.buttons.firstObject.hidden = YES;
@@ -71,7 +72,8 @@
                 NSString *filePath = [NSFileManager documentFile:entity.localPath];
                 cell.imageViews.firstObject.image = [UIImage imageWithContentsOfFile:filePath];
             }else{
-                [cell.imageViews.firstObject sd_setImageWithURL:[NSURL URLWithString:entity.url]];
+                NSString *url = [entity.url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                [cell.imageViews.firstObject sd_setImageWithURL:[NSURL URLWithString:url]];
             }
             cell.buttons.firstObject.hidden = NO;
 
@@ -125,7 +127,8 @@
         if (_imageEntities.count) {
             NSMutableArray *photos = [NSMutableArray array];
             for (GPImageEntity *m in _imageEntities) {
-                IDMPhoto *photo = [IDMPhoto photoWithURL:[NSURL URLWithString:m.url]];
+                NSString *url = [m.url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+                IDMPhoto *photo = [IDMPhoto photoWithURL:[NSURL URLWithString:url]];
                 [photos addObject:photo];
             }
             IDMPhotoBrowser *browser = [[IDMPhotoBrowser alloc] initWithPhotos:photos];

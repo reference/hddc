@@ -26,6 +26,10 @@
 
 #define kURLGetTile @"http://t0.tianditu.com/%@/wmts?service=wmts&request=gettile&version=1.0.0&layer=%@&format=tiles&tilematrixset=%@&tk=502e05b68ea427c201f63ec608d7f0d7"
 
+//https://fxpc.mem.gov.cn/wmts?service=wmts&request=gettile&version=1.0.0&layer=vec&style=default&tilematrixset=c&format=tiles&tilematrix={z}&tilerow={y}&tilecol={x}
+//#define kURLGetTile @"https://fxpc.mem.gov.cn/wmts?service=wmts&request=gettile&version=1.0.0&layer=%@&format=tiles&style=default&tilematrixset=%@"
+
+
 #define tiandituURL @"http://t0.tianditu.com/%@/wmts"
 
 #define X_MIN_MERCATOR -20037508.3427892
