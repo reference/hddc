@@ -63,11 +63,13 @@
     if ([YXUserModel isLogin]) {
         [self goTempLaunch];
         [self reLogin];
+        [self checkVersion];
 //        [self api_relogin];
 //        [self gotoHome];
     }else{
         [NSThread sleepForTimeInterval:1.5];
         [self gotoLogin];
+        [self checkVersion];
     }
     
     //注册推送
@@ -78,6 +80,11 @@
 //        }
 //    }];
     return YES;
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    [self checkVersion];
 }
 
 // 爱谁谁
@@ -179,6 +186,35 @@
     }];
 }
 
+- (void)checkVersion
+{
+    [JGVersion requestVersion:^(JGVersion * _Nonnull m, NSError * _Nonnull error) {
+        if (!error) {
+            //local version
+            NSString *localVerion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+            NSInteger localVersionNumber = [[localVerion stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
+            //remote version
+            NSInteger remoteVersionNumber = [[m.versionAppCode stringByReplacingOccurrencesOfString:@"." withString:@""] integerValue];
+            //if local < remote
+            if (localVersionNumber < remoteVersionNumber) {
+                //alert
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"发现新版本" message:m.message
+                                                                                  preferredStyle:UIAlertControllerStyleAlert];
+                [alertController addAction:[UIAlertAction actionWithTitle:@"立即更新" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:m.url] options:@{} completionHandler:^(BOOL success) {}];
+                }]];
+                
+                //check is force update
+                if (![m.isForceUpdate boolValue]) {
+                    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+                    }]];
+                }
+                
+                [self.window.rootViewController presentViewController:alertController animated:YES completion:^{}];
+            }
+        }
+    }];
+}
 #pragma mark - background location trace
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {

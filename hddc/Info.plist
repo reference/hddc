@@ -146,26 +146,22 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSAppleMusicUsageDescription</key>
-	<string>此App会在浏览商品视频时候访问该权限</string>
 	<key>NSCameraUsageDescription</key>
-	<string>用于随拍或者扫描二维码识别商品信息</string>
+	<string>用于做采集任务时候拍摄现场照片</string>
 	<key>NSContactsUsageDescription</key>
-	<string>用于保存个人收货地址信息</string>
+	<string>用于保存用户的个人联系信息</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>获取当前位置</string>
+	<string>用于做采集任务时候获取当前位置</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>用于导航或路径规划</string>
+	<string>用于做采集任务时导航或路径规划</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App需要通过您的地理位置信息获取商品的数量数据</string>
+	<string>用于做采集任务时候获取当前位置</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>用于视频录音或者客服语音聊天</string>
-	<key>NSMotionUsageDescription</key>
-	<string>App需要访问您的运动数据用于捐步</string>
+	<string>用于做采集任务时语音输入</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>用于上传随拍或者保存商品图片</string>
+	<string>用于做采集任务时候上传现场照片</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>用于保存商品图片</string>
+	<string>用于做采集任务时候上传现场照片</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>FZLTCXHJW.TTF</string>
@@ -197,6 +193,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UISupportsDocumentBrowser</key>
+	<true/>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>

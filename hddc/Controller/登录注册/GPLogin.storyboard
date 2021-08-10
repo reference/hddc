@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -62,12 +62,12 @@
                                                 <userDefinedRuntimeAttribute type="boolean" keyPath="masksToBounds" value="YES"/>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动断层数据采集" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NAq-TS-gK2">
-                                            <rect key="frame" x="62" y="200" width="290.5" height="49"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动断层数据采集子系统" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAq-TS-gK2">
+                                            <rect key="frame" x="40" y="200" width="334" height="49"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="49" id="ccD-Af-EsU"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -77,12 +77,12 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-5V-ito">
                                                     <rect key="frame" x="0.0" y="0.0" width="334" height="69.5"/>
                                                     <subviews>
-                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-95-578">
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="手机号/账号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-95-578">
                                                             <rect key="frame" x="0.0" y="0.0" width="324" height="69.5"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
                                                                     <color key="value" red="0.95686274510000002" green="0.94117647059999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -150,32 +150,16 @@
                                                 <constraint firstAttribute="height" constant="140" id="fZ8-v4-3p2"/>
                                             </constraints>
                                         </stackView>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIu-pp-ZlS">
-                                            <rect key="frame" x="19" y="25" width="73" height="73"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" name="red"/>
-                                            <state key="normal" title="Start"/>
-                                            <connections>
-                                                <action selector="onStartRecord:" destination="kAV-57-ido" eventType="touchUpInside" id="qjT-fc-sfE"/>
-                                            </connections>
-                                        </button>
-                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhR-gn-wUz">
-                                            <rect key="frame" x="19" y="106" width="73" height="73"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" name="red"/>
-                                            <state key="normal" title="Stop"/>
-                                            <connections>
-                                                <action selector="onStopRecord:" destination="kAV-57-ido" eventType="touchUpInside" id="2gL-la-nx1"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="NAq-TS-gK2" firstAttribute="leading" secondItem="Rct-rN-bOc" secondAttribute="leading" constant="40" id="7iR-Jz-sAH"/>
                                         <constraint firstItem="NAq-TS-gK2" firstAttribute="centerX" secondItem="Rct-rN-bOc" secondAttribute="centerX" id="AGc-Zt-ibA"/>
                                         <constraint firstItem="wbJ-1K-F99" firstAttribute="top" secondItem="NAq-TS-gK2" secondAttribute="bottom" constant="30" id="CSg-aC-VEh"/>
                                         <constraint firstItem="wd4-kE-c6I" firstAttribute="top" secondItem="Rct-rN-bOc" secondAttribute="top" constant="50" id="DhC-4C-hjQ"/>
                                         <constraint firstItem="wbJ-1K-F99" firstAttribute="leading" secondItem="Rct-rN-bOc" secondAttribute="leading" constant="40" id="H4u-nY-WIS"/>
                                         <constraint firstItem="NAq-TS-gK2" firstAttribute="top" secondItem="wd4-kE-c6I" secondAttribute="bottom" constant="30" id="Xbq-Nd-Wqt"/>
+                                        <constraint firstAttribute="trailing" secondItem="NAq-TS-gK2" secondAttribute="trailing" constant="40" id="ZI9-qu-jtg"/>
                                         <constraint firstAttribute="trailing" secondItem="wbJ-1K-F99" secondAttribute="trailing" constant="40" id="bp0-XH-8lB"/>
                                         <constraint firstItem="wd4-kE-c6I" firstAttribute="centerX" secondItem="Rct-rN-bOc" secondAttribute="centerX" id="noM-SS-cmr"/>
                                     </constraints>

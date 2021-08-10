@@ -59,7 +59,9 @@
     self.textViews.firstObject.text = m.town;
     //给底部的图片赋值
     if (m.extends7.length) {
-        self.imageEntities = [NSMutableArray arrayWithArray:[GPFormBaseController imageEntitiesWithUrl:m.extends7]];
+        if (self.imageEntities.count == 0) {
+            self.imageEntities = [NSMutableArray arrayWithArray:[GPFormBaseController imageEntitiesWithUrl:m.extends7]];
+        }
     }
     
     //id

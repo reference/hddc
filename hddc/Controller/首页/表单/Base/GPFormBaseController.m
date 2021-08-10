@@ -253,8 +253,8 @@
 
 - (void)setCoordinate:(CLLocationCoordinate2D)coordinate
 {
-    [self.textFields textFieldForTag:0].text = [[NSNumber numberWithDouble:coordinate.longitude] stringValue];
-    [self.textFields textFieldForTag:1].text = [[NSNumber numberWithDouble:coordinate.latitude] stringValue];
+    [self.textFields textFieldForTag:0].text = [NSString stringWithFormat:@"%.8f",coordinate.longitude];
+    [self.textFields textFieldForTag:1].text = [NSString stringWithFormat:@"%.8f",coordinate.latitude];
 }
 
 - (void)setAddress:(NSString *)address
